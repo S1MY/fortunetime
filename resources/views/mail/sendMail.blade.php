@@ -24,6 +24,11 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        hr{
+            background: #fff;
+            margin: 15px 0;
+        }
+
         .mainTable {
             background: #4168D2;
             box-shadow: 0px 0px 12px rgba(33, 33, 33, 0.1);
@@ -75,6 +80,7 @@
             color: #fff;
             padding-bottom: 0;
             font-weight: 400;
+            text-align: left;
         }
 
         @media only screen and (max-width: 640px) {
@@ -156,11 +162,9 @@
             <td>Форма обратной связи</td>
         </tr>
         <tr class="logoTr logoTrHello">
-            <td>Отправитель, <span>{{ $name }}</span></td>
+            <td>Отправитель, <span><a href="mailto:{{ $email }}"></a>{{ $name }}</span></td>
         </tr>
-        <tr class="logoTr logoTrHello">
-            <td>Прикреплённая почта <span>{{ $email }}</span></td>
-        </tr>
+        <hr>
         <tr class="logoTr logoTrText">
             <td>{{ $question }}</td>
         </tr>
