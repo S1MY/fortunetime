@@ -25,7 +25,7 @@ $(document).ready(function () {
                 }else if(formController == 'SetPincode'){
                     window.location.href = '/settings';
                 }else if(formController == 'aboutForm'){
-                    window.location.href = '/about';
+                    // window.location.href = '/about';
                 }else{
                     window.location.href = '/account';
                 }
