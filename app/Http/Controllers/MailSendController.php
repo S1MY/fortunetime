@@ -18,6 +18,6 @@ class MailSendController extends Controller
         $mailsend = Mail::to($supportMail)->send(new SendMail($name, $email, $question));
 
 
-        return $mailsend;
+        return true;
     }
 }

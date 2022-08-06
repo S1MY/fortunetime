@@ -26,7 +26,7 @@ class MailRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'min:2'],
             'email' => ['required', 'email', 'max:255'],
-            'question' => ['required', 'string', 'max:255'],
+            'question' => ['required', 'string'],
         ];
     }
 
@@ -38,7 +38,6 @@ class MailRequest extends FormRequest
             'question.required' => 'Нельзя оставить пустой вопрос.',
             'string' => 'Неподходящий формат вопроса.',
             'min' => 'Минимальное количество символов 2',
-            'question.max' => 'Максимальное количество символов в вопросе 1000.',
         ];
     }
 }
