@@ -143,10 +143,10 @@
                 </a>
             </td>
         </tr>
-        <tr class="logoTr logoTrTitle" style="margin: 15px 0;">
+        <tr class="logoTr logoTrTitle" style="padding: 5px 0;">
             <td>Форма обратной связи</td>
         </tr>
-        <tr class="logoTr logoTrHello" style="margin: 15px 0 20px;">
+        <tr class="logoTr logoTrHello" style="padding: 15px 0 20px;">
             <td>Отправитель, <span><a href="mailto:{{ $email }}">{{ $name }}</a></span></td>
         </tr>
         <tr>
@@ -154,7 +154,7 @@
                 <hr>
             </td>
         </tr>
-        <tr class="logoTr logoTrText" style="margin: 10px 0;">
+        <tr class="logoTr logoTrText" style="paddingpadding: 10px 0;">
             <td>{{ $question }}</td>
         </tr>
     </table>
