@@ -202,7 +202,7 @@
         </tr>
         <tr class="logoTr">
             <td>
-                <a href="/"> <img src="{{ Request::root() }}/image/heroBg.svg" alt="emailimage" style="width: 100%" class="emailimage"></a>
+                <a href="/"> <img src="{{ Request::root() }}/image/heroBg.svg" style="width: 100%;" alt="emailimage" class="emailimage"></a>
             </td>
         </tr>
         <tr class="logoTr logoTrTitle">
