@@ -26,7 +26,7 @@ $(document).ready(function () {
                 }else if(formController == 'SetPincode'){
                     window.location.href = '/settings';
                 }else if(formController == 'aboutForm'){
-                    window.location.href = '/about';
+                    // window.location.href = '/about';
                     $('.sendMailWrapper').html('<p class="goodSend">'+successSvg+'Вы успешно оставили свой вопрос!</p>')
                 }else{
                     window.location.href = '/account';
