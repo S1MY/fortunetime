@@ -27,7 +27,7 @@ $(document).ready(function () {
                     window.location.href = '/settings';
                 }else if(formController == 'aboutForm'){
                     // window.location.href = '/about';
-                    $(this).reset();
+                    $(this)[0].reset();
                     $('.popupResponse').fadeOut(500);
                 }else{
                     window.location.href = '/account';
