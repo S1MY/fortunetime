@@ -23,6 +23,8 @@ $(document).ready(function () {
                     window.location.href = '/reviews';
                 }else if(formController == 'SetPincode'){
                     window.location.href = '/settings';
+                }else if(formController == 'aboutForm'){
+                    window.location.href = '/about';
                 }else{
                     window.location.href = '/account';
                 }
@@ -37,7 +39,7 @@ $(document).ready(function () {
                         $('form#'+formController+' textarea').addClass('error');
                         $('form#'+formController+' textarea').after('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
-                }else if( formController == 'SetPincode' ){
+                }else if( formController == 'SetPincode' || formController == 'aboutForm' ){
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
                         $('form#'+formController+' input').addClass('error');
