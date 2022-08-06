@@ -213,7 +213,7 @@
                         @endphp
                     @endforeach
                 </div>
-                @if ($getTopReferer != null)
+                @if ($getTopReferer != '[]')
                     <div class="statTable">
                         <p class="statTableName">Лидеры приглашений</p>
                         @php
