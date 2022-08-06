@@ -34,14 +34,16 @@
                             </a>
                         </div>
                     </div>
-                    <p class="contactText">Уважаемый пользователь! Вы можете задать любой вопрос, заполнив форму обратной связи.</p>
-                    <div class="inputFlex displayFlex alignItemsCenter spaceBetween">
-                        @csrf
-                        <input type="text" class="formInput" placeholder="Ваше Имя" name="name">
-                        <input type="email" class="formInput" placeholder="Ваш E-Mail" name="email">
+                    <div class="sendMailWrapper">
+                        <p class="contactText">Уважаемый пользователь! Вы можете задать любой вопрос, заполнив форму обратной связи.</p>
+                        <div class="inputFlex displayFlex alignItemsCenter spaceBetween">
+                            @csrf
+                            <input type="text" class="formInput" placeholder="Ваше Имя" name="name">
+                            <input type="email" class="formInput" placeholder="Ваш E-Mail" name="email">
+                        </div>
+                        <textarea class="contactArea" placeholder="Ваш вопрос" name="question"></textarea>
+                        <button class="standartBtn">Задать вопрос</button>
                     </div>
-                    <textarea class="contactArea" placeholder="Ваш вопрос" name="question"></textarea>
-                    <button class="standartBtn">Задать вопрос</button>
                 </form>
                 <svg width="500" height="300" viewBox="0 0 506 304" fill="none" xmlns="http://www.w3.org/2000/svg" class="contactInnerR">
                     <g clip-path="url(#clip0_46_1104)">
