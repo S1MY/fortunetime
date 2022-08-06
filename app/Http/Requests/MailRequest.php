@@ -26,7 +26,7 @@ class MailRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'min:2'],
             'email' => ['required', 'email', 'max:255'],
-            'question' => ['required', 'string', 'max:1000'],
+            'question' => ['required', 'string', 'max:255'],
         ];
     }
 
