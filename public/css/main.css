@@ -15,6 +15,9 @@ p.errors{
     font-size: 14px;
     display: flex;
 }
+#aboutForm p.errors{
+    font-size: 16px;
+}
 p.errors svg{
     width: 15px;
     margin-right: 5px;
