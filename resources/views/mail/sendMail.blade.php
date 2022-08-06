@@ -1,10 +1,3 @@
-<h2>Поступил вопрос:</h2>
-<p>Из обратной связи на странице <a href="{{ Request::root() }}/about">О нас</a> с сайта {{ Request::root() }}</p>
-<p>Содержание:</p>
-<p>Имя: <span>{{ $name }}</span></p>
-<p>Email: <span>{{ $email }}</span></p>
-<p>Вопрос:</p>
-<p>{{ $question }}</p>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,6 +29,7 @@
             margin: 0 auto;
             margin-top: 60px;
             padding: 40px 80px;
+            min-height: 500px;
         }
 
         .logoTr {
@@ -162,9 +156,12 @@
             <td>Форма обратной связи</td>
         </tr>
         <tr class="logoTr logoTrHello">
-            <td>Отправитель, <span><a href="mailto:{{ $email }}"></a>{{ $name }}</span></td>
+            <td>Отправитель, <span><a href="mailto:{{ $email }}">{{ $name }}</a></span></td>
         </tr>
         <hr>
+        <tr class="logoTr logoTrText">
+            <td>Текст сообщения:</td>
+        </tr>
         <tr class="logoTr logoTrText">
             <td>{{ $question }}</td>
         </tr>
