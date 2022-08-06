@@ -26,6 +26,7 @@
             width: 100%;
             margin: 0 auto;
             padding: 40px 80px;
+            min-height: 360px;
         }
 
         .logoTr {
