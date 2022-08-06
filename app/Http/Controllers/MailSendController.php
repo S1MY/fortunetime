@@ -15,7 +15,8 @@ class MailSendController extends Controller
         $question = $request->question;
 
         $supportMail = 'S1MY.PJ@mail.ru';
-        Mail::to($supportMail)->send(new SendMail($name, $email, $question));
-        return true;
+        $sendMail = Mail::to($supportMail)->send(new SendMail($name, $email, $question));
+
+        return $sendMail;
     }
 }
