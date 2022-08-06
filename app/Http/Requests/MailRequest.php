@@ -13,7 +13,7 @@ class MailRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,21 @@ class MailRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => ['required', 'string', 'min:2'],
+            'email' => ['required', 'email', 'max:255'],
+            'question' => ['required', 'string', 'max:1000'],
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+            'name.required' => 'Вы не указали ваше имя.',
+            'email.required' => 'Вы не указали Email для обратной связи.',
+            'question.required' => 'Нельзя оставить пустой вопрос.',
+            'string' => 'Неподходящий формат вопроса.',
+            'min' => 'Минимальное количество символов 2',
+            'question.max' => 'Максимальное количество символов в вопросе 1000.',
         ];
     }
 }

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MailRequest;
 use App\Mail\SendMail;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class MailSendController extends Controller
 {
-    public function sendMailContact(Request $request){
+    public function sendMailContact(MailRequest $request){
 
         $name = $request->name;
         $email = $request->email;
