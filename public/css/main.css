@@ -22,6 +22,9 @@ p.errors svg{
     width: 15px;
     margin-right: 5px;
 }
+#aboutForm p.errors svg{
+    width: 20px;
+}
 p.errors svg circle,
 p.errors svg line{
     stroke: #d24141;
