@@ -48,8 +48,7 @@ $(document).ready(function () {
                 }else if( formController == 'aboutForm' ){
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
-                        $('form#'+formController+' input').addClass('error');
-                        $('form#'+formController+' .contactText').html('<p class="errors">'+errorSvg+''+value+'</p>');
+                        $('form#'+formController+' .contactText').append('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
