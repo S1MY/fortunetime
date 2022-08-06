@@ -1,0 +1,154 @@
+$(document).ready(function () {
+    let header = $(".header");
+    if (header.length) {
+        let headerTop = header.offset().top;
+
+        if (headerTop > 150) {
+            $(".header").addClass('fixed');
+        } else {
+            $(".header").removeClass('fixed');
+        }
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 150) {
+                $(".header").addClass('fixed');
+            } else {
+                $(".header").removeClass('fixed');
+            }
+        });
+    }
+    let daun = 1;
+    let deg = 360 / 5000;
+    let index = 1;
+    let antiindex = -1;
+    setInterval(function () {
+        if (daun == 1) {
+            $('.orbital').css('transform', 'rotate(' + index * deg + 'deg)');
+            $('.planet').css('transform', 'rotate(' + antiindex * deg + 'deg)');
+            index++;
+            antiindex--;
+        }
+    }, deg);
+    $(".planet").hover(function () {
+        $(this).parent().parent().addClass('hovered');
+        daun = 0;
+    }, function () {
+        $(this).parent().parent().removeClass('hovered');
+        daun = 1;
+    });
+    $('body').on('click', '.password-control', function(){
+        if ($('.password-input').attr('type') == 'password'){
+            $('.password-control').addClass('view');
+            $('.password-input').attr('type', 'text');
+        } else {
+            $('.password-control').removeClass('view');
+            $('.password-input').attr('type', 'password');
+        }
+        return false;
+    });
+    // Попапс
+    $('.popupBtn').click(function (e) {
+        e.preventDefault();
+        let popupName = $(this).attr('data-popup');
+        $('.popupWrapper').fadeIn();
+        $('.popupElement[data-popup=' + popupName + ']').fadeIn();
+    });
+    $('.formLink').click(function (e) {
+        e.preventDefault();
+        let popupName = $(this).attr('data-popup');
+        $('.popupElement').fadeOut();
+        $('.popupElement[data-popup=' + popupName + ']').fadeIn();
+    });
+    $('.popupBg, .popupClose').click(function (e) {
+        e.preventDefault();
+        $('.popupWrapper').fadeOut();
+        $('.popupElement').fadeOut();
+    });
+    $('.policeBtn').click(function (e) {
+        e.preventDefault();
+        $('.policeForm').hide();
+        $('#regForm').fadeIn();
+    });
+    // Мобайлс
+    $('.burgerBtn').click(function (e) {
+        e.preventDefault();
+        $('.mobileMenu').addClass('open');
+    });
+    $('.mobileBg, .menuClose').click(function (e) {
+        e.preventDefault();
+        $('.mobileMenu').removeClass('open');
+    });
+    // FAQ
+    $('.answerHeader').click(function (e) {
+        e.preventDefault();
+        $(this).children('.answerIcon').toggleClass('active');
+        $(this).next().slideToggle();
+    });
+    // matrixTab
+    $('.matrixTab').click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('disabled')) {
+
+        }else{
+            $('.matrixTab').removeClass('active');
+            $(this).addClass('active');
+            let matrixNumb = $(this).attr('data-matrix');
+            $('.matrixElement').removeClass('active');
+            $('.matrixElement[data-matrix=' + matrixNumb + ']').addClass('active');
+        }
+    });
+    // Меню юзера
+    $('.userNavWrapper').click(function (e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('actived');
+    });
+    // Клик вне меню
+    $(document).mouseup(function (e) {
+        let select = $(".userNav");
+        if (!select.is(e.target) && select.has(e.target).length === 0) {
+            $(".userNav").removeClass('actived');
+        }
+    });
+    // Копирование
+    $('.linkCopy').click(function () {
+
+        var copyText = $(this).next().text();
+
+        var copytext2 = document.createElement('input');
+
+        copytext2.value = copyText;
+
+        document.body.appendChild(copytext2);
+
+        copytext2.select();
+
+        document.execCommand("copy");
+
+        document.body.removeChild(copytext2);
+
+        $(this).parent().children('.copy').addClass('active');
+
+        setTimeout(function () {
+
+            $(".copy").removeClass('active');
+
+        }, 5000);
+
+    });
+    // MatrixTabs
+    $('.cabMatrixElement').click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+        }
+    });
+    $(document).on("click", '.popupResponseBg, .responseBtn', function (event) {
+
+        event.preventDefault();
+
+        $('.popupResponse').fadeOut(500);
+
+    });
+    $('.matrixImage').magnificPopup({type:'image'});
+});
