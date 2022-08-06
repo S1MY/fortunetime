@@ -27,7 +27,6 @@
             box-shadow: 0px 0px 12px rgba(33, 33, 33, 0.1);
             width: 100%;
             margin: 0 auto;
-            margin-top: 60px;
             padding: 40px 80px;
             min-height: 500px;
         }
@@ -35,10 +34,6 @@
         .logoTr {
             width: 100%;
             text-align: center;
-        }
-
-        .logoTr td {
-            padding-bottom: 30px;
         }
 
         .logoTrTitle td {
@@ -58,11 +53,12 @@
             color: #fff;
             padding-bottom: 20px;
         }
-
+        .logoTrHello td span{
+            padding: 5px 28px;
+        }
         .logoTrHello td span,
         .logoTrHello td span a {
             font-family: 'Merriweather', sans-serif;
-            padding: 5px 28px;
             background: #fff;
             color: #4168D2;
             margin-left: 5px;
@@ -155,12 +151,13 @@
         <tr class="logoTr logoTrTitle">
             <td>Форма обратной связи</td>
         </tr>
-        <tr class="logoTr logoTrHello">
+        <tr class="logoTr logoTrHello" style="">
             <td>Отправитель, <span><a href="mailto:{{ $email }}">{{ $name }}</a></span></td>
         </tr>
-        <hr>
-        <tr class="logoTr logoTrText">
-            <td>Текст сообщения:</td>
+        <tr>
+            <td>
+                <hr>
+            </td>
         </tr>
         <tr class="logoTr logoTrText">
             <td>{{ $question }}</td>
