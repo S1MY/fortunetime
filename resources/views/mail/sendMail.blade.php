@@ -37,7 +37,6 @@
         }
 
         .logoTrTitle td {
-            padding-bottom: 15px;
             text-transform: uppercase;
             font-size: 28px;
             line-height: 32px;
@@ -51,7 +50,6 @@
             letter-spacing: 0.5px;
             font-weight: 700;
             color: #fff;
-            padding-bottom: 20px;
         }
         .logoTrHello td span{
             padding: 5px 28px;
