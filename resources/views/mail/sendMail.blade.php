@@ -27,7 +27,6 @@
         .mainTable {
             background: #4168D2;
             box-shadow: 0px 0px 12px rgba(33, 33, 33, 0.1);
-            max-width: 600px;
             width: 100%;
             margin: 0 auto;
             margin-top: 60px;
@@ -62,7 +61,7 @@
         }
 
         .logoTrHello td span,
-        .logoTrHello td a {
+        .logoTrHello td span a {
             font-family: 'Merriweather', sans-serif;
             padding: 5px 28px;
             background: #fff;
