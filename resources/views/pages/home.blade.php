@@ -213,21 +213,23 @@
                         @endphp
                     @endforeach
                 </div>
-                <div class="statTable">
-                    <p class="statTableName">Лидеры приглашений</p>
-                    @php
-                        $n = 1;
-                    @endphp
-                    @foreach ($getTopReferer as $TopReferer)
-                        <p class="statTableItem">
-                            <span class="statTableNumber">{{ $n }}</span>
-                            <span class="statTableText">{{  \Illuminate\Support\Str::limit($TopReferer->login, $limit = 10, $end = '...') }} - активированных: {{ $TopReferer->sponsor_counter }}</span>
-                        </p>
+                @if ($getTopReferer != null)
+                    <div class="statTable">
+                        <p class="statTableName">Лидеры приглашений</p>
                         @php
-                            $n++;
+                            $n = 1;
                         @endphp
-                    @endforeach
-                </div>
+                        @foreach ($getTopReferer as $TopReferer)
+                            <p class="statTableItem">
+                                <span class="statTableNumber">{{ $n }}</span>
+                                <span class="statTableText">{{  \Illuminate\Support\Str::limit($TopReferer->login, $limit = 10, $end = '...') }} - активированных: {{ $TopReferer->sponsor_counter }}</span>
+                            </p>
+                            @php
+                                $n++;
+                            @endphp
+                        @endforeach
+                    </div>
+                @endif
             </div>
             <div class="statFlexer displayFlex alignItemsCenter spaceBetween">
                 <div class="statItem">
