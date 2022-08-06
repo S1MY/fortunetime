@@ -39,11 +39,17 @@ $(document).ready(function () {
                         $('form#'+formController+' textarea').addClass('error');
                         $('form#'+formController+' textarea').after('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
-                }else if( formController == 'SetPincode' || formController == 'aboutForm' ){
+                }else if( formController == 'SetPincode' ){
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
                         $('form#'+formController+' input').addClass('error');
                         $('form#'+formController+' input[name="'+key+'"]').next().after('<p class="errors">'+errorSvg+''+value+'</p>');
+                    });
+                }else if( formController == 'aboutForm' ){
+                    $('form#'+formController+' input.error').removeClass('error');
+                    $.each(data.responseJSON.errors, function(key, value) {
+                        $('form#'+formController+' input').addClass('error');
+                        $('form#'+formController+' .contactText').html('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
