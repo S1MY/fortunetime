@@ -19,6 +19,7 @@ $(document).ready(function () {
             data: formData,
             dataType: 'json',
             success: function (data) {
+                console.log(data);
                 if( formController == 'ReviewStore' ){
                     window.location.href = '/reviews';
                 }else if(formController == 'SetPincode'){
