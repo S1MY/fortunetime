@@ -49,7 +49,7 @@
             font-size: 28px;
             line-height: 32px;
             font-weight: 900;
-            color: #212121;
+            color: #fff;
         }
 
         .logoTrHello td {
@@ -57,72 +57,25 @@
             line-height: 25px;
             letter-spacing: 0.5px;
             font-weight: 700;
-            color: #212121;
+            color: #fff;
             padding-bottom: 20px;
         }
 
-        .logoTrHello td span {
+        .logoTrHello td span,
+        .logoTrHello td a {
             font-family: 'Merriweather', sans-serif;
             padding: 5px 28px;
-            background: #212121;
-            color: #FFFFFF;
+            background: #fff;
+            color: #4168D2;
             margin-left: 5px;
         }
 
         .logoTrText td {
             font-size: 16px;
             line-height: 24px;
-            color: #303030;
+            color: #fff;
             padding-bottom: 0;
             font-weight: 400;
-        }
-
-        .logoTrText td a {
-            color: #C10808;
-            text-decoration: underline;
-        }
-
-        .dopTable {
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-            margin: 0 auto;
-            margin-bottom: 60px;
-        }
-
-        .dopTable td {
-            padding-top: 30px;
-            font-size: 16px;
-            line-height: 24px;
-            color: #000000;
-        }
-
-        .logoTrBold td {
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 25px;
-            color: #212121;
-            letter-spacing: 0.5px;
-            padding-top: 20px;
-            padding-bottom: 15px;
-        }
-
-        .logoTrPass td {
-            padding-bottom: 0;
-        }
-
-        .logoTrPass span {
-            width: 240px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            height: 48px;
-            background: #C10808;
-            color: #FFFFFF;
-            letter-spacing: 0.5px;
-            font-size: 18px;
-            line-height: 24px;
         }
 
         @media only screen and (max-width: 640px) {
@@ -198,11 +151,6 @@
                 <a href="{{ Request::root() }}" class="logotype">
                     <img src="{{ Request::root() }}/image/logotype.png" alt="emailimage" class="emailimage">
                 </a>
-            </td>
-        </tr>
-        <tr class="logoTr">
-            <td>
-                <a href="/"> <img src="{{ Request::root() }}/image/heroBg.svg" style="width: 100%;" alt="emailimage" class="emailimage"></a>
             </td>
         </tr>
         <tr class="logoTr logoTrTitle">
