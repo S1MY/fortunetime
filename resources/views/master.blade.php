@@ -392,17 +392,17 @@
                 @auth
                     <div class="menuWrapper">
                         <p class="menuName">Мой кабинет</p>
-                        <a href="/cabinet.html" class="menuItem">Личный кабинет</a>
-                        <a href="/start.html" class="menuItem">Быстрый старт</a>
-                        <a href="/automat.html" class="menuItem">Автоматизация</a>
+                        <a href="{{ route('account') }}" class="menuItem">Личный кабинет</a>
+                        <a href="{{ route('start') }}" class="menuItem">Быстрый старт</a>
+                        <a href="{{ route('automation') }}" class="menuItem">Автоматизация</a>
                         <a href="{{ route('reviews') }}" class="menuItem">Отзывы</a>
-                        <a href="/settings.html" class="menuItem">Настройки</a>
-                        <a href="aboba" class="menuItem">Выйти</a>
+                        <a href="{{ route('settings') }}" class="menuItem">Настройки</a>
+                        <a href="{{ route('logout') }}" class="menuItem">Выйти</a>
                     </div>
                 @endauth
                 <div class="menuWrapper">
                     <p class="menuName">Главное меню</p>
-                    <a href="/about.html" class="menuItem">О нас</a>
+                    <a href="{{ route('about') }}" class="menuItem">О нас</a>
                     <a href="{{ route('marketing') }}" class="menuItem">Маркетинг</a>
                     <a href="{{ route('faq') }}" class="menuItem">FAQ</a>
                     <a href="{{ route('reviews') }}" class="menuItem">Отзывы</a>
