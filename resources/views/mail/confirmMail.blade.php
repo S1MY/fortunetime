@@ -145,18 +145,15 @@
             </td>
         </tr>
         <tr class="logoTr logoTrTitle" style="padding: 5px 0;">
-            <td>Форма обратной связи</td>
+            <td>Подтвердите вашу почту</td>
         </tr>
         <tr class="logoTr logoTrHello" style="padding: 15px 0 20px;">
-            <td>Отправитель, <span><a href="mailto:{{ $email }}">{{ $name }}</a></span></td>
+            <td>Ваш код для подтверждения, <span>{{ $code }}</span></td>
         </tr>
         <tr>
             <td>
                 <hr>
             </td>
-        </tr>
-        <tr class="logoTr logoTrText" style="paddingpadding: 10px 0;">
-            <td>{{ $question }}</td>
         </tr>
     </table>
 </body>

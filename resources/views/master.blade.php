@@ -273,6 +273,7 @@
                         }
                     @endphp
                     <input type="text" class="formInput{{$disabled}}" placeholder="Логин пригласителя" name="referer" value="{{ $sponsor }}">
+                    <input type="text" class="formInput mailConfirm" placeholder="Подтверждение почты" name="mailConfirm" value="{{ $sponsor }}">
                     <div class="passwordInput">
                         <input type="password" class="formInput password-input" placeholder="Пароль" name="password">
                         <a href="#" class="password-control"></a>

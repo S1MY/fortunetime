@@ -19,4 +19,5 @@ class MailSendController extends Controller
 
         return true;
     }
+
 }

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\MailConfirm;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -50,11 +52,20 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        if( $data['mailConfirm'] == '' ){
+            $code = rand(00000, 99999);
+            Mail::to($data['email'])->send(new MailConfirm($code));
+        }
         return Validator::make($data, [
+            'mailConfirm' => ['required', 'in:1'],
             'login' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'sponsor' => ['string', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
+        ],
+        [
+            'mailConfirm.required' => 'Введите код для подтверждения почты.',
+            'mailConfirm.in' => 'Код для подтверждения почты введён не правильно.',
         ]);
     }
 

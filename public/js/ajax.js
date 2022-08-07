@@ -26,7 +26,6 @@ $(document).ready(function () {
                 }else if(formController == 'SetPincode'){
                     window.location.href = '/settings';
                 }else if(formController == 'aboutForm'){
-                    // window.location.href = '/about';
                     $('#aboutForm')[0].reset();
                     $('.popupResponse').fadeIn(500);
                 }else{
@@ -60,7 +59,11 @@ $(document).ready(function () {
                         let mval = $('form#'+formController+' input[name="'+key+'"]').attr('placeholder');
                         $('form#'+formController+' input[name="'+key+'"]').addClass('error');
                         $('form#'+formController+' input[name="'+key+'"]').after('<p class="errorsOne">'+value+'</p>');
-                        $('form#'+formController+' input[name="'+key+'"]').after('<p class="errors">'+errorSvg+''+$('form#'+formController+' input[name="'+key+'"]').next().text().replace(key, '"'+mval+'"')+'</p>');
+                        if( key == 'mailConfirm' ){
+                            $('form#'+formController+' input[name="'+key+'"]').after('<p class="errors">'+errorSvg+'Подтвердите ваш Email адрес.</p>');
+                        }else{
+                            $('form#'+formController+' input[name="'+key+'"]').after('<p class="errors">'+errorSvg+''+$('form#'+formController+' input[name="'+key+'"]').next().text().replace(key, '"'+mval+'"')+'</p>');
+                        }
                         $('p.errorsOne').remove();
                     });
                 }
