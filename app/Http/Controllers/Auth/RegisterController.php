@@ -54,7 +54,7 @@ class RegisterController extends Controller
     {
         if( $data['mailConfirm'] == '' ){
             $code = rand(00000, 99999);
-            session('code', $code);
+            session(['code' => $code]);
             $code = session('code');
             Mail::to($data['email'])->send(new MailConfirm($code));
         }
