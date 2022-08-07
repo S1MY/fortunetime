@@ -74,4 +74,8 @@ $(document).ready(function () {
         });
 
     });
+    $('.AJAXFormFK .platItem').click(function (e) {
+        e.preventDefault();
+        alert('click');
+    });
 });

@@ -299,7 +299,7 @@
                     </div>
                 </div>
             </form>
-            <form class="popupElement" data-popup="starter">
+            <form class="popupElement AJAXFormFK" data-popup="starter">
                 <svg class="popupClose" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.6668 3.33325L3.3335 16.6666M16.6668 16.6666L3.3335 3.33325L16.6668 16.6666Z" stroke="#202020" stroke-width="1.66667" stroke-linecap="round"/>
                 </svg>
@@ -307,6 +307,8 @@
                     <h2 class="popupName">Внесение взноса</h2>
                     <div class="popupFlex displayFlex alignItemsCenter spaceCenter">
                         <div class="platItem">
+                            @csrf
+                            <input type="hidden" name="oa" value="1000">
                             <img src="https://cdn.freekassa.ru/images/logo.svg" alt="Freekassa.ru" class="sc-fzpdyU eZlRpO">
                             <div class="platItemText">Комиссия: 1%</div>
                         </div>
