@@ -99,7 +99,8 @@ $(document).ready(function () {
                 $('.popupResponse').fadeIn(500);
             },
             error: function (data) {
-                // console.log(data);
+                console.log(data);
+                // location.href = data.;
             }
         });
     });
