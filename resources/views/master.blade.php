@@ -264,6 +264,7 @@
                     <h2 class="popupName">Регистрация</h2>
                     <input type="text" class="formInput" placeholder="Логин" name="login">
                     <input type="email" class="formInput" placeholder="E-Mail" name="email">
+                    <input type="text" class="formInput mailConfirm" placeholder="Подтверждение почты" name="mailConfirm" value="{{ $sponsor }}">
                     @php
                         $sponsor = '';
                         $disabled = '';
@@ -273,7 +274,6 @@
                         }
                     @endphp
                     <input type="text" class="formInput{{$disabled}}" placeholder="Логин пригласителя" name="referer" value="{{ $sponsor }}">
-                    <input type="text" class="formInput mailConfirm" placeholder="Подтверждение почты" name="mailConfirm" value="{{ $sponsor }}">
                     <div class="passwordInput">
                         <input type="password" class="formInput password-input" placeholder="Пароль" name="password">
                         <a href="#" class="password-control"></a>
