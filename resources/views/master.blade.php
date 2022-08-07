@@ -264,7 +264,7 @@
                     <h2 class="popupName">Регистрация</h2>
                     <input type="text" class="formInput" placeholder="Логин" name="login">
                     <input type="email" class="formInput" placeholder="E-Mail" name="email">
-                    <input type="text" class="formInput mailConfirm" placeholder="Подтверждение почты" name="mailConfirm" value="{{ $sponsor }}">
+                    <input type="text" class="formInput mailConfirm" placeholder="Подтверждение почты" name="mailConfirm">
                     @php
                         $sponsor = '';
                         $disabled = '';
