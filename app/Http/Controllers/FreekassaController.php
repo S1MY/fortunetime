@@ -27,7 +27,6 @@ class FreekassaController extends Controller
 
         $s = md5($merchant_id.':'.$order_amount.':'.$secret_word.':'.$currency.':'.$order_id);
 
-        return $s;
         $client = new Client();
 
         $res = $client->request('GET', 'https://pay.freekassa.ru/', [
@@ -44,5 +43,6 @@ class FreekassaController extends Controller
             $response_data = $res->getBody()->getContents();
         }
 
+        return $response_data;
     }
 }
