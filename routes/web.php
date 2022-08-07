@@ -32,7 +32,7 @@ Route::get('/news', 'App\Http\Controllers\MainController@news')->name('news');
 
 Route::get('/statistic', 'App\Http\Controllers\MainController@statistic')->name('statistic');
 
-Route::get('/freekassa', 'App\Http\Controllers\MainController@freekassa')->name('freekassa');
+Route::post('/freekassa', 'App\Http\Controllers\MainController@freekassa')->name('freekassa');
 
 /* Documents */
 
