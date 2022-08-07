@@ -26,6 +26,6 @@ class FreekassaController extends Controller
 
         $s = md5($merchant_id.':'.$order_amount.':'.$secret_word.':'.$currency.':'.$order_id);
 
-        return 'https://pay.freekassa.ru/?m='.$merchant_id.'&'.$order_amount.'&'.$currency.'&'.$order_id.'&'.$s;
+        return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s;
     }
 }
