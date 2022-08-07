@@ -76,6 +76,31 @@ $(document).ready(function () {
     });
     $('.AJAXFormFK .platItem').click(function (e) {
         e.preventDefault();
-        alert('click');
+        $('.AJAXFormFK').submit();
+    });
+    $('.AJAXFormFK').submit(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('action');
+        let formData = $(this).serialize();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('.popupResponse').fadeIn(500);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
     });
 });
