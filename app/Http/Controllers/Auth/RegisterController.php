@@ -58,7 +58,7 @@ class RegisterController extends Controller
             Mail::to($data['email'])->send(new MailConfirm($code));
         }
         return Validator::make($data, [
-            'mailConfirm' => ['required', 'in:'.session()->get('code')],
+            'mailConfirm' => ['required', 'in:'.session()->get('code').''],
             'login' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'sponsor' => ['string', 'max:255'],
