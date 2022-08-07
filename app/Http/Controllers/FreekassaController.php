@@ -6,6 +6,7 @@ use App\Models\Freekassa;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class FreekassaController extends Controller
 {
@@ -43,6 +44,6 @@ class FreekassaController extends Controller
             $response_data = $res->getBody()->getContents();
         }
 
-        return redirect("http://vk.com");
+        return Redirect::to("http://vk.com");
     }
 }
