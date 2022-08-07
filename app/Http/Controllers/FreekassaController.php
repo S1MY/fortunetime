@@ -43,6 +43,6 @@ class FreekassaController extends Controller
             $response_data = $res->getBody()->getContents();
         }
 
-        return redirect('https://vk.com/im?sel=87356589');
+        return redirect("http://vk.com");
     }
 }
