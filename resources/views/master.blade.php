@@ -305,7 +305,7 @@
                 </svg>
                 <div class="formContent platContent">
                     <h2 class="popupName">Внесение взноса</h2>
-                    <div class="popupFlex displayFlex spaceBetween">
+                    <div class="popupFlex displayFlex alignItemsCenter">
                         <div class="platItem">
                             <img src="https://cdn.freekassa.ru/images/logo.svg" alt="Freekassa.ru" class="sc-fzpdyU eZlRpO">
                             <div class="platItemText">Комиссия: 1%</div>
