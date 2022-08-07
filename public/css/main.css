@@ -22,6 +22,9 @@ p.errors svg{
     width: 15px;
     margin-right: 5px;
 }
+.mailConfirm{
+    display: none;
+}
 #aboutForm p.errors svg{
     width: 20px;
 }
