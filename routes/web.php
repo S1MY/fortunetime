@@ -33,6 +33,8 @@ Route::get('/news', 'App\Http\Controllers\MainController@news')->name('news');
 Route::get('/statistic', 'App\Http\Controllers\MainController@statistic')->name('statistic');
 
 Route::post('/freekassa', 'App\Http\Controllers\MainController@freekassa')->name('freekassa');
+Route::post('/freekassa/payed', 'App\Http\Controllers\MainController@freekassa')->name('freekassa.payed');
+Route::post('/freekassa/fail', 'App\Http\Controllers\MainController@freekassa')->name('freekassa.fail');
 
 /* Documents */
 
