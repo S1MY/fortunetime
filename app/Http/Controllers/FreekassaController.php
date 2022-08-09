@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class FreekassaController extends Controller
 {
     public function freekassa(Request $request){
-
         Freekassa::where('id', $request->MERCHANT_ORDER_ID)->update([
             'status' => 1,
         ]);
@@ -32,7 +31,7 @@ class FreekassaController extends Controller
 
         $s = md5($merchant_id.':'.$order_amount.':'.$secret_word.':'.$currency.':'.$order_id);
 
-        return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s.'&us_id='.$userID;
+        return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s;
     }
     public function successful(Request $request){
         dd($request);
