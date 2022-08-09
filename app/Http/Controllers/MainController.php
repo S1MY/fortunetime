@@ -59,10 +59,6 @@ class MainController extends Controller
         return view('pages.statistic');
     }
 
-    public function freekassa(){
-        return true;
-    }
-
     /* Documents */
 
     public function rules(){

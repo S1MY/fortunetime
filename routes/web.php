@@ -32,9 +32,6 @@ Route::get('/news', 'App\Http\Controllers\MainController@news')->name('news');
 
 Route::get('/statistic', 'App\Http\Controllers\MainController@statistic')->name('statistic');
 
-Route::post('/freekassa', 'App\Http\Controllers\MainController@freekassa')->name('freekassa');
-Route::post('/freekassa/payed', 'App\Http\Controllers\MainController@freekassa')->name('freekassa.payed');
-Route::post('/freekassa/fail', 'App\Http\Controllers\MainController@freekassa')->name('freekassa.fail');
 
 /* Documents */
 
@@ -65,4 +62,7 @@ Route::get('/settings', 'App\Http\Controllers\MainController@settings')->name('s
 Route::post('/settings/update-user/{id}', 'App\Http\Controllers\UserController@update')->name('update.user')->middleware('auth');
 
 /* Freekassa */
+Route::post('/freekassa', 'App\Http\Controllers\MainController@freekassa')->name('freekassa');
 Route::post('/freekassa/pay', 'App\Http\Controllers\FreekassaController@pay')->name('freekassa.pay')->middleware('auth');
+Route::post('/freekassa/payed', 'App\Http\Controllers\FreekassaController@successful')->name('freekassa.payed');
+Route::post('/freekassa/fail', 'App\Http\Controllers\FreekassaController@fail')->name('freekassa.fail');

@@ -28,4 +28,7 @@ class FreekassaController extends Controller
 
         return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s;
     }
+    public function successful(Request $request){
+        dd($request);
+    }
 }
