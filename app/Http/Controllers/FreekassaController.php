@@ -32,9 +32,10 @@ class FreekassaController extends Controller
 
         $s = md5($merchant_id.':'.$order_amount.':'.$secret_word.':'.$currency.':'.$order_id);
 
-        return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s;
+        return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s.'&us_id='.$userID;
     }
-    public function successful(){
+    public function successful(Request $request){
+        dd($request);
         return redirect()->route('account');
     }
 }
