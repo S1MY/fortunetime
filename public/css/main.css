@@ -968,7 +968,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     background: #FFFFFF;
     transition: all 0.4s;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .menuLangItem:hover,
 .menuLangItem.active{

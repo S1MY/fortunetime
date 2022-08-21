@@ -32,6 +32,7 @@ Route::get('/news', 'App\Http\Controllers\MainController@news')->name('news');
 
 Route::get('/statistic', 'App\Http\Controllers\MainController@statistic')->name('statistic');
 
+Route::post('/langchange', 'App\Http\Controllers\MainController@langchange')->name('lang');
 
 /* Documents */
 

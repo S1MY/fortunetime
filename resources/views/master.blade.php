@@ -31,27 +31,27 @@
                                     <p class="langActiveName">ru</p>
                                 </div>
                                 <div class="langContent">
-                                    <div class="langItem displayFlex alignItemsCenter spaceBetween">
+                                    <div class="langItem displayFlex alignItemsCenter spaceBetween" data-action="{{ route('lang') }}" data-lang="en">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"/><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"/><path fill="#0052b4" d="M0 0h256v256H0Z"/><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"/></svg>
                                         <p class="langItemName">en</p>
                                     </div>
-                                    <div class="langItem displayFlex alignItemsCenter spaceBetween">
+                                    <div class="langItem displayFlex alignItemsCenter spaceBetween" data-action="{{ route('lang') }}" data-lang="de">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"/><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"/><path fill="#333" d="M0 0h512v167H0z"/></svg>
                                         <p class="langItemName">de</p>
                                     </div>
-                                    <div class="langItem displayFlex alignItemsCenter spaceBetween">
+                                    <div class="langItem displayFlex alignItemsCenter spaceBetween" data-action="{{ route('lang') }}" data-lang="cn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#d80027" d="M0 0h512v512H0z"/><path fill="#ffda44" d="m140.1 155.8 22.1 68h71.5l-57.8 42.1 22.1 68-57.9-42-57.9 42 22.2-68-57.9-42.1H118zm163.4 240.7-16.9-20.8-25 9.7 14.5-22.5-16.9-20.9 25.9 6.9 14.6-22.5 1.4 26.8 26 6.9-25.1 9.6zm33.6-61 8-25.6-21.9-15.5 26.8-.4 7.9-25.6 8.7 25.4 26.8-.3-21.5 16 8.6 25.4-21.9-15.5zm45.3-147.6L370.6 212l19.2 18.7-26.5-3.8-11.8 24-4.6-26.4-26.6-3.8 23.8-12.5-4.6-26.5 19.2 18.7zm-78.2-73-2 26.7 24.9 10.1-26.1 6.4-1.9 26.8-14.1-22.8-26.1 6.4 17.3-20.5-14.2-22.7 24.9 10.1z"/></svg>
                                         <p class="langItemName">cn</p>
                                     </div>
-                                    <div class="langItem displayFlex alignItemsCenter spaceBetween">
+                                    <div class="langItem displayFlex alignItemsCenter spaceBetween" data-action="{{ route('lang') }}" data-lang="kz">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#338af3" d="M0 0h512v512H0z"/><path fill="#ffda44" d="M400.7 258.8H111.3c0 20 17.4 36.2 37.4 36.2h-1.2c0 20 16.2 36.1 36.2 36.1 0 20 16.1 36.2 36.1 36.2h72.4c20 0 36.1-16.2 36.1-36.2 20 0 36.2-16.2 36.2-36.1h-1.2c20 0 37.4-16.2 37.4-36.2z"/><path fill="#338af3" d="M356.2 211.5a100.2 100.2 0 0 1-200.4 0"/><path fill="#ffda44" d="m332.5 211.5-31.3 14.7 16.7 30.3-34-6.5-4.3 34.3L256 259l-23.6 25.3L228 250l-34 6.5 16.6-30.3-31.2-14.7 31.2-14.7-16.6-30.3 34 6.5 4.3-34.3 23.6 25.2 23.6-25.2L284 173l34-6.5-16.6 30.3z"/></svg>
                                         <p class="langItemName">kz</p>
                                     </div>
-                                    <div class="langItem displayFlex alignItemsCenter spaceBetween">
+                                    <div class="langItem displayFlex alignItemsCenter spaceBetween" data-action="{{ route('lang') }}" data-lang="az">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#d80027" d="m0 166.9 253-31.8 259 31.8v178l-257.5 37.4L0 345z"/><path fill="#338af3" d="M0 0h512v166.9H0z"/><path fill="#6da544" d="M0 344.9h512V512H0z"/><g fill="#eee"><path d="M261.6 328.2a72.3 72.3 0 1 1 34.4-136 89 89 0 1 0 0 127.3 72 72 0 0 1-34.4 8.7z"/><path d="m317.2 206 9.6 26.8 25.8-12.3-12.2 25.8 26.9 9.6-27 9.6 12.3 25.8-25.8-12.3-9.6 27-9.6-27-25.8 12.3 12.3-25.8-27-9.6 27-9.6-12.3-25.8 25.8 12.3z"/></g></svg>
                                         <p class="langItemName">az</p>
                                     </div>
-                                    <div class="langItem displayFlex alignItemsCenter spaceBetween">
+                                    <div class="langItem displayFlex alignItemsCenter spaceBetween" data-action="{{ route('lang') }}" data-lang="uz">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#d80027" d="m0 178 254.2-22L512 178v22.3l-40.2 54.1 40.2 57.3V334l-254 23.4L0 334v-22.3l36.7-59.4-36.7-52z"/><path fill="#338af3" d="M0 0h512v178H0z"/><path fill="#eee" d="M0 200.3h512v111.4H0z"/><path fill="#6da544" d="M0 334h512v178H0z"/><path fill="#eee" d="M117.2 105.7a50 50 0 0 1 39.3-48.9 50.2 50.2 0 0 0-10.7-1.1 50 50 0 1 0 10.7 99c-22.5-5-39.3-25-39.3-49zm69 22.8 3.3 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.7 6.4 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.4 10.4-8.8-6.4-9 6.4 3.5-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.8 6.4 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.8 6.4 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.8 6.4 3.4-10.4-8.8-6.5h11zm-105-36.4 3.4 10.4h11l-9 6.5 3.4 10.4-8.8-6.5-9 6.5 3.5-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.5-8.8 6.5 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.5-8.8 6.5 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.5-8.8 6.5 3.4-10.4-8.8-6.5h11zm-70-36.4 3.4 10.4h11l-9 6.4 3.6 10.5-9-6.5-8.8 6.5 3.4-10.5-9-6.4h11zm35 0 3.4 10.4h11l-9 6.4 3.6 10.5-9-6.5-8.8 6.5 3.4-10.5-9-6.4h11zm35 0 3.4 10.4h11l-9 6.4 3.6 10.5-9-6.5-8.8 6.5 3.4-10.5-8.8-6.4h11z"/></svg>
                                         <p class="langItemName">uz</p>
                                     </div>
@@ -296,25 +296,25 @@
                     <path d="M16.6668 3.33325L3.3335 16.6666M16.6668 16.6666L3.3335 3.33325L16.6668 16.6666Z" stroke="#202020" stroke-width="1.66667" stroke-linecap="round"></path>
                 </svg>
                 <div class="menuLang displayFlex">
-                    <a href="/" class="menuLangItem active">
+                    <a href="/" class="menuLangItem active" data-action="{{ route('lang') }}" data-lang="ru">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#0052b4" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"/><path fill="#eee" d="M0 0h512v167H0z"/><path fill="#d80027" d="M0 345h512v167H0z"/></svg>
                     </a>
-                    <a href="/" class="menuLangItem">
+                    <a href="/" class="menuLangItem" data-action="{{ route('lang') }}" data-lang="en">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"/><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"/><path fill="#0052b4" d="M0 0h256v256H0Z"/><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"/></svg>
                     </a>
-                    <a href="/" class="menuLangItem">
+                    <a href="/" class="menuLangItem" data-action="{{ route('lang') }}" data-lang="de">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"/><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"/><path fill="#333" d="M0 0h512v167H0z"/></svg>
                     </a>
-                    <a href="/" class="menuLangItem">
+                    <a href="/" class="menuLangItem" data-action="{{ route('lang') }}" data-lang="cn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#d80027" d="M0 0h512v512H0z"/><path fill="#ffda44" d="m140.1 155.8 22.1 68h71.5l-57.8 42.1 22.1 68-57.9-42-57.9 42 22.2-68-57.9-42.1H118zm163.4 240.7-16.9-20.8-25 9.7 14.5-22.5-16.9-20.9 25.9 6.9 14.6-22.5 1.4 26.8 26 6.9-25.1 9.6zm33.6-61 8-25.6-21.9-15.5 26.8-.4 7.9-25.6 8.7 25.4 26.8-.3-21.5 16 8.6 25.4-21.9-15.5zm45.3-147.6L370.6 212l19.2 18.7-26.5-3.8-11.8 24-4.6-26.4-26.6-3.8 23.8-12.5-4.6-26.5 19.2 18.7zm-78.2-73-2 26.7 24.9 10.1-26.1 6.4-1.9 26.8-14.1-22.8-26.1 6.4 17.3-20.5-14.2-22.7 24.9 10.1z"/></svg>
                     </a>
-                    <a href="/" class="menuLangItem">
+                    <a href="/" class="menuLangItem" data-action="{{ route('lang') }}" data-lang="kz">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#338af3" d="M0 0h512v512H0z"/><path fill="#ffda44" d="M400.7 258.8H111.3c0 20 17.4 36.2 37.4 36.2h-1.2c0 20 16.2 36.1 36.2 36.1 0 20 16.1 36.2 36.1 36.2h72.4c20 0 36.1-16.2 36.1-36.2 20 0 36.2-16.2 36.2-36.1h-1.2c20 0 37.4-16.2 37.4-36.2z"/><path fill="#338af3" d="M356.2 211.5a100.2 100.2 0 0 1-200.4 0"/><path fill="#ffda44" d="m332.5 211.5-31.3 14.7 16.7 30.3-34-6.5-4.3 34.3L256 259l-23.6 25.3L228 250l-34 6.5 16.6-30.3-31.2-14.7 31.2-14.7-16.6-30.3 34 6.5 4.3-34.3 23.6 25.2 23.6-25.2L284 173l34-6.5-16.6 30.3z"/></svg>
                     </a>
-                    <a href="/" class="menuLangItem">
+                    <a href="/" class="menuLangItem" data-action="{{ route('lang') }}" data-lang="az">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#d80027" d="m0 166.9 253-31.8 259 31.8v178l-257.5 37.4L0 345z"/><path fill="#338af3" d="M0 0h512v166.9H0z"/><path fill="#6da544" d="M0 344.9h512V512H0z"/><g fill="#eee"><path d="M261.6 328.2a72.3 72.3 0 1 1 34.4-136 89 89 0 1 0 0 127.3 72 72 0 0 1-34.4 8.7z"/><path d="m317.2 206 9.6 26.8 25.8-12.3-12.2 25.8 26.9 9.6-27 9.6 12.3 25.8-25.8-12.3-9.6 27-9.6-27-25.8 12.3 12.3-25.8-27-9.6 27-9.6-12.3-25.8 25.8 12.3z"/></g></svg>
                     </a>
-                    <a href="/" class="menuLangItem">
+                    <a href="/" class="menuLangItem" data-action="{{ route('lang') }}" data-lang="uz">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="border-radius:50%" viewBox="0 0 512 512"><path fill="#d80027" d="m0 178 254.2-22L512 178v22.3l-40.2 54.1 40.2 57.3V334l-254 23.4L0 334v-22.3l36.7-59.4-36.7-52z"/><path fill="#338af3" d="M0 0h512v178H0z"/><path fill="#eee" d="M0 200.3h512v111.4H0z"/><path fill="#6da544" d="M0 334h512v178H0z"/><path fill="#eee" d="M117.2 105.7a50 50 0 0 1 39.3-48.9 50.2 50.2 0 0 0-10.7-1.1 50 50 0 1 0 10.7 99c-22.5-5-39.3-25-39.3-49zm69 22.8 3.3 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.7 6.4 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.4 10.4-8.8-6.4-9 6.4 3.5-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.8 6.4 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.8 6.4 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.4-8.8 6.4 3.4-10.4-8.8-6.5h11zm-105-36.4 3.4 10.4h11l-9 6.5 3.4 10.4-8.8-6.5-9 6.5 3.5-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.5-8.8 6.5 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.5-8.8 6.5 3.4-10.4-9-6.5h11zm35 0 3.4 10.4h11l-9 6.5 3.5 10.4-9-6.5-8.8 6.5 3.4-10.4-8.8-6.5h11zm-70-36.4 3.4 10.4h11l-9 6.4 3.6 10.5-9-6.5-8.8 6.5 3.4-10.5-9-6.4h11zm35 0 3.4 10.4h11l-9 6.4 3.6 10.5-9-6.5-8.8 6.5 3.4-10.5-9-6.4h11zm35 0 3.4 10.4h11l-9 6.4 3.6 10.5-9-6.5-8.8 6.5 3.4-10.5-8.8-6.4h11z"/></svg>
                     </a>
                 </div>

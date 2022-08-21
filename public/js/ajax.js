@@ -78,6 +78,31 @@ $(document).ready(function () {
         e.preventDefault();
         $('.AJAXFormFK').submit();
     });
+
+    $('.langItem').click(function (e){
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('data-action');
+        let formData = $(this).attr('data-lang');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
     $('.AJAXFormFK').submit(function (e) {
         e.preventDefault();
 

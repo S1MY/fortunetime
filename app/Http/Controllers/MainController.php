@@ -59,6 +59,10 @@ class MainController extends Controller
         return view('pages.statistic');
     }
 
+    public function langchange(Request $request){
+        return $request;
+    }
+
     /* Documents */
 
     public function rules(){
