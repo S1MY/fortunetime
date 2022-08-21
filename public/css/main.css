@@ -237,7 +237,7 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     top: 100%;
     margin-top: 5px;
-    width: 120px;
+    width: 80px;
     background: #FFFFFF;
     border-radius: 16px;
     padding: 8px 12px;
