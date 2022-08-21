@@ -40,7 +40,7 @@
                     <p class="standartText">За прохождение всех уровней первой матрицы, Ваш общий доход составит 473 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="2">
-                    <img src="/image/matrix/2.jpg" alt="matrix2" class="matrixImage" href="/image/matrix/2.jpg">
+                    <img src="/image/matrix/2.jpg" alt="matrix2" class="matrixImage" href="/video/2.mp4">
                     <p class="standartText">Стартовый вход в вторую матрицу проекта Фортуна составляет 5000 рублей.</p>
                     <p class="standartText">Вход на вторую матрицу уже Вами оплачен от дохода за второй уровень первой матрицы.</p>
 
@@ -70,7 +70,7 @@
                     <p class="standartText">За прохождение всех уровней второй матрицы, Ваш общий доход составит 2 470 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="3">
-                    <img src="/image/matrix/3.jpg" alt="matrix3" class="matrixImage" href="/image/matrix/3.jpg">
+                    <img src="/image/matrix/3.jpg" alt="matrix3" class="matrixImage" href="/video/3.mp4">
                     <p class="standartText">Стартовый вход в третью матрицу проекта Фортуна составляет 10 000 рублей.</p>
                     <p class="standartText">Вход на третью матрицу уже Вами оплачен от дохода за второй уровень второй матрицы.</p>
 
@@ -102,7 +102,7 @@
                     <p class="standartText">За прохождение всех уровней третьей матрицы, Ваш общий доход составит 4 950 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="4">
-                    <img src="/image/matrix/4.jpg" alt="matrix4" class="matrixImage" href="/image/matrix/4.jpg">
+                    <img src="/image/matrix/4.jpg" alt="matrix4" class="matrixImage" href="/video/4.mp4">
                     <p class="standartText">Стартовый вход в третью матрицу проекта Фортуна составляет 25 000 рублей.</p>
                     <p class="standartText">Вход на четвёртую матрицу уже Вами оплачен от дохода за второй уровень третьей матрицы</p>
 
@@ -134,7 +134,7 @@
                     <p class="standartText">За прохождение всех уровней четвёртой матрицы, Ваш общий доход составит 12 300 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="5">
-                    <img src="/image/matrix/5.jpg" alt="matrix5" class="matrixImage" href="/image/matrix/5.jpg">
+                    <img src="/image/matrix/5.jpg" alt="matrix5" class="matrixImage" href="/video/5.mp4">
                     <p class="standartText">Стартовый вход в пятую матрицу проекта Фортуна составляет 50 000 рублей.</p>
                     <p class="standartText">Вход на пятую матрицу уже Вами оплачен от дохода за первый уровень четвёртой матрицы.</p>
 
@@ -167,7 +167,7 @@
                     <p class="standartText">За прохождение всех уровней пятой матрицы, Ваш общий доход составит 24 350 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="6">
-                    <img src="/image/matrix/6.jpg" alt="matrix6" class="matrixImage" href="/image/matrix/6.jpg">
+                    <img src="/image/matrix/6.jpg" alt="matrix6" class="matrixImage" href="/video/6.mp4">
                     <p class="standartText">Стартовый вход в шестую матрицу проекта Фортуна составляет 100 000 рублей.</p>
                     <p class="standartText">Вход на шестую матрицу уже Вами оплачен от дохода за первый уровень пятой матрицы.</p>
 
@@ -200,7 +200,7 @@
                     <p class="standartText">За прохождение всех уровней шестой матрицы, Ваш общий доход составит 48 350 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="7">
-                    <img src="/image/matrix/7.jpg" alt="matrix7" class="matrixImage" href="/image/matrix/7.jpg">
+                    <img src="/image/matrix/7.jpg" alt="matrix7" class="matrixImage" href="/video/7.mp4">
                     <p class="standartText">Стартовый вход в седьмую матрицу проекта Фортуна составляет 250 000 рублей.</p>
                     <p class="standartText">Вход на седьмую матрицу уже Вами оплачен от дохода за первый уровень шестой матрицы.</p>
 
@@ -233,7 +233,7 @@
                     <p class="standartText">За прохождение всех уровней седьмой матрицы, Ваш общий доход составит 121 750 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="8">
-                    <img src="/image/matrix/8.jpg" alt="matrix8" class="matrixImage" href="/image/matrix/8.jpg">
+                    <img src="/image/matrix/8.jpg" alt="matrix8" class="matrixImage" href="/video/8.mp4">
                     <p class="standartText">Стартовый вход в восьмую матрицу проекта Фортуна составляет 500 000 рублей.</p>
                     <p class="standartText">Вход на восьмую матрицу уже Вами оплачен от дохода за первый уровень седьмой матрицы.</p>
 
@@ -266,7 +266,7 @@
                     <p class="standartText">За прохождение всех уровней восьмой матрицы, Ваш общий доход составит 243 500 000 рублей.</p>
                 </div>
                 <div class="matrixElement" data-matrix="9">
-                    <img src="/image/matrix/9.jpg" alt="matrix9" class="matrixImage" href="/image/matrix/9.jpg">
+                    <img src="/image/matrix/9.jpg" alt="matrix9" class="matrixImage" href="/video/9.mp4">
                     <p class="standartText">Итак, мы подошли к маркетингу последней девятой матрицы проекта Фортуна. Разберём её. Стартовый вход в девятую матрицу проекта Фортуна составляет 1 000 000 рублей.</p>
                     <p class="standartText">Вход на девятую матрицу уже Вами оплачен от дохода за первый уровень восьмой матрицы.</p>
 
