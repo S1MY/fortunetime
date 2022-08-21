@@ -79,7 +79,7 @@ $(document).ready(function () {
         $('.AJAXFormFK').submit();
     });
 
-    $('.langItem').click(function (e){
+    $('.langItem, .menuLangItem').click(function (e){
         e.preventDefault();
 
         let ajaxurl = $(this).attr('data-action');
@@ -96,10 +96,10 @@ $(document).ready(function () {
             data: {lang: formData},
             dataType: 'json',
             success: function (data) {
-                console.log(data);
+                location.reload();
             },
             error: function (data) {
-                console.log(data);
+                location.reload();
             }
         });
     })
