@@ -150,5 +150,5 @@ $(document).ready(function () {
         $('.popupResponse').fadeOut(500);
 
     });
-    $('.matrixImage').magnificPopup({type:'image'});
+    $('.matrixImage').magnificPopup({type:'iframe'});
 });
