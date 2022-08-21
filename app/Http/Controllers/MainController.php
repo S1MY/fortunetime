@@ -60,7 +60,7 @@ class MainController extends Controller
     }
 
     public function langchange(Request $request){
-        session()->flash('warning', 'В данный момент доступен только Русский язык! Мы работаем над переводом.' );
+        session()->flash('warning', 'Пока что доступен только Русский язык! <br> Мы работаем над переводом.' );
 
         return route('main');
     }
