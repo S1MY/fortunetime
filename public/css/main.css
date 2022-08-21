@@ -1387,7 +1387,7 @@ body::-webkit-scrollbar-thumb {
 }
 /* matrixImage */
 .matrixImage{
-    cursor: zoom-in;
+    cursor: pointer;
     width: 100%;
     filter: drop-shadow(0px 0px 10px rgba(32, 32, 32, 0.16));
     border-radius: 16px;
