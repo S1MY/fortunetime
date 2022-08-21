@@ -19,7 +19,7 @@
                     <div class="matrixTab" data-matrix="9">Матрица#9</div>
                 </div>
                 <div class="matrixElement active" data-matrix="1">
-                    <img src="/image/matrix/1.jpg" alt="matrix1" class="matrixImage" href="/image/matrix/1.jpg">
+                    <img src="/image/matrix/1.jpg" alt="matrix1" class="matrixImage" href="/video/1.mp4">
                     <p class="standartText">Стартовый вход в первую матрицу проекта Фортуна составляет 1000 рублей.</p>
                     <p class="standartText">Матрица имеет семь уровней. За закрытие каждого уровня, Вы получаете вознаграждение. Как только Вы её активировали, Вы встаёте на пик первого уровня матрицы.</p>
                     <p class="standartText">Затем, когда Ваши четыре приглашённых, по Вашей реферальной ссылке, становятся к Вам, параллельно, два в правое плечо и два в левое, Вы получаете на свой кабинет, своё первое вознаграждение в сумме 4000 рублей, которое можете сразу вывести себе на карту.</p>
