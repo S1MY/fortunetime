@@ -6,7 +6,7 @@
     <section class="contactSection">
         <div class="container">
             <div class="contactInner">
-                <h2 class="pageName">О нас</h2>
+                <h2 class="pageName" style="padding-bottom: 10px;">О нас</h2>
                 <video name="media" style="width: 100%;">
                     <source src="https://fortune-time.ru/video/Система.mp4" type="video/mp4">
                 </video>
