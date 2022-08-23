@@ -344,7 +344,7 @@ body::-webkit-scrollbar-thumb {
     text-shadow: 4px 4px 0px rgba(21, 21, 21, 0.5);
     padding-bottom: 35px;
 }
-.matrixElement {
+.imgMtrixWrapper {
     position: relative;
 }
 .matrixElement .heroGuideBtn{
