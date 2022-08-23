@@ -30,7 +30,7 @@ Route::post('/reviews', 'App\Http\Controllers\ReviewsConroller@create')->name('c
 
 Route::get('/news', 'App\Http\Controllers\MainController@news')->name('news');
 
-Route::get('/statistic', 'App\Http\Controllers\MainController@statistic')->name('statistic');
+Route::get('/contacts', 'App\Http\Controllers\MainController@statistic')->name('statistic');
 
 Route::post('/langchange', 'App\Http\Controllers\MainController@langchange')->name('lang');
 
