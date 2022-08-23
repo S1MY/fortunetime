@@ -344,10 +344,13 @@ body::-webkit-scrollbar-thumb {
     text-shadow: 4px 4px 0px rgba(21, 21, 21, 0.5);
     padding-bottom: 35px;
 }
+.matrixElement {
+    position: relative;
+}
 .matrixElement .heroGuideBtn{
     position: absolute;
     left: 50%;
-    top: 350px;
+    top: 365px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -1403,6 +1406,13 @@ body::-webkit-scrollbar-thumb {
     border-radius: 16px;
     margin-top: 25px;
     margin-bottom: 15px;
+}
+.matrixImage:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #202020;
+    opacity: 0.3;
 }
 .matrixTabs{
     display: flex;
