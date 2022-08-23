@@ -344,6 +344,16 @@ body::-webkit-scrollbar-thumb {
     text-shadow: 4px 4px 0px rgba(21, 21, 21, 0.5);
     padding-bottom: 35px;
 }
+.matrixElement .heroGuideBtn{
+    position: absolute;
+    left: 50%;
+    top: 350px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
 .heroGuide:hover .heroGuideBtn{
     background: #4168D2;
 }
