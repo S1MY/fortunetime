@@ -350,12 +350,12 @@ body::-webkit-scrollbar-thumb {
 .matrixElement .heroGuideBtn{
     position: absolute;
     left: 50%;
-    top: 365px;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 .heroGuide:hover .heroGuideBtn{
     background: #4168D2;
