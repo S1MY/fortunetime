@@ -67,7 +67,7 @@
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
                                 <a href="{{ route('news') }}" class="navItem {{ Route::currentRouteName() == 'news' ? 'active' : '' }}">Новости</a>
-                                <a href="{{ route('statistic') }}" class="navItem {{ Route::currentRouteName() == 'statistic' ? 'active' : '' }}">Статистика</a>
+                                <a href="{{ route('statistic') }}" class="navItem {{ Route::currentRouteName() == 'statistic' ? 'active' : '' }}">Контакты</a>
                             </nav>
                             @guest
                                 <a href="/" class="btn popupBtn" data-popup="login">Вход</a>
@@ -143,7 +143,7 @@
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
                                 <a href="{{ route('news') }}" class="navItem {{ Route::currentRouteName() == 'news' ? 'active' : '' }}">Новости</a>
-                                <a href="{{ route('statistic') }}" class="navItem {{ Route::currentRouteName() == 'statistic' ? 'active' : '' }}">Статистика</a>
+                                <a href="{{ route('statistic') }}" class="navItem {{ Route::currentRouteName() == 'statistic' ? 'active' : '' }}">Контакты</a>
                             </nav>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                     <a href="{{ route('faq') }}" class="menuItem">FAQ</a>
                     <a href="{{ route('reviews') }}" class="menuItem">Отзывы</a>
                     <a href="{{ route('news') }}" class="menuItem">Новости</a>
-                    <a href="{{ route('statistic') }}" class="menuItem">Статистика</a>
+                    <a href="{{ route('statistic') }}" class="menuItem">Контакты</a>
                     @guest
                         <a href="/" class="menuItem mobileBtn popupBtn" data-popup="login">Вход</a>
                         <a href="/" class="menuItem mobileBtn popupBtn" data-popup="register">Регистрация</a>
