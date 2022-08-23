@@ -1063,15 +1063,6 @@
             'reference' => '997363fbcce809b1e55f571997d49017f9c623d9',
             'dev_requirement' => true,
         ),
-        'spatie/laravel-honeypot' => array(
-            'pretty_version' => '4.3.1',
-            'version' => '4.3.1.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../spatie/laravel-honeypot',
-            'aliases' => array(),
-            'reference' => '8879f1952c1d8a733f9b9eab439340597bcfb1ac',
-            'dev_requirement' => false,
-        ),
         'spatie/laravel-ignition' => array(
             'pretty_version' => '1.3.1',
             'version' => '1.3.1.0',
@@ -1080,15 +1071,6 @@
             'aliases' => array(),
             'reference' => 'fe37a0eafe6ea040804255c70e9808af13314f87',
             'dev_requirement' => true,
-        ),
-        'spatie/laravel-package-tools' => array(
-            'pretty_version' => '1.12.1',
-            'version' => '1.12.1.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../spatie/laravel-package-tools',
-            'aliases' => array(),
-            'reference' => '09f80fa240d44fafb1c70657c74ee44ffa929357',
-            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v6.0.10',

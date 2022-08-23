@@ -13,7 +13,6 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
-        "spatie/laravel-honeypot": "^4.3",
         "symfony/http-client": "^6.0",
         "symfony/mailgun-mailer": "^6.0"
     },
