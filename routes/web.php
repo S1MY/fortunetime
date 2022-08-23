@@ -42,7 +42,7 @@ Route::get('/personal', 'App\Http\Controllers\MainController@personal')->name('p
 
 /* Mail Contacts */
 
-Route::post('/send-mail', 'App\Http\Controllers\MailSendController@sendMailContact')->name('send')->middleware(ProtectAgainstSpam::class);
+Route::post('/send-mail', 'App\Http\Controllers\MailSendController@sendMailContact')->name('send');
 
 /* Account  */
 
