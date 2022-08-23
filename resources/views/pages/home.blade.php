@@ -194,7 +194,7 @@
             </div>
         </div>
     </section>
-    <section class="statistics">
+    {{-- <section class="statistics">
         <div class="container">
             <h2 class="secTitle">Статистика</h2>
             <div class="statFlex displayFlex spaceCenter">
@@ -264,7 +264,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="answers">
         <div class="container">
             <h2 class="secTitle">Вопросы и ответы</h2>
