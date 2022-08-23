@@ -6,8 +6,8 @@
     <section class="contactSection">
         <div class="container">
             <div class="contactInner displayFlex alignEnd spaceBetween">
-                <video controls="" autoplay="" name="media">
-                    <source src="https://fortune-time.ru/video/1.mp4" type="video/mp4">
+                <video name="media" style="width: 100%;">
+                    <source src="https://fortune-time.ru/video/Система.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
