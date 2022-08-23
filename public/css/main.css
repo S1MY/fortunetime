@@ -385,7 +385,7 @@ body::-webkit-scrollbar-thumb {
 /* donut */
 .donut {
     padding: 70px 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: #FFFFFF;
 }
 
