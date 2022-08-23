@@ -5,8 +5,8 @@
 @section('content')
     <section class="contactSection">
         <div class="container">
-            <h2 class="pageName">О нас</h2>
-            <div class="contactInner displayFlex alignEnd spaceBetween">
+            <div class="contactInner">
+                <h2 class="pageName">О нас</h2>
                 <video name="media" style="width: 100%;">
                     <source src="https://fortune-time.ru/video/Система.mp4" type="video/mp4">
                 </video>
