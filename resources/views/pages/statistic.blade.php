@@ -1,6 +1,6 @@
 @extends('../master')
 
-@section('title', 'Статистика')
+@section('title', 'Контакты')
 
 @section('content')
     <section class="contactSection">
