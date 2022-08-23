@@ -10,12 +10,6 @@
                 <video name="media" autoplay controls style="width: 100%;">
                     <source src="https://fortune-time.ru/video/10.mp4" type="video/mp4">
                 </video>
-            </div>
-        </div>
-    </section>
-    <section class="aboutSection">
-        <div class="container">
-            <div class="contactInner">
                 <div class="aboutFlex displayFlex alignItemsCenter spaceBetween">
                     <div class="aboutFlexL">
                         <p class="standartText">Мы приветствуем Вас на нашем сайте, который посвящён реальному заработку в интернете. Если Вы устали искать надёжные источники дополнительного дохода и хотите зарабатывать в интернете, на постоянной основе, тогда Вы на правильном пути. Мы Вам поможем , рассказав о том, как мы зарабатываем. Вы сможете регулировать свой доход. У Вас появится свободное время и деньги.</p>
