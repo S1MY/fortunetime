@@ -7,7 +7,7 @@
         <div class="container">
             <div class="contactInner">
                 <h2 class="pageName" style="padding-bottom: 10px;">О нас</h2>
-                <video name="media" autoplay style="width: 100%;">
+                <video name="media" autoplay controls style="width: 100%;">
                     <source src="https://fortune-time.ru/video/10.mp4" type="video/mp4">
                 </video>
             </div>
