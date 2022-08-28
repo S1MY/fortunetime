@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/" class="cabinetBigItem popupBtn" data-popup="starter">Начать заработок</a>
+                        <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
