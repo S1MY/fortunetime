@@ -1861,7 +1861,7 @@ img.matrixImage{
     color: #4168D2;
 }
 .automatVideo{
-    width: calc(100% - 340px);
+    width: 100%;
     height: 510px;
 }
 .automatVideo iframe{
