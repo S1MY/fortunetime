@@ -39,9 +39,9 @@ class FreekassaController extends Controller
 
 
 
-        // $user = User::where('id', $fk_order['user_id'])->get();
+        $user = User::where('id', $fk_order['user_id'])->get();
 
-        // dd($user);
+        dd($user);
 
         // Auth::login($user);
 
