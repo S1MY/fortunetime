@@ -35,6 +35,7 @@ class FreekassaController extends Controller
     }
     public function successful(Request $request){
         dd($request);
+
         return redirect()->route('account');
     }
 }
