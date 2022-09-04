@@ -40,6 +40,8 @@ class FreekassaController extends Controller
 
         Auth::login($user);
 
+        session()->flash('success', 'Вы успешно приобрели первый уровень! Добро пожаловать!' );
+
         return redirect()->route('account');
     }
 }
