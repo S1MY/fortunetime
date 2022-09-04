@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Freekassa;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -35,6 +36,12 @@ class FreekassaController extends Controller
     }
     public function successful(Request $request){
         $fk_order = Freekassa::where('id', $request->MERCHANT_ORDER_ID)->get();
+
+        $user = User::where('id', $fk_order->user_id)->get();
+
+        dd($user);
+
+        Auth::login($user);
 
         dd($fk_order);
 
