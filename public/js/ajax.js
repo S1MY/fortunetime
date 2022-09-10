@@ -81,7 +81,7 @@ $(document).ready(function () {
     });
     $('#avatarUpload').submit(function (e) {
         e.preventDefault();
-        let ajaxurl = $(this).attr('data-action');
+        let ajaxurl = $(this).attr('action');
         let formData = $(this).serialize();
 
         $.ajaxSetup({
