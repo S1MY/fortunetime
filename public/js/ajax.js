@@ -89,11 +89,17 @@ $(document).ready(function () {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+        var $input = $(".avatarInput");
+        var fd = new FormData;
+
+        fd.append('img', $input.prop('files')[0]);
+
         $.ajax({
-            type: 'POST',
             url: ajaxurl,
-            data: formData,
-            dataType: 'json',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
             success: function (data) {
                 console.log(data);
             },
