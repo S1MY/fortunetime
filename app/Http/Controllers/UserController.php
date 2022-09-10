@@ -86,6 +86,9 @@ class UserController extends Controller
 
     public function updateAvatar(UsersRequest $request, $id)
     {
+
+        dd($request);
+
         $user = User::where('id', $id)->first();
 
         $path = $request->file('userfile')->store('users/'.$user['login']);

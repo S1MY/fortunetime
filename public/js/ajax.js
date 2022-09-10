@@ -79,29 +79,29 @@ $(document).ready(function () {
         e.preventDefault();
         $('#avatarUpload').submit();
     });
-    // $('#avatarUpload').submit(function (e) {
-    //     e.preventDefault();
-    //     let ajaxurl = $(this).attr('data-action');
-    //     let formData = $(this).serialize();
+    $('#avatarUpload').submit(function (e) {
+        e.preventDefault();
+        let ajaxurl = $(this).attr('data-action');
+        let formData = $(this).serialize();
 
-    //     $.ajaxSetup({
-    //         headers: {
-    //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //         }
-    //     });
-    //     $.ajax({
-    //         type: 'POST',
-    //         url: ajaxurl,
-    //         data: {lang: formData},
-    //         dataType: 'json',
-    //         success: function (data) {
-    //             location.reload();
-    //         },
-    //         error: function (data) {
-    //             location.reload();
-    //         }
-    //     });
-    // });
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: {lang: formData},
+            dataType: 'json',
+            success: function (data) {
+                location.reload();
+            },
+            error: function (data) {
+                location.reload();
+            }
+        });
+    });
 
 
     $('.AJAXFormFK .platItem').click(function (e) {
