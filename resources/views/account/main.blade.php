@@ -13,7 +13,7 @@
                     <div class="cabinetItem">
                         <div class="cabinetTop displayFlex alignItemsCenter">
                             <div class="avatarItem">
-                                <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="">
+                                <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar">
                             </div>
                             <div class="cabinetInfo">
                                 @php
