@@ -1569,6 +1569,16 @@ img.matrixImage{
     max-height: 95px;
     margin-right: 20px;
 }
+.avatarItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
 .cabinetName{
     font-weight: 500;
     font-size: 20px;
@@ -2361,16 +2371,6 @@ img.matrixImage{
         margin: 0;
         margin-bottom: 10px;
     }
-    .avatarItem img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 12px;
-        -webkit-border-radius: 12px;
-        -moz-border-radius: 12px;
-        -ms-border-radius: 12px;
-        -o-border-radius: 12px;
-}
     .cabMenuLink{
         margin-top: 20px;
         font-size: 16px;
