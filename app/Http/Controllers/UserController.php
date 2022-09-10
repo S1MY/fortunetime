@@ -96,6 +96,8 @@ class UserController extends Controller
         UserInfo::where('user_id', $id)->update([
             'avatar' => $path,
         ]);
+
+        return true;
     }
 
     /**
