@@ -1579,6 +1579,17 @@ img.matrixImage{
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
 }
+#avatarUpload img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
 .cabinetName{
     font-weight: 500;
     font-size: 20px;
