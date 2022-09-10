@@ -84,7 +84,7 @@ class UserController extends Controller
         return true;
     }
 
-    public function updateAvatar(UsersRequest $request, $id)
+    public function updateAvatar(Request $request, $id)
     {
 
         dd($request);
