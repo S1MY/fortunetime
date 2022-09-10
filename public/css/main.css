@@ -1569,6 +1569,7 @@ img.matrixImage{
     max-height: 95px;
     margin-right: 20px;
 }
+.userImage img,
 .avatarItem img{
     width: 100%;
     height: 100%;
