@@ -92,7 +92,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: ajaxurl,
-            data: {lang: formData},
+            data: formData,
             dataType: 'json',
             success: function (data) {
                 console.log(data);
