@@ -76,7 +76,9 @@
                             @auth
                                 <div class="userNav">
                                     <div class="userNavWrapper">
-                                        <div class="userImage"></div>
+                                        <div class="userImage">
+                                            <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar">
+                                        </div>
                                         <p class="userNavName">{{ Auth::user()->login }}</p>
                                     </div>
                                     <div class="subMenu">
