@@ -95,10 +95,10 @@ $(document).ready(function () {
             data: {lang: formData},
             dataType: 'json',
             success: function (data) {
-                location.reload();
+                console.log(data);
             },
             error: function (data) {
-                location.reload();
+                console.log(data);
             }
         });
     });
