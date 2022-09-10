@@ -75,10 +75,10 @@ $(document).ready(function () {
 
     });
 
-    // $('.avatarInput').change(function (e) {
-    //     e.preventDefault();
-    //     $('#avatarUpload').submit();
-    // });
+    $('.avatarInput').change(function (e) {
+        e.preventDefault();
+        $('#avatarUpload').submit();
+    });
     // $('#avatarUpload').submit(function (e) {
     //     e.preventDefault();
     //     let ajaxurl = $(this).attr('data-action');
