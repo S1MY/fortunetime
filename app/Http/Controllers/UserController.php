@@ -91,7 +91,7 @@ class UserController extends Controller
 
         $user = User::where('id', $id)->first();
 
-        $path = $request->file('userfile')->store('users');
+        $path = $request->file('img')->store('users');
 
         UserInfo::where('user_id', $id)->update([
             'avatar' => $path,
