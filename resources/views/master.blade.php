@@ -77,7 +77,9 @@
                                 <div class="userNav">
                                     <div class="userNavWrapper">
                                         <div class="userImage">
-                                            <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar">
+                                            @if (Auth::user()->UserInfo->avatar != '')
+                                                <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar">
+                                            @endif
                                         </div>
                                         <p class="userNavName">{{ Auth::user()->login }}</p>
                                     </div>
