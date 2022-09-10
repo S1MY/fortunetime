@@ -87,7 +87,7 @@ class UserController extends Controller
     public function updateAvatar(Request $request, $id)
     {
 
-        dd($request);
+        // dd($request);
 
         $user = User::where('id', $id)->first();
 
