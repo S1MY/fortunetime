@@ -31,7 +31,6 @@
                             </div>
                         </div>
                     </div>
-                    {{ Auth::user()->UserInfo->avatar }}
                     @if ( Auth::user()->UserInfo->account_password == null )
                         <div class="cabinetItem">
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
