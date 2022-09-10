@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UsersRequest;
+use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -81,6 +82,17 @@ class UserController extends Controller
         }
 
         return true;
+    }
+
+    public function updateAvatar(UsersRequest $request, $id)
+    {
+        $user = User::where('id', $id)->first();
+
+        $path = $request->file('userfile')->store('users/'.$user['login']);
+
+        UserInfo::where('user_id', $id)->update([
+            'avatar' => $path,
+        ]);
     }
 
     /**
