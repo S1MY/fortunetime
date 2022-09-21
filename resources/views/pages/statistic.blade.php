@@ -7,7 +7,6 @@
         <div class="container">
             <div class="contactInner displayFlex alignEnd spaceBetween">
                 <form class="contactInnerL AJAXForm" id="aboutForm" method="POST" action="{{ route('send') }}">
-                    {!! htmlFormSnippet() !!}
                     <div class="contactTitle displayFlex alignItemsCenter spaceBetween">
                         <h1 class="pageName">Контакты</h1>
                         <div class="contactFlex displayFlex alignItemsCenter">
