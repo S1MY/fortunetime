@@ -12,6 +12,8 @@ class MailSendController extends Controller
 {
     public function sendMailContact(MailRequest $request){
 
+        dd($request);
+
         if( isNull($request->forwhat) )
         {
             $name = $request->name;
