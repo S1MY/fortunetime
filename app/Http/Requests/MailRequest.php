@@ -27,7 +27,6 @@ class MailRequest extends FormRequest
             'name' => ['required', 'string', 'min:2'],
             'email' => ['required', 'email', 'max:255'],
             'question' => ['required', 'string'],
-            'surname' => ['max:0'],
         ];
     }
 
@@ -36,7 +35,6 @@ class MailRequest extends FormRequest
         return[
             'name.required' => 'Вы не указали ваше имя.',
             'email.required' => 'Вы не указали Email для обратной связи.',
-            'surname.max' => 'Это поле не должно быть заполнено',
             'question.required' => 'Нельзя оставить пустой вопрос.',
             'string' => 'Неподходящий формат вопроса.',
             'min' => 'Минимальное количество символов 2',

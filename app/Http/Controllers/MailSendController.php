@@ -11,7 +11,7 @@ use function PHPUnit\Framework\isNull;
 class MailSendController extends Controller
 {
     public function sendMailContact(MailRequest $request){
-        if( isNull($request->forwhat) )
+        if( $request->surname == '' )
         {
             $name = $request->name;
             $email = $request->email;
