@@ -14,19 +14,19 @@ class MailSendController extends Controller
 
         dd($request);
 
-        if( isNull($request->forwhat) )
-        {
-            $name = $request->name;
-            $email = $request->email;
-            $question = $request->question;
+        // if( isNull($request->forwhat) )
+        // {
+        //     $name = $request->name;
+        //     $email = $request->email;
+        //     $question = $request->question;
 
-            $supportMail = 'S1MY.PJ@yandex.ru';
-            Mail::to($supportMail)->send(new SendMail($name, $email, $question));
-        }else{
-            return 'fucking spammers';
-        }
+        //     $supportMail = 'S1MY.PJ@yandex.ru';
+        //     Mail::to($supportMail)->send(new SendMail($name, $email, $question));
+        // }else{
+        //     return 'fucking spammers';
+        // }
 
-        return true;
+        // return true;
     }
 
 }
