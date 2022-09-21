@@ -35,6 +35,7 @@ $(document).ready(function () {
                 }
             },
             error: function (data) {
+                console.log('error');
                 console.log(data);
                 $('p.errors').remove();
 
