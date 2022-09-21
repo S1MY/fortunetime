@@ -52,10 +52,8 @@ $(document).ready(function () {
                         $('form#'+formController+' input[name="'+key+'"]').next().after('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
                 }else if( formController == 'aboutForm' ){
-                    $('form#'+formController+' input.error').removeClass('error');
-                    $.each(data.responseJSON.errors, function(key, value) {
-                        $('form#'+formController+' .contactText').append('<p class="errors">'+errorSvg+''+value+'</p>');
-                    });
+                    $('#aboutForm')[0].reset();
+                    $('.popupResponse').fadeIn(500);
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
