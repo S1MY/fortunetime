@@ -88,7 +88,10 @@
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="8">М#8</div>
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
-                {{ $matrix->id }}
+                @if ( $matrix->id != null )
+{{ $matrix->id }}
+                @endif
+
                 <div class="matrixElement active" data-matrix="1">
                     <div class="cabMatrixElement active">
                         <h3 class="cabMatrixName">Партнеры первого уровня <span>(3)</span></h3>
