@@ -89,7 +89,13 @@
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
                 @if ( $matrix != null )
-{{ $matrix->id }}
+                    @if ($matrix->matrix_id != null)
+                        У вас есть пользователи
+                    @else
+                        У вас нет пользователей
+                    @endif
+                @else
+
                 @endif
 
                 <div class="matrixElement active" data-matrix="1">
