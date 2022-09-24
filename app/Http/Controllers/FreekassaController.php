@@ -46,7 +46,7 @@ class FreekassaController extends Controller
     }
     public function successful(Request $request){
 
-        dd($_SERVER['REMOTE_ADDR']);
+        dd($request);
 
         $fk_order = Freekassa::where('id', $request->MERCHANT_ORDER_ID)->first();
         $user = User::where('id', $fk_order['user_id'])->first();
