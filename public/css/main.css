@@ -1816,6 +1816,7 @@ img.matrixImage{
     width: calc((100% - 160px) / 9) !important;
 }
 .matrixTab.disabled{
+    opacity: 0.6;
     cursor: default;
 }
 .popupFlex{
