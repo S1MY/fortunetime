@@ -77,16 +77,27 @@
                         <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
                     </div>
                 </div>
+
+                @if ( $matrix != null )
+                    @php
+                        $disabled = '';
+                    @endphp
+                @else
+                    @php
+                        $disabled = ' disabled';
+                    @endphp
+                @endif
+
                 <div class="matrixTabs cabinetTabs">
                     <div class="matrixTab active" data-matrix="1">М#1</div>
-                    <div class="matrixTab" title="Матрица не активна" data-matrix="2">М#2</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="3">М#3</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="4">М#4</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="5">М#5</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="6">М#6</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="7">М#7</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="8">М#8</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="9">М#9</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2">М#2</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="3">М#3</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="4">М#4</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="5">М#5</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="6">М#6</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="7">М#7</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8">М#8</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
