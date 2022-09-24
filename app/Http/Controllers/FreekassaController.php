@@ -11,6 +11,7 @@ class FreekassaController extends Controller
 {
     public function freekassa(Request $request){
         Freekassa::where('id', $request->MERCHANT_ORDER_ID)->update([
+            'remoteADDR' => $_SERVER['REMOTE_ADDR'],
             'status' => 1,
         ]);
     }

@@ -11,8 +11,8 @@ use function PHPUnit\Framework\isNull;
 class MailSendController extends Controller
 {
     public function sendMailContact(MailRequest $request){
-        if( $request->surname == '' )
-        {
+
+        if( $request->surname == '' ){
             $name = $request->name;
             $email = $request->email;
             $question = $request->question;
@@ -24,6 +24,7 @@ class MailSendController extends Controller
         }
 
         return true;
+
     }
 
 }

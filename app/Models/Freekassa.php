@@ -13,5 +13,6 @@ class Freekassa extends Model
         'user_id',
         'status',
         'amount',
+        'remoteADDR',
     ];
 }
