@@ -88,7 +88,7 @@
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="8">М#8</div>
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
-                @if ( $matrix->id != null )
+                @if ( $matrix != null )
 {{ $matrix->id }}
                 @endif
 
