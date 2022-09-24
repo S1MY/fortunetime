@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\UserInfo;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
@@ -78,7 +79,10 @@ class MainController extends Controller
     /* Account */
 
     public function account(){
-        return view('account.main');
+
+        $marix = DB::table('matrix')->where('user_id', Auth::user()->id)->first();
+
+        return view('account.main', compact('matrix'));
     }
 
     public function start(){
