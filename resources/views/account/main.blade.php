@@ -92,7 +92,12 @@
                     @if ($matrix->matrix_id != null)
                         У вас есть пользователи
                     @else
-                        У вас нет пользователей
+                    <div class="matrixElement active" data-matrix="1">
+                        <div class="cabMatrixElement active">
+                            <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
+                            <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте заработок!</p>
+                        </div>
+                    </div>
                     @endif
                 @else
 
