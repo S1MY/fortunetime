@@ -51,7 +51,9 @@ class FreekassaController extends Controller
 
         Auth::login($user);
 
-        session()->flash('success', 'Ваш баланс успешно пополнен!' );
+        // Какой уровень активен
+
+        session()->flash('success', 'Вы успешно активировалли первый уровень матрицы! На вашу почту была отправленна система!' );
 
         return redirect()->route('account');
     }
