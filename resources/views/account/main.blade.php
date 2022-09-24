@@ -108,7 +108,7 @@
                     </div>
                 @endif
 
-                <div class="matrixElement active" data-matrix="1">
+                {{-- <div class="matrixElement active" data-matrix="1">
                     <div class="cabMatrixElement active">
                         <h3 class="cabMatrixName">Партнеры первого уровня <span>(3)</span></h3>
                         <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
