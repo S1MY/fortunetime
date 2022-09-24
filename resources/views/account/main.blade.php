@@ -92,15 +92,20 @@
                     @if ($matrix->matrix_id != null)
                         У вас есть пользователи
                     @else
-                    <div class="matrixElement active" data-matrix="1">
-                        <div class="cabMatrixElement active">
-                            <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
-                            <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте заработок!</p>
+                        <div class="matrixElement active" data-matrix="1">
+                            <div class="cabMatrixElement active">
+                                <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
+                                <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте заработок!</p>
+                            </div>
                         </div>
-                    </div>
                     @endif
                 @else
-
+                    <div class="matrixElement active" data-matrix="1">
+                        <div class="cabMatrixElement active">
+                            <h3 class="cabMatrixName">Вы ещё не активировали Ваш кабинет!</h3>
+                            <p class="cabMatrixDesc">Пополните первый уровень матрицы для начала заработка!</p>
+                        </div>
+                    </div>
                 @endif
 
                 <div class="matrixElement active" data-matrix="1">
