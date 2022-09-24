@@ -79,7 +79,7 @@
                 </div>
                 <div class="matrixTabs cabinetTabs">
                     <div class="matrixTab active" data-matrix="1">М#1</div>
-                    <div class="matrixTab disabled" title="Матрица не активна" data-matrix="2">М#2</div>
+                    <div class="matrixTab active" title="Матрица не активна" data-matrix="2">М#2</div>
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="3">М#3</div>
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="4">М#4</div>
                     <div class="matrixTab disabled" title="Матрица не активна" data-matrix="5">М#5</div>
@@ -90,22 +90,24 @@
                 </div>
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
-                        У вас есть пользователи
+                        {{-- Если у пользователя кто-то запустил матрицу --}}
                     @else
-                        <div class="matrixElement active" data-matrix="1">
-                            <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
-                                <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте заработок!</p>
-                            </div>
+                        {{-- Если у пользователя нет активных людей в матрице --}}
+                            <div class="matrixElement active" data-matrix="1">
+                                <div class="cabMatrixElement active">
+                                    <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
+                                    <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте зарабатывать!</p>
+                                </div>
                         </div>
                     @endif
                 @else
-                    <div class="matrixElement active" data-matrix="1">
-                        <div class="cabMatrixElement active">
-                            <h3 class="cabMatrixName">Вы ещё не активировали Ваш кабинет!</h3>
-                            <p class="cabMatrixDesc">Пополните первый уровень матрицы для начала заработка!</p>
+                    {{-- Пользователь ещё не пополнился --}}
+                        <div class="matrixElement active" data-matrix="1">
+                            <div class="cabMatrixElement active">
+                                <h3 class="cabMatrixName">Вы ещё не активировали Ваш кабинет!</h3>
+                                <p class="cabMatrixDesc">Пополните первый уровень матрицы для начала заработка!</p>
+                            </div>
                         </div>
-                    </div>
                 @endif
 
                 {{-- <div class="matrixElement active" data-matrix="1">
