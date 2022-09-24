@@ -77,17 +77,6 @@
                         <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
                     </div>
                 </div>
-
-                @if ( $matrix != null )
-                    @php
-                        $disabled = '';
-                    @endphp
-                @else
-                    @php
-                        $disabled = ' disabled';
-                    @endphp
-                @endif
-
                 <div class="matrixTabs cabinetTabs">
                     <div class="matrixTab active" data-matrix="1">М#1</div>
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2">М#2</div>

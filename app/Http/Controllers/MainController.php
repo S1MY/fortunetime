@@ -82,7 +82,12 @@ class MainController extends Controller
 
         $matrix = DB::table('matrix')->where('user_id', Auth::user()->id)->first();
 
-        return view('account.main', compact('matrix'));
+        $disabled = ' disabled';
+        if($matrix != null){
+            $disabled = '';
+        }
+
+        return view('account.main', compact('matrix', 'disabled'));
     }
 
     public function start(){
