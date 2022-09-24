@@ -22,6 +22,7 @@ class FreekassaController extends Controller
             'remoteADDR' => $_SERVER['REMOTE_ADDR'],
             'status' => 1,
         ]);
+
     }
     public function pay(Request $request){
         $userID = Auth::user()->id;
@@ -44,6 +45,9 @@ class FreekassaController extends Controller
         return 'https://pay.freekassa.ru/?m='.$merchant_id.'&oa='.$order_amount.'&currency='.$currency.'&o='.$order_id.'&s='.$s;
     }
     public function successful(Request $request){
+
+        dd($_SERVER['REMOTE_ADDR']);
+
         $fk_order = Freekassa::where('id', $request->MERCHANT_ORDER_ID)->first();
         $user = User::where('id', $fk_order['user_id'])->first();
 
