@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Auth;
 class FreekassaController extends Controller
 {
     public function freekassa(Request $request){
+
+        function getIP() {
+            if(isset($_SERVER['HTTP_X_REAL_IP'])) return $_SERVER['HTTP_X_REAL_IP'];
+            return $_SERVER['REMOTE_ADDR'];
+        }
+
+        if (!in_array(getIP(), array('168.119.157.136', '168.119.60.227', '138.201.88.124', '178.154.197.79'))) die("hacking attempt!");
+
         Freekassa::where('id', $request->MERCHANT_ORDER_ID)->update([
             'remoteADDR' => $_SERVER['REMOTE_ADDR'],
             'status' => 1,
