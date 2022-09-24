@@ -32,7 +32,7 @@ class FreekassaController extends Controller
         $user = User::where('id', $fk_order['user_id'])->first();
 
         DB::table('matrix')->insert([
-            'user_id' => $user['user_id'],
+            'user_id' => $user['id'],
             'matrix_lvl' => 1,
             'matrix_active' => 1
         ]);
