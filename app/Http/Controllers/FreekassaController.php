@@ -105,7 +105,7 @@ class FreekassaController extends Controller
 
                             $checkhalf = $lineChecks / 2;
 
-                            if ( $newPlace < $checkhalf ){
+                            if ( $newPlace <= $checkhalf ){
                                 $shoulder = 0;
                             }else{
                                 $shoulder = 1;
@@ -120,6 +120,7 @@ class FreekassaController extends Controller
                     DB::table('matrix_placers')->insert([
                         'user_id' => $user['id'],
                         'user_place' => $newPlace,
+                        'matrix_id' => $SMartix->matrix_id,
                         'shoulder' => $shoulder,
                         'line' => $line,
                         'created_at' => Carbon::now(),
