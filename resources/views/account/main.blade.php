@@ -99,6 +99,12 @@
                             }else{
                                 $firstLvlCount = 4;
                             }
+
+                            if( $matrixPlayerCounts < 3 ){
+                                $leftfirstCount = $matrixPlayerCounts;
+                                $rightfirstCount = $matrixPlayerCounts - $leftfirstCount;
+                            }
+
                         @endphp
                         <div class="matrixElement active" data-matrix="1">
                             <div class="cabMatrixElement active">
