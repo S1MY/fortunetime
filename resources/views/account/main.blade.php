@@ -112,7 +112,7 @@
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
                                     <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(2)</span></p>
+                                        <p class="cabMatrixItemName">Левое плечо <span>({{ $leftfirstCount  }})</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
                                             @foreach ($matrixInfos as $matrixInfo)
                                                 <div class="matrixLineItem">
@@ -127,7 +127,7 @@
                                         </div>
                                     </div>
                                     <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(1)</span></p>
+                                        <p class="cabMatrixItemName">Правое плечо <span>({{ $rightfirstCount  }})</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
                                             <div class="matrixLineItem">
                                                 <div class="pageUserAvatar"></div>
