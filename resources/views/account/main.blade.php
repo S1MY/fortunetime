@@ -138,7 +138,7 @@
                                                 Правое плечо
                                                 <span>
                                                     @php
-                                                        $rightCount = $lineMatrix->where('shoulder', 0)->count();
+                                                        $rightCount = $lineMatrix->where('shoulder', 1)->count();
                                                     @endphp
                                                     ({{ $rightCount }})
                                                 </span>
