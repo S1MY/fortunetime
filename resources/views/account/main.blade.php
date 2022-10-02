@@ -100,12 +100,11 @@
                                 @php
                                     $activeCabMatrix = '';
                                     $lineMatrix = $matrixInfos->where('line', $i);
-                                    $lineMatrixCounter = $matrixInfos->where('line', $i)->count();
+                                    $lineMatrixCounter = $lineMatrix->count();
 
                                     if( $lineMatrixCounter > 0 ){
                                         $activeCabMatrix = ' active';
                                     }
-                                    dd($lineMatrix);
                                 @endphp
                                 <div class="cabMatrixElement active">
                                     <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
@@ -116,11 +115,7 @@
                                                 Левое плечо
                                                 <span>
                                                     @php
-                                                        $leftCount = $matrixInfos->where([
-                                                                        ['line', '=', $i],
-                                                                        ['shoulder', '=', 0],
-                                                                    ])->first();
-                                                        dd($leftCount);
+                                                        $leftCount = $lineMatrix->where('shoulder', 0)->count();
                                                     @endphp
                                                     ({{ $leftCount }})
                                                 </span>
