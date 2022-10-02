@@ -93,10 +93,11 @@
                         {{-- Если у пользователя кто-то запустил матрицу --}}
 
                         <div class="matrixElement active" data-matrix="1">
-
+                            @php
+                                $neeedly = 2;
+                            @endphp
                             @for ($i = 1; $i <= 9; $i++)
                                 @php
-                                    $neeedly = 2;
                                     $activeCabMatrix = '';
                                     $lineMatrixCounter = $matrixInfos->where('line', $i)->count();
 
