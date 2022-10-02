@@ -121,7 +121,7 @@
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
-                                                @foreach ($matrixInfos as $matrixInfo)
+                                                @foreach ($lineMatrix as $matrixInfo)
                                                     <div class="matrixLineItem">
                                                         <div class="pageUserAvatar"></div>
                                                         <div class="pageTableItemInfo">
