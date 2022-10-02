@@ -31,11 +31,39 @@ class FreekassaController extends Controller
         $fk_order = Freekassa::where('id', $request->MERCHANT_ORDER_ID)->first();
         $user = User::where('id', $fk_order['user_id'])->first();
 
+        $amount = $fk_order['amount'];
+
+        if( $amount == 1000 ){
+            $matrix_lvl = 1;
+        }else if( $amount == 5000 ){
+            $matrix_lvl = 2;
+        }else if( $amount == 10000 ){
+            $matrix_lvl = 3;
+        }else if( $amount == 25000 ){
+            $matrix_lvl = 4;
+        }else if( $amount == 50000 ){
+            $matrix_lvl = 5;
+        }else if( $amount == 100000 ){
+            $matrix_lvl = 6;
+        }else if( $amount == 250000 ){
+            $matrix_lvl = 7;
+        }else if( $amount == 500000 ){
+            $matrix_lvl = 8;
+        }else if( $amount == 1000000 ){
+            $matrix_lvl = 9;
+        }
+
         DB::table('matrix')->insert([
             'user_id' => $user['id'],
-            'matrix_lvl' => 1,
+            'matrix_lvl' => $matrix_lvl,
             'matrix_active' => 1
         ]);
+
+        // Простановка в матрицу партнёра
+
+        if( $user['sponsor'] != 0 ){
+
+        }
 
     }
     public function pay(Request $request){
