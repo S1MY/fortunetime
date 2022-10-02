@@ -96,7 +96,7 @@
                             @php
                                 $neeedly = 2;
                             @endphp
-                            @for ($i = 1; $i < 9; $i++)
+                            @for ($i = 1; $i < 8; $i++)
                                 @php
                                     $activeCabMatrix = '';
                                     $lineMatrix = $matrixInfos->where('line', $i);
@@ -110,8 +110,6 @@
                                         'пятого',
                                         'шестого',
                                         'седьмого',
-                                        'восьмого',
-                                        'девятого',
                                     );
 
                                     if( $lineMatrixCounter > 0 ){
