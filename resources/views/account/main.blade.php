@@ -92,11 +92,17 @@
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
                         @php
-                            print_r($matrixInfos);
+                            $matrixPlayerCounts = $matrixInfos->count();
+
+                            if( $matrixPlayerCounts <= 4 ){
+                                $firstLvlCount = $matrixPlayerCounts;
+                            }else{
+                                $firstLvlCount = 4;
+                            }
                         @endphp
                         <div class="matrixElement active" data-matrix="1">
                             <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Партнеры первого уровня <span>(3)</span></h3>
+                                <h3 class="cabMatrixName">Партнеры первого уровня <span>({{ $firstLvlCount }})</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
                                     <div class="cabMatrixItem">
