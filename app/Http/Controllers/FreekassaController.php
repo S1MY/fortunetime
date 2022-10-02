@@ -98,6 +98,8 @@ class FreekassaController extends Controller
                     DB::table('matrix_placers')->insert([
                         'user_id' => $user['id'],
                         'user_place' => 1,
+                        'shoulder' => 0,
+                        'line' => 1,
                         'created_at' => Carbon::now(),
                         'updated_at' => Carbon::now()
                     ]);
@@ -110,6 +112,10 @@ class FreekassaController extends Controller
 
                     DB::table('matrix')->where('user_id', $user['sponsor'])->update([
                         'matrix_id' => $matrixID,
+                    ]);
+
+                    DB::table('user_infos')->where('user_id', $user['sponsor'])->update([
+                        'balance' => `balance`+$amount,
                     ]);
 
                 }
