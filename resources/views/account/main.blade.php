@@ -99,14 +99,17 @@
                                     <div class="cabMatrixItem">
                                         <p class="cabMatrixItemName">Левое плечо <span>(2)</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
-                                            <div class="matrixLineItem">
-                                                <div class="pageUserAvatar"></div>
-                                                <div class="pageTableItemInfo">
-                                                    <p class="pageTableUsername">Алексашка</p>
-                                                    <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                            @foreach ($matrixInfos as $matrixInfo)
+                                                <div class="matrixLineItem">
+                                                    <div class="pageUserAvatar"></div>
+                                                    <div class="pageTableItemInfo">
+                                                        <p class="pageTableUsername">{{$matrixInfo->login}}</p>
+                                                        <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                    </div>
+                                                    <p class="matrixAddDate">17.04.2022</p>
                                                 </div>
-                                                <p class="matrixAddDate">17.04.2022</p>
-                                            </div>
+                                            @endforeach
+
                                             <div class="matrixLineItem">
                                                 <div class="pageUserAvatar"></div>
                                                 <div class="pageTableItemInfo">
