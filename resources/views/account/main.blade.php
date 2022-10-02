@@ -102,12 +102,24 @@
                                     $lineMatrix = $matrixInfos->where('line', $i);
                                     $lineMatrixCounter = $lineMatrix->count();
 
+                                    $stringI = array(
+                                        'первого',
+                                        'второго',
+                                        'третьего',
+                                        'четвёртого',
+                                        'пятого',
+                                        'шестого',
+                                        'седьмого',
+                                        'восьмого',
+                                        'девятого',
+                                    );
+
                                     if( $lineMatrixCounter > 0 ){
                                         $activeCabMatrix = ' active';
                                     }
                                 @endphp
                                 <div class="cabMatrixElement{{$activeCabMatrix}}">
-                                    <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
+                                    <h3 class="cabMatrixName">Партнеры {{ $stringI[$i-1] }} уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
                                     <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
                                     <div class="matrixFlex displayFlex spaceBetween">
                                         <div class="cabMatrixItem">
