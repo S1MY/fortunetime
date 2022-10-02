@@ -92,21 +92,27 @@
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
                         @php
-                            $matrixPlayerCounts = $matrixInfos->where('user_id', 10)->count();
 
-                            echo $matrixPlayerCounts;
+                            $matrix1PC = $matrixInfos->where('line', 1)->count();
+                            $matrix2PC = $matrixInfos->where('line', 2)->count();
+                            $matrix3PC = $matrixInfos->where('line', 3)->count();
+                            $matrix4PC = $matrixInfos->where('line', 4)->count();
+                            $matrix5PC = $matrixInfos->where('line', 5)->count();
+                            $matrix6PC = $matrixInfos->where('line', 6)->count();
+                            $matrix7PC = $matrixInfos->where('line', 7)->count();
+                            $matrix8PC = $matrixInfos->where('line', 8)->count();
+                            $matrix9PC = $matrixInfos->where('line', 9)->count();
 
                         @endphp
                         <div class="matrixElement active" data-matrix="1">
                             <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Партнеры первого уровня <span>()</span></h3>
+                                <h3 class="cabMatrixName">Партнеры первого уровня <span>({{ $matrix1PC }})</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
                                     <div class="cabMatrixItem">
                                         <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
                                             @foreach ($matrixInfos as $matrixInfo)
-                                                {{ $matrixInfo->where('user_id', 10)->count() }}
                                                 <div class="matrixLineItem">
                                                     <div class="pageUserAvatar"></div>
                                                     <div class="pageTableItemInfo">
