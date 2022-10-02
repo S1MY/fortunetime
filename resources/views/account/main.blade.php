@@ -121,7 +121,10 @@
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
-                                                @foreach ($lineMatrix as $matrixInfo)
+                                                @php
+                                                    $lineLeft = $lineMatrix->where('shoulder', 0);
+                                                @endphp
+                                                @foreach ($lineLeft as $matrixInfo)
                                                     <div class="matrixLineItem">
                                                         <div class="pageUserAvatar"></div>
                                                         <div class="pageTableItemInfo">
@@ -144,14 +147,19 @@
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
-                                                <div class="matrixLineItem">
-                                                    <div class="pageUserAvatar"></div>
-                                                    <div class="pageTableItemInfo">
-                                                        <p class="pageTableUsername">Алексашка</p>
-                                                        <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                @php
+                                                    $lineRight = $lineMatrix->where('shoulder', 1);
+                                                @endphp
+                                                @foreach ($lineRight as $matrixInfo)
+                                                    <div class="matrixLineItem">
+                                                        <div class="pageUserAvatar"></div>
+                                                        <div class="pageTableItemInfo">
+                                                            <p class="pageTableUsername">{{$matrixInfo->login}}</p>
+                                                            <p class="pageTableDate">{{$matrixInfo->email}}</p>
+                                                        </div>
+                                                        <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
                                                     </div>
-                                                    <p class="matrixAddDate">17.04.2022</p>
-                                                </div>
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -160,113 +168,6 @@
                                     $neeedly *= 2;
                                 @endphp
                             @endfor
-
-                            <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Партнеры первого уровня <span>()</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
-                                        <div class="matrixLine displayFlex spaceBetween">
-                                            @foreach ($matrixInfos as $matrixInfo)
-                                                <div class="matrixLineItem">
-                                                    <div class="pageUserAvatar"></div>
-                                                    <div class="pageTableItemInfo">
-                                                        <p class="pageTableUsername">{{$matrixInfo->login}}</p>
-                                                        <p class="pageTableDate">{{$matrixInfo->email}}</p>
-                                                    </div>
-                                                    <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>()</span></p>
-                                        <div class="matrixLine displayFlex spaceBetween">
-                                            <div class="matrixLineItem">
-                                                <div class="pageUserAvatar"></div>
-                                                <div class="pageTableItemInfo">
-                                                    <p class="pageTableUsername">Алексашка</p>
-                                                    <p class="pageTableDate">aleksashka@yandex.ru</p>
-                                                </div>
-                                                <p class="matrixAddDate">17.04.2022</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cabMatrixElement">
-                                <h3 class="cabMatrixName">Партнеры второго уровня <span>(0)</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 4</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cabMatrixElement">
-                                <h3 class="cabMatrixName">Партнеры тртьего уровня <span>(0)</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 8</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cabMatrixElement">
-                                <h3 class="cabMatrixName">Партнеры четвёртого уровня <span>(0)</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 16</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cabMatrixElement">
-                                <h3 class="cabMatrixName">Партнеры пятого уровня <span>(0)</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 32</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cabMatrixElement">
-                                <h3 class="cabMatrixName">Партнеры шестого уровня <span>(0)</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 64</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cabMatrixElement">
-                                <h3 class="cabMatrixName">Партнеры седьмого уровня <span>(0)</span></h3>
-                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 128</p>
-                                <div class="matrixFlex displayFlex spaceBetween">
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
-                                    </div>
-                                    <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     @else
                         {{-- Если у пользователя нет активных людей в матрице --}}
