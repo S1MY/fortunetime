@@ -90,7 +90,7 @@ class MainController extends Controller
                 ['user_id', '=', $user['sponsor']],
                 ['matrix_lvl', '=', $matrix_lvl],
             ])->first();
-            // dd($SMartix);
+            dd($SMartix);
             if( $SMartix ){
 
                 if( $SMartix['matrix_id'] != null ){
