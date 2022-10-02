@@ -106,7 +106,7 @@
                                                         <p class="pageTableUsername">{{$matrixInfo->login}}</p>
                                                         <p class="pageTableDate">{{$matrixInfo->email}}</p>
                                                     </div>
-                                                    <p class="matrixAddDate">{{ date($matrixInfo->created_at, 'YYYY-MM-DD')}}</p>
+                                                    <p class="matrixAddDate">{{ $matrixInfo->created_at->format('Y-m-d') }}</p>
                                                 </div>
                                             @endforeach
 
