@@ -119,11 +119,10 @@
                                     }
 
                                     $neeedly = $neeedly * $i;
-                                    echo $neeedly;
                                 @endphp
                                 <div class="cabMatrixElement active">
-                                    <h3 class="cabMatrixName">Партнеры первого уровня <span>(  )</span></h3>
-                                    <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - </p>
+                                    <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
+                                    <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
                                     <div class="matrixFlex displayFlex spaceBetween">
                                         <div class="cabMatrixItem">
                                             <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
@@ -158,7 +157,7 @@
                             @endfor
 
                             <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Партнеры первого уровня <span>({{  }})</span></h3>
+                                <h3 class="cabMatrixName">Партнеры первого уровня <span>()</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
                                     <div class="cabMatrixItem">
