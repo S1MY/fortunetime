@@ -90,11 +90,15 @@ class MainController extends Controller
 
         $matrixLvL = $matrix->matrix_lvl;
 
-        $matrixInfos = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get()->values();
+        $matrixInfos = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get();
 
         $matrixUsersCount = $matrixInfos->count();
 
-        dd($matrixInfos);
+        foreach($matrixInfos as $matrixInfo){
+            $userEmail = User::where('id', $matrixInfo['user_id'])->first();
+        }
+
+        dd($userEmail);
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos'));
     }
