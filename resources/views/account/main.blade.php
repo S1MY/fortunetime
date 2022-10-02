@@ -99,11 +99,11 @@
                         @endphp
                         <div class="matrixElement active" data-matrix="1">
                             <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Партнеры первого уровня <span>({{ $firstLvlCount }})</span></h3>
+                                <h3 class="cabMatrixName">Партнеры первого уровня <span>()</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
                                     <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Левое плечо <span>({{ $leftfirstCount  }})</span></p>
+                                        <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
                                             @foreach ($matrixInfos as $matrixInfo)
                                                 <div class="matrixLineItem">
@@ -118,7 +118,7 @@
                                         </div>
                                     </div>
                                     <div class="cabMatrixItem">
-                                        <p class="cabMatrixItemName">Правое плечо <span>({{ $rightfirstCount  }})</span></p>
+                                        <p class="cabMatrixItemName">Правое плечо <span>()</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
                                             <div class="matrixLineItem">
                                                 <div class="pageUserAvatar"></div>
