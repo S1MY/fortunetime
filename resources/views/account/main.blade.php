@@ -91,6 +91,7 @@
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
+                        {{ $matrixInfos->count() }}
                         <div class="matrixElement active" data-matrix="1">
                             <div class="cabMatrixElement active">
                                 <h3 class="cabMatrixName">Партнеры первого уровня <span>(3)</span></h3>
@@ -126,7 +127,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="cabMatrixElement active">
+                            <div class="cabMatrixElement">
                                 <h3 class="cabMatrixName">Партнеры второго уровня <span>(0)</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 4</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
