@@ -79,16 +79,51 @@ class FreekassaController extends Controller
 
                     // У спонсора уже есть активная матрица и приглашённые
 
-                    DB::table('matrix')->insert([
+                    $shoulder = 0;
+                    $line = 0;
+
+                    $lastUserInMatrix = DB::table('matrix_placers')->where('matrix_id', $SMartix->matrix_id)->orderByDesc('id')->first();
+
+                    $LUPlace = $lastUserInMatrix->user_place;
+
+                    $newPlace = $LUPlace + 1;
+
+                    $lineChecks = 4;
+
+                    for ($i=0; $i < 8; $i++) {
+                        if( $newPlace <= $lineChecks ){
+                            $line = $i + 1;
+                            break;
+                        }
+                        $lineChecks *= 2;
+                    }
+
+                    $shoulderChecks = 2;
+
+                    for ($i=0; $i < 8; $i++) {
+                        if( $newPlace <= $shoulderChecks ){
+
+                            $checkhalf = $lineChecks / 2;
+
+                            if ( $newPlace < $checkhalf ){
+                                $shoulder = 0;
+                            }else{
+                                $shoulder = 1;
+                            }
+
+                            break;
+
+                        }
+                        $shoulderChecks *= 2;
+                    }
+
+                    DB::table('matrix_placers')->insert([
                         'user_id' => $user['id'],
-                        'matrix_lvl' => $matrix_lvl,
-                        'matrix_active' => 1,
+                        'user_place' => $newPlace,
+                        'shoulder' => $shoulder,
+                        'line' => $line,
                         'created_at' => Carbon::now(),
                         'updated_at' => Carbon::now()
-                    ]);
-
-                    DB::table('matrix')->where('user_id', $user['sponsor'])->update([
-                        'matrix_id' => $_SERVER['REMOTE_ADDR'],
                     ]);
 
                 }else{
