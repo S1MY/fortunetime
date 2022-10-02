@@ -96,7 +96,7 @@ class MainController extends Controller
 
         foreach($matrixInfos as $matrixInfo){
             $userEmail = User::where('id', $matrixInfo->user_id)->first()->email;
-            $matrixInfo->push($userEmail);
+            $matrixInfos->push($userEmail);
         }
 
         dd($matrixInfos);
