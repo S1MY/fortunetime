@@ -91,7 +91,9 @@
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
-                        {{ $matrixInfos->count() }}
+                        @php
+                            print_r($matrixInfos);
+                        @endphp
                         <div class="matrixElement active" data-matrix="1">
                             <div class="cabMatrixElement active">
                                 <h3 class="cabMatrixName">Партнеры первого уровня <span>(3)</span></h3>
