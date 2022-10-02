@@ -88,6 +88,10 @@ class MainController extends Controller
             $disabled = '';
         }
 
+        $matrixPlayers = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get();
+
+        dd($matrixPlayers);
+
         return view('account.main', compact('matrix', 'disabled'));
     }
 
