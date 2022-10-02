@@ -116,6 +116,7 @@ class FreekassaController extends Controller
 
                     DB::table('user_infos')->where('user_id', $user['sponsor'])->update([
                         'balance' => `balance`+$amount,
+                        'earned' => `earned`+$amount,
                     ]);
 
                 }

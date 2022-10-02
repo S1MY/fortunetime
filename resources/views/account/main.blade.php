@@ -92,7 +92,7 @@
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
                         @php
-                            $matrixPlayerCounts = $matrixInfos->count();
+                            $matrixPlayerCounts = $matrixInfos->where('user_id', 10)->count();
 
                             if( $matrixPlayerCounts <= 4 ){
                                 $firstLvlCount = $matrixPlayerCounts;
