@@ -91,6 +91,120 @@
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
+                        <div class="matrixElement" data-matrix="2">
+                            <div class="cabMatrixElement active">
+                                <h3 class="cabMatrixName">Партнеры первого уровня <span>(3)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(2)</span></p>
+                                        <div class="matrixLine displayFlex spaceBetween">
+                                            <div class="matrixLineItem">
+                                                <div class="pageUserAvatar"></div>
+                                                <div class="pageTableItemInfo">
+                                                    <p class="pageTableUsername">Алексашка</p>
+                                                    <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                </div>
+                                                <p class="matrixAddDate">17.04.2022</p>
+                                            </div>
+                                            <div class="matrixLineItem">
+                                                <div class="pageUserAvatar"></div>
+                                                <div class="pageTableItemInfo">
+                                                    <p class="pageTableUsername">Алексашка</p>
+                                                    <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                </div>
+                                                <p class="matrixAddDate">17.04.2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(1)</span></p>
+                                        <div class="matrixLine displayFlex spaceBetween">
+                                            <div class="matrixLineItem">
+                                                <div class="pageUserAvatar"></div>
+                                                <div class="pageTableItemInfo">
+                                                    <p class="pageTableUsername">Алексашка</p>
+                                                    <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                </div>
+                                                <p class="matrixAddDate">17.04.2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabMatrixElement">
+                                <h3 class="cabMatrixName">Партнеры второго уровня <span>(0)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 4</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabMatrixElement">
+                                <h3 class="cabMatrixName">Партнеры тртьего уровня <span>(0)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 8</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabMatrixElement">
+                                <h3 class="cabMatrixName">Партнеры четвёртого уровня <span>(0)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 16</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabMatrixElement">
+                                <h3 class="cabMatrixName">Партнеры пятого уровня <span>(0)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 32</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabMatrixElement">
+                                <h3 class="cabMatrixName">Партнеры шестого уровня <span>(0)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 64</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabMatrixElement">
+                                <h3 class="cabMatrixName">Партнеры седьмого уровня <span>(0)</span></h3>
+                                <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 128</p>
+                                <div class="matrixFlex displayFlex spaceBetween">
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Левое плечо <span>(0)</span></p>
+                                    </div>
+                                    <div class="cabMatrixItem">
+                                        <p class="cabMatrixItemName">Правое плечо <span>(0)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @else
                         {{-- Если у пользователя нет активных людей в матрице --}}
                             <div class="matrixElement active" data-matrix="1">
@@ -98,7 +212,7 @@
                                     <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
                                     <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте зарабатывать!</p>
                                 </div>
-                        </div>
+                            </div>
                     @endif
                 @else
                     {{-- Пользователь ещё не пополнился --}}
