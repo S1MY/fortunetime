@@ -117,7 +117,7 @@
                                                         $leftCount = $matrixInfos->where([
                                                                         ['line', '=', $i],
                                                                         ['shoulder', '=', 0],
-                                                                    ])->count();
+                                                                    ])->first();
                                                         dd($leftCount);
                                                     @endphp
                                                     ({{ $leftCount }})
