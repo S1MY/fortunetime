@@ -94,11 +94,6 @@ class MainController extends Controller
 
         $matrixUsersCount = $matrixInfos->count();
 
-        // $matrixInfos = $matrixInfos->values()->all();
-
-        for ($i=0; $i < $matrixUsersCount ; $i++) {
-            array_push($matrixInfos[$i], 'сюда');
-        }
         dd($matrixInfos);
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos'));
