@@ -94,11 +94,6 @@ class MainController extends Controller
 
         $matrixUsersCount = $matrixInfos->count();
 
-        foreach($matrixInfos as $matrixInfo){
-            $userEmail = User::where('id', $matrixInfo->user_id)->first()->email;
-            $matrixInfos->push($userEmail);
-        }
-
         dd($matrixInfos);
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos'));
