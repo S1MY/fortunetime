@@ -99,11 +99,13 @@
                             @for ($i = 1; $i < 9; $i++)
                                 @php
                                     $activeCabMatrix = '';
+                                    $lineMatrix = $matrixInfos->where('line', $i);
                                     $lineMatrixCounter = $matrixInfos->where('line', $i)->count();
 
                                     if( $lineMatrixCounter > 0 ){
                                         $activeCabMatrix = ' active';
                                     }
+                                    dd($lineMatrix);
                                 @endphp
                                 <div class="cabMatrixElement active">
                                     <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
