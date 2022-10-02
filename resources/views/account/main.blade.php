@@ -96,7 +96,7 @@
                             @php
                                 $neeedly = 2;
                             @endphp
-                            @for ($i = 1; $i <= 9; $i++)
+                            @for ($i = 1; $i < 9; $i++)
                                 @php
                                     $activeCabMatrix = '';
                                     $lineMatrixCounter = $matrixInfos->where('line', $i)->count();
