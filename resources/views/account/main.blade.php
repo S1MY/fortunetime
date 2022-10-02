@@ -91,26 +91,12 @@
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
-                        @php
-
-                            $matrix1PC = $matrixInfos->where('line', 1)->count();
-                            $matrix2PC = $matrixInfos->where('line', 2)->count();
-                            $matrix3PC = $matrixInfos->where('line', 3)->count();
-                            $matrix4PC = $matrixInfos->where('line', 4)->count();
-                            $matrix5PC = $matrixInfos->where('line', 5)->count();
-                            $matrix6PC = $matrixInfos->where('line', 6)->count();
-                            $matrix7PC = $matrixInfos->where('line', 7)->count();
-                            $matrix8PC = $matrixInfos->where('line', 8)->count();
-                            $matrix9PC = $matrixInfos->where('line', 9)->count();
-
-                        @endphp
-
-
 
                         <div class="matrixElement active" data-matrix="1">
 
                             @for ($i = 1; $i <= 9; $i++)
                                 @php
+                                    $neeedly = 2;
                                     $activeCabMatrix = '';
                                     $lineMatrixCounter = $matrixInfos->where('line', $i)->count();
 
