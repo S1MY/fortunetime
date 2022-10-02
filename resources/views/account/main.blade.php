@@ -104,9 +104,9 @@
                                                     <div class="pageUserAvatar"></div>
                                                     <div class="pageTableItemInfo">
                                                         <p class="pageTableUsername">{{$matrixInfo->login}}</p>
-                                                        <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                        <p class="pageTableDate">{{$matrixInfo->email}}</p>
                                                     </div>
-                                                    <p class="matrixAddDate">17.04.2022</p>
+                                                    <p class="matrixAddDate">{{$matrixInfo->created_at}}</p>
                                                 </div>
                                             @endforeach
 
