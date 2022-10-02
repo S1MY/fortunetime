@@ -92,9 +92,16 @@ class MainController extends Controller
 
         $matrixInfos = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get();
 
+        $matrixInfos->toArray();
+
+        dd($matrixInfos);
+
         $matrixUsersCount = $matrixInfos->count();
 
-        dd($matrixUsersCount);
+        // for ($i=0; $i < $matrixUsersCount ; $i++) {
+        //     array_push($matrixInfos[$i], 'сюда');
+        // }
+        // dd($matrixUsersCount);
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos'));
     }
