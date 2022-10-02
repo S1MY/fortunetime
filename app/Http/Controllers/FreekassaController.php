@@ -122,7 +122,7 @@ class FreekassaController extends Controller
 
                         if( $newPlace <= $shoulderChecks ){
 
-                            if ( $newPlace <= $lineChecks ){
+                            if ( $newPlace <= $lineCChecks ){
                                 $shoulder = 0;
                             }else{
                                 $shoulder = 1;
