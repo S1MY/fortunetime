@@ -109,15 +109,6 @@
                                                     <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
                                                 </div>
                                             @endforeach
-
-                                            <div class="matrixLineItem">
-                                                <div class="pageUserAvatar"></div>
-                                                <div class="pageTableItemInfo">
-                                                    <p class="pageTableUsername">Алексашка</p>
-                                                    <p class="pageTableDate">aleksashka@yandex.ru</p>
-                                                </div>
-                                                <p class="matrixAddDate">17.04.2022</p>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="cabMatrixItem">
@@ -135,7 +126,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="cabMatrixElement">
+                            <div class="cabMatrixElement active">
                                 <h3 class="cabMatrixName">Партнеры второго уровня <span>(0)</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 4</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
