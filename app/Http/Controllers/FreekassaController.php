@@ -90,17 +90,36 @@ class FreekassaController extends Controller
 
                     $lineChecks = 4;
 
+                    $lineChecks2 = 4;
+
                     for ($i=0; $i < 8; $i++) {
-                        if( $newPlace <= $lineChecks ){
+
+                        if( $i > 0 ){
+                            $lineCChecks = $lineChecks + $lineChecks2;
+                        }else{
+                            $lineCChecks = $lineChecks;
+                        }
+
+                        if( $newPlace <= $lineCChecks ){
                             $line = $i + 1;
                             break;
                         }
+
+                        $lineChecks2 = $lineChecks;
+
                         $lineChecks *= 2;
                     }
 
                     $shoulderChecks = 2;
 
                     for ($i=0; $i < 8; $i++) {
+
+                        if( $i > 0 ){
+                            $lineCChecks = $lineChecks + $lineChecks2;
+                        }else{
+                            $lineCChecks = $lineChecks;
+                        }
+
                         if( $newPlace <= $shoulderChecks ){
 
                             if ( $newPlace <= $lineChecks ){
