@@ -90,9 +90,7 @@ class MainController extends Controller
 
         $matrixLvL = $matrix->matrix_lvl;
 
-        $matrixInfos = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get();
-
-        $matrixInfos->toArray();
+        $matrixInfos = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get()->values()->all();
 
         dd($matrixInfos);
 
