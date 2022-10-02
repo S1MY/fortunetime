@@ -106,6 +106,7 @@
                                         <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
                                         <div class="matrixLine displayFlex spaceBetween">
                                             @foreach ($matrixInfos as $matrixInfo)
+                                                {{ $matrixInfo->where('user_id', 10)->count() }}
                                                 <div class="matrixLineItem">
                                                     <div class="pageUserAvatar"></div>
                                                     <div class="pageTableItemInfo">
