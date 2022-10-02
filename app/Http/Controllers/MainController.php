@@ -98,9 +98,7 @@ class MainController extends Controller
 
         $matrixUsersCount = $matrixInfos->count();
 
-        dd($matrixInfos);
-
-        return view('account.main', compact('matrix', 'disabled', 'matrixInfos'));
+        return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
 
     public function start(){
