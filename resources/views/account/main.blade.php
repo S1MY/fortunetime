@@ -106,7 +106,7 @@
                                         $activeCabMatrix = ' active';
                                     }
                                 @endphp
-                                <div class="cabMatrixElement active">
+                                <div class="cabMatrixElement{{$activeCabMatrix}}">
                                     <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
                                     <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
                                     <div class="matrixFlex displayFlex spaceBetween">
