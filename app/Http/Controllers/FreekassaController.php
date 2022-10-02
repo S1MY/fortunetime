@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Freekassa;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -57,7 +58,7 @@ class FreekassaController extends Controller
             'user_id' => $user['id'],
             'matrix_lvl' => $matrix_lvl,
             'matrix_active' => 1,
-            'created_at' => time()
+            'created_at' => Carbon::now()
         ]);
 
         // Простановка в матрицу партнёра
