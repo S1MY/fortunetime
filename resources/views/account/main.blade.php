@@ -118,9 +118,9 @@
                                                                         ['line', '=', $i],
                                                                         ['shoulder', '=', 0],
                                                                     ])->count();
-                                                        print_r($leftCount);
+                                                        dd($leftCount);
                                                     @endphp
-                                                    {{-- ({{ $leftCount }}) --}}
+                                                    ({{ $leftCount }})
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
@@ -141,10 +141,10 @@
                                                 Правое плечо
                                                 <span>
 
-                                                    {{-- ({{ $matrixInfos->where([
+                                                    ({{ $matrixInfos->where([
                                                         ['line', '=', $i],
                                                         ['shoulder', '=', 1],
-                                                    ])->count() }}) --}}
+                                                    ])->count() }})
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
