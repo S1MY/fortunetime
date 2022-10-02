@@ -119,6 +119,7 @@
                                     }
 
                                     $neeedly = $neeedly * $i;
+                                    $i = 10;
                                 @endphp
                                 <div class="cabMatrixElement active">
                                     <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
