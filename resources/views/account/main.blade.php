@@ -113,10 +113,13 @@
                                             <p class="cabMatrixItemName">
                                                 Левое плечо
                                                 <span>
-                                                    ({{ $matrixInfos->where([
-                                                        ['line', '=', $i],
-                                                        ['shoulder', '=', 0],
-                                                    ])->count() }})
+                                                    @php
+                                                        $leftCount = $matrixInfos->where([
+                                                                        ['line', '=', $i],
+                                                                        ['shoulder', '=', 0],
+                                                                    ])->count();
+                                                    @endphp
+                                                    ({{ $leftCount }})
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
@@ -136,6 +139,7 @@
                                             <p class="cabMatrixItemName">
                                                 Правое плечо
                                                 <span>
+
                                                     ({{ $matrixInfos->where([
                                                         ['line', '=', $i],
                                                         ['shoulder', '=', 1],
