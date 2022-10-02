@@ -110,7 +110,15 @@
                                     <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
                                     <div class="matrixFlex displayFlex spaceBetween">
                                         <div class="cabMatrixItem">
-                                            <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
+                                            <p class="cabMatrixItemName">
+                                                Левое плечо
+                                                <span>
+                                                    ({{ $matrixInfos->where([
+                                                        ['line', '=', $i],
+                                                        ['shoulder', '=', 0],
+                                                    ])->count() }})
+                                                </span>
+                                            </p>
                                             <div class="matrixLine displayFlex spaceBetween">
                                                 @foreach ($matrixInfos as $matrixInfo)
                                                     <div class="matrixLineItem">
@@ -125,7 +133,15 @@
                                             </div>
                                         </div>
                                         <div class="cabMatrixItem">
-                                            <p class="cabMatrixItemName">Правое плечо <span>()</span></p>
+                                            <p class="cabMatrixItemName">
+                                                Правое плечо
+                                                <span>
+                                                    ({{ $matrixInfos->where([
+                                                        ['line', '=', $i],
+                                                        ['shoulder', '=', 1],
+                                                    ])->count() }})
+                                                </span>
+                                            </p>
                                             <div class="matrixLine displayFlex spaceBetween">
                                                 <div class="matrixLineItem">
                                                     <div class="pageUserAvatar"></div>
