@@ -95,7 +95,7 @@ class MainController extends Controller
         $matrixUsersCount = $matrixInfos->count();
 
         foreach($matrixInfos as $matrixInfo){
-            $userEmail = User::where('id', $matrixInfo['user_id'])->first();
+            $userEmail = User::where('id', $matrixInfo->user_id)->first();
         }
 
         dd($userEmail);
