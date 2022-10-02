@@ -80,57 +80,6 @@ class MainController extends Controller
     /* Account */
 
     public function account(){
-        $user = User::where('id', 10)->first();
-        $matrix_lvl = 1;
-        if( $user['sponsor'] != 0 ){
-
-            // Проверяем активировал ли спонсор свою матрицу
-
-            $SMartix = DB::table('matrix')->where([
-                ['user_id', '=', $user['sponsor']],
-                ['matrix_lvl', '=', $matrix_lvl],
-            ])->first();
-
-            if( $SMartix ){
-
-                if( $SMartix->matrix_id != null ){
-
-                    // У спонсора уже есть активная матрица и приглашённые
-
-                    DB::table('matrix')->insert([
-                        'user_id' => $user['id'],
-                        'matrix_lvl' => $matrix_lvl,
-                        'matrix_active' => 1,
-                        'created_at' => Carbon::now(),
-                        'updated_at' => Carbon::now()
-                    ]);
-
-                    DB::table('matrix')->where('user_id', $user['sponsor'])->update([
-                        'matrix_id' => $_SERVER['REMOTE_ADDR'],
-                    ]);
-
-                }else{
-
-                    // У спонсора уже есть активная матрица, но нет приглашённых ставим первого
-
-                    DB::table('matrix_placers')->insert([
-                        'user_id' => $user['id'],
-                        'user_place' => 1,
-                        'created_at' => Carbon::now(),
-                        'updated_at' => Carbon::now()
-                    ]);
-
-                    $matrixID = DB::getPdo()->lastInsertId();
-
-                    DB::table('matrix')->where('user_id', $user['sponsor'])->update([
-                        'matrix_id' => $matrixID,
-                    ]);
-
-                }
-
-            }
-
-        }
 
         $matrix = DB::table('matrix')->where('user_id', Auth::user()->id)->first();
 

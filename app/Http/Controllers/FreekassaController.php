@@ -75,7 +75,7 @@ class FreekassaController extends Controller
 
             if( $SMartix ){
 
-                if( $SMartix['matrix_id'] != null ){
+                if( $SMartix->matrix_id != null ){
 
                     // У спонсора уже есть активная матрица и приглашённые
 
@@ -103,6 +103,10 @@ class FreekassaController extends Controller
                     ]);
 
                     $matrixID = DB::getPdo()->lastInsertId();
+
+                    DB::table('matrix_placers')->where('id', DB::getPdo()->lastInsertId())->update([
+                        'matrix_id' => DB::getPdo()->lastInsertId(),
+                    ]);
 
                     DB::table('matrix')->where('user_id', $user['sponsor'])->update([
                         'matrix_id' => $matrixID,
