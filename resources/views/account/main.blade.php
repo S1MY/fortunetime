@@ -94,16 +94,7 @@
                         @php
                             $matrixPlayerCounts = $matrixInfos->where('user_id', 10)->count();
 
-                            if( $matrixPlayerCounts <= 4 ){
-                                $firstLvlCount = $matrixPlayerCounts;
-                            }else{
-                                $firstLvlCount = 4;
-                            }
-
-                            if( $matrixPlayerCounts < 3 ){
-                                $leftfirstCount = $matrixPlayerCounts;
-                                $rightfirstCount = $matrixPlayerCounts - $leftfirstCount;
-                            }
+                            echo $matrixPlayerCounts;
 
                         @endphp
                         <div class="matrixElement active" data-matrix="1">
