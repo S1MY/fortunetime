@@ -90,7 +90,10 @@ class MainController extends Controller
 
         $matrixLvL = $matrix->matrix_lvl;
 
-        $matrixInfos = DB::table('matrix_placers')->where('matrix_id', $matrix->matrix_id)->get();
+        $matrixInfos = DB::table('users')
+                        ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                        ->where('matrix_placers.matrix_id', $matrix->matrix_id)
+                        ->get();
 
         $matrixUsersCount = $matrixInfos->count();
 
