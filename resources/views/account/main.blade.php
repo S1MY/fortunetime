@@ -106,7 +106,7 @@
                                                         <p class="pageTableUsername">{{$matrixInfo->login}}</p>
                                                         <p class="pageTableDate">{{$matrixInfo->email}}</p>
                                                     </div>
-                                                    <p class="matrixAddDate">{{\Carbon\Carbon::createFromFormat('created_at', 'd/m/Y')->toDateTimeString()}}</p>
+                                                    <p class="matrixAddDate">{{ date($matrixInfo->created_at, 'YYYY-MM-DD')}}</p>
                                                 </div>
                                             @endforeach
 
