@@ -90,10 +90,10 @@ class MainController extends Controller
                 ['user_id', '=', $user['sponsor']],
                 ['matrix_lvl', '=', $matrix_lvl],
             ])->first();
-            dd($SMartix->matrix_id);
+
             if( $SMartix ){
 
-                if( $SMartix['matrix_id'] != null ){
+                if( $SMartix->matrix_id != null ){
 
                     // У спонсора уже есть активная матрица и приглашённые
 
