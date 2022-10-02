@@ -118,8 +118,9 @@
                                                                         ['line', '=', $i],
                                                                         ['shoulder', '=', 0],
                                                                     ])->count();
+                                                        echo $leftCount;
                                                     @endphp
-                                                    ({{ $leftCount }})
+                                                    {{-- ({{ $leftCount }}) --}}
                                                 </span>
                                             </p>
                                             <div class="matrixLine displayFlex spaceBetween">
