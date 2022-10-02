@@ -104,8 +104,6 @@
                                     if( $lineMatrixCounter > 0 ){
                                         $activeCabMatrix = ' active';
                                     }
-
-                                    $neeedly *= 2;
                                 @endphp
                                 <div class="cabMatrixElement active">
                                     <h3 class="cabMatrixName">Партнеры первого уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
@@ -141,6 +139,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                @php
+                                    $neeedly *= 2;
+                                @endphp
                             @endfor
 
                             <div class="cabMatrixElement active">
