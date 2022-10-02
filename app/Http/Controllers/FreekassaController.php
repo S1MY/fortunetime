@@ -56,7 +56,8 @@ class FreekassaController extends Controller
         DB::table('matrix')->insert([
             'user_id' => $user['id'],
             'matrix_lvl' => $matrix_lvl,
-            'matrix_active' => 1
+            'matrix_active' => 1,
+            'created_at' => time()
         ]);
 
         // Простановка в матрицу партнёра
