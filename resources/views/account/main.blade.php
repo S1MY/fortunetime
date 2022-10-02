@@ -104,9 +104,60 @@
                             $matrix9PC = $matrixInfos->where('line', 9)->count();
 
                         @endphp
+
+
+
                         <div class="matrixElement active" data-matrix="1">
+
+                            @for ($i = 1; $i <= 9; $i++)
+                                @php
+                                    $activeCabMatrix = '';
+                                    $lineMatrixCounter = $matrixInfos->where('line', $i)->count();
+
+                                    if( $lineMatrixCounter > 0 ){
+                                        $activeCabMatrix = ' active';
+                                    }
+
+                                    $neeedly = $neeedly * $i;
+                                @endphp
+                                <div class="cabMatrixElement active">
+                                    <h3 class="cabMatrixName">Партнеры первого уровня <span>({{ $lineMatrixCounter }})</span></h3>
+                                    <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{$neeedly}}</p>
+                                    <div class="matrixFlex displayFlex spaceBetween">
+                                        <div class="cabMatrixItem">
+                                            <p class="cabMatrixItemName">Левое плечо <span>()</span></p>
+                                            <div class="matrixLine displayFlex spaceBetween">
+                                                @foreach ($matrixInfos as $matrixInfo)
+                                                    <div class="matrixLineItem">
+                                                        <div class="pageUserAvatar"></div>
+                                                        <div class="pageTableItemInfo">
+                                                            <p class="pageTableUsername">{{$matrixInfo->login}}</p>
+                                                            <p class="pageTableDate">{{$matrixInfo->email}}</p>
+                                                        </div>
+                                                        <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                        <div class="cabMatrixItem">
+                                            <p class="cabMatrixItemName">Правое плечо <span>()</span></p>
+                                            <div class="matrixLine displayFlex spaceBetween">
+                                                <div class="matrixLineItem">
+                                                    <div class="pageUserAvatar"></div>
+                                                    <div class="pageTableItemInfo">
+                                                        <p class="pageTableUsername">Алексашка</p>
+                                                        <p class="pageTableDate">aleksashka@yandex.ru</p>
+                                                    </div>
+                                                    <p class="matrixAddDate">17.04.2022</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endfor
+
                             <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Партнеры первого уровня <span>({{ $matrix1PC }})</span></h3>
+                                <h3 class="cabMatrixName">Партнеры первого уровня <span>({{  }})</span></h3>
                                 <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - 2</p>
                                 <div class="matrixFlex displayFlex spaceBetween">
                                     <div class="cabMatrixItem">
