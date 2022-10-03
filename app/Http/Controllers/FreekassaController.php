@@ -113,6 +113,10 @@ class FreekassaController extends Controller
                     $lineMin = 2;
                     $lineCount = $lineMin ** $line;
 
+                    if( $line > 1 ){
+                        $lineCount = ($lineMin ** $line)*2;
+                    }
+
                     if( $newPlace <= $lineCount ){
                         $shoulder = 0;
                     }else{
