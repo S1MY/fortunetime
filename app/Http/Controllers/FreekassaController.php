@@ -110,28 +110,13 @@ class FreekassaController extends Controller
                         $lineChecks *= 2;
                     }
 
-                    $shoulderChecks = 2;
+                    $lineMin = 2;
+                    $lineCount = $lineMin ** $line;
 
-                    for ($i=0; $i < 8; $i++) {
-
-                        if( $i > 0 ){
-                            $lineCChecks = ($lineChecks + $lineChecks2)/2;
-                        }else{
-                            $lineCChecks = $lineChecks;
-                        }
-
-                        if( $newPlace <= $shoulderChecks ){
-
-                            if ( $newPlace <= $lineCChecks ){
-                                $shoulder = 0;
-                            }else{
-                                $shoulder = 1;
-                            }
-
-                            break;
-
-                        }
-                        $shoulderChecks *= 2;
+                    if( $newPlace <= $lineCount ){
+                        $shoulder = 0;
+                    }else{
+                        $shoulder = 1;
                     }
 
                     DB::table('matrix_placers')->insert([

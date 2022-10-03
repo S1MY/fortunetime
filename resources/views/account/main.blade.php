@@ -88,6 +88,20 @@
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8">М#8</div>
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
+                @php
+                    $line = 2;
+
+                    $lineMin = 2;
+                    $lineCount = $lineMin ** $line;
+
+                    if( $newPlace <= $lineCount ){
+                        $shoulder = 0;
+                    }else{
+                        $shoulder = 1;
+                    }
+
+                    echo $shoulder;
+                @endphp
                 @if ( $matrix != null )
                     @if ($matrix->matrix_id != null)
                         {{-- Если у пользователя кто-то запустил матрицу --}}
