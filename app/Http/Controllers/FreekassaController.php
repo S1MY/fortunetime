@@ -115,7 +115,7 @@ class FreekassaController extends Controller
                     for ($i=0; $i < 8; $i++) {
 
                         if( $i > 0 ){
-                            $lineCChecks = $lineChecks + $lineChecks2;
+                            $lineCChecks = ($lineChecks + $lineChecks2)/2;
                         }else{
                             $lineCChecks = $lineChecks;
                         }
