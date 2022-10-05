@@ -44,29 +44,31 @@
                         </div>
                     @else
                         <div class="cabinetItem">
+                            <p style="margin-bottom: 25px;">Заявка на вывод</p>
+                            <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
+                                @csrf
+                                <input type="text" class="formInput" placeholder="Введите желаемую сумму для вывода" name="name">
+                                <input type="password" class="formInput" placeholder="Пин-код" name="surname">
+                                <button class="passBtn">Оставить заявку</button>
+                            </form>
+                        </div>
+                        <div class="cabinetItem">
+                            <p style="margin-bottom: 25px;">Личные данные</p>
+                            <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
+                                @csrf
+                                <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name">
+                                <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
+                                <button class="passBtn">Установить данные</button>
+                            </form>
+                        </div>
+                        <div class="cabinetItem">
+                            <p style="margin-bottom: 25px;">Смена пароля</p>
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
                                 @csrf
                                 <input type="password" class="formInput" placeholder="Новый пароль" name="pass">
                                 <input type="password" class="formInput" placeholder="Повторите пароль" name="repass">
                                 <input type="password" class="formInput" placeholder="Пин-код" name="pincode">
                                 <button class="passBtn">Сменить Пароль</button>
-                            </form>
-                        </div>
-                        <div class="cabinetItem">
-                            <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
-                                @csrf
-                                <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name">
-                                <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
-                                <button class="passBtn">Установить данные</button>
-                            </form>
-                        </div>
-                        <div class="cabinetItem">
-                            <p>Заявка на вывод</p>
-                            <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
-                                @csrf
-                                <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name">
-                                <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
-                                <button class="passBtn">Установить данные</button>
                             </form>
                         </div>
                     @endif
