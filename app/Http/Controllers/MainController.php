@@ -86,9 +86,8 @@ class MainController extends Controller
         $disabled = ' disabled';
         if($matrix != null){
             $disabled = '';
+            $matrixLvL = $matrix->matrix_lvl;
         }
-
-        $matrixLvL = $matrix->matrix_lvl;
 
         $matrixInfos = DB::table('users')
                         ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
