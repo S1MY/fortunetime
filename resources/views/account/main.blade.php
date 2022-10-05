@@ -138,7 +138,7 @@
                                                     <div class="matrixLineItem">
                                                         <div class="pageUserAvatar">
                                                             @if ($matrixInfo->avatar != '')
-                                                                <img src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
+                                                                <img style="width: 100%" src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
                                                             @endif
                                                         </div>
                                                         <div class="pageTableItemInfo">
@@ -166,7 +166,11 @@
                                                 @endphp
                                                 @foreach ($lineRight as $matrixInfo)
                                                     <div class="matrixLineItem">
-                                                        <div class="pageUserAvatar"></div>
+                                                        <div class="pageUserAvatar">
+                                                            @if ($matrixInfo->avatar != '')
+                                                                <img style="width: 100%" src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
+                                                            @endif
+                                                        </div>
                                                         <div class="pageTableItemInfo">
                                                             <p class="pageTableUsername">{{$matrixInfo->login}}</p>
                                                             <p class="pageTableDate">{{$matrixInfo->email}}</p>
