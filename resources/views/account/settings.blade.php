@@ -47,9 +47,9 @@
                             <p style="margin-bottom: 25px;">Заявка на вывод</p>
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
                                 @csrf
-                                <input type="text" class="formInput" placeholder="Введите желаемую сумму для вывода" name="name">
-                                <input type="password" class="formInput" placeholder="Пин-код" name="surname">
-                                <button class="passBtn">Оставить заявку</button>
+                                <input type="text" class="formInput" placeholder="Введите желаемую сумму для вывода" name="amount">
+                                <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
+                                <button class="passBtn" style="width: 100%;">Оставить заявку</button>
                             </form>
                         </div>
                         <div class="cabinetItem">
@@ -58,7 +58,7 @@
                                 @csrf
                                 <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name">
                                 <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
-                                <button class="passBtn">Установить данные</button>
+                                <button class="passBtn" style="width: 100%;">Установить данные</button>
                             </form>
                         </div>
                         <div class="cabinetItem">
