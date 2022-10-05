@@ -74,7 +74,7 @@
                                         @php
                                             if( Auth::user()->UserInfo->user_name != null ){
                                                 echo 'readonly';
-                                                echo 'style="cursor: default;"';
+                                                echo ' style="cursor: default;"';
                                             }
                                         @endphp
                                         >
@@ -87,7 +87,7 @@
                                         @php
                                             if( Auth::user()->UserInfo->user_surname != null ){
                                                 echo 'readonly';
-                                                echo 'style="cursor: default;"';
+                                                echo ' style="cursor: default;"';
                                             }
                                         @endphp>
                                 @if (Auth::user()->UserInfo->user_name == null || Auth::user()->UserInfo->user_surname == null)
