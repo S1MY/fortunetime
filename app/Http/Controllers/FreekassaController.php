@@ -79,10 +79,16 @@ class FreekassaController extends Controller
 
                     // У спонсора уже есть активная матрица и приглашённые
 
+                    $lastUserInMatrix = DB::table('matrix_placers')->where('matrix_id', $SMartix->matrix_id)->orderByDesc('id')->first();
+
+                    $LUPlace = $lastUserInMatrix->user_place;
+
+                    $newPlace = $LUPlace + 1;
+
                     $line = 0;
                     $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
                     $lineG = array(4, 12, 28, 60, 124, 252, 508);
-                    $newPlace = 140;
+                    // $newPlace = 140;
                     $maxLine = 7;
 
                     if ($line == 0) {
