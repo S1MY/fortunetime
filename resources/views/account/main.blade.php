@@ -148,7 +148,13 @@
                                                             @endif
                                                         </div>
                                                         <div class="pageTableItemInfo">
-                                                            <p class="pageTableUsername">{{$matrixInfo->login}}</p>
+                                                            <p class="pageTableUsername">
+                                                                @if ($matrixInfo->user_name != null)
+                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 16px;">({{ $matrixInfo->login }})</span>
+                                                                @else
+                                                                    {{ $matrixInfo->login }}
+                                                                @endif
+                                                            </p>
                                                             <p class="pageTableDate">{{$matrixInfo->email}}</p>
                                                         </div>
                                                         <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
@@ -178,7 +184,13 @@
                                                             @endif
                                                         </div>
                                                         <div class="pageTableItemInfo">
-                                                            <p class="pageTableUsername">{{$matrixInfo->login}}</p>
+                                                            <p class="pageTableUsername">
+                                                                @if ($matrixInfo->user_name != null)
+                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 16px;">({{ $matrixInfo->login }})</span>
+                                                                @else
+                                                                    {{ $matrixInfo->login }}
+                                                                @endif
+                                                            </p>
                                                             <p class="pageTableDate">{{$matrixInfo->email}}</p>
                                                         </div>
                                                         <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
