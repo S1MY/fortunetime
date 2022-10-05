@@ -24,7 +24,14 @@
                                 <input type="file" name="userfile" class="avatarInput" title="Загрузить аватар..">
                             </form>
                             <div class="cabinetInfo">
-                                <p class="cabinetName">{{ Auth::user()->login }}</p>
+                                <p class="cabinetName">
+                                    @php
+                                        if ( Auth::user()->UserInfo->user_name != null ){
+                                            echo Auth::user()->UserInfo->user_name;
+                                        }
+                                    @endphp
+                                    {{ Auth::user()->login }}
+                                </p>
                                 <p class="cabinetInfoItem">{{ Auth::user()->email }}</p>
                                 @if ( Auth::user()->UserInfo->activated == 0 )
                                     <p class="cabinetInfoItem">для активации аккаунте требуется оплата взноса</p>
