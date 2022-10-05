@@ -83,12 +83,11 @@ class FreekassaController extends Controller
 
                     $LUPlace = $lastUserInMatrix->user_place;
 
-                    $newPlace = $LUPlace + 1;
-
-                    $line = 0;
                     $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
                     $lineG = array(4, 12, 28, 60, 124, 252, 508);
-                    // $newPlace = 140;
+
+                    $line = 0;
+                    $newPlace = $LUPlace + 1;
                     $maxLine = 7;
 
                     if ($line == 0) {
@@ -119,6 +118,11 @@ class FreekassaController extends Controller
                         'line' => $line,
                         'created_at' => Carbon::now(),
                         'updated_at' => Carbon::now()
+                    ]);
+
+                    DB::table('user_infos')->where('user_id', $user['sponsor'])->update([
+                        'balance' => `balance`+$amount,
+                        'earned' => `earned`+$amount,
                     ]);
 
                 }else{

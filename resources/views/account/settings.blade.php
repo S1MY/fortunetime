@@ -52,6 +52,15 @@
                                 <button class="passBtn">Сменить Пароль</button>
                             </form>
                         </div>
+                        <div class="cabinetItem">
+                            <form class="passChange displayFlex spaceBetween AJAXForm" id="SetPincode" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
+                                @csrf
+                                <input type="password" class="formInput" placeholder="Новый пароль" name="pass">
+                                <input type="password" class="formInput" placeholder="Повторите пароль" name="repass">
+                                <input type="password" class="formInput" placeholder="Пин-код" name="pincode">
+                                <button class="passBtn">Сменить Пароль</button>
+                            </form>
+                        </div>
                     @endif
                 </div>
             </div>
