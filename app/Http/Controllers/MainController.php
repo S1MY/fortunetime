@@ -82,20 +82,19 @@ class MainController extends Controller
     public function account(){
 
         $matrix = DB::table('matrix')->where('user_id', Auth::user()->id)->first();
-
         $disabled = ' disabled';
         if($matrix != null){
             $disabled = '';
             $matrixLvL = $matrix->matrix_lvl;
+
+            $matrixInfos = DB::table('users')
+                            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                            ->where('matrix_placers.matrix_id', $matrix->matrix_id)
+                            ->get();
+            $matrixUsersCount = $matrixInfos->count();
         }
 
-        $matrixInfos = DB::table('users')
-                        ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                        ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                        ->where('matrix_placers.matrix_id', $matrix->matrix_id)
-                        ->get();
-
-        $matrixUsersCount = $matrixInfos->count();
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
