@@ -83,7 +83,7 @@
                                         </div>
                                         <p class="userNavName">
                                             @if (Auth::user()->UserInfo->user_name != null)
-                                                {{ Auth::user()->UserInfo->user_name }} <span style="font-size: 16px;">({{ Auth::user()->login }})</span>
+                                                {{ Auth::user()->UserInfo->user_name }}
                                             @else
                                                 {{ Auth::user()->login }}
                                             @endif
