@@ -26,7 +26,7 @@
                             <div class="cabinetInfo">
                                 <p class="cabinetName">
                                     @if (Auth::user()->UserInfo->user_name != null)
-                                        {{ Auth::user()->UserInfo->user_name }} ( {{ Auth::user()->login }} )
+                                        {{ Auth::user()->UserInfo->user_name }} <span style="font-size: 16px;">({{ Auth::user()->login }})</span>
                                     @else
                                         {{ Auth::user()->login }}
                                     @endif
