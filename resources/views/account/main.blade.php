@@ -21,7 +21,13 @@
                                 @php
                                     $sugarID = md5(Auth::user()->login);
                                 @endphp
-                                <p class="cabinetName">{{ Auth::user()->login }}</p>
+                                <p class="cabinetName">
+                                    @if (Auth::user()->UserInfo->user_name != null)
+                                        {{ Auth::user()->UserInfo->user_name }} <span style="font-size: 16px;">({{ Auth::user()->login }})</span>
+                                    @else
+                                        {{ Auth::user()->login }}
+                                    @endif
+                                </p>
                                 <p class="cabinetInfoItem">id: {{ $sugarID }}</p>
                                 @if ( Auth::user()->UserInfo->activated == 0 )
                                     <p class="cabinetInfoItem">для активации аккаунте требуется оплата взноса</p>
