@@ -79,48 +79,30 @@ class FreekassaController extends Controller
 
                     // У спонсора уже есть активная матрица и приглашённые
 
-                    $shoulder = 0;
                     $line = 0;
+                    $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
+                    $lineG = array(4, 12, 28, 60, 124, 252, 508);
+                    $newPlace = 140;
+                    $maxLine = 7;
 
-                    $lastUserInMatrix = DB::table('matrix_placers')->where('matrix_id', $SMartix->matrix_id)->orderByDesc('id')->first();
+                    if ($line == 0) {
+                        $crew = 0;
+                    }else{
+                        $crew = $line - 1;
+                    }
 
-                    $LUPlace = $lastUserInMatrix->user_place;
-
-                    $newPlace = $LUPlace + 1;
-
-                    $lineChecks = 4;
-
-                    $lineChecks2 = 4;
-
-                    for ($i=0; $i < 8; $i++) {
-
-                        if( $i > 0 ){
-                            $lineCChecks = $lineChecks + $lineChecks2;
-                        }else{
-                            $lineCChecks = $lineChecks;
-                        }
-
-                        if( $newPlace <= $lineCChecks ){
-                            $line = $i + 1;
+                    for ($l=0; $l <= $maxLine ; $l++) {
+                        if($newPlace <= $lineG[$crew]){
+                            $line = $l + 1;
                             break;
                         }
-
-                        $lineChecks2 = $lineChecks;
-
-                        $lineChecks *= 2;
+                        $crew++;
                     }
 
-                    $lineMin = 2;
-                    $lineCount = $lineMin ** $line;
-
-                    if( $line > 1 ){
-                        $lineCount = ($lineMin ** $line)*2;
-                    }
-
-                    if( $newPlace <= $lineCount ){
-                        $shoulder = 0;
-                    }else{
+                    if ($newPlace > $shoulderG[$crew]) {
                         $shoulder = 1;
+                    }else{
+                        $shoulder = 0;
                     }
 
                     DB::table('matrix_placers')->insert([
