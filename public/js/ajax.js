@@ -25,7 +25,7 @@ $(document).ready(function () {
                 console.log(data);
                 if( formController == 'ReviewStore' ){
                     window.location.href = '/reviews';
-                }else if(formController == 'SetPincode'){
+                }else if(formController == 'SetPincode' || formController == 'presonal'){
                     window.location.href = '/settings';
                 }else if(formController == 'aboutForm'){
                     $('#aboutForm')[0].reset();
