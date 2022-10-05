@@ -81,7 +81,13 @@
                                                 <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar">
                                             @endif
                                         </div>
-                                        <p class="userNavName">{{ Auth::user()->login }}</p>
+                                        <p class="userNavName">
+                                            @if (Auth::user()->UserInfo->user_name != null)
+                                                {{ Auth::user()->UserInfo->user_name }} <span style="font-size: 16px;">({{ Auth::user()->login }})</span>
+                                            @else
+                                                {{ Auth::user()->login }}
+                                            @endif
+                                        </p>
                                     </div>
                                     <div class="subMenu">
                                         <a href="{{ route('account') }}" class="subMenuItem active">
