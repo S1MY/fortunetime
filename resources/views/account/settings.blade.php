@@ -56,7 +56,7 @@
                             @php
                                 $readonly = '';
 
-                                if( !Auth::user()->UserInfo->user_name ){
+                                if( Auth::user()->UserInfo->user_name != null ){
                                     $readonly = ' readonly';
                                 }
                             @endphp
