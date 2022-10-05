@@ -100,6 +100,25 @@ class UserController extends Controller
         return true;
     }
 
+    public function updatePersonalInfo(Request $request, $id)
+    {
+
+        // return $request;
+
+        $user = User::where('id', $id)->first();
+
+        if( !$user ){
+            return false;
+        }
+
+        UserInfo::where('user_id', $id)->update([
+            'user_name' => $request->name,
+            'user_surname' => $request->surname,
+        ]);
+
+        return true;
+    }
+
     /**
      * Remove the specified resource from storage.
      *

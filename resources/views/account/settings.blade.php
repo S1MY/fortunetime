@@ -54,7 +54,7 @@
                         </div>
                         <div class="cabinetItem">
                             <p style="margin-bottom: 25px;">Личные данные</p>
-                            <form class="passChange displayFlex spaceBetween AJAXForm" id="presonal" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
+                            <form class="passChange displayFlex spaceBetween AJAXForm" id="presonal" method="POST" action="{{ route('update.personal', Auth::user()->id) }}">
                                 @csrf
                                 <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name">
                                 <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
