@@ -67,7 +67,9 @@
                                 @csrf
                                 <input type="text"{!! $style !!} class="formInput" placeholder="Введите ваше Имя" name="name" value="{{ Auth::user()->UserInfo->user_name }}" {{$readonly}}>
                                 <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
-                                <button class="passBtn" style="width: 100%;">Установить данные</button>
+                                @if (Auth::user()->UserInfo->user_name == null || Auth::user()->UserInfo->user_surname == null)
+                                    <button class="passBtn" style="width: 100%;">Установить данные</button>
+                                @endif
                             </form>
                         </div>
                         <div class="cabinetItem">
