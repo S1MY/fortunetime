@@ -59,6 +59,8 @@
                                 if( Auth::user()->UserInfo->user_name != null ){
                                     $readonly = ' readonly';
                                 }
+
+                                echo $readonly;
                             @endphp
                             <p style="margin-bottom: 25px;">Личные данные</p>
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="presonal" method="POST" action="{{ route('update.personal', Auth::user()->id) }}">
