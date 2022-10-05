@@ -25,12 +25,11 @@
                             </form>
                             <div class="cabinetInfo">
                                 <p class="cabinetName">
-                                    @php
-                                        if ( Auth::user()->UserInfo->user_name != null ){
-                                            echo Auth::user()->UserInfo->user_name;
-                                        }
-                                    @endphp
-                                    {{ Auth::user()->login }}
+                                    @if (Auth::user()->UserInfo->user_name != null)
+                                        {{ Auth::user()->UserInfo->user_name }} ( {{ Auth::user()->login }} )
+                                    @else
+                                        {{ Auth::user()->login }}
+                                    @endif
                                 </p>
                                 <p class="cabinetInfoItem">{{ Auth::user()->email }}</p>
                                 @if ( Auth::user()->UserInfo->activated == 0 )
