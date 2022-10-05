@@ -56,7 +56,7 @@
                             <p style="margin-bottom: 25px;">Личные данные</p>
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="presonal" method="POST" action="{{ route('update.personal', Auth::user()->id) }}">
                                 @csrf
-                                <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name">
+                                <input type="text" class="formInput" placeholder="Введите ваше Имя" name="name" value="{{ Auth::user()->UserInfo->user_name }}">
                                 <input type="password" class="formInput" placeholder="Введите вашу Фамилию" name="surname">
                                 <button class="passBtn" style="width: 100%;">Установить данные</button>
                             </form>
