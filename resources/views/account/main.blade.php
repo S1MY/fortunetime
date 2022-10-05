@@ -150,7 +150,7 @@
                                                         <div class="pageTableItemInfo">
                                                             <p class="pageTableUsername">
                                                                 @if ($matrixInfo->user_name != null)
-                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 16px;">({{ $matrixInfo->login }})</span>
+                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 12px;">({{ $matrixInfo->login }})</span>
                                                                 @else
                                                                     {{ $matrixInfo->login }}
                                                                 @endif
@@ -186,7 +186,7 @@
                                                         <div class="pageTableItemInfo">
                                                             <p class="pageTableUsername">
                                                                 @if ($matrixInfo->user_name != null)
-                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 16px;">({{ $matrixInfo->login }})</span>
+                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 12px;">({{ $matrixInfo->login }})</span>
                                                                 @else
                                                                     {{ $matrixInfo->login }}
                                                                 @endif
