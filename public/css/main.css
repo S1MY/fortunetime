@@ -1300,6 +1300,7 @@ body::-webkit-scrollbar-thumb {
 .matrixLineItem .pageUserAvatar{
     margin: 0 !important;
     margin-right: 10px !important;
+    overflow: hidden;
 }
 .pageTableUsername{
     font-weight: 500;
