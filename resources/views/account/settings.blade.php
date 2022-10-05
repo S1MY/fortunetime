@@ -59,7 +59,7 @@
 
                                 if( Auth::user()->UserInfo->user_name != null ){
                                     $readonly = ' readonly';
-                                    $style = ' style="cursor: defoult;"';
+                                    $style = ' style="cursor: default;"';
                                 }
                             @endphp
                             <p style="margin-bottom: 25px;">Личные данные</p>
