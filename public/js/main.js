@@ -89,7 +89,7 @@ $(document).ready(function () {
 
             $('.popupElement[data-popup=starter] h2').text($title);
 
-            $('.popupElement[data-popup=starter] input[name=oa]').value($value);
+            $('.popupElement[data-popup=starter] input[name=oa]').val($value);
 
         }
 
