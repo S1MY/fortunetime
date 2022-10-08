@@ -217,7 +217,7 @@
                             {{-- Если у пользователя нет активных людей в матрице --}}
                                 <div class="matrixElement active" data-matrix="1">
                                     <div class="cabMatrixElement active">
-                                        <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
+                                        <h3 class="cabMatrixName">Первый уровень успешно активирован!</h3>
                                         <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте зарабатывать!</p>
                                     </div>
                                 </div>
