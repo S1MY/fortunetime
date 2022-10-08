@@ -119,7 +119,7 @@
             <div class="matrixElement active" data-matrix="{{ $matrix->matrix_lvl }}">
                 <div class="cabMatrixElement active">
                     @php
-                        $arrayNamesMatrix = array('Второй', 'Третий', 'Четвёртый', 'Пятый', 'Шестой', 'Седьмой', 'Восьмой', 'Девятый');
+                        $arrayNamesMatrix = array('Первый', 'Второй', 'Третий', 'Четвёртый', 'Пятый', 'Шестой', 'Седьмой', 'Восьмой', 'Девятый');
                         $titleMatrix = $arrayNamesMatrix[$matrix->matrix_lvl - 2];
                     @endphp
                     <h3 class="cabMatrixName">{{ $titleMatrix }} уровень успешно активирован!</h3>
