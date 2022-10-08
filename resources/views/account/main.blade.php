@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         @if ( $matrix != null )
-                            <a href="#" class="cabinetBtn popupBtn" data-popup="starter">Начать заработок</a>
+                            <a href="#" class="cabinetBigItem popupBtn" data-popup="starter">Начать заработок</a>
                         @else
                             <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
                         @endif
