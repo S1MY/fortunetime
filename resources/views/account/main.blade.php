@@ -89,14 +89,14 @@
                 </div>
                 <div class="matrixTabs cabinetTabs">
                     <div class="matrixTab active" data-matrix="1">М#1</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2">М#2</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="3">М#3</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="4">М#4</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="5">М#5</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="6">М#6</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="7">М#7</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8">М#8</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9">М#9</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 2 ) }}">М#2</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="3" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 3 ) }}">М#3</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="4" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 4 ) }}">М#4</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="5" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 5 ) }}">М#5</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="6" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 6 ) }}">М#6</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="7" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 7 ) }}">М#7</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 8 ) }}">М#8</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9" data-matrix-url="{{ route('getmatrix', Auth::user()->id, 9 ) }}">М#9</div>
                 </div>
                 @if ( $matrix != null)
                     @if ($matrix->matrix_id != null )

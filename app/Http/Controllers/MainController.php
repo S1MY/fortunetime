@@ -82,8 +82,8 @@ class MainController extends Controller
     public function account(){
 
         $matrix = DB::table('matrix')->where([
-                                    ['user_id', '=', Auth::user()->id],
-                                    ['matrix_lvl', '=', 1],
+                                        ['user_id', '=', Auth::user()->id],
+                                        ['matrix_lvl', '=', 1],
                                     ])->first();
         $disabled = ' disabled';
         $matrixInfos = '';
