@@ -157,7 +157,8 @@ $(document).ready(function () {
                     console.log(response['responseText']);
                 },
                 error: function (data) {
-                    console.log(data['responseText']);
+                    var content = data['responseText'];
+                    $('.mainContainerMatrix').html(content);
                     // console.log(data);
                 }
             });
