@@ -50,6 +50,39 @@ $(document).ready(function () {
         e.preventDefault();
         let popupName = $(this).attr('data-popup');
         $('.popupWrapper').fadeIn();
+
+        if( popupName == 'starter' ){
+            let lvl = $(this).attr('data-matrix-id');
+
+            if( lvl == 2){
+                $title = 'Внесение взноса за вторую матрицу';
+            }
+            if( lvl == 3){
+                $title = 'Внесение взноса за третью матрицу';
+            }
+            if( lvl == 4){
+                $title = 'Внесение взноса за четвёртую матрицу';
+            }
+            if( lvl == 5){
+                $title = 'Внесение взноса за пятую матрицу';
+            }
+            if( lvl == 6){
+                $title = 'Внесение взноса за шестую матрицу';
+            }
+            if( lvl == 7){
+                $title = 'Внесение взноса за седьмую матрицу';
+            }
+            if( lvl == 8){
+                $title = 'Внесение взноса за восьмую матрицу';
+            }
+            if( lvl == 9){
+                $title = 'Внесение взноса за девятую матрицу';
+            }
+
+            $('.popupElement[data-popup=starter] h2').text($title);
+
+        }
+
         $('.popupElement[data-popup=' + popupName + ']').fadeIn();
     });
     $('.formLink').click(function (e) {
