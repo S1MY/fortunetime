@@ -89,7 +89,7 @@ class MainController extends Controller
         $matrixInfos = '';
         $matrixUsersCount = '';
 
-        dd($matrix);
+        // dd($matrix);
 
         if($matrix != null){
             $disabled = '';
