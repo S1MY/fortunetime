@@ -198,7 +198,20 @@ class FreekassaController extends Controller
 
         // Какой уровень активен
 
-        session()->flash('success', 'Вы успешно активировалли первый уровень матрицы! На вашу почту была отправленна система!' );
+        $matrix = DB::table('matrix')->where([
+            ['user_id', '=', $fk_order['user_id']],
+        ])->orderBy('id', 'desc')->first();
+
+        $arrayNamesMatrix = array('второй', 'третий', 'четвёртый', 'пятый', 'шестой', 'седьмой', 'восьмой', 'девятый');
+        $titleMatrix = $arrayNamesMatrix[$matrix->matrix_lvl - 2];
+
+        if( $matrix->matrix_lvl != 1 ){
+            session()->flash('success', 'Вы успешно активировали '.$titleMatrix.' уровень матрицы!');
+        }else{
+            session()->flash('success', 'Вы успешно активировали первый уровень матрицы! На вашу почту была отправленна система!');
+        }
+
+
 
         return redirect()->route('account');
     }
