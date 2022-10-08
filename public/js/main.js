@@ -154,10 +154,10 @@ $(document).ready(function () {
                 data: "data",
                 dataType: "dataType",
                 success: function (response) {
-                    console.log(response)
+                    console.log(response['responseText']);
                 },
                 error: function (data) {
-                    console.log(data);
+                    console.log(data['responseText']);
                 }
             });
         }
