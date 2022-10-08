@@ -125,8 +125,6 @@ class UserController extends Controller
         }
 
         return view('account.layout.matrix', 'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount');
-
-        return $lvl;
     }
 
     public function updatePersonalInfo(Request $request, $id)

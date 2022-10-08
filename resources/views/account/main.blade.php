@@ -231,12 +231,6 @@
                                 <p class="cabMatrixDesc">Пополните первый уровень матрицы для начала заработка!</p>
                             </div>
                         </div>
-                        <div class="matrixElement" data-matrix="2">
-                            <div class="cabMatrixElement active">
-                                <h3 class="cabMatrixName">Вы ещё не активировали Ваш кабинет!</h3>
-                                <p class="cabMatrixDesc">Пополните первый уровень матрицы для начала заработка!</p>
-                            </div>
-                        </div>
                 @endif
 
                 <div class="matrixElement" data-matrix="2">
