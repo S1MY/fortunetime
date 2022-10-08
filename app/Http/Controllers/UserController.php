@@ -108,6 +108,8 @@ class UserController extends Controller
             ['matrix_lvl', '=', $lvl],
         ])->first();
 
+        dd($matrix);
+
         $disabled = ' disabled';
         $matrixInfos = '';
         $matrixUsersCount = '';
