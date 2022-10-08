@@ -8,6 +8,7 @@
             <div class="pageInner">
 
                 @include('account.layout.accountMaster')
+                {{ dd($matrix) }}
 
                 <div class="cabinetFlex displayFlex spaceBetween">
                     <div class="cabinetItem">
@@ -99,7 +100,6 @@
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
                 @if ( $matrix != null)
-                    {{ dd($matrix) }}
                     @if ($matrix->matrix_id != null )
                         {{-- Если у пользователя кто-то запустил матрицу --}}
                             @php
