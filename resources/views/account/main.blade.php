@@ -98,117 +98,122 @@
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8">М#8</div>
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
-                @if ( $matrix != null )
-                    @if ($matrix->matrix_id != null)
+                @if ( $matrix != null)
+                    @if ($matrix->matrix_id != null )
                         {{-- Если у пользователя кто-то запустил матрицу --}}
-
-                        <div class="matrixElement active" data-matrix="1">
                             @php
-                                $neeedly = 2;
+                                $active = '';
+                                if( $matrix->matrix_lvl == 1 ){
+                                    $active = ' active';
+                                }
                             @endphp
-                            @for ($i = 1; $i < 8; $i++)
+                            <div class="matrixElement{{$active}}" data-matrix="{{ $matrix->matrix_lvl }}">
                                 @php
-                                    $activeCabMatrix = '';
-                                    $lineMatrix = $matrixInfos->where('line', $i);
-                                    $lineMatrixCounter = $lineMatrix->count();
-
-                                    $stringI = array(
-                                        'первого',
-                                        'второго',
-                                        'третьего',
-                                        'четвёртого',
-                                        'пятого',
-                                        'шестого',
-                                        'седьмого',
-                                    );
-
-                                    if( $lineMatrixCounter > 0 ){
-                                        $activeCabMatrix = ' active';
-                                    }
+                                    $neeedly = 2;
                                 @endphp
-                                <div class="cabMatrixElement{{$activeCabMatrix}}">
-                                    <h3 class="cabMatrixName">Партнеры {{ $stringI[$i-1] }} уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
-                                    <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
-                                    <div class="matrixFlex displayFlex spaceBetween">
-                                        <div class="cabMatrixItem">
-                                            <p class="cabMatrixItemName">
-                                                Левое плечо
-                                                <span>
+                                @for ($i = 1; $i < 8; $i++)
+                                    @php
+                                        $activeCabMatrix = '';
+                                        $lineMatrix = $matrixInfos->where('line', $i);
+                                        $lineMatrixCounter = $lineMatrix->count();
+
+                                        $stringI = array(
+                                            'первого',
+                                            'второго',
+                                            'третьего',
+                                            'четвёртого',
+                                            'пятого',
+                                            'шестого',
+                                            'седьмого',
+                                        );
+
+                                        if( $lineMatrixCounter > 0 ){
+                                            $activeCabMatrix = ' active';
+                                        }
+                                    @endphp
+                                    <div class="cabMatrixElement{{$activeCabMatrix}}">
+                                        <h3 class="cabMatrixName">Партнеры {{ $stringI[$i-1] }} уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
+                                        <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
+                                        <div class="matrixFlex displayFlex spaceBetween">
+                                            <div class="cabMatrixItem">
+                                                <p class="cabMatrixItemName">
+                                                    Левое плечо
+                                                    <span>
+                                                        @php
+                                                            $leftCount = $lineMatrix->where('shoulder', 0)->count();
+                                                        @endphp
+                                                        ({{ $leftCount }})
+                                                    </span>
+                                                </p>
+                                                <div class="matrixLine displayFlex spaceBetween">
                                                     @php
-                                                        $leftCount = $lineMatrix->where('shoulder', 0)->count();
+                                                        $lineLeft = $lineMatrix->where('shoulder', 0);
                                                     @endphp
-                                                    ({{ $leftCount }})
-                                                </span>
-                                            </p>
-                                            <div class="matrixLine displayFlex spaceBetween">
-                                                @php
-                                                    $lineLeft = $lineMatrix->where('shoulder', 0);
-                                                @endphp
-                                                @foreach ($lineLeft as $matrixInfo)
-                                                    <div class="matrixLineItem">
-                                                        <div class="pageUserAvatar">
-                                                            @if ($matrixInfo->avatar != '')
-                                                                <img style="width: 100%" src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
-                                                            @endif
-                                                        </div>
-                                                        <div class="pageTableItemInfo">
-                                                            <p class="pageTableUsername">
-                                                                @if ($matrixInfo->user_name != null)
-                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 12px;">({{ $matrixInfo->login }})</span>
-                                                                @else
-                                                                    {{ $matrixInfo->login }}
+                                                    @foreach ($lineLeft as $matrixInfo)
+                                                        <div class="matrixLineItem">
+                                                            <div class="pageUserAvatar">
+                                                                @if ($matrixInfo->avatar != '')
+                                                                    <img style="width: 100%" src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
                                                                 @endif
-                                                            </p>
-                                                            <p class="pageTableDate">{{$matrixInfo->email}}</p>
+                                                            </div>
+                                                            <div class="pageTableItemInfo">
+                                                                <p class="pageTableUsername">
+                                                                    @if ($matrixInfo->user_name != null)
+                                                                        {{ $matrixInfo->user_name }} <span style="font-size: 12px;">({{ $matrixInfo->login }})</span>
+                                                                    @else
+                                                                        {{ $matrixInfo->login }}
+                                                                    @endif
+                                                                </p>
+                                                                <p class="pageTableDate">{{$matrixInfo->email}}</p>
+                                                            </div>
+                                                            <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
                                                         </div>
-                                                        <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
-                                                    </div>
-                                                @endforeach
+                                                    @endforeach
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="cabMatrixItem">
-                                            <p class="cabMatrixItemName">
-                                                Правое плечо
-                                                <span>
+                                            <div class="cabMatrixItem">
+                                                <p class="cabMatrixItemName">
+                                                    Правое плечо
+                                                    <span>
+                                                        @php
+                                                            $rightCount = $lineMatrix->where('shoulder', 1)->count();
+                                                        @endphp
+                                                        ({{ $rightCount }})
+                                                    </span>
+                                                </p>
+                                                <div class="matrixLine displayFlex spaceBetween">
                                                     @php
-                                                        $rightCount = $lineMatrix->where('shoulder', 1)->count();
+                                                        $lineRight = $lineMatrix->where('shoulder', 1);
                                                     @endphp
-                                                    ({{ $rightCount }})
-                                                </span>
-                                            </p>
-                                            <div class="matrixLine displayFlex spaceBetween">
-                                                @php
-                                                    $lineRight = $lineMatrix->where('shoulder', 1);
-                                                @endphp
-                                                @foreach ($lineRight as $matrixInfo)
-                                                    <div class="matrixLineItem">
-                                                        <div class="pageUserAvatar">
-                                                            @if ($matrixInfo->avatar != '')
-                                                                <img style="width: 100%" src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
-                                                            @endif
-                                                        </div>
-                                                        <div class="pageTableItemInfo">
-                                                            <p class="pageTableUsername">
-                                                                @if ($matrixInfo->user_name != null)
-                                                                    {{ $matrixInfo->user_name }} <span style="font-size: 12px;">({{ $matrixInfo->login }})</span>
-                                                                @else
-                                                                    {{ $matrixInfo->login }}
+                                                    @foreach ($lineRight as $matrixInfo)
+                                                        <div class="matrixLineItem">
+                                                            <div class="pageUserAvatar">
+                                                                @if ($matrixInfo->avatar != '')
+                                                                    <img style="width: 100%" src="{{ Storage::url($matrixInfo->avatar) }}" alt="avatar">
                                                                 @endif
-                                                            </p>
-                                                            <p class="pageTableDate">{{$matrixInfo->email}}</p>
+                                                            </div>
+                                                            <div class="pageTableItemInfo">
+                                                                <p class="pageTableUsername">
+                                                                    @if ($matrixInfo->user_name != null)
+                                                                        {{ $matrixInfo->user_name }} <span style="font-size: 12px;">({{ $matrixInfo->login }})</span>
+                                                                    @else
+                                                                        {{ $matrixInfo->login }}
+                                                                    @endif
+                                                                </p>
+                                                                <p class="pageTableDate">{{$matrixInfo->email}}</p>
+                                                            </div>
+                                                            <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
                                                         </div>
-                                                        <p class="matrixAddDate">{{ date("d.m.Y", strtotime( $matrixInfo->created_at )) }}</p>
-                                                    </div>
-                                                @endforeach
+                                                    @endforeach
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                @php
-                                    $neeedly *= 2;
-                                @endphp
-                            @endfor
-                        </div>
+                                    @php
+                                        $neeedly *= 2;
+                                    @endphp
+                                @endfor
+                            </div>
                     @else
                         {{-- Если у пользователя нет активных людей в матрице --}}
                             <div class="matrixElement active" data-matrix="1">
