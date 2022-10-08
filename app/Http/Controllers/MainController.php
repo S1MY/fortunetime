@@ -84,7 +84,7 @@ class MainController extends Controller
         $matrix = DB::table('matrix')->where([
                                     ['user_id', '=', Auth::user()->id],
                                     ['matrix_lvl', '=', 1],
-                                    ])->get();
+                                    ])->first();
         $disabled = ' disabled';
         $matrixInfos = '';
         $matrixUsersCount = '';
