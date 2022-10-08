@@ -99,6 +99,7 @@
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9">М#9</div>
                 </div>
                 @if ( $matrix != null)
+                    {{ dd($matrix) }}
                     @if ($matrix->matrix_id != null )
                         {{-- Если у пользователя кто-то запустил матрицу --}}
                             @php
