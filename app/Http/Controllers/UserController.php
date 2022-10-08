@@ -120,7 +120,7 @@ class UserController extends Controller
 
         }
 
-        return view('account.layout.matrix', 'matrix', 'matrixInfos', 'matrixUsersCount');
+        return view('account.layout.matrix');
     }
 
     public function updatePersonalInfo(Request $request, $id)
