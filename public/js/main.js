@@ -52,6 +52,7 @@ $(document).ready(function () {
         $('.popupWrapper').fadeIn();
 
         if( popupName == 'starter' ){
+
             let lvl = $(this).attr('data-matrix-id');
 
             if( lvl == 2){
@@ -137,6 +138,7 @@ $(document).ready(function () {
             let matrixNumb = $(this).attr('data-matrix');
             $('.matrixElement').removeClass('active');
             $('.matrixElement[data-matrix=' + matrixNumb + ']').addClass('active');
+            $('.martixBuyer').attr('data-matrix-id', matrixNumb);
         }
     });
     // Меню юзера
