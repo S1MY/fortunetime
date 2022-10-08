@@ -56,30 +56,40 @@ $(document).ready(function () {
 
             if( lvl == 2){
                 $title = 'Внесение взноса за вторую матрицу';
+                $value = 5000;
             }
             if( lvl == 3){
                 $title = 'Внесение взноса за третью матрицу';
+                $value = 10000;
             }
             if( lvl == 4){
                 $title = 'Внесение взноса за четвёртую матрицу';
+                $value = 25000;
             }
             if( lvl == 5){
                 $title = 'Внесение взноса за пятую матрицу';
+                $value = 50000;
             }
             if( lvl == 6){
                 $title = 'Внесение взноса за шестую матрицу';
+                $value = 100000;
             }
             if( lvl == 7){
                 $title = 'Внесение взноса за седьмую матрицу';
+                $value = 250000;
             }
             if( lvl == 8){
                 $title = 'Внесение взноса за восьмую матрицу';
+                $value = 500000;
             }
             if( lvl == 9){
                 $title = 'Внесение взноса за девятую матрицу';
+                $value = 1000000;
             }
 
             $('.popupElement[data-popup=starter] h2').text($title);
+
+            $('.popupElement[data-popup=starter] input[name=oa]').value($value);
 
         }
 
