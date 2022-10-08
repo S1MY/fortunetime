@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
-                    <div class="matrixTab active" data-matrix="1">М#1</div>
+                    <div class="matrixTab active" data-matrix="1" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>1] ) }}">М#1</div>
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>2] ) }}">М#2</div>
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="3" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>3] ) }}">М#3</div>
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="4" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>4] ) }}">М#4</div>

@@ -132,7 +132,7 @@
         <div class="matrixElement active" data-matrix="1">
             <div class="cabMatrixElement active">
                 <h3 class="cabMatrixName">Вы ещё не активировали данный уровень!</h3>
-                <p class="cabMatrixDesc">Нажмите начать заработок если хотите активировать уровень матрицы!</p>
+                <p class="cabMatrixDesc">Нажмите "Начать заработок" если хотите активировать уровень матрицы!</p>
             </div>
         </div>
 @endif
