@@ -108,25 +108,19 @@ class UserController extends Controller
             ['matrix_lvl', '=', $lvl],
         ])->first();
 
-        dd($matrix);
-
-        $disabled = ' disabled';
-        $matrixInfos = '';
-        $matrixUsersCount = '';
-
         if($matrix != null){
-            $disabled = '';
 
             $matrixInfos = DB::table('users')
             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
-            ->get();
+            ->get()->toArray();
 
             $matrixUsersCount = $matrixInfos->count();
+
         }
 
-        return view('account.layout.matrix', 'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount');
+        return view('account.layout.matrix', 'matrix', 'matrixInfos', 'matrixUsersCount');
     }
 
     public function updatePersonalInfo(Request $request, $id)
