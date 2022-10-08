@@ -103,16 +103,28 @@ class UserController extends Controller
 
     public function getMatrix($id, $lvl){
 
-        $Martix = DB::table('matrix')->where([
+        $matrix = DB::table('matrix')->where([
             ['user_id', '=', $id],
             ['matrix_lvl', '=', $lvl],
         ])->first();
 
-        if( $Martix != null ){
-            return view('account.start');
-        }else{
-            return 'null matrix';
+        $disabled = ' disabled';
+        $matrixInfos = '';
+        $matrixUsersCount = '';
+
+        if($matrix != null){
+            $disabled = '';
+
+            $matrixInfos = DB::table('users')
+            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+            ->where('matrix_placers.matrix_id', $matrix->matrix_id)
+            ->get();
+
+            $matrixUsersCount = $matrixInfos->count();
         }
+
+        return view('account.layout.matrix', 'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount');
 
         return $lvl;
     }
