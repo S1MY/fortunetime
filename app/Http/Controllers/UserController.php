@@ -109,7 +109,7 @@ class UserController extends Controller
         ])->first();
 
         if( $Martix != null ){
-
+            return view('account.start');
         }else{
             return 'null matrix';
         }
