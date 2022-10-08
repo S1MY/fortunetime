@@ -120,7 +120,7 @@
                 <div class="cabMatrixElement active">
                     @php
                         $arrayNamesMatrix = array('Первый', 'Второй', 'Третий', 'Четвёртый', 'Пятый', 'Шестой', 'Седьмой', 'Восьмой', 'Девятый');
-                        $titleMatrix = $arrayNamesMatrix[$matrix->matrix_lvl - 2];
+                        $titleMatrix = $arrayNamesMatrix[$matrix->matrix_lvl - 1];
                     @endphp
                     <h3 class="cabMatrixName">{{ $titleMatrix }} уровень успешно активирован!</h3>
                     <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте зарабатывать!</p>
