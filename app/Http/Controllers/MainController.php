@@ -86,6 +86,8 @@ class MainController extends Controller
         $matrixInfos = '';
         $matrixUsersCount = '';
 
+        dd($matrix);
+
         if($matrix != null){
             $disabled = '';
             $matrixLvL = $matrix->matrix_lvl;
@@ -97,8 +99,6 @@ class MainController extends Controller
                             ->get();
             $matrixUsersCount = $matrixInfos->count();
         }
-
-        dd($matrix);
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
