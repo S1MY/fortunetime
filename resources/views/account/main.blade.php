@@ -80,6 +80,7 @@
                                 </div>
                             </div>
                         </div>
+                        {{ dd($matrix) }}
                         <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
                     </div>
                 </div>

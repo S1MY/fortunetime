@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Freekassa;
 use App\Models\User;
+use App\Models\UserInfo;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,7 @@ class FreekassaController extends Controller
 
         $fk_order = Freekassa::where('id', $request->MERCHANT_ORDER_ID)->first();
         $user = User::where('id', $fk_order['user_id'])->first();
+        $userInfo = UserInfo::where('user_id', $fk_order['user_id'])->first();
 
         $amount = $fk_order['amount'];
 
@@ -61,6 +63,12 @@ class FreekassaController extends Controller
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
+
+        if( $userInfo->activated == 0 ){
+            UserInfo::where('user_id', $user['id'])->update([
+                'activated' => 1,
+            ]);
+        }
 
         // Простановка в матрицу партнёра
 
@@ -122,7 +130,7 @@ class FreekassaController extends Controller
 
                     DB::table('user_infos')->where('user_id', $user['sponsor'])->update([
                         'balance' => `balance`+$amount,
-                        'earned' => `earned`+$amount,
+                        'earned' => `earned`+$amount
                     ]);
 
                 }else{
@@ -160,6 +168,7 @@ class FreekassaController extends Controller
         }
 
     }
+
     public function pay(Request $request){
         $userID = Auth::user()->id;
 
