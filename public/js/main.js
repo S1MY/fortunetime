@@ -155,6 +155,9 @@ $(document).ready(function () {
                 dataType: "dataType",
                 success: function (response) {
                     console.log(response)
+                },
+                error: function (data) {
+                    console.log(data);
                 }
             });
         }
