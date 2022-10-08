@@ -114,13 +114,13 @@ class UserController extends Controller
             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
-            ->get()->toArray();
+            ->get();
 
             $matrixUsersCount = $matrixInfos->count();
 
         }
 
-        return view('account.layout.matrix');
+        return view('account.layout.matrix', 'matrix');
     }
 
     public function updatePersonalInfo(Request $request, $id)
