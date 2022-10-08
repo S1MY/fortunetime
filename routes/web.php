@@ -66,7 +66,7 @@ Route::post('/settings/update-user/personal/{id}', 'App\Http\Controllers\UserCon
 
 Route::post('/settings/update-user/avatar/{id}', 'App\Http\Controllers\UserController@updateAvatar')->name('update.avatar')->middleware('auth');
 
-Route::post('/user/{id}/{lvl}', 'App\Http\Controllers\UserController@updateAvatar')->name('getmatrix')->middleware('auth');
+Route::post('/user/{id}/{lvl}', 'App\Http\Controllers\UserController@getMatrix')->name('getmatrix')->middleware('auth');
 
 /* Freekassa */
 Route::post('/freekassa', 'App\Http\Controllers\FreekassaController@freekassa')->name('freekassa');

@@ -100,6 +100,10 @@ class UserController extends Controller
         return true;
     }
 
+    public function getMatrix($id, $lvl){
+        return $lvl;
+    }
+
     public function updatePersonalInfo(Request $request, $id)
     {
 

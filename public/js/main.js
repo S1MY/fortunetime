@@ -133,12 +133,30 @@ $(document).ready(function () {
         if ($(this).hasClass('disabled')) {
 
         }else{
+            let matrixNumb = $(this).attr('data-matrix');
+            let matrixURL = $(this).attr('data-matrix-url');
+
             $('.matrixTab').removeClass('active');
             $(this).addClass('active');
-            let matrixNumb = $(this).attr('data-matrix');
             $('.matrixElement').removeClass('active');
             $('.matrixElement[data-matrix=' + matrixNumb + ']').addClass('active');
             $('.martixBuyer').attr('data-matrix-id', matrixNumb);
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                type: "POST",
+                url: matrixURL,
+                data: "data",
+                dataType: "dataType",
+                success: function (response) {
+                    console.log(response)
+                }
+            });
         }
     });
     // Меню юзера
