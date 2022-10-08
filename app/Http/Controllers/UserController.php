@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -101,6 +102,18 @@ class UserController extends Controller
     }
 
     public function getMatrix($id, $lvl){
+
+        $Martix = DB::table('matrix')->where([
+            ['user_id', '=', $id],
+            ['matrix_lvl', '=', $lvl],
+        ])->first();
+
+        if( $Martix != null ){
+
+        }else{
+            return 'null matrix';
+        }
+
         return $lvl;
     }
 
