@@ -80,8 +80,11 @@
                                 </div>
                             </div>
                         </div>
-                        {{ dd($matrix) }}
-                        <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
+                        @if ( $matrix != null )
+                            <a href="#" class="cabinetBtn popupBtn" data-popup="starter">Начать заработок</a>
+                        @else
+                            <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
+                        @endif
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
