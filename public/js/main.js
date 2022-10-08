@@ -157,8 +157,8 @@ $(document).ready(function () {
                     console.log(response['responseText']);
                 },
                 error: function (data) {
-                    // console.log(data['responseText']);
-                    console.log(data);
+                    console.log(data['responseText']);
+                    // console.log(data);
                 }
             });
         }
