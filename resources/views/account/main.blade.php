@@ -8,7 +8,6 @@
             <div class="pageInner">
 
                 @include('account.layout.accountMaster')
-                {{ dd($matrix) }}
 
                 <div class="cabinetFlex displayFlex spaceBetween">
                     <div class="cabinetItem">
