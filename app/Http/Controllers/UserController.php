@@ -108,6 +108,9 @@ class UserController extends Controller
             ['matrix_lvl', '=', $lvl],
         ])->first();
 
+        $matrixInfos = '';
+        $matrixUsersCount = '';
+
         if($matrix != null){
 
             $matrixInfos = DB::table('users')

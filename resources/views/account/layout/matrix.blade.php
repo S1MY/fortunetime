@@ -116,7 +116,7 @@
             </div>
     @else
         {{-- Если у пользователя нет активных людей в матрице --}}
-            <div class="matrixElement active" data-matrix="1">
+            <div class="matrixElement active" data-matrix="{{ $matrix->matrix_lvl }}">
                 <div class="cabMatrixElement active">
                     <h3 class="cabMatrixName">Ваша матрица ещё пуста!</h3>
                     <p class="cabMatrixDesc">Приглашайте людей по реферальной ссылке и начинайте зарабатывать!</p>
@@ -127,7 +127,7 @@
     {{-- Пользователь ещё не пополнился --}}
         <div class="matrixElement active" data-matrix="1">
             <div class="cabMatrixElement active">
-                <h3 class="cabMatrixName">Вы ещё не данный уровень!</h3>
+                <h3 class="cabMatrixName">Вы ещё не активировали данный уровень!</h3>
                 <p class="cabMatrixDesc">Нажмите начать заработок если хотите активировать уровень матрицы!</p>
             </div>
         </div>
