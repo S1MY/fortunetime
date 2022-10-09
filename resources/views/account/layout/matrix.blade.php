@@ -4,10 +4,7 @@
     @if ($matrix->matrix_id != null )
         {{-- Если у пользователя кто-то запустил матрицу --}}
             @php
-                $active = '';
-                if( $matrix->matrix_lvl == 1 ){
-                    $active = ' active';
-                }
+                $active = ' active';
             @endphp
             <div class="matrixElement{{$active}}" data-matrix="{{ $matrix->matrix_lvl }}">
                 @php
