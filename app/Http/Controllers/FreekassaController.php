@@ -202,8 +202,8 @@ class FreekassaController extends Controller
             ['user_id', '=', $fk_order['user_id']],
         ])->orderBy('id', 'desc')->first();
 
-        $arrayNamesMatrix = array('второй', 'третий', 'четвёртый', 'пятый', 'шестой', 'седьмой', 'восьмой', 'девятый');
-        $titleMatrix = $arrayNamesMatrix[$matrix->matrix_lvl - 2];
+        $arrayNamesMatrix = array('первый', 'второй', 'третий', 'четвёртый', 'пятый', 'шестой', 'седьмой', 'восьмой', 'девятый');
+        $titleMatrix = $arrayNamesMatrix[$matrix->matrix_lvl - 1];
 
         if( $matrix->matrix_lvl != 1 ){
             session()->flash('success', 'Вы успешно активировали '.$titleMatrix.' уровень матрицы!');
