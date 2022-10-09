@@ -148,16 +148,14 @@ class FreekassaController extends Controller
 
                     $matrixID = DB::getPdo()->lastInsertId();
 
-                    DB::table('matrix_placers')->where(
-                        [
-                            ['id', '=', DB::getPdo()->lastInsertId()],
-                            ['matrix_lvl', '=', $matrix_lvl],
-                        ]
-                        )->update([
-                            'matrix_id' => DB::getPdo()->lastInsertId(),
-                        ]);
+                    DB::table('matrix_placers')->where('id', DB::getPdo()->lastInsertId())->update([
+                        'matrix_id' => DB::getPdo()->lastInsertId(),
+                    ]);
 
-                    DB::table('matrix')->where('user_id', $user['sponsor'])->update([
+                    DB::table('matrix')->where([
+                            ['user_id', $user['sponsor']],
+                            ['matrix_lvl', $matrix_lvl],
+                        ])->update([
                         'matrix_id' => $matrixID,
                     ]);
 
