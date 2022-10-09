@@ -159,10 +159,7 @@ class FreekassaController extends Controller
                         'matrix_id' => $matrixID,
                     ]);
 
-                    DB::table('user_infos')->where('user_id', $user['sponsor'])->update([
-                        'balance' => `balance`+$amount,
-                        'earned' => `earned`+$amount,
-                    ]);
+                    DB::table('user_infos')->where('user_id', $user['sponsor'])->increment('balance', $amount);
 
                 }
 
