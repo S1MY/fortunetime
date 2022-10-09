@@ -1,4 +1,4 @@
-{{ dd($matrix) }}
+
 
 @if ( $matrix != null)
     @if ($matrix->matrix_id != null )
