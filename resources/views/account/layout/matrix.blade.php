@@ -1,3 +1,5 @@
+{{ dd($matrix) }}
+
 @if ( $matrix != null)
     @if ($matrix->matrix_id != null )
         {{-- Если у пользователя кто-то запустил матрицу --}}
