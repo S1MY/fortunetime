@@ -55,9 +55,14 @@
                 for ($n=$lineG[$i-2] + 1; $n <= $countInLine; $n++) {
                     echo $n;
                     $b = $n - 1;
+
                     if( $b % 2 ){
                         echo '<br>';
                         $refererPlaces++;
+                    }
+
+                    if ( $n == $newPlace ){
+                        break;
                     }
                 }
 
