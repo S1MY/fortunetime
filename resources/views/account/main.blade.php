@@ -58,7 +58,6 @@
                         echo '<br>';
                         $refererPlaces++;
                     }
-                    if( $n ==  )
                 }
 
                 echo 'Позиция реферал - ' . $refererPlaces;
