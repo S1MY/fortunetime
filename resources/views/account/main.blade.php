@@ -46,7 +46,7 @@
             if( $i > 1 ){
                 $refererPlace = $countInLine+1;
 
-                $countInLine = $lineG[$i-1] - $lineG[$i-2];
+                $countInLine = $lineG[$i-1];
                 $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
 
                 for ($n=$countInPrevLine; $n <= $countInLine; $n++) {
