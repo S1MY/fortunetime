@@ -39,7 +39,7 @@
             $line = $i;
             echo 'Свободная линия - '.$i;
             echo '<br>';
-            $newPlace = 7;//$lastPlace + 1;
+            $newPlace = 8;//$lastPlace + 1;
             echo 'Свободное место - '.$lastPlace + 1;
             echo '<br>';
             echo 'MatrixID - '. $martixID;
