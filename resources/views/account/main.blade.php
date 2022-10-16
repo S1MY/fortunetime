@@ -41,6 +41,7 @@
             echo 'Свободное место - '.$lastPlace + 1;
             echo '<br>';
             echo 'MatrixID - '. $martixID;
+            echo '<br>';
 
             if( $i > 1 ){
                 $refererPlace = $countInLine;
