@@ -20,13 +20,14 @@
 
     for ($i=1; $i < 7; $i++) {
 
-        $placeInLine = DB::table('matrix_placers')->where([
-                            ['matrix_id', '=', $martixID],
-                            ['line', '=', $i],
-                        ])->orWhere([
-                            ['referer_id', '=', $martixID],
-                            ['referer_line', '=', $i],
-                        ])->get();
+        $placeInLine =
+        DB::table('matrix_placers')->where([
+            ['matrix_id', '=', $martixID],
+            ['line', '=', $i],
+        ])->orWhere([
+            ['referer_id', '=', $martixID],
+            ['referer_line', '=', $i],
+        ])->get();
 
         $countInLine = $placeInLine->count();
 
@@ -35,6 +36,9 @@
             echo 'Свободная линия - '.$i;
             echo '<br>';
             echo 'Свободное место - '.$countInLine + 1;
+
+            echo 'MatrixID - '. $martixID;
+
             break;
         }
     }
