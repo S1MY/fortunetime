@@ -50,14 +50,17 @@
 
                 $countInLine = $lineG[$i-1];
                 $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
-                $refererPlace = 0;
+                $refererPlaces = 1;
                 for ($n=$newPlace; $n <= $countInLine; $n++) {
                     echo $n;
                     $b = $n - 1;
                     if( $b % 2 ){
                         echo '<br>';
+                        $refererPlaces++;
                     }
                 }
+
+                echo 'Позиция реферал - ' . $refererPlaces;
 
                 echo '<br>';
                 echo 'Количество мест на линии - '.$countInLine;
