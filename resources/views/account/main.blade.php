@@ -38,11 +38,13 @@
 
             echo 'Свободная линия - '.$i;
             echo '<br>';
-            echo 'Свободное место - '.$countInLine + 1;
+            echo 'Свободное место - '.$lastPlace + 1;
             echo '<br>';
             echo 'MatrixID - '. $martixID;
 
             break;
+        }else{
+            $lastPlace = $countInLine;
         }
 
     }
