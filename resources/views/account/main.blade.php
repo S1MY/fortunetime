@@ -31,6 +31,8 @@
 
         $countInLine = $placeInLine->count();
 
+        echo $countInLine;
+
         dd($placeInLine);
 
         if( !in_array($countInLine, $lineG) ){
