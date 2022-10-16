@@ -36,8 +36,10 @@
 
         if( !in_array($countInLine, $lineG) ){
 
+            $line = $i;
             echo 'Свободная линия - '.$i;
             echo '<br>';
+            $newPlace = $lastPlace + 1;
             echo 'Свободное место - '.$lastPlace + 1;
             echo '<br>';
             echo 'MatrixID - '. $martixID;
@@ -48,9 +50,12 @@
 
                 $countInLine = $lineG[$i-1];
                 $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
-
-                for ($n=$lastPlace + 1; $n <= $countInLine; $n++) {
+                $refererPlace = 0;
+                for ($n=$newPlace; $n <= $countInLine; $n++) {
                     echo $n;
+                    if( $newPlace <= $countInPrevLine ){
+                        echo '<br>';
+                    }
                 }
 
                 echo '<br>';
