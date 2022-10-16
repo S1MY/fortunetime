@@ -33,6 +33,7 @@
         if( !in_array($countInLine, $lineG) ){
 
             echo 'Свободная линия - '.$i;
+            echo '<br>';
             echo 'Свободное место - '.$countInLine + 1;
             break;
         }
