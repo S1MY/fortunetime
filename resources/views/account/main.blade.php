@@ -99,6 +99,7 @@
                     <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>9] ) }}">М#9</div>
                 </div>
                 <div class="mainContainerMatrix">
+                    {{ $matrix->matrix_id }}
                     @if ( $matrix != null)
                         @if ($matrix->matrix_id != null )
                             {{-- Если у пользователя кто-то запустил матрицу --}}
