@@ -3,6 +3,16 @@
 @section('title', 'Личный кабинет')
 
 @section('content')
+
+@php
+
+
+
+
+
+
+    exit;
+@endphp
     <section class="pageSection">
         <div class="container">
             <div class="pageInner">
