@@ -16,6 +16,8 @@
 
     $martixID = 61;
 
+    $lineG = array(4, 12, 28, 60, 124, 252, 508);
+
     for ($i=1; $i < 7; $i++) {
 
         $placeInLine = DB::table('matrix_placers')->where([
@@ -28,9 +30,11 @@
 
         $countInLine = $placeInLine->count();
 
-        echo $countInLine;
+        if( !in_array($countInLine, $lineG) ){
 
-        dd($placeInLine);
+            echo $i;
+            break;
+        }
     }
 
     exit;
