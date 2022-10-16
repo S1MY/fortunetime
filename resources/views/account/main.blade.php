@@ -46,7 +46,7 @@
             if( $i > 1 ){
                 $refererPlace = $countInLine+1;
                 $countInLine = $lineG[$i-1] - $lineG[$i-2];
-                $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / $lineG[$i-2];
+                $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
                 echo 'Количество мест на линии - '.$countInLine;
                 echo '<br>';
                 echo 'Место на линии - '.$refererPlace;
