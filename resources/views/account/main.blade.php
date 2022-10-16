@@ -5,22 +5,24 @@
 @section('content')
 <style>
     p{
-        display: inline-flex;
-        margin: 0 10px;
+        /* display: inline-flex; */
+        margin: 0 5px;
     }
 </style>
+<div style="display: inline-flex;">
 @php
-    for ($i=0; $i < 4; $i++) {
+    for ($i=1; $i <= 4; $i++) {
 
         $lineG = array(4, 12, 28, 60, 124, 252, 508);
 
-        for ($n=0; $n < $lineG[$i]; $n++) {
+        for ($n=1; $n <= $lineG[$i]; $n++) {
             echo '<p>'.$n.'</p>';
         }
         echo '<br>';
     }
     exit;
 @endphp
+</div>
     <section class="pageSection">
         <div class="container">
             <div class="pageInner">
