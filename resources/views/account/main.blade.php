@@ -19,9 +19,12 @@
     for ($i=1; $i < 7; $i++) {
 
         $placeInLine = DB::table('matrix_placers')->where([
-            ['matrix_id', '=', $martixID],
-            ['line', '=', $i],
-        ])->get();
+                            ['matrix_id', '=', $martixID],
+                            ['line', '=', $i],
+                        ])->orWhere([
+                            ['referer_id', '=', $martixID],
+                            ['referer_line', '=', $i],
+                        ])->get();
 
         $countInLine = $placeInLine->count();
 
