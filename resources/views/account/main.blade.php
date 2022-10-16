@@ -49,7 +49,7 @@
                 $countInLine = $lineG[$i-1];
                 $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
 
-                for ($n=$countInPrevLine; $n <= $countInLine; $n++) {
+                for ($n=$lastPlace + 1; $n <= $countInLine; $n++) {
                     echo $n;
                 }
 
