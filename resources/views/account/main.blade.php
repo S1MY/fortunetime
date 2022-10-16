@@ -33,8 +33,6 @@
 
         echo $countInLine;
 
-        dd($placeInLine);
-
         if( !in_array($countInLine, $lineG) ){
 
             echo 'Свободная линия - '.$i;
@@ -45,6 +43,8 @@
 
             break;
         }
+
+        dd($placeInLine);
     }
 
     exit;
