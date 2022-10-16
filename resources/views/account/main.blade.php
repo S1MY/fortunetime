@@ -14,18 +14,16 @@
 </style>
 @php
 
-    for ($i=0; $i < 3; $i++) {
 
-        $lineG = array(4, 12, 28, 60, 124, 252, 508);
 
-        echo '<p>';
-            for ($n=1; $n <= $lineG[$i]; $n++) {
-                echo '<span style="color: green;">'.$n.'</span>';
-            }
-        echo '</p>';
+    for ($i=0; $i < 7; $i++) {
+        $placeInLine = DB::table('matrix_placers')->where([
+            ['matrix_id', '=', $martixID],
+            ['line', '=', $i],
+        ])->get();
 
+        dd($placeInLine);
     }
-
 
     exit;
 
