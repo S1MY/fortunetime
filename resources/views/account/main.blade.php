@@ -32,6 +32,7 @@
         $countInLine = $placeInLine->count();
 
         echo $countInLine;
+        echo '<br>';
 
         if( !in_array($countInLine, $lineG) ){
 
