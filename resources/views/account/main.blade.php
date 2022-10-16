@@ -42,13 +42,19 @@
             echo '<br>';
             echo 'MatrixID - '. $martixID;
 
+            if( $i > 1 ){
+                $refererPlace = $countInLine;
+                $countInLine = $lineG[$i] - $lineG[$i-1];
+                echo 'Количество мест на линии - '.$countInLine;
+            }
+
             break;
+
         }else{
             $lastPlace = $countInLine;
         }
 
     }
-    dd($placeInLine);
 
     exit;
 
