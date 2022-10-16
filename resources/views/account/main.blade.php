@@ -53,7 +53,7 @@
                 $refererPlace = 0;
                 for ($n=$newPlace; $n <= $countInLine; $n++) {
                     echo $n;
-                    if( $n+1 % 2 ){
+                    if( $n % 2 ){
                         echo '<br>';
                     }
                 }
