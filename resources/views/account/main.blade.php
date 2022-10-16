@@ -16,7 +16,8 @@
 
     $martixID = 61;
 
-    for ($i=0; $i < 7; $i++) {
+    for ($i=1; $i < 7; $i++) {
+
         $placeInLine = DB::table('matrix_placers')->where([
             ['matrix_id', '=', $martixID],
             ['line', '=', $i],
