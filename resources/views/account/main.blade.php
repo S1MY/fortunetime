@@ -44,6 +44,7 @@
             break;
         }
 
+
         dd($placeInLine);
     }
 
