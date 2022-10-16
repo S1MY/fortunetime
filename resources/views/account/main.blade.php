@@ -50,7 +50,7 @@
 
                 $countInLine = $lineG[$i-1];
                 $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
-                $refererPlaces = 1;
+                $refererPlaces = 0;
 
                 for ($n=$lineG[$i-2] + 1; $n <= $countInLine; $n++) {
                     echo $n;
