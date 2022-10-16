@@ -27,7 +27,7 @@
         ])->orWhere([
             ['referer_id', '=', $martixID],
             ['referer_line', '=', $i],
-        ])->get();
+        ])->OrderBy('id', 'desc')->get();
 
         $countInLine = $placeInLine->count();
 
