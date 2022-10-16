@@ -23,6 +23,10 @@
             ['line', '=', $i],
         ])->get();
 
+        $countInLine = $placeInLine->count();
+
+        echo $countInLine;
+
         dd($placeInLine);
     }
 
