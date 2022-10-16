@@ -14,23 +14,21 @@
 </style>
 @php
 
-    $zaneto = array(
-        array(
-            'line' => 1,
-            'place' => 1,
-        )
-    );
-
     for ($i=0; $i < 3; $i++) {
 
         $lineG = array(4, 12, 28, 60, 124, 252, 508);
+
         echo '<p>';
             for ($n=1; $n <= $lineG[$i]; $n++) {
-                echo '<span>'.$n.'</span>';
+                echo '<span style="color: green;">'.$n.'</span>';
             }
         echo '</p>';
+
     }
+
+
     exit;
+
 @endphp
     <section class="pageSection">
         <div class="container">
