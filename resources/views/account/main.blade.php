@@ -69,7 +69,7 @@
 
                     $uplace = 2;
 
-                    if ( $uplace % 2 == 0 ){
+                    if ( ($uplace - 1) % 2 == 0 ){
                         $rpos++;
                     }
                     echo '<br>';
