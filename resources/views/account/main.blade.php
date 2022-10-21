@@ -39,6 +39,8 @@
 
             for ($i=1; $i <= 7; $i++) {
 
+                echo '----- Итерация # ' . $i . ' -----';
+
                 $current_line = $i;
 
                 $spmplacer = DB::table('matrix_placers')->where([
