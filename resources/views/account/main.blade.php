@@ -14,7 +14,7 @@
 </style>
 @php
 
-    $user = DB::table('users')::where('id', 1)->first();
+    $user = DB::table('users')->where('id', 1)->first();
 
     dd($user);
 
