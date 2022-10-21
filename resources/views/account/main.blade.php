@@ -36,7 +36,8 @@
             $matrix_id = $spmid;
 
             for ($i=1; $i <= 7; $i++) {
-                $spmplacer = DB::table('matrix')->where([
+
+                $spmplacer = DB::table('matrix_placers')->where([
                     ['matrix_id', '=', $matrix_id],
                     ['line', '=', $i],
                 ])->first();
