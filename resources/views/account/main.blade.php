@@ -67,7 +67,7 @@
 
                     $rpos = 1;
 
-                    $uplace = 6;
+                    $uplace = 7;
 
                     for ($n=1; $n <= $uplace; $n++) {
 
