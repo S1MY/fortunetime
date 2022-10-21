@@ -52,10 +52,6 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                // echo $spmplacer->count();
-                // echo $lineG[$i-1];
-                // break;
-
                 if( $spmplacer->count() == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
                     echo '<br>';
@@ -69,6 +65,10 @@
                     echo '<br>';
                     echo 'Ваша позиция на линии: ' . $uplace;
 
+                    $rpos = 1;
+
+                    echo '<br>';
+                    echo $upos % 2;
 
                     break;
                 }
