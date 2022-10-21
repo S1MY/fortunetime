@@ -57,7 +57,8 @@
                     /*/
 
 
-                    echo 'мм';
+                    echo $spmplacer->count();
+
                     // break;
                 }else{
                     echo 'Линя полностью занята';
