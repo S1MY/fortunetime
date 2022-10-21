@@ -59,7 +59,14 @@
                 }else{
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
-                    echo 'Людей на линии ' . $spmplacer->count();
+                    echo 'Людей на линии: ' . $spmplacer->count();
+
+                    $uplace = $spmplacer->count() + 1;
+
+                    echo '<br>';
+                    echo 'Ваша позиция на линии: ' . $uplace;
+
+
                     break;
                 }
 
