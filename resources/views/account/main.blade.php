@@ -73,7 +73,7 @@
                         $rpos++;
                     }
                     echo '<br>';
-                    echo $uplace % 2;
+                    echo $rpos;
 
                     break;
                 }
