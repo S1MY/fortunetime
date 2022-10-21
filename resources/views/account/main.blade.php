@@ -17,7 +17,7 @@
     $user = DB::table('users')->where('id', 10)->first();
 
     // Берём спонсора
-    $sp = $user['sponsor'];
+    $sp = $user->sponsor;
 
     echo $sp;
 
