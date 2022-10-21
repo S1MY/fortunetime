@@ -68,8 +68,12 @@
                     $rpos = 1;
 
                     $uplace = 3;
+
+                    if ( $uplace % 2 == 0 ){
+                        $rpos++;
+                    }
                     echo '<br>';
-                    echo $uplace % 2;
+                    echo $rpos;
 
                     break;
                 }
