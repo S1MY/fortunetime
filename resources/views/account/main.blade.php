@@ -59,7 +59,7 @@
                 }else{
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
-                    echo 'Колличество людей на линии ' . $spmplacer->count();
+                    echo 'Людей на линии ' . $spmplacer->count();
                     break;
                 }
 
