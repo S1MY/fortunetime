@@ -85,7 +85,7 @@
                         ['referer_id', '=', $matrix_id],
                         ['referer_line', '=', $i-1],
                         ['referer_place', '=', $rpos],
-                    ])->get();
+                    ])->first();
 
                     dd($refmplacer[0]['user_id']);
 
