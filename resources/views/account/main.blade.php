@@ -28,7 +28,7 @@
                 ['matrix_lvl', '=', $matrix_lvl],
             ])->first();
 
-    if( $SMartix ){
+    if( $spmatrix ){
         echo 'Есть активная матрица '.$matrix_lvl.' уровня';
         echo '<br>';
     }else{
