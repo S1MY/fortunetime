@@ -14,23 +14,7 @@
 </style>
 @php
 
-    $martixID = 61;
-    $lineG = array(4, 12, 28, 60, 124, 252, 508);
-
-    for ($i=1; $i < 7; $i++) {
-
-        $placeInLine =
-        DB::table('matrix_placers')->where([
-            ['matrix_id', '=', $martixID],
-            ['line', '=', $i],
-        ])->orWhere([
-            ['referer_id', '=', $martixID],
-            ['referer_line', '=', $i],
-        ])->OrderBy('id', 'asc')->get();
-
-        dd($placeInLine);
-
-    }
+    dd($user);
 
     exit;
 
