@@ -87,7 +87,7 @@
                         ['referer_place', '=', $rpos],
                     ])->first();
 
-                    dd($refmplacer);
+                    dd($refmplacer->user_id);
 
                     $ruser_id = $refmplacer->user_id;
 
