@@ -54,10 +54,11 @@
                 // break;
 
                 if( $spmplacer->count() == $lineG[$i-1] ){
-                    echo 'Линяя ' . $i . 'занята';
+                    echo 'Линяя ' . $i . ' занята';
                 }else{
                     echo 'Свободна '.$i.' линяя';
-                    echo $spmplacer->count();
+                    echo '<br>';
+                    echo 'Колличество людей на линии ' . $spmplacer->count();
                     break;
                 }
 
