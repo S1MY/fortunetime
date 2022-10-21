@@ -23,6 +23,8 @@
     // Берём спонсора и проверяем есть ли у него матрица
     $sp = $user->sponsor;
 
+    $lineG = array(4, 12, 28, 60, 124, 252, 508);
+
     $spmatrix = DB::table('matrix')->where([
                 ['user_id', '=', $sp],
                 ['matrix_lvl', '=', $matrix_lvl],
@@ -41,6 +43,12 @@
                     ['matrix_id', '=', $matrix_id],
                     ['line', '=', $i],
                 ])->get();
+
+                if( in_array($spmplacer->count(), $lineG) ){
+                    echo 'Переход на новую линию';
+                }else{
+                    echo 'Постановка в эту';
+                }
 
                 dd($spmplacer);
 
