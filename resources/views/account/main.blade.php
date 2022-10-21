@@ -49,7 +49,7 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                echo in_array($spmplacer->count();
+                echo $spmplacer->count();
                 break;
 
                 if( !in_array($spmplacer->count(), $lineG[$i-1]) ){
