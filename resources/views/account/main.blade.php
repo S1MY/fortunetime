@@ -14,6 +14,8 @@
 </style>
 @php
 
+    $user = User::where('id', 1)->first();
+
     dd($user);
 
     exit;
