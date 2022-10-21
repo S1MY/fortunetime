@@ -49,9 +49,9 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                echo $spmplacer->count();
-                echo $lineG[$i-1];
-                break;
+                // echo $spmplacer->count();
+                // echo $lineG[$i-1];
+                // break;
 
                 if( $spmplacer->count() == $lineG[$i-1] ){
 
@@ -61,9 +61,9 @@
 
                     echo 'Линя полностью занята';
 
-                    break;
                 }else{
                     echo 'Свободна '.$i.' линяя';
+                    break;
                 }
 
                 // dd($spmplacer);
