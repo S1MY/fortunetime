@@ -60,6 +60,7 @@
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
                     echo 'Людей на линии: ' . $spmplacer->count();
+                    echo '<br>';
 
                     for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
 
