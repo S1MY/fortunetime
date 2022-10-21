@@ -49,6 +49,9 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
+                echo $spmplacer->count();
+                break;
+
                 if( in_array($spmplacer->count(), $lineG) ){
 
                     /*/
@@ -68,7 +71,7 @@
 
             }
 
-            echo $current_line;
+            // echo $current_line;
 
         }else{
             echo 'Нет айдишника';
