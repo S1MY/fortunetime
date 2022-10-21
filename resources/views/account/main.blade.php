@@ -78,7 +78,8 @@
                     }
 
                     echo '<br>';
-                    echo $rpos;
+                    echo 'Подконтрольная позиция: ' . $rpos;
+                    echo '<br>';
 
                     break;
                 }
