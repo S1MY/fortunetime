@@ -87,8 +87,6 @@
                         ['referer_place', '=', $rpos],
                     ])->first();
 
-                    dd($refmplacer->user_id);
-
                     $ruser_id = $refmplacer->user_id;
 
                     $refmatrix = DB::table('matrix')->where([
