@@ -68,11 +68,9 @@
                     $rpos = 1;
 
                     for ($n=1; $n <= $uplace; $n++) {
-
                         if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
                             $rpos++;
                         }
-
                     }
 
                     echo '<br>';
@@ -89,7 +87,18 @@
                         ['referer_place', '=', $rpos],
                     ])->get();
 
-                    dd($refmplacer);
+                    $ruser_id = $refmplacer->user_id;
+
+                    $refmatrix = DB::table('matrix')->where([
+                        ['user_id', '=', $ruser_id],
+                        ['matrix_lvl', '=', $matrix_lvl],
+                    ])->first();
+
+                    if( $refmatrix ){
+                        $referer_id = $refmatrix->matrix_id;
+                    }
+
+                    echo 'Матрица вышестоящего: ' . $referer_id;
 
                     break;
                 }
