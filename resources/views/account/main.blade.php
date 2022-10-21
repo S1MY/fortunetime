@@ -17,7 +17,7 @@
     $matrix_lvl = 1;
 
 
-
+    // Заменить 10 на $user['id']
     $user = DB::table('users')->where('id', 10)->first();
 
     // Берём спонсора и проверяем есть ли у него матрица
@@ -33,12 +33,21 @@
         $spmid = $spmatrix->matrix_id;
 
         if( $spmid ){
-            echo 'Есть айдишник';
+            $matrix_id = $spmid;
+
+            for ($i=1; $i <= 7; $i++) {
+                $spmplacer = DB::table('matrix')->where([
+                    ['matrix_id', '=', $matrix_id],
+                    ['line', '=', $i],
+                ])->first();
+
+                dd($spmplacer);
+
+            }
+
         }else{
             echo 'Нет айдишника';
         }
-
-
 
     }else{
         echo 'Нет активной матрицы';
