@@ -16,7 +16,10 @@
 
     $user = DB::table('users')->where('id', 10)->first();
 
-    dd($user);
+    // Берём спонсора
+    $sp = $user['sponsor'];
+
+    echo $sp;
 
     exit;
 
