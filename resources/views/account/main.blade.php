@@ -40,7 +40,7 @@
                 $spmplacer = DB::table('matrix_placers')->where([
                     ['matrix_id', '=', $matrix_id],
                     ['line', '=', $i],
-                ])->first();
+                ])->get();
 
                 dd($spmplacer);
 
