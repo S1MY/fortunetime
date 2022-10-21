@@ -57,6 +57,7 @@
                     echo 'Линяя ' . $i . 'занята';
                 }else{
                     echo 'Свободна '.$i.' линяя';
+                    echo $spmplacer->count();
                     break;
                 }
 
