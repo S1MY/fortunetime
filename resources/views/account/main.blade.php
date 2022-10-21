@@ -55,6 +55,7 @@
 
                 if( $spmplacer->count() == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
+                    echo '<br>';
                 }else{
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
