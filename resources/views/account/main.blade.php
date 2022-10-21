@@ -32,7 +32,11 @@
         // Берём id активной матрицы
         $spmid = $spmatrix->matrix_id;
 
-        echo $spmid;
+        if( $spmid ){
+            echo 'Есть айдишник';
+        }else{
+            echo 'Нет айдишник';
+        }
 
 
 
