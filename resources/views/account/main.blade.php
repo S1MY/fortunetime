@@ -106,7 +106,11 @@
                             ['referer_line', '=', 1],
                         ])->get();
 
-                        dd($rmplacer);
+
+                        if( $rmplacer->count() >= 2 ){
+                            echo 'Тут нельзя';
+                            echo '<br>';
+                        }
 
                     }
 
