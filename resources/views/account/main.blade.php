@@ -13,13 +13,28 @@
     }
 </style>
 @php
+    // Данные для проверки
+    $matrix_lvl = 1;
+
+
 
     $user = DB::table('users')->where('id', 10)->first();
 
-    // Берём спонсора
+    // Берём спонсора и проверяем есть ли у него матрица
     $sp = $user->sponsor;
 
-    echo $sp;
+    $spmatrix = DB::table('matrix')->where([
+                ['user_id', '=', $sp],
+                ['matrix_lvl', '=', $matrix_lvl],
+            ])->first();
+
+    if( $SMartix ){
+        echo 'Есть активная матрица '.$matrix_lvl.' уровня';
+        echo '<br>';
+    }else{
+        echo 'Нет активной матрицы';
+        echo '<br>';
+    }
 
     exit;
 
