@@ -69,13 +69,15 @@
 
                     $uplace = 4;
 
-                    for ($n=0; $n < $lineG[$i-1]; $n++) {
+                    for ($n=1; $n <= $uplace; $n++) {
 
-                        if ( ($uplace - 1) % 2 == 0 ){
-                            $rpos++;
-                        }
+                        $rpos++;
 
                     }
+
+                    // if ( ($uplace - 1) % 2 == 0 ){
+                    //     $rpos++;
+                    // }
 
                     echo '<br>';
                     echo $rpos;
