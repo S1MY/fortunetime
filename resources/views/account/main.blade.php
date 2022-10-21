@@ -67,6 +67,7 @@
 
                     $rpos = 1;
 
+                    $uplace = 3;
                     echo '<br>';
                     echo $uplace % 2;
 
