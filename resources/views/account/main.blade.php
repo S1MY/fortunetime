@@ -49,10 +49,10 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                // dd($spmplacer);
-                // break;
+                echo in_array($spmplacer->count();
+                break;
 
-                if( !in_array($spmplacer->count(), $lineG) ){
+                if( !in_array($spmplacer->count(), $lineG[$i-1]) ){
 
                     /*/
                      * Проверяем есть ли места на линии, если нет то пропускаем это условие и идём в следующюю
