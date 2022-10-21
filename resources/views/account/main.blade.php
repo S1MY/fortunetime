@@ -29,8 +29,13 @@
             ])->first();
 
     if( $spmatrix ){
-        echo 'Есть активная матрица '.$matrix_lvl.' уровня';
-        echo '<br>';
+        // Берём id активной матрицы
+        $spmid = $spmatrix->matrix_id;
+
+        echo $spmid;
+
+
+
     }else{
         echo 'Нет активной матрицы';
         echo '<br>';
