@@ -56,6 +56,23 @@
                     echo 'Линяя ' . $i . ' занята';
                     echo '<br>';
                 }else{
+
+                    if( $current_line > 1 ){
+                        $uplace = $spmplacer->count() + 1;
+
+                        $rpos = 1;
+
+                        for ($n=1; $n <= $uplace; $n++) {
+                            if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
+                                $rpos++;
+                            }
+                        }
+                    }
+
+
+
+
+
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
                     echo 'Людей на линии: ' . $spmplacer->count();
@@ -86,6 +103,8 @@
                         ['referer_line', '=', $i-1],
                         ['referer_place', '=', $rpos],
                     ])->first();
+
+                    dd($refmplacer);
 
                     $ruser_id = $refmplacer->user_id;
 
