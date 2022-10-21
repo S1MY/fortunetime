@@ -15,7 +15,7 @@
 @php
 
     $martixID = 61;
-
+    $lastPlace = 0;
     $lineG = array(4, 12, 28, 60, 124, 252, 508);
 
     for ($i=1; $i < 7; $i++) {
