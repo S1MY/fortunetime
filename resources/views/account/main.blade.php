@@ -67,7 +67,7 @@
 
                     $rpos = 1;
 
-                    $uplace = 4;
+                    $uplace = 5;
 
                     for ($n=1; $n <= $uplace; $n++) {
 
@@ -76,10 +76,6 @@
                         }
 
                     }
-
-                    // if ( ($uplace - 1) % 2 == 0 ){
-                    //     $rpos++;
-                    // }
 
                     echo '<br>';
                     echo $rpos;
