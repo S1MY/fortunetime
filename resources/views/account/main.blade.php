@@ -61,12 +61,10 @@
                     echo '<br>';
                     echo 'Людей на линии: ' . $spmplacer->count();
 
-                    dd($lineG[$i-1]);
+                    for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
 
-                    for ($uplace=$spmplacer->count() + 1; $uplace < $lineG[$i-1]; $uplace++) {
-
+                        echo 'Проверка позиции: ' . $uplace;
                         echo '<br>';
-                        echo 'Ваша позиция на линии: ' . $uplace;
 
                         $rpos = 1;
 
@@ -76,7 +74,6 @@
                             }
                         }
 
-                        echo '<br>';
                         echo 'Позиция вышестоящего: ' . $rpos;
                         echo '<br>';
 
@@ -121,6 +118,8 @@
                         }
 
                     }
+
+                    break;
                 }
 
                 // dd($spmplacer);
