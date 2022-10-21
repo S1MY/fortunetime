@@ -49,8 +49,8 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                dd($spmplacer);
-                break;
+                // dd($spmplacer);
+                // break;
 
                 if( in_array($spmplacer->count(), $lineG) ){
 
@@ -60,7 +60,7 @@
                     /*/
 
 
-                    echo $spmplacer->count();
+                    echo 'Свободна '.$i.' линяя';
 
                     break;
                 }else{
