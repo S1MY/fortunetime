@@ -67,7 +67,7 @@
 
                     $rpos = 1;
 
-                    $uplace = 2;
+                    $uplace = 3;
 
                     if ( ($uplace - 1) % 2 == 0 ){
                         $rpos++;
