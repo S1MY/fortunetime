@@ -28,58 +28,7 @@
             ['referer_line', '=', $i],
         ])->OrderBy('id', 'asc')->get();
 
-        $countInLine = $placeInLine->count();
-
-        echo $countInLine;
-        echo '<br>';
-
-        if( !in_array($countInLine, $lineG) ){
-
-            $line = $i;
-            echo 'Свободная линия - '.$i;
-            echo '<br>';
-            $newPlace = 7;//$lastPlace + 1;
-            echo 'Свободное место - '.$lastPlace + 1;
-            echo '<br>';
-            echo 'MatrixID - '. $martixID;
-            echo '<br>';
-
-            if( $i > 1 ){
-                $refererPlace = $countInLine+1;
-
-                $countInLine = $lineG[$i-1];
-                $countInPrevLine = ($lineG[$i-1] - $lineG[$i-2]) / 2;
-                $refererPlaces = 0;
-
-                for ($n=$lineG[$i-2] + 1; $n <= $countInLine; $n++) {
-                    echo $n;
-                    $b = $n - 1;
-
-                    if( $b % 2 ){
-                        echo '<br>';
-                        $refererPlaces++;
-                    }
-
-                    if ( $n == $newPlace ){
-                        break;
-                    }
-                }
-
-                echo 'Позиция реферал - ' . $refererPlaces;
-
-                echo '<br>';
-                echo 'Количество мест на линии - '.$countInLine;
-                echo '<br>';
-                echo 'Место на линии - '.$refererPlace;
-                echo '<br>';
-                echo 'Количество человек на предыдущей линии - '.$countInPrevLine;
-            }
-
-            //break;
-
-        }else{
-            $lastPlace = $countInLine;
-        }
+        dd($placeInLine);
 
     }
 
