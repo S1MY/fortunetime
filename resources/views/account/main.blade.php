@@ -49,7 +49,7 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                if( !in_array($spmplacer->count(), $lineG) ){
+                if( in_array($spmplacer->count(), $lineG) ){
 
                     /*/
                      * Проверяем есть ли места на линии, если нет то пропускаем это условие и идём в следующюю
@@ -59,7 +59,7 @@
 
                     echo $spmplacer->count();
 
-                    // break;
+                    break;
                 }else{
                     echo 'Линя полностью занята';
                 }
