@@ -61,62 +61,66 @@
                     echo '<br>';
                     echo 'Людей на линии: ' . $spmplacer->count();
 
-                    $uplace = $spmplacer->count() + 1;
+                    dd($lineG[$i-1]);
 
-                    echo '<br>';
-                    echo 'Ваша позиция на линии: ' . $uplace;
+                    for ($uplace=$spmplacer->count() + 1; $uplace < $lineG[$i-1]; $uplace++) {
 
-                    $rpos = 1;
+                        echo '<br>';
+                        echo 'Ваша позиция на линии: ' . $uplace;
 
-                    for ($n=1; $n <= $uplace; $n++) {
-                        if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
-                            $rpos++;
+                        $rpos = 1;
+
+                        for ($n=1; $n <= $uplace; $n++) {
+                            if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
+                                $rpos++;
+                            }
                         }
-                    }
 
-                    echo '<br>';
-                    echo 'Позиция вышестоящего: ' . $rpos;
-                    echo '<br>';
+                        echo '<br>';
+                        echo 'Позиция вышестоящего: ' . $rpos;
+                        echo '<br>';
 
-                    $refmplacer = DB::table('matrix_placers')->where([
-                        ['matrix_id', '=', $matrix_id],
-                        ['line', '=', $i-1],
-                        ['user_place', '=', $rpos],
-                    ])->orWhere([
-                        ['referer_id', '=', $matrix_id],
-                        ['referer_line', '=', $i-1],
-                        ['referer_place', '=', $rpos],
-                    ])->first();
-
-                    $ruser_id = $refmplacer->user_id;
-
-                    $refmatrix = DB::table('matrix')->where([
-                        ['user_id', '=', $ruser_id],
-                        ['matrix_lvl', '=', $matrix_lvl],
-                    ])->first();
-
-                    if( $refmatrix ){
-                        $referer_id = $refmatrix->matrix_id;
-
-                        $rmplacer = DB::table('matrix_placers')->where([
-                            ['matrix_id', '=', $referer_id],
-                            ['line', '=', 1],
+                        $refmplacer = DB::table('matrix_placers')->where([
+                            ['matrix_id', '=', $matrix_id],
+                            ['line', '=', $i-1],
+                            ['user_place', '=', $rpos],
                         ])->orWhere([
-                            ['referer_id', '=', $referer_id],
-                            ['referer_line', '=', 1],
-                        ])->get();
+                            ['referer_id', '=', $matrix_id],
+                            ['referer_line', '=', $i-1],
+                            ['referer_place', '=', $rpos],
+                        ])->first();
+
+                        $ruser_id = $refmplacer->user_id;
+
+                        $refmatrix = DB::table('matrix')->where([
+                            ['user_id', '=', $ruser_id],
+                            ['matrix_lvl', '=', $matrix_lvl],
+                        ])->first();
+
+                        if( $refmatrix ){
+                            $referer_id = $refmatrix->matrix_id;
+
+                            $rmplacer = DB::table('matrix_placers')->where([
+                                ['matrix_id', '=', $referer_id],
+                                ['line', '=', 1],
+                            ])->orWhere([
+                                ['referer_id', '=', $referer_id],
+                                ['referer_line', '=', 1],
+                            ])->get();
 
 
-                        if( $rmplacer->count() >= 2 ){
-                            echo 'Тут нельзя';
-                            echo '<br>';
+                            if( $rmplacer->count() >= 2 ){
+                                echo 'Тут нельзя';
+                                echo '<br>';
+                            }else{
+                                echo 'Можем разместиться';
+                                echo '<br>';
+                                echo 'Матрица вышестоящего: ' . $referer_id;
+                                break;
+                            }
                         }
 
                     }
-
-                    echo 'Матрица вышестоящего: ' . $referer_id;
-
-                    break;
                 }
 
                 // dd($spmplacer);
