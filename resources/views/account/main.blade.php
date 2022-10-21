@@ -44,10 +44,10 @@
                     ['line', '=', $i],
                 ])->get();
 
-                if( in_array($spmplacer->count(), $lineG) ){
-                    echo 'Переход на новую линию';
-                }else{
+                if( !in_array($spmplacer->count(), $lineG) ){
                     echo 'Постановка в эту';
+
+                    // break;
                 }
 
                 dd($spmplacer);
