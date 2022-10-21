@@ -50,6 +50,7 @@
                 ])->get();
 
                 echo $spmplacer->count();
+                echo $lineG[$i-1];
                 break;
 
                 if( !in_array($spmplacer->count(), $lineG[$i-1]) ){
