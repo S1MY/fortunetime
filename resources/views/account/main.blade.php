@@ -81,6 +81,18 @@
                     echo 'Позиция вышестоящего: ' . $rpos;
                     echo '<br>';
 
+                    $refmplacer = DB::table('matrix_placers')->where([
+                        ['matrix_id', '=', $matrix_id],
+                        ['line', '=', $i-1],
+                        ['user_place', '=', $rpos],
+                    ])->orWhere([
+                        ['referer_id', '=', $matrix_id],
+                        ['referer_line', '=', $i-1],
+                        ['referer_place', '=', $rpos],
+                    ])->get();
+
+                    dd($refmplacer);
+
                     break;
                 }
 
