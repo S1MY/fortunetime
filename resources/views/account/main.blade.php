@@ -64,7 +64,7 @@
 
                     for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
 
-                        echo 'Проверка позиции: ' . $uplace;
+                        echo '==== Проверка позиции: ' . $uplace . ' ====';
                         echo '<br>';
 
                         $rpos = 1;
