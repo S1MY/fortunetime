@@ -42,12 +42,23 @@
                 $spmplacer = DB::table('matrix_placers')->where([
                     ['matrix_id', '=', $matrix_id],
                     ['line', '=', $i],
+                ])->orWhere([
+                    ['referer_id', '=', $matrix_id],
+                    ['referer_line', '=', $i],
                 ])->get();
 
                 if( !in_array($spmplacer->count(), $lineG) ){
-                    echo 'Постановка в эту';
+
+                    /*/
+                     * Проверяем есть ли места на линии, если нет то пропускаем это условие и идём в следующюю
+                     * Если есть, берём нужные данные и ставим пользователя в эту же линюю, после ломаем for
+                    /*/
+
+
 
                     // break;
+                }else{
+                    echo 'Линя полностью занята';
                 }
 
                 dd($spmplacer);
