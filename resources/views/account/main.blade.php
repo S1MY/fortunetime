@@ -39,6 +39,8 @@
 
             for ($i=1; $i <= 7; $i++) {
 
+                $current_line = $i;
+
                 $spmplacer = DB::table('matrix_placers')->where([
                     ['matrix_id', '=', $matrix_id],
                     ['line', '=', $i],
@@ -56,14 +58,16 @@
 
 
 
-                    // break;
+                    break;
                 }else{
                     echo 'Линя полностью занята';
                 }
 
-                dd($spmplacer);
+                // dd($spmplacer);
 
             }
+
+            echo $current_line;
 
         }else{
             echo 'Нет айдишника';
