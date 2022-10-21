@@ -57,22 +57,6 @@
                     echo '<br>';
                 }else{
 
-                    if( $current_line > 1 ){
-                        $uplace = $spmplacer->count() + 1;
-
-                        $rpos = 1;
-
-                        for ($n=1; $n <= $uplace; $n++) {
-                            if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
-                                $rpos++;
-                            }
-                        }
-                    }
-
-
-
-
-
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
                     echo 'Людей на линии: ' . $spmplacer->count();
@@ -104,8 +88,6 @@
                         ['referer_place', '=', $rpos],
                     ])->first();
 
-                    dd($refmplacer);
-
                     $ruser_id = $refmplacer->user_id;
 
                     $refmatrix = DB::table('matrix')->where([
@@ -115,6 +97,17 @@
 
                     if( $refmatrix ){
                         $referer_id = $refmatrix->matrix_id;
+
+                        $rmplacer = DB::table('matrix_placers')->where([
+                            ['matrix_id', '=', $referer_id],
+                            ['line', '=', 1],
+                        ])->orWhere([
+                            ['referer_id', '=', $referer_id],
+                            ['referer_line', '=', 1],
+                        ])->get();
+
+                        dd($rmplacer);
+
                     }
 
                     echo 'Матрица вышестоящего: ' . $referer_id;
