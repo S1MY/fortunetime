@@ -440,6 +440,7 @@
 
             }
 
+            echo '<br>';
             echo $line_pay;
             // echo $current_line;
 
