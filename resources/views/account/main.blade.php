@@ -121,12 +121,326 @@
                     }
 
                     break;
-                }
 
-                // dd($spmplacer);
+                }
 
             }
 
+            $uplace = 4;
+
+            // Нужно ли двать деньги
+            if( in_array($uplace, $lineG) ){
+                if( $matrix_lvl == 1 ){
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 4000;
+                            $line_bonus = 0;
+                            break;
+                        case 2:
+                            $line_pay = 3000;
+                            $line_bonus = 5000;
+                            break;
+                        case 3:
+                            $line_pay = 11000;
+                            $line_bonus = 5000;
+                            break;
+                        case 4:
+                            $line_pay = 27000;
+                            $line_bonus = 5000;
+                            break;
+                        case 5:
+                            $line_pay = 59000;
+                            $line_bonus = 5000;
+                            break;
+                        case 6:
+                            $line_pay = 123000;
+                            $line_bonus = 5000;
+                            break;
+                        case 7:
+                            $line_pay = 246000;
+                            $line_bonus = 10000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 2 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 20000;
+                            $line_bonus = 0;
+                            break;
+                        case 2:
+                            $line_pay = 30000;
+                            $line_bonus = 10000;
+                            break;
+                        case 3:
+                            $line_pay = 70000;
+                            $line_bonus = 10000;
+                            break;
+                        case 4:
+                            $line_pay = 150000;
+                            $line_bonus = 10000;
+                            break;
+                        case 5:
+                            $line_pay = 310000;
+                            $line_bonus = 10000;
+                            break;
+                        case 6:
+                            $line_pay = 640000;
+                            $line_bonus = 10000;
+                            break;
+                        case 7:
+                            $line_pay = 1260000;
+                            $line_bonus = 20000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 3 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 40000;
+                            $line_bonus = 0;
+                            break;
+                        case 2:
+                            $line_pay = 55000;
+                            $line_bonus = 25000;
+                            break;
+                        case 3:
+                            $line_pay = 135000;
+                            $line_bonus = 25000;
+                            break;
+                        case 4:
+                            $line_pay = 295000;
+                            $line_bonus = 25000;
+                            break;
+                        case 5:
+                            $line_pay = 615000;
+                            $line_bonus = 25000;
+                            break;
+                        case 6:
+                            $line_pay = 1255000;
+                            $line_bonus = 25000;
+                            break;
+                        case 7:
+                            $line_pay = 2510000;
+                            $line_bonus = 50000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 4 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 50000;
+                            $line_bonus = 50000;
+                            break;
+                        case 2:
+                            $line_pay = 15000;
+                            $line_bonus = 50000;
+                            break;
+                        case 3:
+                            $line_pay = 350000;
+                            $line_bonus = 50000;
+                            break;
+                        case 4:
+                            $line_pay = 750000;
+                            $line_bonus = 50000;
+                            break;
+                        case 5:
+                            $line_pay = 1550000;
+                            $line_bonus = 50000;
+                            break;
+                        case 6:
+                            $line_pay = 3150000;
+                            $line_bonus = 50000;
+                            break;
+                        case 7:
+                            $line_pay = 6350000;
+                            $line_bonus = 50000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 5 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 50000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                        case 2:
+                            $line_pay = 250000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                        case 3:
+                            $line_pay = 650000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                        case 4:
+                            $line_pay = 1450000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                        case 5:
+                            $line_pay = 3050000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                        case 6:
+                            $line_pay = 6250000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                        case 7:
+                            $line_pay = 12650000;
+                            $line_bonus = 100000;
+                            $line_reinv = 50000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 6 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 150000;
+                            $line_bonus = 250000;
+                            break;
+                        case 2:
+                            $line_pay = 350000;
+                            $line_bonus = 250000;
+                            $line_reinv = 200000;
+                            break;
+                        case 3:
+                            $line_pay = 1250000;
+                            $line_bonus = 250000;
+                            $line_reinv = 100000;
+                            break;
+                        case 4:
+                            $line_pay = 2850000;
+                            $line_bonus = 250000;
+                            $line_reinv = 100000;
+                            break;
+                        case 5:
+                            $line_pay = 6050000;
+                            $line_bonus = 250000;
+                            $line_reinv = 100000;
+                            break;
+                        case 6:
+                            $line_pay = 12450000;
+                            $line_bonus = 250000;
+                            $line_reinv = 100000;
+                            break;
+                        case 7:
+                            $line_pay = 25250000;
+                            $line_bonus = 250000;
+                            $line_reinv = 100000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 7 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 500000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                        case 2:
+                            $line_pay = 1250000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                        case 3:
+                            $line_pay = 3250000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                        case 4:
+                            $line_pay = 7250000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                        case 5:
+                            $line_pay = 15250000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                        case 6:
+                            $line_pay = 31250000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                        case 7:
+                            $line_pay = 63250000;
+                            $line_bonus = 500000;
+                            $line_reinv = 250000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 8 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                        case 2:
+                            $line_pay = 2500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                        case 3:
+                            $line_pay = 6500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                        case 4:
+                            $line_pay = 14500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                        case 5:
+                            $line_pay = 30500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                        case 6:
+                            $line_pay = 62500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                        case 7:
+                            $line_pay = 126500000;
+                            $line_bonus = 1000000;
+                            $line_reinv = 500000;
+                            break;
+                    }
+                }elseif ( $matrix_lvl == 9 ) {
+                    switch ($current_line) {
+                        case 1:
+                            $line_pay = 3000000;
+                            $line_reinv = 1000000;
+                            break;
+                        case 2:
+                            $line_pay = 7000000;
+                            $line_reinv = 1000000;
+                            break;
+                        case 3:
+                            $line_pay = 15000000;
+                            $line_reinv = 1000000;
+                            break;
+                        case 4:
+                            $line_pay = 31000000;
+                            $line_reinv = 1000000;
+                            break;
+                        case 5:
+                            $line_pay = 63000000;
+                            $line_reinv = 1000000;
+                            break;
+                        case 6:
+                            $line_pay = 127000000;
+                            $line_reinv = 1000000;
+                            break;
+                        case 7:
+                            $line_pay = 255000000;
+                            $line_reinv = 1000000;
+                            break;
+                    }
+                }
+
+            }
+
+            echo $line_pay;
             // echo $current_line;
 
         }else{
