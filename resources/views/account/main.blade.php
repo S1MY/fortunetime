@@ -129,7 +129,7 @@
             $uplace = 4;
 
             // Нужно ли двать деньги
-            if( $uplace = $lineG[$current_line - 1] ){
+            if( $uplace == $lineG[$current_line - 1] ){
                 if( $matrix_lvl == 1 ){
                     switch ($current_line) {
                         case 1:
