@@ -8,8 +8,6 @@
             <div class="pageInner">
 
                 @include('account.layout.adminMaster')
-
-                @foreach ($users as $user)
                 <table>
                     <tr>
                         <th>Имя</td>
@@ -21,18 +19,21 @@
                         <th>Баланс</td>
                         <th>Активирован</td>
                     </th>
-                    <tr>
-                        <td>{{ $user->user_name }}</td>
-                        <td>{{ $user->user_surname }}</td>
-                        <td>{{ $user->login }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->sponsor }}</td>
-                        <td>{{ $user->sponsor_counter }}</td>
-                        <td>{{ $user->balance }}</td>
-                        <td>{{ $user->activated }}</td>
-                    </tr>
+
+                    @foreach ($users as $user)
+                        <tr>
+                            <td>{{ $user->user_name }}</td>
+                            <td>{{ $user->user_surname }}</td>
+                            <td>{{ $user->login }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->sponsor }}</td>
+                            <td>{{ $user->sponsor_counter }}</td>
+                            <td>{{ $user->balance }}</td>
+                            <td>{{ $user->activated }}</td>
+                        </tr>
+                    @endforeach
+
                 </table>
-                @endforeach
             </div>
         </div>
     </section>
