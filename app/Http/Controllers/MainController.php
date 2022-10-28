@@ -142,7 +142,6 @@ class MainController extends Controller
     }
 
     public function adminSorting(Request $request){
-        var_dump($request);
-        return var_dump($request);
+        return $request->sorting;
     }
 }
