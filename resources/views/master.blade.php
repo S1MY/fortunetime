@@ -92,9 +92,9 @@
                                     <div class="subMenu">
 
                                         @if (Auth::user()->is_admin == 1)
-                                            <a href="{{ route('adminPage') }}" class="subMenuItem active" style="color: #ff5722;">
+                                            <a href="{{ route('adminPage') }}" class="subMenuItem" style="color: #ff5722;">
                                                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                    <path style="#ff5722 !important" d="M18 18H5.867C4.247 18 3 19.38 3 21v2h18v-2c0-1.62-1.38-3-3-3zM12 1a8 8 0 0 0-8 8c0 4.419 3.581 8 8 8s8-3.581 8-8a8 8 0 0 0-8-8zm-1 12L7.5 9.5 9 8l2 2 4-4 1.5 1.5L11 13z"/>
+                                                    <path fill="#ff5722" d="M18 18H5.867C4.247 18 3 19.38 3 21v2h18v-2c0-1.62-1.38-3-3-3zM12 1a8 8 0 0 0-8 8c0 4.419 3.581 8 8 8s8-3.581 8-8a8 8 0 0 0-8-8zm-1 12L7.5 9.5 9 8l2 2 4-4 1.5 1.5L11 13z"/>
                                                 </svg>
                                                 <span>Админка</span>
                                             </a>
