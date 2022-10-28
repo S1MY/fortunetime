@@ -11,15 +11,15 @@
 
                 @foreach ($users as $user)
                 <table>
-                    <th>
-                        <td>Имя</td>
-                        <td>Фамилия</td>
-                        <td>Логин</td>
-                        <td>Email</td>
-                        <td>Пригласитель</td>
-                        <td>Количество приглашённых</td>
-                        <td>Баланс</td>
-                        <td>Активирован</td>
+                    <tr>
+                        <th>Имя</td>
+                        <th>Фамилия</td>
+                        <th>Логин</td>
+                        <th>Email</td>
+                        <th>Пригласитель</td>
+                        <th>Количество приглашённых</td>
+                        <th>Баланс</td>
+                        <th>Активирован</td>
                     </th>
                     <tr>
                         <td>{{ $user->user_name }}</td>
