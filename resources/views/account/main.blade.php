@@ -13,6 +13,8 @@
     }
 </style>
 @php
+
+dd(Auth::user());
     // Данные для проверки
     $matrix_lvl = 1;
 
@@ -452,8 +454,6 @@
         echo 'Нет активной матрицы';
         echo '<br>';
     }
-
-    exit;
 
 @endphp
     <section class="pageSection">
