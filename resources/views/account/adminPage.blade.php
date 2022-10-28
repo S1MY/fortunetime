@@ -22,6 +22,7 @@
                     </th>
 
                     @foreach ($users as $user)
+                    {{ dd($user) }}
                         <tr>
                             <td>{{ $user->user_name }}</td>
                             <td>{{ $user->user_surname }}</td>
