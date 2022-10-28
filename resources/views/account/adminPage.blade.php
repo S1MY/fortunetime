@@ -31,7 +31,6 @@
                             <td class="tacenter">{{ $user->sponsor_login }}</td>
                             <td class="tacenter">{{ $user->sponsor_counter }}</td>
                             <td>{{ $user->balance }}</td>
-                            <td>{{ $user->activated }}</td>
                             <td>{{ $user->created_at }}</td>
                         </tr>
                     @endforeach
