@@ -142,6 +142,6 @@ class MainController extends Controller
     }
 
     public function adminSorting(Request $request){
-        dd($request);
+        return dd($request);
     }
 }
