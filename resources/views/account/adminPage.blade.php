@@ -10,7 +10,7 @@
                 @include('account.layout.adminMaster')
 
                 @foreach ($users as $user)
-            {{ $user->name }}
+                    {{ $user->login }}
                 @endforeach
             </div>
         </div>
