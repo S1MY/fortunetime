@@ -18,7 +18,6 @@
                         <th>Пригласитель</th>
                         <th>Количество приглашённых</th>
                         <th>Баланс</th>
-                        <th></th>
                         <th>Дата регистрации</th>
                     </tr>
 
@@ -33,6 +32,7 @@
                             <td class="tacenter">{{ $user->sponsor_counter }}</td>
                             <td>{{ $user->balance }}</td>
                             <td>{{ $user->activated }}</td>
+                            <td>{{ $user->created_at }}</td>
                         </tr>
                     @endforeach
 
