@@ -40,6 +40,10 @@
     margin-top: 25px;
 }
 
+.adminBtn:not:first-child{
+    margin-left: 20px;
+}
+
 .adminBtn.active{
     background: #4168D2;
     color: #FFFFFF;
