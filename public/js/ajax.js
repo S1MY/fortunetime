@@ -170,10 +170,10 @@ $(document).ready(function () {
             data: formData,
             dataType: 'json',
             success: function (data) {
-                $('.tableWrapper').html(data);
+                $('.tableWrapper').html(data['responseText']);
             },
             error: function (data) {
-                $('.tableWrapper').html(data);
+                $('.tableWrapper').html(data['responseText']);
                 console.log(data);
             }
         });
