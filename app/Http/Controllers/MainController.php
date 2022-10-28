@@ -189,12 +189,13 @@ class MainController extends Controller
 
     public function paied(){
         $paieds = DB::table('freekassas')
-                    ->select('users.login', 'amount' , 'freekassas.created_at')
+                    ->select('users.login', DB::raw("sum(amount) as amount") , 'freekassas.created_at')
                     ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
                     ->where('status','=',1)
-                    ->sum('amount');
+                    ->groupBy('users.login')
+                    ->get();
 
-        $title = 'Все успешные пополнения ()';
+        $title = 'Все успешные пополнения ('.$paieds->count().')';
 
         return view('account.admin.payed', compact('paieds', 'title'));
     }
