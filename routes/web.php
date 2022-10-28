@@ -72,7 +72,7 @@ Route::post('/user/{id}/{lvl}', 'App\Http\Controllers\UserController@getMatrix')
 /* Admin */
 
 Route::get('/admin', 'App\Http\Controllers\MainController@admin')->name('adminPage')->middleware('is_admin');
-Route::get('/paied', 'App\Http\Controllers\MainController@paied')->name('paied')->middleware('is_admin');
+Route::get('/admin/paied', 'App\Http\Controllers\MainController@paied')->name('paied')->middleware('is_admin');
 Route::post('/admin/sorting', 'App\Http\Controllers\MainController@adminSorting')->name('adminSorting')->middleware('is_admin');
 
 /* Freekassa */
