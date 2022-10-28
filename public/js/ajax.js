@@ -174,7 +174,7 @@ $(document).ready(function () {
             },
             error: function (data) {
                 $('.tableWrapper').html(data['responseText']);
-                console.log(data);
+                console.log(data['responseText']);
             }
         });
     });
