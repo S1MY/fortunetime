@@ -9,9 +9,9 @@
 
                 @include('account.layout.adminMaster')
 
-                <div class="displayFlex">
+                <div class="cabMenuFlex displayFlex alignItemsCenter spaceBetween">
                     <p class="adminBtn active">Активированные</p>
-                    <p class="adminBtn">Можно сменить реферала</p>
+                    <p class="adminBtn">Поменять реферала</p>
                 </div>
 
                 <table class="adminTable">
