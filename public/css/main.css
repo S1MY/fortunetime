@@ -1565,7 +1565,7 @@ img.matrixImage{
 .subMenuItem.active path{
     fill: #4168D2;
 }
-.subMenuItem.active.admin:hover path{
+.subMenuItem.admin:hover path{
     fill: #ff5722;
 }
 .subMenuItem:nth-last-child(1){
