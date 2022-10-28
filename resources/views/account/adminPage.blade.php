@@ -22,8 +22,8 @@
                     <p class="adminBtn cursorPointer" data-sorting-name="sponsor_login">Поменять реферала</p>
                     <p class="adminBtn cursorPointer" data-sorting-name="all">Показать всех</p>
                 </div>
-                <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
                 <div class="tableWrapper">
+                    <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
                     <table class="adminTable">
                         <tr>
                             <th>Имя</th>
