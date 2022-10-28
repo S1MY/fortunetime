@@ -14,11 +14,13 @@
                 <form id="formSorting" action="{{ route('adminSorting') }}">
                     <input type="hidden" name="activated" id="activated" value="0">
                     <input type="hidden" name="sponsor_login" id="sponsor_login" value="1">
+                    <input type="hidden" name="all" id="all" value="0">
                 </form>
 
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
                     <p class="adminBtn active cursorPointer" data-sorting-name="activated">Активированные</p>
                     <p class="adminBtn cursorPointer" data-sorting-name="sponsor_login">Поменять реферала</p>
+                    <p class="adminBtn cursorPointer" data-sorting-name="all">Показать всех</p>
                 </div>
                 <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
                 <div class="tableWrapper">

@@ -144,12 +144,17 @@ $(document).ready(function () {
         e.preventDefault();
         $('#formSorting').submit();
 
+        if( $(this).attr('data-sorting-name') == 'all' ){
+            $('.adminBtn').removeClass('active');
+            $('#formSorting input').attr('value', 0);
+        }
+
         $(this).toggleClass('active');
 
         if( $(this).attr('data-sorting-name') == 'sponsor_login' ){
             $('.adminBtn[data-sorting-name=activated]').removeClass('active');
+            $('#formSorting #activated').attr('value', 0);
         }
-
 
         if( $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value') == 1 ){
             $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 0);
