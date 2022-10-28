@@ -146,24 +146,6 @@ class MainController extends Controller
         $sorting = $request->sorting;
         $value = $request->value;
 
-        if( $sorting == 'activated' ){
-            $users = DB::table('users')
-                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
-                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
-                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                    ->where('activated', $value)
-                    ->get();
-        }
-
-        if( $sorting == 'sponsor_login' ){
-            $users = DB::table('users')
-                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
-                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
-                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                    ->where('activated', $value)
-                    ->get();
-        }
-
-        return $request->sorting;
+        return $request->activated;
     }
 }
