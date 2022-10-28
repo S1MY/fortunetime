@@ -150,7 +150,7 @@ class MainController extends Controller
                 ->where('activated', $request->activated)
                 ->get();
 
-        if( $request->sponsor_login == 1 ){
+        if( $request->sponsor_login === 1 ){
             $users = DB::table('users')
                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
@@ -162,7 +162,7 @@ class MainController extends Controller
                     ->get();
         }
 
-        if( $request->all == 1 ){
+        if( $request->all === 1 ){
             $users = DB::table('users')
                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
