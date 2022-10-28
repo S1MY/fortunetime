@@ -96,7 +96,6 @@ class MainController extends Controller
 
             $matrixInfos = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                            ->select('u2.login as sponsor_login')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
                             ->get();
@@ -111,6 +110,7 @@ class MainController extends Controller
 
         $users = DB::table('users')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                    ->select('u2.login as sponsor_login')
                     ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                     ->get();
