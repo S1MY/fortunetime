@@ -9,6 +9,10 @@
 
                 @include('account.layout.adminMaster')
 
+                <div class="flex">
+                    <p class="btn">Активированные</p>
+                </div>
+
                 <table class="adminTable">
                     <tr>
                         <th>Имя</th>
