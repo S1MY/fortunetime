@@ -107,7 +107,10 @@ class MainController extends Controller
     }
 
     public function admin(){
-        return view('account.adminPage');
+
+        $users = User::get();
+
+        return view('account.adminPage', compact('users'));
     }
 
     public function start(){

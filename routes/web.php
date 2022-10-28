@@ -69,6 +69,8 @@ Route::post('/settings/update-user/avatar/{id}', 'App\Http\Controllers\UserContr
 
 Route::post('/user/{id}/{lvl}', 'App\Http\Controllers\UserController@getMatrix')->name('getmatrix')->middleware('auth');
 
+/* Admin */
+
 Route::get('/admin', 'App\Http\Controllers\MainController@admin')->name('adminPage')->middleware('is_admin');
 
 /* Freekassa */

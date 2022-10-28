@@ -9,6 +9,9 @@
 
                 @include('account.layout.adminMaster')
 
+                @foreach ($users as $user)
+            {{ $user->name }}
+                @endforeach
             </div>
         </div>
     </section>
