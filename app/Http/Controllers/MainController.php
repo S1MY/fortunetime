@@ -137,7 +137,9 @@ class MainController extends Controller
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                     ->get();
 
-        return view('account.adminPage', compact('users'));
+        $title = 'Все пользователи ('.$users->count().')';
+
+        return view('account.adminPage', compact('users', 'title'));
     }
 
     public function adminSorting(Request $request){

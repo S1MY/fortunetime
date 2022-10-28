@@ -23,7 +23,7 @@
                     <p class="adminBtn cursorPointer" data-sorting-name="all">Показать всех</p>
                 </div>
                 <div class="tableWrapper">
-                    <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
+                    <h3 class="cabMatrixName" style="margin-top: 20px">{{ $title }}</h3>
                     <table class="adminTable">
                         <tr>
                             <th>Имя</th>
