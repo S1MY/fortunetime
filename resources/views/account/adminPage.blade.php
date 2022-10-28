@@ -14,7 +14,6 @@
                     <p class="adminBtn active">Активированные</p>
                     <p class="adminBtn">Поменять реферала</p>
                 </div>
-{{ Route::currentRouteName() }}
                 <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
                 <table class="adminTable">
                     <tr>
