@@ -142,8 +142,7 @@ class MainController extends Controller
     }
 
     public function adminSorting(Request $request){
-        http_response_code(500);
-        dd($request);
+        var_dump($request);
         return 1;
     }
 }
