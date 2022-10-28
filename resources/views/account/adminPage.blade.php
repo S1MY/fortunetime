@@ -8,7 +8,8 @@
             <div class="pageInner">
 
                 @include('account.layout.adminMaster')
-                <table>
+
+                <table class="adminTable">
                     <tr>
                         <th>Имя</td>
                         <th>Фамилия</td>
