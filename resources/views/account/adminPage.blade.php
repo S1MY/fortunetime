@@ -18,7 +18,7 @@
                 </form>
 
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
-                    <p class="adminBtn active cursorPointer" data-sorting-name="activated">Активированные</p>
+                    <p class="adminBtn cursorPointer" data-sorting-name="activated">Активированные</p>
                     <p class="adminBtn cursorPointer" data-sorting-name="sponsor_login">Поменять реферала</p>
                     <p class="adminBtn cursorPointer" data-sorting-name="all">Показать всех</p>
                 </div>
