@@ -13,7 +13,7 @@
 
                 <form id="formSorting" action="{{ route('adminSorting') }}">
                     <input type="hidden" name="activated" id="activated" value="0">
-                    <input type="hidden" name="sponsor_login" id="sponsor_login" value="1">
+                    <input type="hidden" name="sponsor_login" id="sponsor_login" value="0">
                 </form>
 
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
