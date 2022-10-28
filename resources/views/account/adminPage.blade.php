@@ -11,8 +11,14 @@
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Настройка вывода</h3>
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
-                    <p class="adminBtn active cursorPointer" data-sorting-name="activated" data-value="0" data-action="{{ route('adminSorting') }}">Активированные</p>
-                    <p class="adminBtn cursorPointer" data-sorting-name="sponsor_login" data-value="1" data-action="{{ route('adminSorting') }}">Поменять реферала</p>
+
+                    <form id="formSorting" action="{{ route('adminSorting') }}">
+                        <input type="hidden" name="activated" id="activated" value="1">
+                        <input type="hidden" name="sponsor_login" id="sponsor_login" value="0">
+                    </form>
+
+                    <p class="adminBtn active cursorPointer" data-sorting-name="activated">Активированные</p>
+                    <p class="adminBtn cursorPointer" data-sorting-name="sponsor_login">Поменять реферала</p>
                 </div>
                 <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
                 <table class="adminTable">

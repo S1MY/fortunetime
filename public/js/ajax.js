@@ -142,12 +142,22 @@ $(document).ready(function () {
 
     $('.adminBtn').click(function (e){
         e.preventDefault();
-
-        let ajaxurl = $(this).attr('data-action');
-        let sorting = $(this).attr('data-sorting-name');
-        let value = $(this).attr('data-value');
+        $('#formSorting').submit();
 
         $(this).toggleClass('active');
+
+        if( $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value') == 1 ){
+            $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 0);
+        } else{
+            $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 1);
+        }
+    })
+
+    $('#formSorting').submit(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('action');
+        let formData = $(this).serialize();
 
         $.ajaxSetup({
             headers: {
@@ -157,7 +167,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: ajaxurl,
-            data: {sorting: sorting, value: value},
+            data: formData,
             dataType: 'json',
             success: function (data) {
                 console.log(data);
@@ -166,7 +176,7 @@ $(document).ready(function () {
                 console.log(data);
             }
         });
-    })
+    });
 
     $('.AJAXFormFK').submit(function (e) {
         e.preventDefault();
