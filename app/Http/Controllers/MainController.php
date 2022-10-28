@@ -189,7 +189,7 @@ class MainController extends Controller
 
     public function paied(){
         $paieds = DB::table('freekassas')
-                    ->select('users.login', 'amount' , 'created_at')
+                    ->select('users.login', 'amount' , 'freekassas.created_at')
                     ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
                     ->where('status','=',1)
                     ->get();
