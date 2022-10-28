@@ -101,9 +101,11 @@
                             $rmplacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $referer_id],
                                 ['line', '=', 1],
+                                ['shoulder', '=', 0],
                             ])->orWhere([
                                 ['referer_id', '=', $referer_id],
                                 ['referer_line', '=', 1],
+                                ['shoulder', '=', 0],
                             ])->get();
 
 
@@ -125,8 +127,6 @@
                 }
 
             }
-
-            $uplace = 12;
 
             $line_pay = 0;
             // Нужно ли двать деньги
