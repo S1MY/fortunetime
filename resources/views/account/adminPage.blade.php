@@ -25,10 +25,10 @@
                         <tr>
                             <td>{{ $user->user_name }}</td>
                             <td>{{ $user->user_surname }}</td>
-                            <td>{{ $user->login }}</td>
+                            <td class="tacenter">{{ $user->login }}</td>
                             <td>{{ $user->email }}</td>
-                            <td>{{ $user->sponsor }}</td>
-                            <td>{{ $user->sponsor_counter }}</td>
+                            <td class="tacenter">{{ $user->sponsor }}</td>
+                            <td class="tacenter">{{ $user->sponsor_counter }}</td>
                             <td>{{ $user->balance }}</td>
                             <td>{{ $user->activated }}</td>
                         </tr>
