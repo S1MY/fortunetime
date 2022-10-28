@@ -10,7 +10,6 @@
                 @include('account.layout.adminMaster')
 
                 @foreach ($users as $user)
-                {{ dd($user) }}
                 <table>
                     <th>
                         <td>Имя</td>
