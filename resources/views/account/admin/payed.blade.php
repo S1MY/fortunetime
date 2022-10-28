@@ -33,9 +33,9 @@
 
                         @foreach ($paieds as $paied)
                             <tr>
-                                <td>{{ $paied->login }}</td>
-                                <td>{{ $paied->amount }}</td>
-                                <td>{{ $paied->created_at }}</td>
+                                <td class="tacenter">{{ $paied->login }}</td>
+                                <td class="tacenter">{{ $paied->amount }}</td>
+                                <td class="tacenter">{{ $paied->created_at }}</td>
                             </tr>
                         @endforeach
 
