@@ -19,6 +19,10 @@
 	padding: 5px;
 }
 
+.adminTable .tacenter{
+    text-align: center;
+}
+
 /* errors */
 input.error,
 textarea.error{
