@@ -109,6 +109,7 @@ class MainController extends Controller
     public function admin(){
 
         $users = DB::table('users')
+                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
                     ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                     ->get();
