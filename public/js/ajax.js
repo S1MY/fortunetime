@@ -144,7 +144,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('#formSorting').submit();
 
-        if( $(this).attr('data-sorting-name') == 'all' ){
+        if( $(this).attr('data-sorting-name') == 'all' && $('#formSorting #all').attr('value') == 0 ){
             $('.adminBtn').removeClass('active');
             $('#formSorting input').attr('value', 0);
         }
