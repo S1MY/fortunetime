@@ -186,4 +186,17 @@ class MainController extends Controller
 
         return view('account.admin.usersTable', compact('users', 'title'));
     }
+
+    public function paied(){
+        $paieds = DB::table('freekassas')
+                    ->select('users.login', 'amount' , 'created_at')
+                    ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
+                    ->where('status','=',1)
+                    ->get();
+
+        $title = 'Все успешные пополнения ('.$paieds->count().')';
+
+        return view('account.admin.payed', compact('paieds', 'title'));
+    }
+
 }
