@@ -3,5 +3,11 @@
 @section('title', 'Автоматизация')
 
 @section('content')
-    <p>Админка</p>
+    <section class="pageSection">
+        <div class="container">
+            <div class="pageInner">
+                <p>Админка</p>
+            </div>
+        </div>
+    </section>
 @endsection
