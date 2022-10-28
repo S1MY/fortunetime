@@ -11,15 +11,16 @@
 
                 <table class="adminTable">
                     <tr>
-                        <th>Имя</td>
-                        <th>Фамилия</td>
-                        <th>Логин</td>
-                        <th>Email</td>
-                        <th>Пригласитель</td>
-                        <th>Количество приглашённых</td>
-                        <th>Баланс</td>
-                        <th>Активирован</td>
-                    </th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Логин</th>
+                        <th>Email</th>
+                        <th>Пригласитель</th>
+                        <th>Количество приглашённых</th>
+                        <th>Баланс</th>
+                        <th></th>
+                        <th>Дата регистрации</th>
+                    </tr>
 
                     @foreach ($users as $user)
                     {{-- {{ dd($user) }} --}}
