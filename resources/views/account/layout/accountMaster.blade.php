@@ -7,9 +7,6 @@
 @endphp
 
 <div class="cabMenuFlex displayFlex alignItemsCenter spaceBetween">
-    @if (Auth::user()->is_admin == 1)
-        <a href="{{ route('account') }}" class="cabMenuLink{{ Route::currentRouteName() == 'account' ? ' active' : '' }}">Админ панель</a>
-    @endif
     <a href="{{ route('account') }}" class="cabMenuLink{{ Route::currentRouteName() == 'account' ? ' active' : '' }}">Главная</a>
     <a href="{{ route('start') }}" class="cabMenuLink{{ $disabledMunuLink }}{{ Route::currentRouteName() == 'start' ? ' active' : '' }}">Быстрый старт</a>
     <a href="{{ route('automation') }}" class="cabMenuLink{{ $disabledMunuLink }}{{ Route::currentRouteName() == 'automation' ? ' active' : '' }}">Автоматизация</a>
