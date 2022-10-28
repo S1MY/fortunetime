@@ -108,7 +108,10 @@ class MainController extends Controller
 
     public function admin(){
 
-        $users = User::get();
+        $users = DB::table('users')
+                    ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                    ->get();
 
         return view('account.adminPage', compact('users'));
     }

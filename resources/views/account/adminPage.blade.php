@@ -10,7 +10,11 @@
                 @include('account.layout.adminMaster')
 
                 @foreach ($users as $user)
-                    {{ $user->login }}
+                    <div class="itemWrapper">
+                        <p class="wrapperContent">{{ $user->login }}</p>
+                        <p class="wrapperContent">{{ $user->email }}</p>
+                        <p class="wrapperContent">{{ $user->sponsor }}</p>
+                    </div>
                 @endforeach
             </div>
         </div>
