@@ -14,7 +14,7 @@
 </style>
 @php
 
-dd(Auth::user());
+dd(Auth::user()->is_admin);
     // Данные для проверки
     $matrix_lvl = 1;
 
