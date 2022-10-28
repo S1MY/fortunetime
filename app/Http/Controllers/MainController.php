@@ -192,7 +192,7 @@ class MainController extends Controller
                     ->select('users.login', 'amount' , 'freekassas.created_at')
                     ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
                     ->where('status','=',1)
-                    ->get();
+                    ->sum('amount');
 
         $title = 'Все успешные пополнения ('.$paieds->count().')';
 
