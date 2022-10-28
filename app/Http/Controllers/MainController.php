@@ -158,7 +158,7 @@ class MainController extends Controller
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                     ->where([
                         ['activated', '=', 0],
-                        ['users.sponsor_counter', '=', NULL]
+                        ['users.sponsor', '=', NULL]
                         ])
                     ->get();
         }
