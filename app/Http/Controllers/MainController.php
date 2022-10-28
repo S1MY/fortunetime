@@ -143,7 +143,7 @@ class MainController extends Controller
 
     public function adminSorting(Request $request){
 
-        if( $request->sponsor_login ){
+        if( $request->sponsor_login == 1 ){
             $users = DB::table('users')
                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
