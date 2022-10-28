@@ -9,6 +9,7 @@
 
                 @include('account.layout.adminMaster')
 
+                <h2>Настройка вывода</h2>
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
                     <p class="adminBtn active">Активированные</p>
                     <p class="adminBtn">Поменять реферала</p>
