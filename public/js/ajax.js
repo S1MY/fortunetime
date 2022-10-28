@@ -140,7 +140,7 @@ $(document).ready(function () {
         });
     })
 
-    $('.adminBtn').click(function (e){
+    $(document).on('click', '.adminBtn', function(e) {
         e.preventDefault();
         $('#formSorting').submit();
 
@@ -163,7 +163,7 @@ $(document).ready(function () {
         }
     })
 
-    $('#formSorting').submit(function (e) {
+    $(document).on('click', '#formSorting', function(e) {
         e.preventDefault();
 
         let ajaxurl = $(this).attr('action');
