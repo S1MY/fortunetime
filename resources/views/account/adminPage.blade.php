@@ -30,8 +30,8 @@
                             <td>{{ $user->email }}</td>
                             <td class="tacenter">{{ $user->sponsor_login }}</td>
                             <td class="tacenter">{{ $user->sponsor_counter }}</td>
-                            <td>{{ $user->balance }}</td>
-                            <td>{{ $user->created_at }}</td>
+                            <td class="tacenter">{{ $user->balance }}</td>
+                            <td class="tacenter">{{ $user->created_at }}</td>
                         </tr>
                     @endforeach
 
