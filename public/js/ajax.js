@@ -163,7 +163,7 @@ $(document).ready(function () {
         }
     })
 
-    $(document).on('click', '#formSorting', function(e) {
+    $(document).on('submit', '#formSorting', function(e) {
         e.preventDefault();
 
         let ajaxurl = $(this).attr('action');
