@@ -110,9 +110,9 @@ class MainController extends Controller
 
         $users = DB::table('users')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
-                    ->select('u2.login as sponsor_login')
                     ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                    ->select('u2.login as sponsor_login, user_name, user_surname, users.login')
                     ->get();
 
         return view('account.adminPage', compact('users'));
