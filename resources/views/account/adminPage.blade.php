@@ -11,8 +11,8 @@
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Настройка вывода</h3>
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
-                    <p class="adminBtn active cursorPointer">Активированные</p>
-                    <p class="adminBtn cursorPointer">Поменять реферала</p>
+                    <p class="adminBtn active cursorPointer" data-sorting-name="activated" data-value="0" data-action="{{ Route('adminSorting') }}">Активированные</p>
+                    <p class="adminBtn cursorPointer" data-sorting-name="sponsor_login" data-value="1" data-action="{{ Route('adminSorting') }}">Поменять реферала</p>
                 </div>
                 <h3 class="cabMatrixName" style="margin-top: 20px">Все пользователи</h3>
                 <table class="adminTable">

@@ -139,6 +139,35 @@ $(document).ready(function () {
             }
         });
     })
+
+    $('.adminBtn').click(function (e){
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('data-action');
+        let sorting = $(this).attr('data-sorting-name');
+        let value = $(this).attr('data-value');
+
+        $(this).toggleClass('active');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: {sorting: sorting, value: value},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
+
     $('.AJAXFormFK').submit(function (e) {
         e.preventDefault();
 

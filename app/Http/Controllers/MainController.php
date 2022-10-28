@@ -106,18 +106,6 @@ class MainController extends Controller
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
 
-    public function admin(){
-
-        $users = DB::table('users')
-                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
-                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
-                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                    ->where('activated', 1)
-                    ->get();
-
-        return view('account.adminPage', compact('users'));
-    }
-
     public function start(){
         return view('account.start');
     }
@@ -139,4 +127,21 @@ class MainController extends Controller
         return redirect()->route('main');
     }
 
+    // Admin
+
+    public function admin(){
+
+        $users = DB::table('users')
+                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
+                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                    ->where('activated', 1)
+                    ->get();
+
+        return view('account.adminPage', compact('users'));
+    }
+
+    public function adminSorting(Request $request){
+        dd($request);
+    }
 }
