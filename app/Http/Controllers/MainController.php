@@ -183,6 +183,6 @@ class MainController extends Controller
 
 
 
-        return view('account.admin.usersTable', compact('users'));
+        return view('account.admin.usersTable', compact('users', 'title'));
     }
 }
