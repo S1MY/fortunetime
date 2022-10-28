@@ -11,7 +11,6 @@
 
                 <table class="adminTable">
                     <tr>
-                        <th>ID</th>
                         <th>Имя</td>
                         <th>Фамилия</td>
                         <th>Логин</td>
@@ -24,7 +23,6 @@
 
                     @foreach ($users as $user)
                         <tr>
-                            <td>{{ md5($user->login) }}</td>
                             <td>{{ $user->user_name }}</td>
                             <td>{{ $user->user_surname }}</td>
                             <td class="tacenter">{{ $user->login }}</td>
