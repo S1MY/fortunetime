@@ -171,6 +171,9 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 $('.tableWrapper').html(data);
+            },
+            error: function (data) {
+                $('.tableWrapper').html(data);
             }
         });
     });
