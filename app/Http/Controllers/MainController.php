@@ -194,7 +194,7 @@ class MainController extends Controller
                     ->where('status','=',1)
                     ->sum('amount');
 
-        $title = 'Все успешные пополнения ('.$paieds->count().')';
+        $title = 'Все успешные пополнения ()';
 
         return view('account.admin.payed', compact('paieds', 'title'));
     }
