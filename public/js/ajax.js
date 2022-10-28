@@ -147,7 +147,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
 
         if( $(this).attr('data-sorting-name') == 'sponsor_login' ){
-            $('.adminBtn[data-sorting-name=activated]').toggleClass('active');
+            $('.adminBtn[data-sorting-name=activated]').removeClass('active');
         }
 
 
