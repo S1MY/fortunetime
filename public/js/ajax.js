@@ -146,6 +146,8 @@ $(document).ready(function () {
         if( $(this).attr('data-sorting-name') == 'all' && $('#formSorting #all').attr('value') == 0 ){
             $('.adminBtn').removeClass('active');
             $('#formSorting input').attr('value', 0);
+        }else{
+            $('.adminBtn[data-sorting-name=all]').removeClass('active');
         }
 
         $(this).toggleClass('active');
