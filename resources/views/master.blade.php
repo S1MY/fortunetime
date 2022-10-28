@@ -96,7 +96,7 @@
                                                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                                     <path fill="#231f20" d="M18 18H5.867C4.247 18 3 19.38 3 21v2h18v-2c0-1.62-1.38-3-3-3zM12 1a8 8 0 0 0-8 8c0 4.419 3.581 8 8 8s8-3.581 8-8a8 8 0 0 0-8-8zm-1 12L7.5 9.5 9 8l2 2 4-4 1.5 1.5L11 13z"/>
                                                 </svg>
-                                                <span>Админ панель</span>
+                                                <span>Админка</span>
                                             </a>
                                         @endif
                                         <a href="{{ route('account') }}" class="subMenuItem active">
