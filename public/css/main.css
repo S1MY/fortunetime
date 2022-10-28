@@ -23,6 +23,10 @@
     text-align: center;
 }
 
+.adminTable .cursorPointer{
+    cursor: pointer;
+}
+
 /* errors */
 input.error,
 textarea.error{

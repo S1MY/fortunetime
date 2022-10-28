@@ -22,13 +22,12 @@
                     </tr>
 
                     @foreach ($users as $user)
-                    {{-- {{ dd($user) }} --}}
                         <tr>
                             <td>{{ $user->user_name }}</td>
                             <td>{{ $user->user_surname }}</td>
-                            <td class="tacenter">{{ $user->login }}</td>
+                            <td class="tacenter cursorPointer">{{ $user->login }}</td>
                             <td>{{ $user->email }}</td>
-                            <td class="tacenter">{{ $user->sponsor_login }}</td>
+                            <td class="tacenter cursorPointer">{{ $user->sponsor_login }}</td>
                             <td class="tacenter">{{ $user->sponsor_counter }}</td>
                             <td class="tacenter">{{ $user->balance }}</td>
                             <td class="tacenter">{{ $user->created_at }}</td>
