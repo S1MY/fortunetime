@@ -143,9 +143,25 @@ class MainController extends Controller
 
     public function adminSorting(Request $request){
 
-        $sorting = $request->sorting;
-        $value = $request->value;
+        if( $request->sponsor_login ){
+            $users = DB::table('users')
+                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
+                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                    ->where([
+                        ['activated', '=', 0],
+                        ['users.sponsor', '=', NULL]
+                        ])
+                    ->get();
+        }else{
+            $users = DB::table('users')
+                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
+                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                    ->where('activated', $request->activated)
+                    ->get();
+        }
 
-        return $request->activated;
+        return view('account.admin.usersTable', compact('users'));
     }
 }
