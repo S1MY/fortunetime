@@ -148,7 +148,7 @@ class MainController extends Controller
                 ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                 ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
                 ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                ->where('activated', $request->activated)
+                ->where('activated', '=', $request->activated)
                 ->get();
 
         if( $request->sponsor_login == 1 ){
