@@ -9,8 +9,9 @@
 
                 @include('account.layout.adminMaster')
 
-                <div class="flex">
-                    <p class="btn">Активированные</p>
+                <div class="displayFlex">
+                    <p class="adminBtn active">Активированные</p>
+                    <p class="adminBtn">Можно сменить реферала</p>
                 </div>
 
                 <table class="adminTable">

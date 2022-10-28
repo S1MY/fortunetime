@@ -27,6 +27,26 @@
     cursor: pointer;
 }
 
+.adminBtn{
+    border: 1px solid #4168D2;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #4168D2;
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    display: block;
+    transition: all 0.4s;
+}
+
+.adminBtn.active{
+    background: #4168D2;
+    color: #FFFFFF;
+}
+
 /* errors */
 input.error,
 textarea.error{
