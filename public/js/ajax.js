@@ -157,7 +157,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: ajaxurl,
-            data: {sorting: sorting},
+            data: {sorting: sorting, value: value},
             dataType: 'json',
             success: function (data) {
                 console.log(data);
