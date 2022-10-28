@@ -47,4 +47,8 @@ class User extends Authenticatable
     public function UserInfo(){
         return $this->hasOne(UserInfo::class, 'user_id', 'id');
     }
+
+    public function isAdmin(){
+        return $this->is_admin === 1;
+    }
 }

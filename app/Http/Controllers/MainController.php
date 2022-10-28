@@ -106,6 +106,10 @@ class MainController extends Controller
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
 
+    public function admin(){
+        return view('account.adminPage');
+    }
+
     public function start(){
         return view('account.start');
     }
