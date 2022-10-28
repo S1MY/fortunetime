@@ -17,6 +17,7 @@
                             <th>Сумма</th>
                             <th>Дата</th>
                         </tr>
+                        {{ dd($paieds) }}
                         @foreach ($paieds as $paied)
                             <tr>
                                 <td class="tacenter">{{ $paied->login }}</td>
