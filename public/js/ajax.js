@@ -142,7 +142,6 @@ $(document).ready(function () {
 
     $(document).on('click', '.adminBtn', function(e) {
         e.preventDefault();
-        $('#formSorting').submit();
 
         if( $(this).attr('data-sorting-name') == 'all' && $('#formSorting #all').attr('value') == 0 ){
             $('.adminBtn').removeClass('active');
@@ -161,6 +160,9 @@ $(document).ready(function () {
         } else{
             $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 1);
         }
+
+        $('#formSorting').submit();
+
     })
 
     $(document).on('submit', '#formSorting', function(e) {
