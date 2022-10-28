@@ -10,6 +10,7 @@
                 @include('account.layout.adminMaster')
 
                 @foreach ($users as $user)
+                {{ dd($user) }}
                     <div class="itemWrapper">
                         <p class="wrapperContent">{{ $user->login }}</p>
                         <p class="wrapperContent">{{ $user->email }}</p>
