@@ -11,11 +11,28 @@
 
                 @foreach ($users as $user)
                 {{ dd($user) }}
-                    <div class="itemWrapper">
-                        <p class="wrapperContent">{{ $user->login }}</p>
-                        <p class="wrapperContent">{{ $user->email }}</p>
-                        <p class="wrapperContent">{{ $user->sponsor }}</p>
-                    </div>
+                <table>
+                    <th>
+                        <td>Имя</td>
+                        <td>Фамилия</td>
+                        <td>Логин</td>
+                        <td>Email</td>
+                        <td>Пригласитель</td>
+                        <td>Количество приглашённых</td>
+                        <td>Баланс</td>
+                        <td>Активирован</td>
+                    </th>
+                    <tr>
+                        <td>{{ $user->user_name }}</td>
+                        <td>{{ $user->user_surname }}</td>
+                        <td>{{ $user->login }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->sponsor }}</td>
+                        <td>{{ $user->sponsor_counter }}</td>
+                        <td>{{ $user->balance }}</td>
+                        <td>{{ $user->activated }}</td>
+                    </tr>
+                </table>
                 @endforeach
             </div>
         </div>
