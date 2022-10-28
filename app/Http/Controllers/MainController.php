@@ -193,6 +193,7 @@ class MainController extends Controller
                     ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
                     ->where('status','=',1)
                     ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
+                    ->orderBy('created_at', 'DESC')
                     ->get();
 
         $title = 'Все успешные пополнения ('.$paieds->count().')';
