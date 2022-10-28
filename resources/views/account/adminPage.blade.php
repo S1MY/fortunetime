@@ -22,13 +22,13 @@
                     </th>
 
                     @foreach ($users as $user)
-                    {{ dd($user) }}
+                    {{-- {{ dd($user) }} --}}
                         <tr>
                             <td>{{ $user->user_name }}</td>
                             <td>{{ $user->user_surname }}</td>
                             <td class="tacenter">{{ $user->login }}</td>
                             <td>{{ $user->email }}</td>
-                            <td class="tacenter">{{ $user->sponsor }}</td>
+                            <td class="tacenter">{{ $user->sponsor_login }}</td>
                             <td class="tacenter">{{ $user->sponsor_counter }}</td>
                             <td>{{ $user->balance }}</td>
                             <td>{{ $user->activated }}</td>
