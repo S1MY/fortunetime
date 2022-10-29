@@ -1322,6 +1322,13 @@ body::-webkit-scrollbar-thumb {
 .answerIcon.active {
     transform: rotate(180deg);
 }
+.answerIcon.editIcon.active {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
 .answerContent{
     font-size: 16px;
     line-height: 28px;
