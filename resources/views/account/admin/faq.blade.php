@@ -45,7 +45,6 @@
             </div>
         </div>
     </section>
-@endsection
 
     <!-- подключаем сам summernote -->
 
@@ -60,4 +59,6 @@
     });
 
     </script>
+
+@endsection
 
