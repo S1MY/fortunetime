@@ -6,7 +6,7 @@
     width: 100%;
     display: block;
 }
-.adminFaq form label input{
+.adminFaq .passChange .formInput{
     width: 100%;
 }
 .adminFaq form label textarea{
