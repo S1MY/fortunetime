@@ -1323,11 +1323,11 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(180deg);
 }
 .answerIcon.editIcon.active {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
 }
 .answerContent{
     font-size: 16px;
