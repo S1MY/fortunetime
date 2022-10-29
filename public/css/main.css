@@ -9,6 +9,9 @@
 .adminFaq .passChange .formInput{
     width: 100%;
 }
+.adminFaq .passBtn{
+    width: 100%;
+}
 .adminFaq form label textarea{
     width: 100%;
     background: #FFFFFF;
