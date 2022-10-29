@@ -15,7 +15,7 @@
                         <input type="text" class="formInput" placeholder="Введите вопрос" name="question" id="question">
                     </label>
                     <label for="answer">
-                        <textarea name="answer" id="answer"></textarea>
+                        <textarea name="answer" id="answer" placeholder="Введите ответ на вопрос"></textarea>
                     </label>
                     <button class="passBtn">Добавить FAQ</button>
                 </form>
