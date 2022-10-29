@@ -26,6 +26,7 @@
     outline: none;
     border: none;
     margin-bottom: 20px;
+    resize: unset;
 }
 .adminTable {
 	width: 100%;
