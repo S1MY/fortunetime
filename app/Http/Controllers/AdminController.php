@@ -38,7 +38,7 @@ class AdminController extends Controller
     }
 
     public function faq(){
-        $faq = DB::table('faq')
+        $faqs = DB::table('faq')
                     ->orderBy('id', 'DESC')
                     ->get();
 
