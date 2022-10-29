@@ -1323,6 +1323,7 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(180deg);
 }
 .answerIcon.editIcon.active {
+    top: 12%;
     transform: unset;
     -webkit-transform: unset;
     -moz-transform: unset;
