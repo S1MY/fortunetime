@@ -38,7 +38,11 @@ class AdminController extends Controller
     }
 
     public function faq(){
-        return view('account.admin.faq');
+        $faq = DB::table('faq')
+                    ->orderBy('id', 'DESC')
+                    ->get();
+
+        return view('account.admin.faq', compact('faqs'));
     }
 
     // Управление
