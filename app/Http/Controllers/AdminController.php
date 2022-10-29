@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
-    // Admin
+
+    // Страницы
 
     public function admin(){
 
@@ -19,8 +20,28 @@ class AdminController extends Controller
 
         $title = 'Все пользователи ('.$users->count().')';
 
-        return view('account.adminPage', compact('users', 'title'));
+        return view('account.admin.main', compact('users', 'title'));
     }
+
+    public function paied(){
+        $paieds = DB::table('freekassas')
+                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(freekassas.created_at) as created_at"))
+                    ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
+                    ->where('status','=',1)
+                    ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
+                    ->orderBy('created_at', 'DESC')
+                    ->get();
+
+        $title = 'Все успешные пополнения ('.$paieds->count().')';
+
+        return view('account.admin.payed', compact('paieds', 'title'));
+    }
+
+    public function faq(){
+        return view('account.admin.faq', compact('paieds', 'title'));
+    }
+
+    // Управление
 
     public function adminSorting(Request $request){
 
@@ -64,20 +85,6 @@ class AdminController extends Controller
 
 
 
-        return view('account.admin.usersTable', compact('users', 'title'));
-    }
-
-    public function paied(){
-        $paieds = DB::table('freekassas')
-                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(freekassas.created_at) as created_at"))
-                    ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
-                    ->where('status','=',1)
-                    ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
-                    ->orderBy('created_at', 'DESC')
-                    ->get();
-
-        $title = 'Все успешные пополнения ('.$paieds->count().')';
-
-        return view('account.admin.payed', compact('paieds', 'title'));
+        return view('account.admin.layout.usersTable', compact('users', 'title'));
     }
 }
