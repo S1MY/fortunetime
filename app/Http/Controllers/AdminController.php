@@ -38,7 +38,7 @@ class AdminController extends Controller
     }
 
     public function faq(){
-        return view('account.admin.faq', compact('paieds', 'title'));
+        return view('account.admin.faq');
     }
 
     // Управление
