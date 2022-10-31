@@ -96,27 +96,27 @@ class AdminController extends Controller
 
     public function adminAddFAQ(AdminRequest $request){
 
-        if( $request->editID == 0 ){
-            DB::table('faq')->insert([
-                [
-                    'qustion' => $request->question,
-                    'answer' => $request->answer,
-                    'created_at' => Carbon::now(),
-                    'updated_at' => Carbon::now()
-                ],
-            ]);
-        }else{
-            DB::table('faq')
-            ->where('id', $request->editID)
-            ->update([
-                [
-                    'qustion' => $request->question,
-                    'answer' => $request->answer,
-                    'updated_at' => Carbon::now()
-                ],
-            ]);
-        }
+        // if( $request->editID == 0 ){
+        //     DB::table('faq')->insert([
+        //         [
+        //             'qustion' => $request->question,
+        //             'answer' => $request->answer,
+        //             'created_at' => Carbon::now(),
+        //             'updated_at' => Carbon::now()
+        //         ],
+        //     ]);
+        // }else{
+        //     DB::table('faq')
+        //     ->where('id', $request->editID)
+        //     ->update([
+        //         [
+        //             'qustion' => $request->question,
+        //             'answer' => $request->answer,
+        //             'updated_at' => Carbon::now()
+        //         ],
+        //     ]);
+        // }
 
-        return true;
+        return $request->editID;
     }
 }
