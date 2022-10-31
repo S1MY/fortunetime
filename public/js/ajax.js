@@ -90,7 +90,7 @@ $(document).ready(function () {
     });
 
 
-    $('.deleteQuestion').click(function (e) {
+    $('.cabMenuLink').click(function (e) {
         e.preventDefault();
 
         if( $(this).hasClass('delete') ){
