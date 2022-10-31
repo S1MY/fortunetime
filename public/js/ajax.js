@@ -33,6 +33,9 @@ $(document).ready(function () {
                     $('#adminFAQ')[0].reset();
                     $('.note-editable').html('<p></p>');
                     $('.popupResponse').fadeIn(500);
+                    setTimeout(() => {
+                        window.location.href = '/admin/faq';
+                    }, 1500);
                 }else{
                     window.location.href = '/account';
                 }
