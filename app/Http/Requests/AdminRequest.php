@@ -25,6 +25,7 @@ class AdminRequest extends FormRequest
     {
         return [
             'question' => ['required', 'string', 'min:1'],
+            'answer' => ['required', 'string'],
         ];
     }
 
@@ -32,6 +33,7 @@ class AdminRequest extends FormRequest
     {
         return[
             'question.required' => 'Вы не ввели вопрос',
+            'answer.required' => 'Вы забыли указать ответ на вопрос',
         ];
     }
 
