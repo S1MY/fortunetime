@@ -119,6 +119,13 @@ $(document).ready(function () {
         $('.note-placeholder').hide();
     });
 
+    $('.removeIcon.').click(function (e) {
+        e.preventDefault();
+
+        $('.popupResponse.deleteQuestion').fadeIn(500);
+
+    });
+
     $('.formLink').click(function (e) {
         e.preventDefault();
         let popupName = $(this).attr('data-popup');
