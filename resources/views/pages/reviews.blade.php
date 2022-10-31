@@ -27,7 +27,7 @@
                                 <div class="pageTableItemL">
                                     <div class="pageUserAvatar"></div>
                                     <div class="pageTableItemInfo">
-                                        <p class="pageTableUsername">{{ $review->User->login }}</p>
+                                        <p class="pageTableUsername">{{ $review->login }}</p>
                                         <p class="pageTableDate">{{ date('d M в H:i', strtotime($review->created_at)); }}</p>
                                     </div>
                                 </div>
