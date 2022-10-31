@@ -64,8 +64,7 @@ $(document).ready(function () {
                             $('form#'+formController+' input').addClass('error');
                             $('form#'+formController+' input[name="'+key+'"]').before('<p class="errors">'+errorSvg+''+value+'</p>');
                         }else{
-                            $('form#'+formController+' textarea').addClass('error');
-                            $('form#'+formController+' textarea').before('<p class="errors">'+errorSvg+''+value+'</p>');
+                            $('form#'+formController+' textarea[name="'+key+'"]').before('<p class="errors">'+errorSvg+''+value+'</p>');
                         }
 
                     });
