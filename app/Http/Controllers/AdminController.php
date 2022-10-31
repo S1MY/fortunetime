@@ -47,6 +47,17 @@ class AdminController extends Controller
         return view('account.admin.faq', compact('faqs'));
     }
 
+    public function reviews(){
+        $reviews = DB::table('reviews')
+                    ->leftJoin('users', 'reviews.user_id', '=', 'users.id')
+                    ->leftJoin('user_infos', 'reviews.user_id', '=', 'user_infos.user_id')
+                    ->orderBy('id', 'DESC')
+                    ->get();
+
+        return view('account.admin.reviews', compact('reviews'));
+
+    }
+
     // Управление
 
     public function adminSorting(Request $request){
