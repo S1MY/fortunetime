@@ -60,7 +60,7 @@ $(document).ready(function () {
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
                         console.log(key);
-                        if( key == question ){
+                        if( key == 'question' ){
                             $('form#'+formController+' input').addClass('error');
                             $('form#'+formController+' input[name="'+key+'"]').before('<p class="errors">'+errorSvg+''+value+'</p>');
                         }else{
