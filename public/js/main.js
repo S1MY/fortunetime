@@ -110,7 +110,7 @@ $(document).ready(function () {
     $('.editIcon').click(function (e) {
         e.preventDefault();
         let faqID = $(this).attr('data-faq-id');
-        $('.editID').value(faqID);
+        $('.editID').attr('value', faqID);
     });
 
     $('.formLink').click(function (e) {
