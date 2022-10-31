@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AdminRequest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -95,6 +96,15 @@ class AdminController extends Controller
 
     public function adminAddFAQ(AdminRequest $request){
 
-        return $request->answer;
+        DB::table('faq')->insert([
+            [
+                'qustion' => $request->question,
+                'answer' => $request->answer,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+        ]);
+
+        return true;
     }
 }
