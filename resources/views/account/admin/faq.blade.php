@@ -73,6 +73,11 @@
 
             <p class="popupResponseText">Вы уверены что хотите удалить вопрос?</p>
 
+            <div class="cabMenuFlex displayFlex alignItemsCenter spaceBetween">
+                <a href="#" class="cabMenuLink">Да</a>
+                <a href="#" class="cabMenuLink">Нет</a>
+            </div>
+
         </div>
     </div>
 
