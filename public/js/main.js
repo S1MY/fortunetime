@@ -116,6 +116,7 @@ $(document).ready(function () {
         $('.editID').attr('value', faqID);
         $('#question').attr('value', question);
         $('.note-editable').html(answer);
+        $('.note-placeholder').hide();
     });
 
     $('.formLink').click(function (e) {
