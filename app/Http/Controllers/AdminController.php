@@ -94,8 +94,7 @@ class AdminController extends Controller
     }
 
     public function adminAddFAQ(AdminRequest $request){
-        dd($request);
 
-        return 1;
+        return $request->answer;
     }
 }
