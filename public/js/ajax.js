@@ -22,7 +22,6 @@ $(document).ready(function () {
             data: formData,
             dataType: 'json',
             success: function (data) {
-                console.log(data);
                 if( formController == 'ReviewStore' ){
                     window.location.href = '/reviews';
                 }else if(formController == 'SetPincode' || formController == 'presonal'){
@@ -31,14 +30,13 @@ $(document).ready(function () {
                     $('#aboutForm')[0].reset();
                     $('.popupResponse').fadeIn(500);
                 }else if(formController == 'adminFAQ'){
-
+                    $('#aboutForm')[0].reset();
+                    $('.popupResponse').fadeIn(500);
                 }else{
                     window.location.href = '/account';
                 }
             },
             error: function (data) {
-                console.log('error');
-                console.log(data);
                 $('p.errors').remove();
 
                 if( formController == 'ReviewStore' ){
@@ -59,7 +57,6 @@ $(document).ready(function () {
                 }else if(formController == 'adminFAQ'){
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
-                        console.log(key);
                         if( key == 'question' ){
                             $('form#'+formController+' input').addClass('error');
                             $('form#'+formController+' input[name="'+key+'"]').before('<p class="errors">'+errorSvg+''+value+'</p>');
