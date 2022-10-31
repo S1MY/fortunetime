@@ -112,7 +112,7 @@ class AdminController extends Controller
                 [
                     'qustion' => $request->question,
                     'answer' => $request->answer,
-                    'updated_at' => Carbon::now()
+                    'updated_at' => Carbon::now(),
                 ],
             ]);
         }
