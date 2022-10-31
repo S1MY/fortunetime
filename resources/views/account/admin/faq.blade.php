@@ -10,7 +10,7 @@
                 @include('account.layout.adminMaster')
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Форма создания вопроса</h3>
-                <form class="passChange AJAXForm" method="POST" action="">
+                <form class="AJAXForm" id="adminFAQ" method="POST" action="{{ route('adminAddFAQ') }}">
                     <label for="question">
                         <input type="text" class="formInput" placeholder="Введите вопрос" name="question" id="question">
                     </label>

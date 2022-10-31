@@ -30,6 +30,8 @@ $(document).ready(function () {
                 }else if(formController == 'aboutForm'){
                     $('#aboutForm')[0].reset();
                     $('.popupResponse').fadeIn(500);
+                }else if(formController == 'adminFAQ'){
+
                 }else{
                     window.location.href = '/account';
                 }
@@ -54,6 +56,8 @@ $(document).ready(function () {
                 }else if( formController == 'aboutForm' ){
                     $('#aboutForm')[0].reset();
                     $('.popupResponse').fadeIn(500);
+                }else if(formController == 'adminFAQ'){
+
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {

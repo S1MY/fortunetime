@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AdminRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -90,5 +91,11 @@ class AdminController extends Controller
 
 
         return view('account.admin.layout.usersTable', compact('users', 'title'));
+    }
+
+    public function adminAddFAQ(AdminRequest $request){
+        dd($request);
+
+        return 1;
     }
 }
