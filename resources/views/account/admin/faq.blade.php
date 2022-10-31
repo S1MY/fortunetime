@@ -19,7 +19,7 @@
                     </label>
                     <button class="passBtn">Добавить FAQ</button>
                 </form>
-
+                {{ $form->summernote('content'); }}
                 <h3 class="cabMatrixName" style="margin-top: 20px">Существующие вопросы</h3>
 
                 @foreach ($faqs as $faq)
