@@ -15,9 +15,18 @@
 
                     <div class="reviewItem">
                         <div class="pageTableItemL">
-                            <div class="pageUserAvatar"></div>
+                            <div class="pageUserAvatar">
+                                @if ($review->avatar != '')
+                                    <img src="{{ Storage::url($review->avatar) }}" alt="avatar">
+                                @endif
+                            </div>
                             <div class="pageTableItemInfo">
-                                <p class="pageTableUsername">{{ $review->user_name }}</p>
+                                @if ($review->user_name == '')
+                                    <p class="pageTableUsername">{{ $review->login }}</p>
+                                @else
+                                    <p class="pageTableUsername">{{ $review->user_name }}</p>
+                                @endif
+
                                 <p class="pageTableDate">{{ date('d M в H:i', strtotime($review->created_at)); }}</p>
                             </div>
                         </div>

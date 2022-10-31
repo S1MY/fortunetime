@@ -49,7 +49,7 @@ class AdminController extends Controller
 
     public function reviews(){
         $reviews = DB::table('reviews')
-                    ->select('users.id', 'reviews.user_id', 'review', 'reviews.id', 'published', 'reviews.created_at', 'users.login', 'user_infos.user_name', 'user_infos.user_surname')
+                    ->select('users.id', 'reviews.user_id', 'avatar', 'review', 'reviews.id', 'published', 'reviews.created_at', 'users.login', 'user_infos.user_name', 'user_infos.user_surname')
                     ->leftJoin('users', 'reviews.user_id', '=', 'users.id')
                     ->leftJoin('user_infos', 'reviews.user_id', '=', 'user_infos.user_id')
                     ->orderBy('reviews.id', 'DESC')
