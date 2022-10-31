@@ -187,6 +187,11 @@ li {
     list-style: none;
 }
 
+label li{
+    list-style: disc;
+    margin-left: 15px;
+}
+
 a,
 input,
 button {
