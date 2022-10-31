@@ -109,11 +109,9 @@ class AdminController extends Controller
             DB::table('faq')
             ->where('id', $request->edit)
             ->update([
-                [
-                    'qustion' => $request->question,
-                    'answer' => $request->answer,
-                    'updated_at' => Carbon::now(),
-                ],
+                'qustion' => $request->question,
+                'answer' => $request->answer,
+                'updated_at' => Carbon::now(),
             ]);
         }
 
