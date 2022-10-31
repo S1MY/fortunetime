@@ -95,9 +95,9 @@ $(document).ready(function () {
 
         if( $(this).hasClass('delete') ){
             $('#faqRemove').submit();
-        }else{
-            $('.popupResponse.deleteQuestion').fadeOut(500);
         }
+
+        $('.popupResponse.deleteQuestion').fadeOut(500);
 
     });
 
