@@ -93,7 +93,7 @@ class AdminController extends Controller
         return view('account.admin.layout.usersTable', compact('users', 'title'));
     }
 
-    public function adminAddFAQ(AdminRequest $request){
+    public function adminAddFAQ(Request $request){
         dd($request);
 
         return 1;
