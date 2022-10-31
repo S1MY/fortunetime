@@ -11,6 +11,7 @@
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Форма создания вопроса</h3>
                 <form class="adminFAQ AJAXForm" id="adminFAQ" method="POST" action="{{ route('adminAddFAQ') }}">
+                    <input type="hidden" name="edit" class="editID" value="0">
                     <label for="question">
                         <input type="text" class="formInput" placeholder="Введите вопрос" name="question" id="question">
                     </label>

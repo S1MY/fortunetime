@@ -109,7 +109,8 @@ $(document).ready(function () {
 
     $('.editIcon').click(function (e) {
         e.preventDefault();
-        alert('Кнопка редактирования');
+        let faqID = $(this).attr('data-faq-id');
+        $('.editID').value(faqID);
     });
 
     $('.formLink').click(function (e) {
