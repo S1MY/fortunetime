@@ -77,7 +77,7 @@ Route::get('/admin/faq', 'App\Http\Controllers\AdminController@faq')->name('admi
 
 Route::post('/admin/sorting', 'App\Http\Controllers\AdminController@adminSorting')->name('adminSorting')->middleware('auth', 'is_admin');
 Route::post('/admin/add/faq', 'App\Http\Controllers\AdminController@adminAddFAQ')->name('adminAddFAQ')->middleware('auth', 'is_admin');
-Route::post('/admin/add/faq', 'App\Http\Controllers\AdminController@faqDelete')->name('faqDelete')->middleware('auth', 'is_admin');
+Route::post('/admin/delete/faq', 'App\Http\Controllers\AdminController@faqDelete')->name('faqDelete')->middleware('auth', 'is_admin');
 
 /* Freekassa */
 Route::post('/freekassa', 'App\Http\Controllers\FreekassaController@freekassa')->name('freekassa');
