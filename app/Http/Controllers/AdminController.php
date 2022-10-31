@@ -96,7 +96,7 @@ class AdminController extends Controller
 
     public function adminAddFAQ(AdminRequest $request){
 
-        if( $request->editID == 0 ){
+        if( $request->edit == 0 ){
             DB::table('faq')->insert([
                 [
                     'qustion' => $request->question,
@@ -107,7 +107,7 @@ class AdminController extends Controller
             ]);
         }else{
             DB::table('faq')
-            ->where('id', $request->editID)
+            ->where('id', $request->edit)
             ->update([
                 [
                     'qustion' => $request->question,
@@ -117,6 +117,6 @@ class AdminController extends Controller
             ]);
         }
 
-        return $request->editID;
+        return true;
     }
 }
