@@ -99,6 +99,11 @@ $(document).ready(function () {
 
         $('.popupElement[data-popup=' + popupName + ']').fadeIn();
     });
+
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+
     $('.formLink').click(function (e) {
         e.preventDefault();
         let popupName = $(this).attr('data-popup');
