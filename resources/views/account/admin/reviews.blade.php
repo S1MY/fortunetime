@@ -15,7 +15,7 @@
 
                     <div class="reviewItem">
                         <div class="pageTableItemL">
-                            <div class="pageUserAvatar">
+                            <div class="pageUserAvatar userImage">
                                 @if ($review->avatar != '')
                                     <img src="{{ Storage::url($review->avatar) }}" alt="avatar">
                                 @endif
