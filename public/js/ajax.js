@@ -62,10 +62,10 @@ $(document).ready(function () {
                         console.log(key);
                         if( key == question ){
                             $('form#'+formController+' input').addClass('error');
-                            $('form#'+formController+' input[name="'+key+'"]').after('<p class="errors">'+errorSvg+''+value+'</p>');
+                            $('form#'+formController+' input[name="'+key+'"]').before('<p class="errors">'+errorSvg+''+value+'</p>');
                         }else{
                             $('form#'+formController+' textarea').addClass('error');
-                            $('form#'+formController+' textarea').after('<p class="errors">'+errorSvg+''+value+'</p>');
+                            $('form#'+formController+' textarea').before('<p class="errors">'+errorSvg+''+value+'</p>');
                         }
 
                     });
