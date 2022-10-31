@@ -107,6 +107,11 @@ $(document).ready(function () {
           });
     });
 
+    $('.editIcon').click(function (e) {
+        e.preventDefault();
+        alert('Кнопка редактирования');
+    });
+
     $('.formLink').click(function (e) {
         e.preventDefault();
         let popupName = $(this).attr('data-popup');
