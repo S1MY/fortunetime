@@ -64,7 +64,7 @@
     <div class="popupResponse deleteQuestion">
         <div class="popupResponseBg"></div>
 
-        <form action="{{ route('faqDelete') }}" method="POST">
+        <form action="{{ route('faqDelete') }}" id="faqRemove" method="POST">
             <input type="hidden" name="removeid" id="removeid" value="">
         </form>
 
