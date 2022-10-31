@@ -103,7 +103,7 @@ $(document).ready(function () {
     $(document).ready(function() {
         $('#summernote').summernote({
             placeholder: 'Введите ответ на вопрос',
-            lang: 'ko-KR'
+            lang: 'ru-RU'
           });
     });
 
