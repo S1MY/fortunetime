@@ -47,7 +47,7 @@
         </div>
     </section>
 
-    <div class="popupResponse">
+    <div class="popupResponse succes">
         <div class="popupResponseBg"></div>
 
         <div class="popupResponseItem">

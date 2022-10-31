@@ -32,7 +32,7 @@ $(document).ready(function () {
                 }else if(formController == 'adminFAQ'){
                     $('#adminFAQ')[0].reset();
                     $('.note-editable').html('<p></p>');
-                    $('.popupResponse').fadeIn(500);
+                    $('.popupResponse.succes').fadeIn(500);
                     setTimeout(() => {
                         window.location.href = '/admin/faq';
                     }, 1500);
@@ -119,7 +119,10 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 console.log(data);
-                $('.popupResponse').fadeIn(500);
+                setTimeout(() => {
+                    window.location.href = '/admin/faq';
+                }, 1500);
+                $('.popupResponse.succes').fadeIn(500);
             },
             error: function (data) {
                 console.log(data);
