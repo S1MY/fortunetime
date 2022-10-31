@@ -60,8 +60,14 @@ $(document).ready(function () {
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
                         console.log(key);
-                        $('form#'+formController+' input').addClass('error');
-                        $('form#'+formController+' input[name="'+key+'"]').before('<p class="errors">'+errorSvg+''+value+'</p>');
+                        if( key == question ){
+                            $('form#'+formController+' input').addClass('error');
+                            $('form#'+formController+' input[name="'+key+'"]').after('<p class="errors">'+errorSvg+''+value+'</p>');
+                        }else{
+                            $('form#'+formController+' textarea').addClass('error');
+                            $('form#'+formController+' textarea').after('<p class="errors">'+errorSvg+''+value+'</p>');
+                        }
+
                     });
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
