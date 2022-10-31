@@ -30,7 +30,7 @@ $(document).ready(function () {
                     $('#aboutForm')[0].reset();
                     $('.popupResponse').fadeIn(500);
                 }else if(formController == 'adminFAQ'){
-                    $('#aboutForm')[0].reset();
+                    $('#adminFAQ')[0].reset();
                     $('.popupResponse').fadeIn(500);
                 }else{
                     window.location.href = '/account';
