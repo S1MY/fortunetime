@@ -89,6 +89,44 @@ $(document).ready(function () {
 
     });
 
+
+    $('.deleteQuestion').click(function (e) {
+        e.preventDefault();
+
+        if( $(this).hasClass('delete') ){
+            $('#faqRemove').submit();
+        }else{
+            $('.popupResponse.deleteQuestion').fadeOut(500);
+        }
+
+    });
+
+    $('#faqRemove').submit(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('action');
+        let formData = $(this).serialize();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('.popupResponse').fadeIn(500);
+            },
+            error: function (data) {
+                console.log(data);
+                location.href = data.responseText;
+            }
+        });
+    });
     $('.avatarInput').change(function (e) {
         e.preventDefault();
         $('#avatarUpload').submit();

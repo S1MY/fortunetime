@@ -117,4 +117,11 @@ class AdminController extends Controller
 
         return true;
     }
+
+    public function faqDelete(Request $request){
+
+        DB::table('faq')->where('id', '=', $request->removeid)->delete();
+
+        return true;
+    }
 }

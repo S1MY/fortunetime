@@ -124,16 +124,9 @@ $(document).ready(function () {
 
         $('.popupResponse.deleteQuestion').fadeIn(500);
 
-    });
+        let faqID = $(this).attr('data-faq-id');
 
-    $('.deleteQuestion').click(function (e) {
-        e.preventDefault();
-
-        if( $(this).hasClass('delete') ){
-
-        }else{
-            $('.popupResponse.deleteQuestion').fadeOut(500);
-        }
+        $('#removeid').attr('value', faqID);
 
     });
 
