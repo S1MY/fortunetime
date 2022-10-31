@@ -31,6 +31,7 @@ $(document).ready(function () {
                     $('.popupResponse').fadeIn(500);
                 }else if(formController == 'adminFAQ'){
                     $('#adminFAQ')[0].reset();
+                    $('.note-editable').html('<p></p>');
                     $('.popupResponse').fadeIn(500);
                 }else{
                     window.location.href = '/account';
