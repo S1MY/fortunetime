@@ -89,7 +89,6 @@ $(document).ready(function () {
 
     });
 
-
     $('.deleteQuestion .cabMenuLink').click(function (e) {
         e.preventDefault();
 
@@ -130,10 +129,12 @@ $(document).ready(function () {
             }
         });
     });
+
     $('.avatarInput').change(function (e) {
         e.preventDefault();
         $('#avatarUpload').submit();
     });
+
     $('#avatarUpload').submit(function (e) {
         e.preventDefault();
         let ajaxurl = $(this).attr('action');
@@ -164,7 +165,6 @@ $(document).ready(function () {
             }
         });
     });
-
 
     $('.AJAXFormFK .platItem').click(function (e) {
         e.preventDefault();
@@ -247,6 +247,38 @@ $(document).ready(function () {
                 console.log(data['responseText']);
             }
         });
+    });
+
+    $('.reviewController').click(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('data-action');
+        let id = $(this).attr('data-id');
+        let value = $(this).attr('data-value');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: {id: id, value: value},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                setTimeout(() => {
+                    window.location.href = '/admin/faq';
+                }, 1500);
+                $('.popupResponse.succes').fadeIn(500);
+            },
+            error: function (data) {
+                console.log(data);
+                location.href = data.responseText;
+            }
+        });
+
     });
 
     $('.AJAXFormFK').submit(function (e) {

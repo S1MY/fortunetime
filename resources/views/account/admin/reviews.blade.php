@@ -32,9 +32,9 @@
                         </div>
                         <p class="reviewText">{{ $review->review }}</p>
                         @if ( $review->published == 1 )
-                            <span style="color: #4168D2; cursor: pointer;">Снять с публикации</span>
+                            <span class="reviewController" style="color: #4168D2; cursor: pointer;" data-id="{{ $review->revID }}" data-action="{{ route('reviewChanger') }}" data-value="0">Снять с публикации</span>
                         @else
-                            <span style="color: #27AE60; cursor: pointer;">Опубликовать</span>
+                            <span class="reviewController" style="color: #27AE60; cursor: pointer;" data-id="{{ $review->revID }}" data-action="{{ route('reviewChanger') }}" data-value="1">Опубликовать</span>
                         @endif
                     </div>
 
