@@ -187,6 +187,10 @@ li {
     list-style: none;
 }
 
+p{
+    margin-bottom: 0;
+}
+
 label li{
     list-style: disc;
     margin-left: 15px;
