@@ -31,6 +31,11 @@
                             </div>
                         </div>
                         <p class="reviewText">{{ $review->review }}</p>
+                        @if ( $review->published == 1 )
+                            <span style="color: #27AE60;">Опубликован</span>
+                        @else
+                            <span style="color: #4168D2;">Не опубликован</span>
+                        @endif
                     </div>
 
                 @endforeach
