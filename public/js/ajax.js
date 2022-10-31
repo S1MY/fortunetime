@@ -59,6 +59,7 @@ $(document).ready(function () {
                 }else if(formController == 'adminFAQ'){
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
+                        console.log(key);
                         $('form#'+formController+' input').addClass('error');
                         $('form#'+formController+' input[name="'+key+'"]').next().after('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
