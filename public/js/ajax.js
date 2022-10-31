@@ -61,7 +61,7 @@ $(document).ready(function () {
                     $.each(data.responseJSON.errors, function(key, value) {
                         console.log(key);
                         $('form#'+formController+' input').addClass('error');
-                        $('form#'+formController+' input[name="'+key+'"]').next().after('<p class="errors">'+errorSvg+''+value+'</p>');
+                        $('form#'+formController+' input[name="'+key+'"]').after('<p class="errors">'+errorSvg+''+value+'</p>');
                     });
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
