@@ -126,6 +126,17 @@ $(document).ready(function () {
 
     });
 
+    $('.deleteQuestion').click(function (e) {
+        e.preventDefault();
+
+        if( $(this).hasClass('delete') ){
+
+        }else{
+            $('.popupResponse.deleteQuestion').fadeOut(500);
+        }
+
+    });
+
     $('.formLink').click(function (e) {
         e.preventDefault();
         let popupName = $(this).attr('data-popup');
