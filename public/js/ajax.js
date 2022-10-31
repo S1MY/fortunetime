@@ -57,7 +57,11 @@ $(document).ready(function () {
                     $('#aboutForm')[0].reset();
                     $('.popupResponse').fadeIn(500);
                 }else if(formController == 'adminFAQ'){
-
+                    $('form#'+formController+' input.error').removeClass('error');
+                    $.each(data.responseJSON.errors, function(key, value) {
+                        $('form#'+formController+' input').addClass('error');
+                        $('form#'+formController+' input[name="'+key+'"]').next().after('<p class="errors">'+errorSvg+''+value+'</p>');
+                    });
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
