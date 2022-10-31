@@ -32,9 +32,9 @@
                         </div>
                         <p class="reviewText">{{ $review->review }}</p>
                         @if ( $review->published == 1 )
-                            <span style="color: #27AE60;">Опубликован</span>
+                            <span style="color: #4168D2;">Снять с публикации</span>
                         @else
-                            <span style="color: #4168D2;">Не опубликован</span>
+                            <span style="color: #27AE60;">Опубликовать</span>
                         @endif
                     </div>
 
