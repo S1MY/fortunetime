@@ -373,7 +373,7 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
     transform: translateY(0);
 }
-.btn{
+.btn:not(.note-btn){
     border: 1px solid #FFFFFF;
     background: transparent;
     padding: 8px 32px;

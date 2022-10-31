@@ -101,7 +101,9 @@ $(document).ready(function () {
     });
 
     $(document).ready(function() {
-        $('#summernote').summernote();
+        $('#summernote').summernote({
+            placeholder: 'Введите ответ на вопрос'
+          });
     });
 
     $('.formLink').click(function (e) {
