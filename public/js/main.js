@@ -110,7 +110,12 @@ $(document).ready(function () {
     $('.editIcon').click(function (e) {
         e.preventDefault();
         let faqID = $(this).attr('data-faq-id');
+        let question = $('.faqIDTitle_'+faqID).html();
+        let answer = $('.faqIDContent_'+faqID).html();
+
         $('.editID').attr('value', faqID);
+        $('#question').attr('value', question);
+        $('.note-editable').html(answer);
     });
 
     $('.formLink').click(function (e) {
