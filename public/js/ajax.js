@@ -198,28 +198,56 @@ $(document).ready(function () {
 
     $(document).on('click', '.adminBtn', function(e) {
         e.preventDefault();
+        if( $(this).hasClass('reviewsAdminBtn') ){
+            $(this).toggleClass('active');
 
-        if( $(this).attr('data-sorting-name') == 'all' && $('#formSorting #all').attr('value') == 0 ){
-            $('.adminBtn').removeClass('active');
-            $('#formSorting input').attr('value', 0);
+            let ajaxurl = $(this).attr('data-action');
+            let value = $(this).attr('data-value');
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {value: value},
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data['responseText']);
+                    // $('.tableWrapper').html(data['responseText']);
+                },
+                error: function (data) {
+                    // $('.tableWrapper').html(data['responseText']);
+                    console.log(data['responseText']);
+                }
+            });
+
         }else{
-            $('.adminBtn[data-sorting-name=all]').removeClass('active');
+            if( $(this).attr('data-sorting-name') == 'all' && $('#formSorting #all').attr('value') == 0 ){
+                $('.adminBtn').removeClass('active');
+                $('#formSorting input').attr('value', 0);
+            }else{
+                $('.adminBtn[data-sorting-name=all]').removeClass('active');
+            }
+
+            $(this).toggleClass('active');
+
+            if( $(this).attr('data-sorting-name') == 'sponsor_login' ){
+                $('.adminBtn[data-sorting-name=activated]').removeClass('active');
+                $('#formSorting #activated').attr('value', 0);
+            }
+
+            if( $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value') == 1 ){
+                $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 0);
+            } else{
+                $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 1);
+            }
+
+            $('#formSorting').submit();
         }
 
-        $(this).toggleClass('active');
-
-        if( $(this).attr('data-sorting-name') == 'sponsor_login' ){
-            $('.adminBtn[data-sorting-name=activated]').removeClass('active');
-            $('#formSorting #activated').attr('value', 0);
-        }
-
-        if( $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value') == 1 ){
-            $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 0);
-        } else{
-            $('#formSorting #'+$(this).attr('data-sorting-name')).attr('value', 1);
-        }
-
-        $('#formSorting').submit();
 
     })
 
