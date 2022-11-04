@@ -269,7 +269,7 @@ $(document).ready(function () {
             success: function (data) {
                 console.log(data);
                 setTimeout(() => {
-                    window.location.href = '/admin/faq';
+                    window.location.href = '/admin/reviews';
                 }, 1500);
                 $('.popupResponse.succes').fadeIn(500);
             },
