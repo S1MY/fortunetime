@@ -25,5 +25,3 @@
     @endforeach
 
 </table>
-
-{{ $users->links('vendor.pagination.default') }}
