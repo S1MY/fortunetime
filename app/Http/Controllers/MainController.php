@@ -45,7 +45,7 @@ class MainController extends Controller
     }
 
     public function reviews(){
-        $reviews = Reviews::orderBy('id', 'desc')->paginate(5);
+        $reviews = Reviews::orderBy('id', 'desc')->where('published', '=', '1')->paginate(5);
         $revCount = count(Reviews::get());
         return view('pages.reviews', compact('reviews', 'revCount'));
     }
