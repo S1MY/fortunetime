@@ -26,6 +26,8 @@
                         @endforeach
 
                     </table>
+
+                    {{ $paieds->links('vendor.pagination.default') }}
                 </div>
             </div>
         </div>
