@@ -213,7 +213,7 @@ $(document).ready(function () {
             }
             if( value == 0 ){
                 $(this).attr('data-value', 1);
-                $(this).text('Все опубликованные');
+                $(this).text('Опубликованные');
             }
 
             $.ajaxSetup({
