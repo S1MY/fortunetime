@@ -199,7 +199,6 @@ $(document).ready(function () {
     $(document).on('click', '.adminBtn', function(e) {
         e.preventDefault();
         if( $(this).hasClass('reviewsAdminBtn') ){
-            $(this).toggleClass('active');
 
             let ajaxurl = $(this).attr('data-action');
             let value = $(this).attr('data-value');

@@ -12,7 +12,7 @@
                 <h3 class="cabMatrixName" style="margin-top: 20px">Настройка вывода</h3>
 
                 <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
-                    <p class="adminBtn cursorPointer reviewsAdminBtn" data-sorting-name="published" data-value="1" data-action="{{ route('adminSortingRewiew') }}">Опубликованные</p>
+                    <p class="adminBtn cursorPointer reviewsAdminBtn active" data-sorting-name="published" data-value="1" data-action="{{ route('adminSortingRewiew') }}">Опубликованные</p>
                 </div>
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Все отзывы ({{$rewCount}})</h3>
