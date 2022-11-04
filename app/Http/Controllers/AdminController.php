@@ -152,13 +152,46 @@ class AdminController extends Controller
     public function adminSortingRewiew(Request $request){
 
         if( $request->value == 0 ){
-            return 'Показать всё';
-        }elseif( $request->value == 1 ){
-            return 'Вывести опубликованные';
-        }else{
-            return 'Вывести снятые';
-        }
+            $reviews = DB::table('reviews')
+                    ->select('users.id', 'reviews.user_id', 'avatar', 'review', 'reviews.id as revID', 'published', 'reviews.created_at', 'users.login', 'user_infos.user_name', 'user_infos.user_surname')
+                    ->leftJoin('users', 'reviews.user_id', '=', 'users.id')
+                    ->leftJoin('user_infos', 'reviews.user_id', '=', 'user_infos.user_id')
+                    ->orderBy('reviews.id', 'DESC')
+                    ->get();
 
-        // return true;
+            $rewCount = count($reviews);
+
+            $rewTitle = 'Все отзывы ('.$rewCount.')';
+
+            return view('account.admin.layout.usersReviews', compact('reviews', 'rewTitle'));
+        }elseif( $request->value == 1 ){
+            $reviews = DB::table('reviews')
+                    ->select('users.id', 'reviews.user_id', 'avatar', 'review', 'reviews.id as revID', 'published', 'reviews.created_at', 'users.login', 'user_infos.user_name', 'user_infos.user_surname')
+                    ->leftJoin('users', 'reviews.user_id', '=', 'users.id')
+                    ->leftJoin('user_infos', 'reviews.user_id', '=', 'user_infos.user_id')
+                    ->where('published', '=', 1)
+                    ->orderBy('reviews.id', 'DESC')
+                    ->get();
+
+            $rewCount = count($reviews);
+
+            $rewTitle = 'Опубликованные отзывы ('.$rewCount.')';
+
+            return view('account.admin.layout.usersReviews', compact('reviews', 'rewTitle'));
+        }else{
+            $reviews = DB::table('reviews')
+                    ->select('users.id', 'reviews.user_id', 'avatar', 'review', 'reviews.id as revID', 'published', 'reviews.created_at', 'users.login', 'user_infos.user_name', 'user_infos.user_surname')
+                    ->leftJoin('users', 'reviews.user_id', '=', 'users.id')
+                    ->leftJoin('user_infos', 'reviews.user_id', '=', 'user_infos.user_id')
+                    ->where('published', '=', 0)
+                    ->orderBy('reviews.id', 'DESC')
+                    ->get();
+
+            $rewCount = count($reviews);
+
+            $rewTitle = 'Снятые с публикации ('.$rewCount.')';
+
+            return view('account.admin.layout.usersReviews', compact('reviews', 'rewTitle'));
+        }
     }
 }

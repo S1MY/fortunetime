@@ -228,10 +228,10 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function (data) {
                     console.log(data['responseText']);
-                    // $('.tableWrapper').html(data['responseText']);
+                    $('.uReviewsWrapper').html(data['responseText']);
                 },
                 error: function (data) {
-                    // $('.tableWrapper').html(data['responseText']);
+                    $('.uReviewsWrapper').html(data['responseText']);
                     console.log(data['responseText']);
                 }
             });
