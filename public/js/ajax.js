@@ -204,6 +204,19 @@ $(document).ready(function () {
             let ajaxurl = $(this).attr('data-action');
             let value = $(this).attr('data-value');
 
+            if( value == 1 ){
+                $(this).attr('data-value', 2);
+                $(this).text('Снятые с публикации');
+            }
+            if( value == 2 ){
+                $(this).attr('data-value', 0);
+                $(this).text('Все отзывы');
+            }
+            if( value == 0 ){
+                $(this).attr('data-value', 1);
+                $(this).text('Все опубликованные');
+            }
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

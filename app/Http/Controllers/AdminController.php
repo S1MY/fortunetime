@@ -148,4 +148,17 @@ class AdminController extends Controller
         return true;
 
     }
+
+    public function adminSortingRewiew(Request $request){
+
+        if( $request->value == 0 ){
+            return 'Показать всё';
+        }elseif( $request->value == 1 ){
+            return 'Вывести опубликованные';
+        }else{
+            return 'Вывести снятые';
+        }
+
+        // return true;
+    }
 }
