@@ -43,6 +43,8 @@
                     <div class="answerContent faqIDContent_{{ $faq->id }}">{!! $faq->answer !!}</div>
                 </div>
                 @endforeach
+
+                {{ $faqs->links('vendor.pagination.default') }}
             </div>
         </div>
     </section>

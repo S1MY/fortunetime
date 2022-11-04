@@ -46,7 +46,7 @@ class AdminController extends Controller
     public function faq(){
         $faqs = DB::table('faq')
                     ->orderBy('id', 'DESC')
-                    ->get();
+                    ->paginate(5);
 
         return view('account.admin.faq', compact('faqs'));
     }
