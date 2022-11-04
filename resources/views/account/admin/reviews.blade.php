@@ -9,7 +9,13 @@
 
                 @include('account.layout.adminMaster')
 
-                <h3 class="cabMatrixName" style="margin-top: 20px">Все отзывы</h3>
+                <h3 class="cabMatrixName" style="margin-top: 20px">Настройка вывода</h3>
+
+                <div class="cabMenuFlex displayFlex alignItemsCenter cabAdminMenu">
+                    <p class="adminBtn cursorPointer" data-sorting-name="published" data-value="1" data-action="{{ route('adminSortingRewiew') }}">Опубликованные</p>
+                </div>
+
+                <h3 class="cabMatrixName" style="margin-top: 20px">Все отзывы ({{$rewCount}})</h3>
 
                 @foreach ($reviews as $review)
 

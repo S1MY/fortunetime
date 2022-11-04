@@ -55,7 +55,9 @@ class AdminController extends Controller
                     ->orderBy('reviews.id', 'DESC')
                     ->get();
 
-        return view('account.admin.reviews', compact('reviews'));
+        $rewCount = count($reviews);
+
+        return view('account.admin.reviews', compact('reviews', 'rewCount'));
 
     }
 
