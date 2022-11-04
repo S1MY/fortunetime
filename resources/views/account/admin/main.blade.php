@@ -50,6 +50,8 @@
                         @endforeach
 
                     </table>
+
+                    {{ $users->links('vendor.pagination.default') }}
                 </div>
             </div>
         </div>
