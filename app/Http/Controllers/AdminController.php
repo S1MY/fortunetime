@@ -77,7 +77,7 @@ class AdminController extends Controller
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                     ->where('activated', $request->activated)
-                    ->paginate(5);
+                    ->paginate(1);
             $title = 'Активированные пользователи ('.DB::table('users')
                                                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                                                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
