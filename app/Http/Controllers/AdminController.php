@@ -77,8 +77,13 @@ class AdminController extends Controller
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                     ->where('activated', $request->activated)
-                    ->get();
-            $title = 'Активированные пользователи ('.$users->count().')';
+                    ->paginate(5);
+            $title = 'Активированные пользователи ('.DB::table('users')
+                                                    ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
+                                                    ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                                                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                                                    ->where('activated', $request->activated)
+                                                    ->get()->count().')';
         }
 
         if( $request->sponsor_login == 1 ){
@@ -90,8 +95,15 @@ class AdminController extends Controller
                         ['activated', 0],
                         ['users.sponsor', NULL]
                         ])
-                    ->get();
-            $title = 'Пользователи которым можно сменить пригласившего ('.$users->count().')';
+                    ->paginate(5);
+            $title = 'Пользователи которым можно сменить пригласившего ('.DB::table('users')
+                                                                        ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
+                                                                        ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                                                                        ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                                                                        ->where([
+                                                                            ['activated', 0],
+                                                                            ['users.sponsor', NULL]
+                                                                            ])->count().')';
         }
 
         if( $request->sponsor_login == 1 OR $request->activated == 1 ){
@@ -103,8 +115,11 @@ class AdminController extends Controller
                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                    ->get();
-            $title = 'Все пользователи ('.$users->count().')';
+                    ->paginate(5);
+            $title = 'Все пользователи ('.DB::table('users')
+                                        ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
+                                        ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
+                                        ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')->count().')';
         }
 
 
