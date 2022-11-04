@@ -18,7 +18,7 @@ class AdminController extends Controller
                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
                     ->leftJoin('users as u2', 'users.sponsor', '=', 'u2.id')
                     ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                    ->paginate(15);
+                    ->paginate(5);
 
         $title = 'Все пользователи ('.DB::table('users')
                                     ->select('u2.login as sponsor_login', 'user_name' , 'user_surname', 'users.login', 'users.email', 'users.sponsor_counter', 'balance', 'activated', 'users.created_at')
