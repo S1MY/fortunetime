@@ -38,12 +38,7 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->paginate(15);
 
-        $title = 'Все успешные пополнения ('.DB::table('freekassas')
-                                            ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(freekassas.created_at) as created_at"))
-                                            ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
-                                            ->where('status','=',1)
-                                            ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
-                                            ->count().')';
+        $title = 'Все пополнения';
 
         return view('account.admin.payed', compact('paieds', 'title'));
     }
