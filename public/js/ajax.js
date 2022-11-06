@@ -370,12 +370,12 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 console.log(data);
-                $('.AJAXFormPY .formPY').html(data);
+                $('.AJAXFormPY .formPY').html(data.responseText);
                 // $('.popupResponse').fadeIn(500);
             },
             error: function (data) {
                 console.log(data);
-                $('.AJAXFormPY .formPY').html(data);
+                $('.AJAXFormPY .formPY').html(data.responseText);
                 // location.href = data.responseText;
             }
         });
