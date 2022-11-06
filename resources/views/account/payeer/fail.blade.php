@@ -6,6 +6,7 @@
     <section class="pageSection">
         <div class="container">
             <div class="pageInner adminFaq" style="text-align: center;">
+                <img src="https://avatars.mds.yandex.net/i?id=7f5984507bcca8fbf053a59c4d9547bcddb88763-4302648-images-thumbs&n=13&exp=1" alt="payeer">
                 <p>При оплате произошла ошибка.</p>
                 <a href="https://fortune-time.ru/account" class="subMenuItem active" style="justify-content: center; margin-top: 10px;">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
