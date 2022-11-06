@@ -47,11 +47,11 @@ class PayeerController extends Controller
                     'updated_at' => Carbon::now()
                 ]);
 
-                return true;
+                ob_end_clean(); exit($_POST['m_orderid'].'|success');
 
             }
 
-            return false;
+            ob_end_clean(); exit($_POST['m_orderid'].'|error');
         }
     }
 
