@@ -171,6 +171,11 @@ $(document).ready(function () {
         $('.AJAXFormFK').submit();
     });
 
+    $('.AJAXFormPY .platItem').click(function (e) {
+        e.preventDefault();
+        $('.AJAXFormPY').submit();
+    });
+
     $('.langItem, .menuLangItem').click(function (e){
         e.preventDefault();
 
@@ -342,6 +347,35 @@ $(document).ready(function () {
             },
             error: function (data) {
                 console.log(data);
+                // location.href = data.responseText;
+            }
+        });
+    });
+
+    $('.AJAXFormPY').submit(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('action');
+        let formData = $(this).serialize();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('.AJAXFormPY .formPY').html(data);
+                // $('.popupResponse').fadeIn(500);
+            },
+            error: function (data) {
+                console.log(data);
+                $('.AJAXFormPY .formPY').html(data);
                 // location.href = data.responseText;
             }
         });
