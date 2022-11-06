@@ -324,7 +324,7 @@
                             <div class="platItem">
                                 @csrf
                                 <input type="hidden" name="oa" value="1000">
-                                <img src="https://cdn.freekassa.ru/images/logo.svg" alt="Freekassa.ru" class="sc-fzpdyU eZlRpO">
+                                <img src="https://cdn.freekassa.ru/images/logo.svg" alt="Freekassa.ru" style="height: 61px; max-width: 110px;" class="sc-fzpdyU eZlRpO">
                                 <div class="platItemText">Комиссия: 1%</div>
                             </div>
                         </form>
