@@ -320,14 +320,14 @@
                 <div class="formContent platContent">
                     <h2 class="popupName">Внесение взноса</h2>
                     <div class="popupFlex displayFlex alignItemsCenter spaceCenter">
-                        <div class="platItem">
-                            <form class="AJAXFormFK" action="{{ route('freekassa.pay') }}">
+                        <form class="AJAXFormFK" action="{{ route('freekassa.pay') }}">
+                            <div class="platItem">
                                 @csrf
                                 <input type="hidden" name="oa" value="1000">
                                 <img src="https://cdn.freekassa.ru/images/logo.svg" alt="Freekassa.ru" class="sc-fzpdyU eZlRpO">
                                 <div class="platItemText">Комиссия: 1%</div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
