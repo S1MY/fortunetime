@@ -242,6 +242,9 @@ body::-webkit-scrollbar-thumb {
     min-height: 100vh;
     height: 100%;
 }
+.formPY{
+    display: none;
+}
 .displayFlex{
     display: flex;
 }
