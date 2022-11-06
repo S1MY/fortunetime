@@ -319,7 +319,7 @@
                 </svg>
                 <div class="formContent platContent">
                     <h2 class="popupName">Внесение взноса</h2>
-                    <div class="popupFlex displayFlex alignItemsCenter spaceCenter">
+                    <div class="popupFlex displayFlex alignItemsCenter spaceBetween">
                         <form class="AJAXFormFK" action="{{ route('freekassa.pay') }}">
                             <div class="platItem">
                                 @csrf
