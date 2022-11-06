@@ -41,4 +41,7 @@ class PayeerController extends Controller
     public function payed(Request $request){
         return view('account.payeer.fail');
     }
+    public function fail(Request $request){
+        return view('account.payeer.fail');
+    }
 }
