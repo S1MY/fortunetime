@@ -343,11 +343,11 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 console.log(data);
-                // $('.popupResponse').fadeIn(500);
+                $('.popupResponse').fadeIn(500);
             },
             error: function (data) {
                 console.log(data);
-                // location.href = data.responseText;
+                location.href = data.responseText;
             }
         });
     });
