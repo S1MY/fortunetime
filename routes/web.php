@@ -93,5 +93,5 @@ Route::post('/freekassa/fail', 'App\Http\Controllers\FreekassaController@fail')-
 
 Route::post('/payeer', 'App\Http\Controllers\PayeerController@payeer')->name('payeer')->middleware('auth');
 Route::post('/payeer/pay', 'App\Http\Controllers\PayeerController@pay')->name('payeer.pay')->middleware('auth');
-Route::post('/payeer/payed', 'App\Http\Controllers\PayeerController@payed')->name('payeer.payed');
+Route::get('/payeer/payed', 'App\Http\Controllers\PayeerController@payed')->name('payeer.payed');
 Route::get('/payeer/fail', 'App\Http\Controllers\PayeerController@fail')->name('payeer.fail');
