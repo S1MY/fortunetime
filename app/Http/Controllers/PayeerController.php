@@ -39,6 +39,6 @@ class PayeerController extends Controller
     }
 
     public function payed(Request $request){
-        dd($request);
+        return view('account.payeer.fail');
     }
 }
