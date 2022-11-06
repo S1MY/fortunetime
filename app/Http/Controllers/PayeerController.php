@@ -10,7 +10,8 @@ class PayeerController extends Controller
     public function pay(Request $request){
         $m_shop = '1770985667';
         $m_orderid = Auth::user()->id;
-        $m_amount = number_format($request->oa, 2, '.', '');
+        // $m_amount = number_format($request->oa, 2, '.', '');
+        $m_amount = number_format(10, 2, '.', '');
         $m_curr = 'RUB';
         $m_desc = base64_encode('Оплата одного из уровня маркетинга на проекте Fortune Time!');
         $m_key = 'DAJ12VfyfWmzQ5mu';
