@@ -10,55 +10,49 @@ use Illuminate\Support\Facades\DB;
 class PayeerController extends Controller
 {
     public function payeer(Request $request){
-        DB::table('payeer')->insert([
-            'user_id' => 1,
-            'amount' => explode('.', '10.00')[0],
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
-        // if (!in_array($_SERVER['REMOTE_ADDR'], array('185.71.65.92', '185.71.65.189', '149.202.17.210'))) return;
+        if (!in_array($_SERVER['REMOTE_ADDR'], array('185.71.65.92', '185.71.65.189', '149.202.17.210'))) return;
 
-        // if (isset($request->m_operation_id) && isset($request->m_sign))
-        // {
-        //     $m_key = 'DAJ12VfyfWmzQ5mu';
+        if (isset($request->m_operation_id) && isset($request->m_sign))
+        {
+            $m_key = 'DAJ12VfyfWmzQ5mu';
 
-        //     $arHash = array(
-        //         $request->m_operation_id,
-        //         $request->m_operation_ps,
-        //         $request->m_operation_date,
-        //         $request->m_operation_pay_date,
-        //         $request->m_shop,
-        //         $request->m_orderid,
-        //         $request->m_amount,
-        //         $request->m_curr,
-        //         $request->m_desc,
-        //         $request->m_status
-        //     );
+            $arHash = array(
+                $request->m_operation_id,
+                $request->m_operation_ps,
+                $request->m_operation_date,
+                $request->m_operation_pay_date,
+                $request->m_shop,
+                $request->m_orderid,
+                $request->m_amount,
+                $request->m_curr,
+                $request->m_desc,
+                $request->m_status
+            );
 
-        //     if (isset($request->m_params))
-        //     {
-        //         $arHash[] = $request->m_params;
-        //     }
+            if (isset($request->m_params))
+            {
+                $arHash[] = $request->m_params;
+            }
 
-        //     $arHash[] = $m_key;
+            $arHash[] = $m_key;
 
-        //     $sign_hash = strtoupper(hash('sha256', implode(':', $arHash)));
+            $sign_hash = strtoupper(hash('sha256', implode(':', $arHash)));
 
-        //     if ($request->m_sign == $sign_hash && $request->m_status == 'success')
-        //     {
-        //         DB::table('payeer')->insert([
-        //             'user_id' => $request->m_orderid,
-        //             'amount' => explode('.', $request->m_amount)[0],
-        //             'created_at' => Carbon::now(),
-        //             'updated_at' => Carbon::now()
-        //         ]);
+            if ($request->m_sign == $sign_hash && $request->m_status == 'success')
+            {
+                DB::table('payeer')->insert([
+                    'user_id' => $request->m_orderid,
+                    'amount' => explode('.', $request->m_amount)[0],
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now()
+                ]);
 
-        //         ob_end_clean(); exit($_POST['m_orderid'].'|success');
+                ob_end_clean(); exit($_POST['m_orderid'].'|success');
 
-        //     }
+            }
 
-        //     ob_end_clean(); exit($_POST['m_orderid'].'|error');
-        // }
+            ob_end_clean(); exit($_POST['m_orderid'].'|error');
+        }
     }
 
     public function pay(Request $request){
