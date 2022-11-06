@@ -41,7 +41,8 @@ class MainController extends Controller
     }
 
     public function faq(){
-        return view('pages.faq');
+        $faqs = DB::table('faq')->get();
+        return view('pages.faq', compact('faqs'));
     }
 
     public function reviews(){
