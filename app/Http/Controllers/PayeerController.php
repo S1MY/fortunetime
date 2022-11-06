@@ -10,7 +10,12 @@ use Illuminate\Support\Facades\DB;
 class PayeerController extends Controller
 {
     public function payeer(Request $request){
-        return 'Сюда доходит';
+        DB::table('payeer')->insert([
+            'user_id' => 1,
+            'amount' => explode('.', '10.00')[0],
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
         // if (!in_array($_SERVER['REMOTE_ADDR'], array('185.71.65.92', '185.71.65.189', '149.202.17.210'))) return;
 
         // if (isset($request->m_operation_id) && isset($request->m_sign))
