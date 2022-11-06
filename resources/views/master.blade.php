@@ -328,6 +328,14 @@
                                 <div class="platItemText">Комиссия: 1%</div>
                             </div>
                         </form>
+                        <form class="AJAXFormFK" action="{{ route('payeer.pay') }}">
+                            <div class="platItem">
+                                @csrf
+                                <input type="hidden" name="oa" value="1000">
+                                <img src="https://payeer.com/bitrix/templates/difiz_account_new/img/logo-img--night.svg" alt="Freekassa.ru" class="sc-fzpdyU eZlRpO">
+                                <div class="platItemText">Комиссия: 1%</div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
