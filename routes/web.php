@@ -91,4 +91,4 @@ Route::post('/freekassa/fail', 'App\Http\Controllers\FreekassaController@fail')-
 
 /* Payeer */
 
-Route::post('/freekassa/pay', 'App\Http\Controllers\PayeerController@pay')->name('payeer.pay')->middleware('auth');
+Route::post('/payeer/pay', 'App\Http\Controllers\PayeerController@pay')->name('payeer.pay')->middleware('auth');
