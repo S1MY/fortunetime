@@ -41,8 +41,8 @@ class PayeerController extends Controller
             if ($_POST['m_sign'] == $sign_hash && $_POST['m_status'] == 'success')
             {
                 DB::table('payeer')->insert([
-                    'user_id' => $_GET['m_orderid'],
-                    'amount' => explode('.', $_GET['m_amount'])[0],
+                    'user_id' => $request->m_orderid,
+                    'amount' => explode('.', $request->m_amount)[0],
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now()
                 ]);
@@ -51,7 +51,7 @@ class PayeerController extends Controller
 
             }
 
-            ob_end_clean(); exit($_POST['m_orderid'].'|error');
+            return false;
         }
     }
 
