@@ -5,7 +5,7 @@
 @section('content')
     <section class="pageSection">
         <div class="container">
-            <div class="pageInner adminFaq">
+            <div class="pageInner adminFaq" style="text-align: center;">
                 <p>При оплате произошла ошибка.</p>
                 <a href="https://fortune-time.ru/account" class="subMenuItem active">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
