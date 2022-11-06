@@ -371,11 +371,13 @@ $(document).ready(function () {
             success: function (data) {
                 console.log(data);
                 $('.AJAXFormPY .formPY').html(data.responseText);
+                $('.formPY').submit();
                 // $('.popupResponse').fadeIn(500);
             },
             error: function (data) {
                 console.log(data);
                 $('.AJAXFormPY .formPY').html(data.responseText);
+                $('.formPY').submit();
                 // location.href = data.responseText;
             }
         });
