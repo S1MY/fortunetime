@@ -20,7 +20,7 @@
                         </p>
                         <p class="answerContent">{!! $faq->answer !!}</p>
                     </div>
-                @endforeach
+                {{-- @endforeach
 
                 <div class="answerItem">
                     <p class="answerHeader displayFlex alignItemsCenter">
@@ -188,7 +188,7 @@
                         </svg>
                     </p>
                     <p class="answerContent">Если вам не удалось найти ответ на интересующий вопрос, вы можете связаться с нами через контакты которые указаны на странице <a href="{{ route('statistic') }}">'КОНТАКТЫ'</a>.</p>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
