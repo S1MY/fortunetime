@@ -335,10 +335,10 @@
                                 <img src="https://avatars.mds.yandex.net/i?id=644b167e8d34453805407e207fc309c0e76431f4-5277647-images-thumbs&n=13&exp=1" style="max-width: 110px;" alt="payeer.ru" class="sc-fzpdyU eZlRpO">
                                 <div class="platItemText">Комиссия: 1%</div>
                             </div>
-                            <form method="post" action="https://payeer.com/merchant/" class="formPY">
-                            </form>
                         </form>
                     </div>
+                    <form method="post" action="https://payeer.com/merchant/" class="formPY">
+                    </form>
                 </div>
             </div>
 
