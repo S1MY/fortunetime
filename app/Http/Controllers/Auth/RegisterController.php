@@ -80,7 +80,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if( $data['referer'] == '' ){
-            $sponsor = 0;
+            $sponsor = 1;
         }else{
             $sponsor = User::where('login', $data['referer'])->first();
             $sponsor = $sponsor->id;
