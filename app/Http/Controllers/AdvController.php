@@ -25,6 +25,13 @@ class AdvController extends Controller
                     <input type="text" name="ac_currency" value="RUB" />
                     <input type="text" name="ac_order_id" value="'.$m_orderid.'" />
                     <input type="text" name="ac_sign" value="a45b20f2c8dd5bde1a43a9aa5806a1fe939257cb6d68949bd0eba617ce72e65f" />
+                    <input type="hidden" name="ac_success_url" value="https://fortune-time.ru/advcash/payed" />
+                    <input type="hidden" name="ac_success_url_method" value="GET" />
+                    <input type="hidden" name="ac_fail_url" value="https://fortune-time.ru/advcash/fail" />
+                    <input type="hidden" name="ac_fail_url_method" value="GET" />
+                    <input type="hidden" name="ac_status_url" value="https://fortune-time.ru/advcash" />
+                    <input type="hidden" name="ac_status_url_method" value="POST" />
+                    <input type="text" name="ac_comments" value="Comment" />
                     <input type="submit" />
                 </form>';
 
