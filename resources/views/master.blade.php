@@ -347,6 +347,8 @@
                     </div>
                     <form method="post" action="https://payeer.com/merchant/" class="formPY">
                     </form>
+                    <form method="post" action="https://wallet.advcash.com/sci/" class="formAdv">
+                    </form>
                 </div>
             </div>
 

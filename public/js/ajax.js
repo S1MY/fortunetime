@@ -382,4 +382,35 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('.AJAXFormAdv').submit(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('action');
+        let formData = $(this).serialize();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('.formAdv').html(data.responseText);
+                $('.formAdv').submit();
+                // $('.popupResponse').fadeIn(500);
+            },
+            error: function (data) {
+                console.log(data);
+                $('.formAdv').html(data.responseText);
+                $('.formAdv').submit();
+                // location.href = data.responseText;
+            }
+        });
+    });
 });
