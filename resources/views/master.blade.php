@@ -325,7 +325,7 @@
                                 @csrf
                                 <input type="hidden" name="oa" value="1000">
                                 <img src="https://cdn.freekassa.ru/images/logo.svg" alt="Freekassa.ru" style="height: 61px; max-width: 110px;" class="sc-fzpdyU eZlRpO">
-                                <div class="platItemText">Комиссия: 1%</div>
+                                {{-- <div class="platItemText">Комиссия: 1%</div> --}}
                             </div>
                         </form>
                         <form class="AJAXFormPY" action="{{ route('payeer.pay') }}">
@@ -333,7 +333,15 @@
                                 @csrf
                                 <input type="hidden" name="oa" value="1000">
                                 <img src="https://avatars.mds.yandex.net/i?id=644b167e8d34453805407e207fc309c0e76431f4-5277647-images-thumbs&n=13&exp=1" style="max-width: 110px;" alt="payeer.ru" class="sc-fzpdyU eZlRpO">
-                                <div class="platItemText">Комиссия: 1%</div>
+                                {{-- <div class="platItemText">Комиссия: 1%</div> --}}
+                            </div>
+                        </form>
+                        <form class="AJAXFormAdv" action="{{ route('adv.pay') }}">
+                            <div class="platItem">
+                                @csrf
+                                <input type="hidden" name="oa" value="1000">
+                                <img src="https://referalka24.ru/images/2021/12/04/advcash1.png" style="max-width: 110px;" alt="payeer.ru" class="sc-fzpdyU eZlRpO">
+                                {{-- <div class="platItemText">Комиссия: 1%</div> --}}
                             </div>
                         </form>
                     </div>
