@@ -243,7 +243,8 @@ body::-webkit-scrollbar-thumb {
     min-height: 100vh;
     height: 100%;
 }
-.formPY{
+.formPY,
+.formAdv{
     display: none;
 }
 .displayFlex{
