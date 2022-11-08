@@ -176,6 +176,11 @@ $(document).ready(function () {
         $('.AJAXFormPY').submit();
     });
 
+    $('.AJAXFormAdv .platItem').click(function (e) {
+        e.preventDefault();
+        $('.AJAXFormAdv').submit();
+    });
+
     $('.langItem, .menuLangItem').click(function (e){
         e.preventDefault();
 
