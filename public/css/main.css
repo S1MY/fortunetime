@@ -258,6 +258,9 @@ body::-webkit-scrollbar-thumb {
 .spaceBetween{
     justify-content: space-between;
 }
+.spaceAround{
+    justify-content: space-around;
+}
 .spaceCenter{
     justify-content: center;
 }
