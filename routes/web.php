@@ -97,5 +97,5 @@ Route::get('/payeer/payed', 'App\Http\Controllers\PayeerController@payed')->name
 Route::get('/payeer/fail', 'App\Http\Controllers\PayeerController@fail')->name('payeer.fail');
 
 /* ADVCASH */
-Route::get('/advcash/payed', 'App\Http\Controllers\AdvController@payed')->name('payeer.payed');
-Route::get('/advcash/fail', 'App\Http\Controllers\AdvController@fail')->name('payeer.fail');
+Route::get('/advcash/payed', 'App\Http\Controllers\AdvController@payed')->name('adv.payed');
+Route::get('/advcash/fail', 'App\Http\Controllers\AdvController@fail')->name('adv.fail');
