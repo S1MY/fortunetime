@@ -95,3 +95,7 @@ Route::post('/payeer', 'App\Http\Controllers\PayeerController@payeer')->name('pa
 Route::post('/payeer/pay', 'App\Http\Controllers\PayeerController@pay')->name('payeer.pay')->middleware('auth');
 Route::get('/payeer/payed', 'App\Http\Controllers\PayeerController@payed')->name('payeer.payed');
 Route::get('/payeer/fail', 'App\Http\Controllers\PayeerController@fail')->name('payeer.fail');
+
+/* ADVCASH */
+Route::get('/advcash/payed', 'App\Http\Controllers\AdvController@payed')->name('payeer.payed');
+Route::get('/advcash/fail', 'App\Http\Controllers\AdvController@fail')->name('payeer.fail');
