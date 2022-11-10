@@ -336,14 +336,14 @@
                                 {{-- <div class="platItemText">Комиссия: 1%</div> --}}
                             </div>
                         </form>
-                        <form class="AJAXFormAdv" action="{{ route('adv.pay') }}">
+                        {{-- <form class="AJAXFormAdv" action="{{ route('adv.pay') }}">
                             <div class="platItem">
                                 @csrf
                                 <input type="hidden" name="oa" value="1000">
                                 <img src="https://referalka24.ru/images/2021/12/04/advcash1.png" style="max-width: 110px;" alt="payeer.ru" class="sc-fzpdyU eZlRpO">
-                                {{-- <div class="platItemText">Комиссия: 1%</div> --}}
+
                             </div>
-                        </form>
+                        </form> --}}
                     </div>
                     <form method="post" action="https://payeer.com/merchant/" class="formPY">
                     </form>
