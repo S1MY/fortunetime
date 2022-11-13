@@ -11,7 +11,7 @@
 
                 <div class="bgBlue">
                     <h3>Общая сумма</h3>
-                    <p>{{ $paiedsum }}</p>
+                    <p>{{ $paiedsum->amount }}</p>
                 </div>
 
                 <div class="tableWrapper">
