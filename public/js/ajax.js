@@ -140,7 +140,7 @@ $(document).ready(function () {
             }
         });
         var $input = $(".newsimgInput");
-        var fd = new FormData($(this));
+        var fd = new FormData($(this)[0]);
 
         fd.append('img', $input.prop('files')[0]);
 
