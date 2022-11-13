@@ -39,13 +39,9 @@
                     <div class="pageFlexItem">
                         <h2 class="pageName">Последние видео-отзывы</h2>
                         <div class="reviewVideo">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/" title="Абоба" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="reviewVideo">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/" title="Абоба" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="reviewVideo">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/" title="Абоба" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <video name="media" autoplay="" controls="" style="width: 100%;">
+                                <source src="https://fortune-time.ru/video/Система финал.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
