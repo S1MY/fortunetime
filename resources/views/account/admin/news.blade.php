@@ -10,7 +10,7 @@
                 @include('account.layout.adminMaster')
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Форма создания новости</h3>
-                <form class="adminNews AJAXForm" id="adminNews" method="POST" action="{{ route('adminAddNews') }}">
+                <form class="adminNews" id="adminNews" method="POST" action="{{ route('adminAddNews') }}">
                     <input type="hidden" name="edit" class="editID" value="0">
                     <label for="question">
                         <input type="text" class="formInput" placeholder="Введите заголовок новости" name="title" id="question">
