@@ -16,7 +16,8 @@
                                            margin-top: 10px;
                                            padding: 10px 18px;">
                     <h3>Общая сумма</h3>
-                    <p>{{ $paiedsum }}</p>
+                    <p style="font-size: 24px;
+                              font-weight: bold;">{{ $paiedsum }} руб</p>
                 </div>
 
                 <div class="tableWrapper">
