@@ -18,6 +18,9 @@
                     <label for="answer">
                         <textarea name="answer" id="summernote" placeholder="Введите ответ на вопрос"></textarea>
                     </label>
+                    <label for="newsimg">
+                        <input type="file" name="newsimg">
+                    </label>
                     <button class="passBtn">Добавить Новость</button>
                 </form>
                 <h3 class="cabMatrixName" style="margin-top: 20px">Существующие новости</h3>
