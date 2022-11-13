@@ -9,7 +9,9 @@
 
                 @include('account.layout.adminMaster')
 
-                <div class="bgBlue">
+                <div class="bgBlue" style="color: #FFFFFF;
+                                           background: #4168D2;
+                                           padding: 10px 14px;">
                     <h3>Общая сумма</h3>
                     <p>{{ $paiedsum }}</p>
                 </div>
