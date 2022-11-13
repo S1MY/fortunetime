@@ -11,7 +11,10 @@
 
                 <div class="bgBlue" style="color: #FFFFFF;
                                            background: #4168D2;
-                                           padding: 10px 14px;">
+                                           display: inline-block;
+                                           border-radius: 6px;
+                                           margin-top: 10px;
+                                           padding: 10px 18px;">
                     <h3>Общая сумма</h3>
                     <p>{{ $paiedsum }}</p>
                 </div>
