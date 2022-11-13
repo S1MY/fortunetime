@@ -218,7 +218,7 @@ class AdminController extends Controller
 
         // return $request;
 
-        $path = $request->file('newsimg')->store('news/');
+        $path = $request->file('newsimg')->store('news');
 
         if( $request->edit == 0 ){
             DB::table('news')->insert([
