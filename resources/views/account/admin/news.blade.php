@@ -26,7 +26,7 @@
                 <h3 class="cabMatrixName" style="margin-top: 20px">Существующие новости</h3>
 
                 <div class="pageFlex newsFlex">
-                    <h1 class="pageName">Новости - <span>{{ $newCount }}</span></h1>
+                    <h3 class="pageName">Новости - <span>{{ $newCount }}</span></h3>
                     <div class="pageFullWidth spaceBetween">
                         @foreach ($news as $new)
                             <div class="newsItem">
