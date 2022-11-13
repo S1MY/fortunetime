@@ -13,10 +13,10 @@
                 <form class="adminFAQ AJAXForm" id="adminFAQ" method="POST" action="{{ route('adminAddFAQ') }}">
                     <input type="hidden" name="edit" class="editID" value="0">
                     <label for="question">
-                        <input type="text" class="formInput" placeholder="Введите вопрос" name="question" id="question">
+                        <input type="text" class="formInput" placeholder="Введите заголовок новости" name="question" id="question">
                     </label>
                     <label for="answer">
-                        <textarea name="answer" id="summernote" placeholder="Введите ответ на вопрос"></textarea>
+                        <textarea name="answer" id="summernote" placeholder="Ввидете содержание новости"></textarea>
                     </label>
                     <label for="newsimg">
                         <input type="file" name="newsimg">
