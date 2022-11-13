@@ -10,13 +10,13 @@
                 @include('account.layout.adminMaster')
 
                 <h3 class="cabMatrixName" style="margin-top: 20px">Форма создания новости</h3>
-                <form class="adminFAQ AJAXForm" id="adminFAQ" method="POST" action="{{ route('adminAddFAQ') }}">
+                <form class="adminFAQ AJAXForm" id="adminFAQ" method="POST" action="{{ route('adminAddNews') }}">
                     <input type="hidden" name="edit" class="editID" value="0">
                     <label for="question">
-                        <input type="text" class="formInput" placeholder="Введите заголовок новости" name="question" id="question">
+                        <input type="text" class="formInput" placeholder="Введите заголовок новости" name="title" id="question">
                     </label>
                     <label for="answer">
-                        <textarea name="answer" id="summernotenews" placeholder="Ввидете содержание новости"></textarea>
+                        <textarea name="content" id="summernotenews" placeholder="Ввидете содержание новости"></textarea>
                     </label>
                     <label for="newsimg">
                         <input type="file" name="newsimg">

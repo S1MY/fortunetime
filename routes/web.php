@@ -82,6 +82,7 @@ Route::post('/admin/add/faq', 'App\Http\Controllers\AdminController@adminAddFAQ'
 Route::post('/admin/delete/faq', 'App\Http\Controllers\AdminController@faqDelete')->name('faqDelete')->middleware('auth', 'is_admin');
 Route::post('/admin/change/reviews', 'App\Http\Controllers\AdminController@reviewChanger')->name('reviewChanger')->middleware('auth', 'is_admin');
 Route::post('/admin/sorting/reviews', 'App\Http\Controllers\AdminController@adminSortingRewiew')->name('adminSortingRewiew')->middleware('auth', 'is_admin');
+Route::get('/admin/news/add', 'App\Http\Controllers\AdminController@adminAddNews')->name('adminAddNews')->middleware('auth', 'is_admin');
 
 
 /* Freekassa */

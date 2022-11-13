@@ -6,6 +6,7 @@ use App\Http\Requests\AdminRequest;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -211,5 +212,34 @@ class AdminController extends Controller
 
             return view('account.admin.layout.usersReviews', compact('reviews', 'rewTitle'));
         }
+    }
+
+    public function adminAddNews(Request $request){
+
+        $path = $request->file('newsimg')->store('news/');
+
+        if( $request->edit == 0 ){
+            DB::table('news')->insert([
+                [
+                    'title' => $request->title,
+                    'content' => $request->content,
+                    'image' => $path,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now()
+                ],
+            ]);
+        }else{
+            DB::table('news')
+            ->where('id', $request->edit)
+            ->update([
+                'title' => $request->title,
+                'content' => $request->content,
+                'image' => $path,
+                'updated_at' => Carbon::now(),
+            ]);
+        }
+
+        return true;
+
     }
 }
