@@ -69,6 +69,16 @@ class AdminController extends Controller
 
     }
 
+    public function news(){
+        $news = DB::table('news')
+                    ->orderBy('news.id', 'DESC')
+                    ->paginate(5);
+
+        $newCount = DB::table('news')->orderBy('news.id', 'DESC')->count();
+
+        return view('account.admin.news', compact('news', 'newCount'));
+    }
+
     // Управление
 
     public function adminSorting(Request $request){

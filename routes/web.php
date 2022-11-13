@@ -75,6 +75,7 @@ Route::get('/admin', 'App\Http\Controllers\AdminController@admin')->name('adminP
 Route::get('/admin/paied', 'App\Http\Controllers\AdminController@paied')->name('paied')->middleware('auth', 'is_admin');
 Route::get('/admin/faq', 'App\Http\Controllers\AdminController@faq')->name('adminfaq')->middleware('auth', 'is_admin');
 Route::get('/admin/reviews', 'App\Http\Controllers\AdminController@reviews')->name('adminreviews')->middleware('auth', 'is_admin');
+Route::get('/admin/news', 'App\Http\Controllers\AdminController@news')->name('adminnews')->middleware('auth', 'is_admin');
 
 Route::post('/admin/sorting', 'App\Http\Controllers\AdminController@adminSorting')->name('adminSorting')->middleware('auth', 'is_admin');
 Route::post('/admin/add/faq', 'App\Http\Controllers\AdminController@adminAddFAQ')->name('adminAddFAQ')->middleware('auth', 'is_admin');
