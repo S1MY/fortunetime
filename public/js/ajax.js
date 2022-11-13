@@ -130,6 +130,36 @@ $(document).ready(function () {
         });
     });
 
+    $('#adminNews').submit(function(e){
+        e.preventDefault();
+        let ajaxurl = $(this).attr('action');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        var $input = $(".newsimgInput");
+        var fd = new FormData($(this));
+
+        fd.append('img', $input.prop('files')[0]);
+
+        $.ajax({
+            url: ajaxurl,
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function (data) {
+                console.log(data);
+                location.reload();
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
+
     $('.avatarInput').change(function (e) {
         e.preventDefault();
         $('#avatarUpload').submit();
