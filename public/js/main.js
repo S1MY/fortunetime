@@ -105,6 +105,10 @@ $(document).ready(function () {
             placeholder: 'Введите ответ на вопрос',
             lang: 'ru-RU'
           });
+          $('#summernotenews').summernote({
+            placeholder: 'Введите содержание новости',
+            lang: 'ru-RU'
+          });
     });
 
     $('.editIcon').click(function (e) {

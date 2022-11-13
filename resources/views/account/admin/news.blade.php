@@ -16,7 +16,7 @@
                         <input type="text" class="formInput" placeholder="Введите заголовок новости" name="question" id="question">
                     </label>
                     <label for="answer">
-                        <textarea name="answer" id="summernote" placeholder="Ввидете содержание новости"></textarea>
+                        <textarea name="answer" id="summernotenews" placeholder="Ввидете содержание новости"></textarea>
                     </label>
                     <label for="newsimg">
                         <input type="file" name="newsimg">
