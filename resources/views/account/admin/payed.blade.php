@@ -9,6 +9,11 @@
 
                 @include('account.layout.adminMaster')
 
+                <div class="bgBlue">
+                    <h3>Общая сумма</h3>
+                    <p>{{ $paiedsum }}</p>
+                </div>
+
                 <div class="tableWrapper">
                     <h3 class="cabMatrixName" style="margin-top: 20px">{{ $title }}</h3>
                     <table class="adminTable">

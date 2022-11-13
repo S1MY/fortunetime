@@ -40,7 +40,11 @@ class AdminController extends Controller
 
         $title = 'Все пополнения';
 
-        return view('account.admin.payed', compact('paieds', 'title'));
+        $paiedsum = DB::table('freekassas')
+                    ->select(DB::raw("sum(amount) as amount"))
+                    ->where('status','=',1)->get();
+
+        return view('account.admin.payed', compact('paieds', 'title', 'paiedsum'));
     }
 
     public function faq(){
