@@ -16,7 +16,7 @@
                                     <p class="newsDate">{{ date('d M в H:i', strtotime($new->created_at)); }}</p>
                                 </div>
                                 @if ($new->content != null)
-                                    <p class="newsText">{{$new->content}}</p>
+                                    <p class="newsText">{!!$new->content!!}</p>
                                 @endif
                                 @if ( $new->image != null )
                                     <img src="{{$new->image}}" alt="news" class="newsImage">
