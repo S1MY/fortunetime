@@ -19,7 +19,7 @@
                                     <div class="newsText">{!!$new->content!!}</div>
                                 @endif
                                 @if ( $new->image != null )
-                                    <img src="{{$new->image}}" alt="news" class="newsImage">
+                                    <img src="{{Storage::url($new->image)}}" alt="news" class="newsImage">
                                 @endif
                             </div>
                         @endforeach
