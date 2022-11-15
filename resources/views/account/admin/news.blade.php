@@ -31,9 +31,7 @@
                         @foreach ($news as $new)
                             <div class="newsItem">
                                 <div class="newsTop displayFlex alignItemsCenter" style="position: relative">
-                                    <h3 class="newsTitle faqIDTitle_{{ $new->id }}">
-                                        {{ $new->title }}
-                                    </h3>
+                                    <h3 class="newsTitle faqIDTitle_{{ $new->id }}">{{ $new->title }}</h3>
                                     <p class="newsDate">{{ date('d M в H:i', strtotime($new->created_at)); }}</p>
                                     <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" class="answerIcon editIcon" style="right: 40px;" data-faq-id="{{ $new->id }}">
                                         <path fill="#4168D2" d="M3.5,24h15A3.51,3.51,0,0,0,22,20.487V12.95a1,1,0,0,0-2,0v7.537A1.508,1.508,0,0,1,18.5,22H3.5A1.508,1.508,0,0,1,2,20.487V5.513A1.508,1.508,0,0,1,3.5,4H11a1,1,0,0,0,0-2H3.5A3.51,3.51,0,0,0,0,5.513V20.487A3.51,3.51,0,0,0,3.5,24Z"></path>

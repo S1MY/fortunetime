@@ -117,6 +117,8 @@ $(document).ready(function () {
         let question = $('.faqIDTitle_'+faqID).html();
         let answer = $('.faqIDContent_'+faqID).html();
 
+        console.log(answer);
+
         $('.editID').attr('value', faqID);
         $('#question').attr('value', question);
         $('.note-editable').html(answer);
