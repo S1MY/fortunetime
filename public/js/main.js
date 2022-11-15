@@ -123,7 +123,7 @@ $(document).ready(function () {
         $('.note-placeholder').hide();
     });
 
-    $('.answerItem .removeIcon').click(function (e) {
+    $('.removeIcon').click(function (e) {
         e.preventDefault();
 
         $('.popupResponse.deleteQuestion').fadeIn(500);
