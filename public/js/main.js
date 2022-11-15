@@ -117,8 +117,6 @@ $(document).ready(function () {
         let question = $('.faqIDTitle_'+faqID).html();
         let answer = $('.faqIDContent_'+faqID).html();
 
-        console.log(answer);
-
         $('.editID').attr('value', faqID);
         $('#question').attr('value', question);
         $('.note-editable').html(answer);
@@ -136,11 +134,13 @@ $(document).ready(function () {
 
     });
 
-    $('.newsItem .editIcon').click(function (e) {
+    $('body').on('click', '.newsItem .editIcon', function(e){
         e.preventDefault();
         let faqID = $(this).attr('data-faq-id');
         let question = $('.faqIDTitle_'+faqID).html();
         let answer = $('.faqIDContent_'+faqID).html();
+
+        console.log(answer);
 
         $('.editID').attr('value', faqID);
         $('#question').attr('value', question);
