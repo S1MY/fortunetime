@@ -21,7 +21,10 @@
                     <label for="newsimg">
                         <input type="file" name="newsimg" class="newsimgInput">
                     </label>
-                    <p>Оптимальный формат фото 600 на 320 пикселей. <br> При изменение если не хотите заменить изображение не выбирайте файл.</p>
+                    <p style="margin-bottom: 10px;
+                             font-size: 14px;
+                             color: #1a720a;
+                             line-height: 16px;">Оптимальный формат фото 600 на 320 пикселей. <br> При изменение если не хотите заменить изображение не выбирайте файл.</p>
                     <button class="passBtn">Добавить Новость</button>
                 </form>
                 <h3 class="cabMatrixName" style="margin-top: 20px">Существующие новости</h3>
