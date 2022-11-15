@@ -152,7 +152,10 @@ $(document).ready(function () {
             type: 'POST',
             success: function (data) {
                 console.log(data);
-                // location.reload();
+                $('.popupResponse.succes').fadeIn(500);
+                setTimeout(() => {
+                    window.location.href = '/admin/news';
+                }, 1500);
             },
             error: function (data) {
                 console.log(data);
