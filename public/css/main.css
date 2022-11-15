@@ -1150,6 +1150,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 16px;
     opacity: 0.6;
     padding-left: 10px;
+    margin-top: 10px;
 }
 .newsImage{
     border-radius: 12px;
@@ -2636,7 +2637,6 @@ img.matrixImage{
     .newsDate{
         padding: 0;
         padding-top: 6px;
-        margin-top: 10px;
         text-align: center;
     }
     .newsText{
