@@ -1340,6 +1340,9 @@ body::-webkit-scrollbar-thumb {
 .answerIcon.active {
     transform: rotate(180deg);
 }
+.answerIcon{
+    cursor: pointer;
+}
 .answerIcon.editIcon.active {
     top: 12%;
     transform: unset;
