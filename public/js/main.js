@@ -142,6 +142,7 @@ $(document).ready(function () {
 
         $('.editID').attr('value', faqID);
         $('#question').attr('value', question);
+        $('#summernotenews').attr('value', answer);
         $('.note-editable').html(answer);
         $('.note-placeholder').hide();
     });
