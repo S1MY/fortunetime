@@ -111,7 +111,7 @@ $(document).ready(function () {
           });
     });
 
-    $('.answerItem .editIcon').click(function (e) {
+    $('body').on('click', '.answerItem .editIcon', function(e){
         e.preventDefault();
         let faqID = $(this).attr('data-faq-id');
         let question = $('.faqIDTitle_'+faqID).html();
