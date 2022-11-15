@@ -235,14 +235,24 @@ class AdminController extends Controller
                 ],
             ]);
         }else{
-            DB::table('news')
-            ->where('id', $request->edit)
-            ->update([
-                'title' => $request->title,
-                'content' => $request->content,
-                'image' => $path,
-                'updated_at' => Carbon::now(),
-            ]);
+            if ($request->hasFile('newsimg')) {
+                DB::table('news')
+                ->where('id', $request->edit)
+                ->update([
+                    'title' => $request->title,
+                    'content' => $request->content,
+                    'image' => $path,
+                    'updated_at' => Carbon::now(),
+                ]);
+            }else{
+                DB::table('news')
+                ->where('id', $request->edit)
+                ->update([
+                    'title' => $request->title,
+                    'content' => $request->content,
+                    'updated_at' => Carbon::now(),
+                ]);
+            }
         }
 
         return true;
