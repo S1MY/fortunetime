@@ -258,4 +258,10 @@ class AdminController extends Controller
         return true;
 
     }
+
+    public function newsDelete(Request $request){
+        DB::table('news')->where('id', '=', $request->removeid)->delete();
+
+        return true;
+    }
 }

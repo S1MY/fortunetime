@@ -119,7 +119,7 @@ $(document).ready(function () {
             success: function (data) {
                 console.log(data);
                 setTimeout(() => {
-                    window.location.href = '/admin/faq';
+                    location.reload();
                 }, 1500);
                 $('.popupResponse.succes').fadeIn(500);
             },

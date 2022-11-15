@@ -88,7 +88,7 @@
             <p class="popupResponseText">Вы уверены что хотите удалить вопрос?</p>
 
             <div class="cabMenuFlex displayFlex alignItemsCenter spaceBetween">
-                <a href="#" class="cabMenuLink delete" style="width: calc((100% - 100px) / 2);">Да</a>
+                <a href="#" class="cabMenuLink delete news" style="width: calc((100% - 100px) / 2);">Да</a>
                 <a href="#" class="cabMenuLink refresh" style="width: calc((100% - 100px) / 2);">Нет</a>
             </div>
 
