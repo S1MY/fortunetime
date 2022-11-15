@@ -45,7 +45,7 @@
                                     <div class="newsText faqIDContent_{{ $new->id }}">{!!$new->content!!}</div>
                                 @endif
                                 @if ( $new->image != null )
-                                    <img src="{{storage_path($new->image)}}" alt="news" class="newsImage faqIDImage_{{ $new->id }}">
+                                    <img src="{{Storage::url($new->image)}}" alt="news" class="newsImage faqIDImage_{{ $new->id }}">
                                 @endif
                             </div>
                         @endforeach
