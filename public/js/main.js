@@ -145,6 +145,8 @@ $(document).ready(function () {
         $('.note-codable').attr('value', answer);
         $('.note-editable').html(answer);
         $('.note-placeholder').hide();
+
+        $('.passBtn').html('Обновить новость');
     });
 
     $('.formLink').click(function (e) {
