@@ -216,7 +216,7 @@ class AdminController extends Controller
 
     public function adminAddNews(Request $request){
 
-        return $request;
+        // return $request;
 
         if ($request->hasFile('newsimg')) {
             $path = $request->file('newsimg')->store('news');
