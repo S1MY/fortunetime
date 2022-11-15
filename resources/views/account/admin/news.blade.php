@@ -30,18 +30,18 @@
                     <div class="pageFullWidth spaceBetween">
                         @foreach ($news as $new)
                             <div class="newsItem">
-                                <div class="newsTop displayFlex alignItemsCenter">
+                                <div class="newsTop displayFlex alignItemsCenter" style="position: relative">
                                     <h3 class="newsTitle">
                                         {{ $new->title }}
-                                        <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" class="answerIcon editIcon" style="right: 40px;" title="Изменить" data-faq-id="{{ $new->id }}">
-                                            <path fill="#4168D2" d="M3.5,24h15A3.51,3.51,0,0,0,22,20.487V12.95a1,1,0,0,0-2,0v7.537A1.508,1.508,0,0,1,18.5,22H3.5A1.508,1.508,0,0,1,2,20.487V5.513A1.508,1.508,0,0,1,3.5,4H11a1,1,0,0,0,0-2H3.5A3.51,3.51,0,0,0,0,5.513V20.487A3.51,3.51,0,0,0,3.5,24Z"></path>
-                                            <path fill="#4168D2" d="M9.455,10.544l-.789,3.614a1,1,0,0,0,.271.921,1.038,1.038,0,0,0,.92.269l3.606-.791a1,1,0,0,0,.494-.271l9.114-9.114a3,3,0,0,0,0-4.243,3.07,3.07,0,0,0-4.242,0l-9.1,9.123A1,1,0,0,0,9.455,10.544Zm10.788-8.2a1.022,1.022,0,0,1,1.414,0,1.009,1.009,0,0,1,0,1.413l-.707.707L19.536,3.05Zm-8.9,8.914,6.774-6.791,1.4,1.407-6.777,6.793-1.795.394Z"></path>
-                                        </svg>
-                                        <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" class="answerIcon removeIcon" viewBox="0 0 24 24" data-faq-id="{{ $new->id }}">
-                                            <path fill="#4168D2" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm4.71 13.29L15.3 16.7 12 13.41l-3.29 3.3-1.42-1.42 3.3-3.29-3.3-3.29 1.42-1.42 3.29 3.3 3.29-3.29 1.41 1.41L13.41 12Z"/>
-                                        </svg>
                                     </h3>
                                     <p class="newsDate">{{ date('d M в H:i', strtotime($new->created_at)); }}</p>
+                                    <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" class="answerIcon editIcon" style="right: 40px;" title="Изменить" data-faq-id="{{ $new->id }}">
+                                        <path fill="#4168D2" d="M3.5,24h15A3.51,3.51,0,0,0,22,20.487V12.95a1,1,0,0,0-2,0v7.537A1.508,1.508,0,0,1,18.5,22H3.5A1.508,1.508,0,0,1,2,20.487V5.513A1.508,1.508,0,0,1,3.5,4H11a1,1,0,0,0,0-2H3.5A3.51,3.51,0,0,0,0,5.513V20.487A3.51,3.51,0,0,0,3.5,24Z"></path>
+                                        <path fill="#4168D2" d="M9.455,10.544l-.789,3.614a1,1,0,0,0,.271.921,1.038,1.038,0,0,0,.92.269l3.606-.791a1,1,0,0,0,.494-.271l9.114-9.114a3,3,0,0,0,0-4.243,3.07,3.07,0,0,0-4.242,0l-9.1,9.123A1,1,0,0,0,9.455,10.544Zm10.788-8.2a1.022,1.022,0,0,1,1.414,0,1.009,1.009,0,0,1,0,1.413l-.707.707L19.536,3.05Zm-8.9,8.914,6.774-6.791,1.4,1.407-6.777,6.793-1.795.394Z"></path>
+                                    </svg>
+                                    <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" class="answerIcon removeIcon" viewBox="0 0 24 24" data-faq-id="{{ $new->id }}">
+                                        <path fill="#4168D2" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm4.71 13.29L15.3 16.7 12 13.41l-3.29 3.3-1.42-1.42 3.3-3.29-3.3-3.29 1.42-1.42 3.29 3.3 3.29-3.29 1.41 1.41L13.41 12Z"/>
+                                    </svg>
                                 </div>
                                 @if ($new->content != null)
                                     <p class="newsText">{!!$new->content!!}</p>
