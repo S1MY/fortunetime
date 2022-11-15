@@ -139,12 +139,10 @@ $(document).ready(function () {
         let faqID = $(this).attr('data-faq-id');
         let question = $('.faqIDTitle_'+faqID).html();
         let answer = $('.faqIDContent_'+faqID).html();
-        let image = $('.faqIDImage_'+faqID).html();
 
         $('.editID').attr('value', faqID);
         $('#question').attr('value', question);
         $('.note-editable').html(answer);
-        $('.newsimgInput').attr('value', image);
         $('.note-placeholder').hide();
     });
 
