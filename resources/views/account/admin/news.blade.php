@@ -42,7 +42,7 @@
                                     </svg>
                                 </div>
                                 @if ($new->content != null)
-                                    <p class="newsText faqIDContent_{{ $new->id }}">{!!$new->content!!}</p>
+                                    <div class="newsText faqIDContent_{{ $new->id }}">{!!$new->content!!}</div>
                                 @endif
                                 @if ( $new->image != null )
                                     <img src="{{$new->image}}" alt="news" class="newsImage faqIDImage_{{ $new->id }}">
