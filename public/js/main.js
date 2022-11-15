@@ -111,7 +111,7 @@ $(document).ready(function () {
           });
     });
 
-    $('.editIcon').click(function (e) {
+    $('.answerItem .editIcon').click(function (e) {
         e.preventDefault();
         let faqID = $(this).attr('data-faq-id');
         let question = $('.faqIDTitle_'+faqID).html();
@@ -123,7 +123,7 @@ $(document).ready(function () {
         $('.note-placeholder').hide();
     });
 
-    $('.removeIcon').click(function (e) {
+    $('.answerItem .removeIcon').click(function (e) {
         e.preventDefault();
 
         $('.popupResponse.deleteQuestion').fadeIn(500);
@@ -132,6 +132,18 @@ $(document).ready(function () {
 
         $('#removeid').attr('value', faqID);
 
+    });
+
+    $('.newsItem .editIcon').click(function (e) {
+        e.preventDefault();
+        let faqID = $(this).attr('data-faq-id');
+        let question = $('.faqIDTitle_'+faqID).html();
+        let answer = $('.faqIDContent_'+faqID).html();
+
+        $('.editID').attr('value', faqID);
+        $('#question').attr('value', question);
+        $('.note-editable').html(answer);
+        $('.note-placeholder').hide();
     });
 
     $('.formLink').click(function (e) {
