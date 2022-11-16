@@ -13,7 +13,7 @@
                             <div class="newsItem">
                                 <div class="newsTop displayFlex alignItemsCenter">
                                     <h3 class="newsTitle">{{ $new->title }}</h3>
-                                    <p class="newsDate">{{ date('d M в H:i', strtotime($new->created_at)); }}</p>
+                                    {{-- <p class="newsDate">{{ date('d M в H:i', strtotime($new->created_at)); }}</p> --}}
                                 </div>
                                 @if ($new->content != null)
                                     <div class="newsText">{!!$new->content!!}</div>
