@@ -40,7 +40,7 @@
                             <tr>
                                 <td>{{ $user->user_name }}</td>
                                 <td>{{ $user->user_surname }}</td>
-                                <td class="tacenter cursorPointer">{{ $user->login }}</td>
+                                <td class="tacenter cursorPointer" data-link="{{ route('showMatrix', $user->login) }}">{{ $user->login }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td class="tacenter cursorPointer">{{ $user->sponsor_login }}</td>
                                 <td class="tacenter">{{ $user->sponsor_counter }}</td>
