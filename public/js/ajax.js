@@ -172,16 +172,13 @@ $(document).ready(function () {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-        var fd = $(this).serialize();
-
-        console.log(fd);
+        var formData = $(this).serialize();
 
         $.ajax({
-            url: ajaxurl,
-            data: fd,
-            processData: false,
-            contentType: false,
             type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
             success: function (data) {
                 console.log(data);
                 // $('.popupResponse.succes').fadeIn(500);
