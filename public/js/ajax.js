@@ -174,6 +174,8 @@ $(document).ready(function () {
         });
         var fd = $(this).serialize();
 
+        console.log(fd);
+
         $.ajax({
             url: ajaxurl,
             data: fd,
