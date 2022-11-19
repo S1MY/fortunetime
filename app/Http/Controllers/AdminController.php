@@ -118,7 +118,7 @@ class AdminController extends Controller
 
         $sponsor = DB::table('users')->where('login', '=', $request->newSponsor)->first();
 
-        return $request;
+        dd($request);
 
         $sponsor = $sponsor->id;
 
