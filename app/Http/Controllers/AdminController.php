@@ -81,7 +81,33 @@ class AdminController extends Controller
     }
 
     public function showMartix($login){
-        dd($login);
+
+        $user = DB::table('users')->where('login', '=', $login)->first();
+
+        $matrix = DB::table('matrix')->where([
+            ['user_id', '=', $user->id],
+            ['matrix_lvl', '=', 1],
+        ])->first();
+
+        $disabled = ' disabled';
+        $matrixInfos = '';
+        $matrixUsersCount = '';
+
+        // dd($matrix);
+
+        if($matrix != null){
+            $disabled = '';
+
+            $matrixInfos = DB::table('users')
+            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+            ->where('matrix_placers.matrix_id', $matrix->matrix_id)
+            ->get();
+
+            $matrixUsersCount = $matrixInfos->count();
+        }
+
+        return view('account.admin.matrix', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
 
     // Управление
