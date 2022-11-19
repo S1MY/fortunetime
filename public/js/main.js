@@ -134,6 +134,17 @@ $(document).ready(function () {
 
     });
 
+    $('.changeRef a').click(function (e) {
+        e.preventDefault();
+
+        $('.popupResponse.changeRef').fadeIn(500);
+
+        let userID = $(this).attr('data-id');
+
+        $('#changeID').attr('value', faqID);
+
+    });
+
     $('body').on('click', '.newsItem .editIcon', function(e){
         e.preventDefault();
         let faqID = $(this).attr('data-faq-id');
