@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="linkBlock">
-                            <p class="labelText">Ваша реферальная ссылка:</p>
+                            <p class="labelText">Реферальная ссылка пользователя:</p>
                             <p class="fullLink">
                                 <span class="linkCopy displayFlex alignItemsCenter spaceCenter" title="Скопировать">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,9 +81,9 @@
                             </div>
                         </div>
                         @if ( $matrix != null )
-                            <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
+                            {{-- <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a> --}}
                         @else
-                            <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
+                            {{-- <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a> --}}
                         @endif
                     </div>
                 </div>
