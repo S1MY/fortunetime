@@ -42,7 +42,7 @@
                                 <td>{{ $user->user_surname }}</td>
                                 <td class="tacenter cursorPointer"><a href="{{ route('showMatrix', $user->login) }}">{{ $user->login }}</a></td>
                                 <td>{{ $user->email }}</td>
-                                @if ($user->sponsor_login == null)
+                                @if ($user->sponsor_login == null AND $user->activated == 0)
                                     <td class="tacenter cursorPointer changeRef">Поменять реферала</td>
                                 @else
                                     <td class="tacenter cursorPointer">{{ $user->sponsor_login }}</td>
