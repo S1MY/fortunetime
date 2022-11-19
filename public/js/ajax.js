@@ -164,6 +164,7 @@ $(document).ready(function () {
     })
 
     $('#changeReferal').submit(function(e){
+        $('.popupResponse.changeRef').fadeOut(500);
         e.preventDefault();
         let ajaxurl = $(this).attr('action');
 
@@ -181,10 +182,10 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 console.log(data);
-                // $('.popupResponse.succes').fadeIn(500);
-                // setTimeout(() => {
-                //     window.location.href = '/admin';
-                // }, 1500);
+                $('.popupResponse.succes').fadeIn(500);
+                setTimeout(() => {
+                    window.location.href = '/admin';
+                }, 1500);
             },
             error: function (data) {
                 console.log(data);
