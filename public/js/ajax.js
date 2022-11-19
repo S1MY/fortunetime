@@ -181,10 +181,11 @@ $(document).ready(function () {
             contentType: false,
             type: 'POST',
             success: function (data) {
-                $('.popupResponse.succes').fadeIn(500);
-                setTimeout(() => {
-                    window.location.href = '/admin';
-                }, 1500);
+                console.log(data);
+                // $('.popupResponse.succes').fadeIn(500);
+                // setTimeout(() => {
+                //     window.location.href = '/admin';
+                // }, 1500);
             },
             error: function (data) {
                 console.log(data);
