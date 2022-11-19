@@ -77,7 +77,7 @@
             <form action="{{ route('changeUserReferal') }}" id="faqRemove" method="POST">
                 <input type="hidden" name="changeID" id="removeid" value="">
                 <input type="text" class="formInput" style="width: 100%" placeholder="Введите логин нового реферала">
-                <button class="passBtn" style="width: 100%">Изменить</button>
+                <button class="passBtn" style="width: 100%; margin-top: 10px;">Изменить</button>
             </form>
 
         </div>
