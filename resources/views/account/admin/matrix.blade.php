@@ -19,17 +19,17 @@
                             </div>
                             <div class="cabinetInfo">
                                 @php
-                                    $sugarID = md5(Auth::user()->login);
+                                    $sugarID = md5($user->login);
                                 @endphp
                                 <p class="cabinetName">
-                                    @if (Auth::user()->UserInfo->user_name != null)
-                                        {{ Auth::user()->UserInfo->user_name }} <span style="font-size: 16px;">({{ Auth::user()->login }})</span>
+                                    @if ($userInfo->user_name != null)
+                                        {{ $userInfo->user_name }} <span style="font-size: 16px;">({{ $user->login }})</span>
                                     @else
-                                        {{ Auth::user()->login }}
+                                        {{ $user->login }}
                                     @endif
                                 </p>
                                 <p class="cabinetInfoItem">id: {{ $sugarID }}</p>
-                                @if ( Auth::user()->UserInfo->activated == 0 )
+                                @if ( $userInfo->activated == 0 )
                                     <p class="cabinetInfoItem">для активации аккаунте требуется оплата взноса</p>
                                 @endif
                             </div>
@@ -50,7 +50,7 @@
                                         </defs>
                                     </svg>
                                 </span>
-                                <span class="linkRef">{{ Request::root() }}/referral/{{ Auth::user()->login }}</span>
+                                <span class="linkRef">{{ Request::root() }}/referral/{{ $user->login }}</span>
                                 <span class="copy">Скопировано</span>
                             </p>
                         </div>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="cabinetTopInfo">
                                     <p class="cabinetTopName">Заработано всего</p>
-                                    <p class="cabinetTopCount">{{ Auth::user()->UserInfo->earned; }} rub.</p>
+                                    <p class="cabinetTopCount">{{ $userInfo->earned; }} rub.</p>
                                 </div>
                             </div>
                             <div class="cabinetTopItem displayFlex spaceBetween alignItemsCenter">
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="cabinetTopInfo">
                                     <p class="cabinetTopName">Доступно на вывод</p>
-                                    <p class="cabinetTopCount">{{ Auth::user()->UserInfo->balance; }} rub.</p>
+                                    <p class="cabinetTopCount">{{ $userInfo->balance; }} rub.</p>
                                 </div>
                             </div>
                         </div>
@@ -88,15 +88,15 @@
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
-                    <div class="matrixTab active" data-matrix="1" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>1] ) }}">М#1</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>2] ) }}">М#2</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="3" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>3] ) }}">М#3</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="4" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>4] ) }}">М#4</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="5" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>5] ) }}">М#5</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="6" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>6] ) }}">М#6</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="7" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>7] ) }}">М#7</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>8] ) }}">М#8</div>
-                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9" data-matrix-url="{{ route('getmatrix', ['id'=>Auth::user()->id, 'lvl'=>9] ) }}">М#9</div>
+                    <div class="matrixTab active" data-matrix="1" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>1] ) }}">М#1</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="2" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>2] ) }}">М#2</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="3" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>3] ) }}">М#3</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="4" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>4] ) }}">М#4</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="5" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>5] ) }}">М#5</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="6" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>6] ) }}">М#6</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="7" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>7] ) }}">М#7</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="8" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>8] ) }}">М#8</div>
+                    <div class="matrixTab{{$disabled}}" title="Матрица не активна" data-matrix="9" data-matrix-url="{{ route('getmatrix', ['id'=>$user->id, 'lvl'=>9] ) }}">М#9</div>
                 </div>
                 <div class="mainContainerMatrix">
                     @if ( $matrix != null)
