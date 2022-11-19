@@ -80,6 +80,10 @@ class AdminController extends Controller
         return view('account.admin.news', compact('news', 'newCount'));
     }
 
+    public function showMartix($login){
+        dd($login);
+    }
+
     // Управление
 
     public function adminSorting(Request $request){
