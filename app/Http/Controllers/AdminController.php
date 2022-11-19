@@ -83,6 +83,7 @@ class AdminController extends Controller
     public function showMartix($login){
 
         $user = DB::table('users')->where('login', '=', $login)->first();
+        $userInfo = DB::table('user_infos')->where('user_id', '=', $user->id)->first();
 
         $matrix = DB::table('matrix')->where([
             ['user_id', '=', $user->id],
@@ -107,7 +108,7 @@ class AdminController extends Controller
             $matrixUsersCount = $matrixInfos->count();
         }
 
-        return view('account.admin.matrix', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
+        return view('account.admin.matrix', compact('user', 'userInfo' ,'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
 
     // Управление
