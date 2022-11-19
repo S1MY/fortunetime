@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AdminRequest;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -112,6 +113,19 @@ class AdminController extends Controller
     }
 
     // Управление
+
+    public function changeUserReferal(Request $request){
+        $sponsor = User::where('login', $request->newSponsor)->first();
+        $sponsor = $sponsor->id;
+
+        DB::table('users')
+            ->where('id', $request->changeID)
+            ->update([
+                'sponsor' => $sponsor,
+            ]);
+
+        return 1;
+    }
 
     public function adminSorting(Request $request){
 

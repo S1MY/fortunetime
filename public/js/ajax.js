@@ -163,6 +163,35 @@ $(document).ready(function () {
         });
     })
 
+    $('#changeReferal').submit(function(e){
+        e.preventDefault();
+        let ajaxurl = $(this).attr('action');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        var fd = $(this).serialize();
+
+        $.ajax({
+            url: ajaxurl,
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function (data) {
+                $('.popupResponse.succes').fadeIn(500);
+                setTimeout(() => {
+                    window.location.href = '/admin';
+                }, 1500);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
+
     $('.avatarInput').change(function (e) {
         e.preventDefault();
         $('#avatarUpload').submit();

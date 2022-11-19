@@ -141,7 +141,7 @@ $(document).ready(function () {
 
         let userID = $(this).attr('data-id');
 
-        $('#changeID').attr('value', faqID);
+        $('#changeID').attr('value', userID);
 
     });
 
