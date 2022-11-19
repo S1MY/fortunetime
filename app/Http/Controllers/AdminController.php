@@ -116,9 +116,9 @@ class AdminController extends Controller
 
     public function changeUserReferal(Request $request){
 
-        $sponsor = DB::table('users')->where('login', '=', $request->newSponsor)->first();
+        return $request;
 
-        dd($request);
+        $sponsor = DB::table('users')->where('login', '=', $request->newSponsor)->first();
 
         $sponsor = $sponsor->id;
 
