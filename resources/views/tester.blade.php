@@ -434,7 +434,7 @@
             // У спонсора новая матрица, у которой нет ID
             // Встаём к нему первыми
 
-            $countMatrixPlacerLines = DB::table('matrix_placers')->count();
+            $countMatrixPlacerLines = DB::table('matrix_placers')->count()+1;
 
             echo $countMatrixPlacerLines;
 
