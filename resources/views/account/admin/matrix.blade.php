@@ -117,25 +117,45 @@
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
                                         @endphp
                                         @for ($ei = 1; $ei <= $lineG[$i-1]; $ei++)
-                                            {{ $ei }}
+                                            @if ($matrixInfos->where('line', '=', $i)->where('user_place', '=', $ei)->count() == 0 )
+                                                @php
+                                                    $activeCabMatrix = '';
+                                                    $lineMatrix = $matrixInfos->where('referer_line', '=', $i);
+                                                    $lineMatrixCounter = $lineMatrix->count();
+                                                    $stringI = array(
+                                                        'первого',
+                                                        'второго',
+                                                        'третьего',
+                                                        'четвёртого',
+                                                        'пятого',
+                                                        'шестого',
+                                                        'седьмого',
+                                                    );
+                                                    if( $lineMatrixCounter > 0 ){
+                                                        $activeCabMatrix = ' active';
+                                                    }
+                                                @endphp
+                                            @else
+                                                @php
+                                                    $activeCabMatrix = '';
+                                                    $lineMatrix = $matrixInfos->where('line', '=', $i);
+                                                    $lineMatrixCounter = $lineMatrix->count();
+                                                    $stringI = array(
+                                                        'первого',
+                                                        'второго',
+                                                        'третьего',
+                                                        'четвёртого',
+                                                        'пятого',
+                                                        'шестого',
+                                                        'седьмого',
+                                                    );
+                                                    if( $lineMatrixCounter > 0 ){
+                                                        $activeCabMatrix = ' active';
+                                                    }
+                                                @endphp
+                                            @endif
                                         @endfor
-                                        @php
-                                            $activeCabMatrix = '';
-                                            $lineMatrix = $matrixInfos->where('line', '=', $i);
-                                            $lineMatrixCounter = $lineMatrix->count();
-                                            $stringI = array(
-                                                'первого',
-                                                'второго',
-                                                'третьего',
-                                                'четвёртого',
-                                                'пятого',
-                                                'шестого',
-                                                'седьмого',
-                                            );
-                                            if( $lineMatrixCounter > 0 ){
-                                                $activeCabMatrix = ' active';
-                                            }
-                                        @endphp
+
                                         <div class="cabMatrixElement{{$activeCabMatrix}}">
                                             <h3 class="cabMatrixName">Партнеры {{ $stringI[$i-1] }} уровня <span>( {{ $lineMatrixCounter }} )</span></h3>
                                             <p class="cabMatrixDesc">Необходимое количество участников в каждом плече для закрытия уровня - {{ $neeedly }}</p>
