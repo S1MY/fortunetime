@@ -479,7 +479,7 @@
                 'referer_shoulder' => $referer_shoulder,
                 'line' => $current_line,
                 'referer_line' => $referer_line,
-                'user_id' => $user['id'],
+                'user_id' => $user->id,
                 'user_place' => $uplace,
                 'referer_place' => $refposs,
                 // 'created_at' => Carbon::now(),
