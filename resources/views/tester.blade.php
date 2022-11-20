@@ -435,7 +435,17 @@
         }
 
     }else{
-        echo 'Нет активной матрицы';
+        // У спонсора нет активной матрицы
+        $myMatrix = DB::table('matrix')->where([
+                ['user_id', '=', $user->id],
+                ['matrix_lvl', '=', $matrix_lvl],
+            ])->first();
+
+        if ( $myMatrix ) {
+            echo 'У нас нет активной матрицы '.$matrix_lvl.' уровня.';
+        }
+
+        echo 'У';
         echo '<br>';
     }
 
