@@ -83,6 +83,7 @@
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
                                 ['matrix_lvl', '=', $matrix_lvl],
+                                ['matrix_id', '!=', null],
                             ])->first();
 
                             if( $refmatrix ){
