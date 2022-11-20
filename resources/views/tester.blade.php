@@ -111,6 +111,9 @@
                                     echo 'Матрица вышестоящего: ' . $referer_id;
                                     echo '<br>';
                                     echo 'Наша в ней позиция: '.$rpos;
+                                    echo '<br>';
+
+                                    $refposs = $rpos;
 
                                     break;
                                 }
