@@ -63,6 +63,8 @@
                                 }
                             }
 
+
+
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
                             echo 'Проверка '.$matrix_id.' матрицы';
@@ -108,6 +110,8 @@
                                     echo '<br>';
                                     echo 'Матрица вышестоящего: ' . $referer_id;
                                     echo '<br>';
+                                    echo 'Наша в ней позиция: '.$rpos;
+
                                     break;
                                 }
                             }else{
