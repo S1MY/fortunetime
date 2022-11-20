@@ -14,6 +14,10 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/freekassa',
         '/freekassa/payed',
-        'freekassa/fail'
+        '/freekassa/fail',
+        '/payeer',
+        '/payeer/pay',
+        '/payeer/payed',
+        '/payeer/fail'
     ];
 }

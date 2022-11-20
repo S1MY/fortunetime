@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
 
+    public function tester(){
+        return view('tester');
+    }
+
     // Страницы
 
     public function admin(){
