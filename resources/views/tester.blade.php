@@ -443,17 +443,15 @@
 
         if ( !$myMatrix ) {
             // У нас тоже нет активной матрицы этого уровня
+            // Создаём матрицу
+
             DB::table('matrix')->insert([
                 'user_id' => $user->id,
                 'matrix_lvl' => $matrix_lvl,
-                'matrix_active' => 1/*,
+                'matrix_active' => 1,
                 'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()*/
+                'updated_at' => Carbon::now()
             ]);
-
-            echo 'Создали матрицу.';
-        }else{
-            echo 'У нас уже есть матрица этого уровня';
         }
     }
 
