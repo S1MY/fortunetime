@@ -122,7 +122,6 @@
 
             $line_pay = 0;
             // Нужно ли двать деньги
-            echo $lineG[$current_line - 1];
 
             if( $uplace == $lineG[$current_line - 1] ){
                 if( $matrix_lvl == 1 ){
@@ -436,14 +435,24 @@
 
             if( $line_pay == 0 ){
                 echo 'Тут мы не даём деньги';
+                echo '<br>';
             }else{
 
             }
-            echo '<br>';
 
-
-
-            // echo $current_line;
+            DB::table('matrix_placers')->insert([
+                'matrix_id' => $matrix_id,
+                'referer_id' => $referer_id,
+                'shoulder' => $shoulder,
+                'referer_shoulder' => $referer_shoulder,
+                'line' => $current_line,
+                'referer_line' => $referer_line,
+                'user_id' => $user['id'],
+                'user_place' => $uplace,
+                'referer_place' => $refposs,
+                // 'created_at' => Carbon::now(),
+                // 'updated_at' => Carbon::now()
+            ]);
 
         }else{
             // У спонсора новая матрица, у которой нет ID
