@@ -151,7 +151,7 @@
 
             }
 
-            exit;
+            // exit;
 
             $line_pay = 0;
             $line_reinv = 0;
