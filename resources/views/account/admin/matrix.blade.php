@@ -116,6 +116,7 @@
                                         @php
                                             $activeCabMatrix = '';
                                             print_r($matrixInfos);
+                                            echo $matrixInfos->login;
                                             $lineMatrix = $matrixInfos->where('referer_line', $i);
                                             $lineMatrixCounter = $lineMatrix->count();
                                             $stringI = array(
