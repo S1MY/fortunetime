@@ -116,7 +116,7 @@
                                 $newMatrixID = DB::table('matrix_placers')->count()+1;
 
                                 DB::table('matrix')->where([
-                                    ['user_id', '=', $referer_id],
+                                    ['user_id', '=', $ruser_id],
                                     ['matrix_lvl', '=', $matrix_lvl],
                                 ])->update(['matrix_id' => $newMatrixID]);
 
