@@ -442,8 +442,15 @@
             ])->first();
 
         if ( !$myMatrix ) {
-            echo 'У нас нет активной матрицы '.$matrix_lvl.' уровня.';
-            echo '<br>';
+            // У нас тоже нет активной матрицы этого уровня
+            DB::table('matrix')->insert([
+                'user_id' => $user->id,
+                'matrix_lvl' => $matrix_lvl,
+                'matrix_active' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]);
+
         }
     }
 
