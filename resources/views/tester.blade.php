@@ -110,6 +110,8 @@
                             }
 
                         }
+                    }else{
+                        $uplace = $spmplacer->count() + 1;
                     }
 
                     break;
