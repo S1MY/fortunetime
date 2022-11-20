@@ -441,12 +441,10 @@
                 ['matrix_lvl', '=', $matrix_lvl],
             ])->first();
 
-        if ( $myMatrix ) {
+        if ( !$myMatrix ) {
             echo 'У нас нет активной матрицы '.$matrix_lvl.' уровня.';
+            echo '<br>';
         }
-
-        echo 'У';
-        echo '<br>';
     }
 
 @endphp
