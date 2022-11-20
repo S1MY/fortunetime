@@ -452,7 +452,7 @@
 
             // Добавляем спонсору созданную матрицу
 
-            DB::table('matrix_placers')->where([
+            DB::table('matrix')->where([
                 ['user_id', '=', $sp],
                 ['matrix_lvl', '=', $matrix_lvl],
             ])->update(['matrix_id' => $matrixID]);
