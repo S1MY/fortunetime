@@ -133,6 +133,8 @@
                                     ['user_id', '=', $referer_id],
                                     ['matrix_lvl', '=', $matrix_lvl],
                                 ])->update(['matrix_id' => $newMatrixID]);
+
+                                echo 'Создали матрицу вышестоящему и встали к нему';
                             }
 
                         }
