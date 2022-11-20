@@ -112,6 +112,7 @@
                         }
                     }else{
                         $uplace = $spmplacer->count() + 1;
+                        $referer_id = $matrix_id;
                     }
 
                     break;
