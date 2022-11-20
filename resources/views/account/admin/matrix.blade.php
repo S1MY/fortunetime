@@ -115,11 +115,11 @@
                                     @for ($i = 1; $i < 8; $i++)
                                         @php
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
+                                            $activeCabMatrix = '';
                                         @endphp
                                         @for ($ei = 1; $ei <= $lineG[$i-1]; $ei++)
                                             @if ($matrixInfos->where('line', '=', $i)->where('user_place', '=', $ei)->count() == 0 )
                                                 @php
-                                                    $activeCabMatrix = '';
                                                     $lineMatrix = $matrixInfos->where('referer_line', '=', $i);
                                                     $lineMatrixCounter = $lineMatrix->count();
                                                     $stringI = array(
@@ -137,7 +137,6 @@
                                                 @endphp
                                             @else
                                                 @php
-                                                    $activeCabMatrix = '';
                                                     $lineMatrix = $matrixInfos->where('line', '=', $i);
                                                     $lineMatrixCounter = $lineMatrix->count();
                                                     print_r($lineMatrix->count());
@@ -153,7 +152,6 @@
                                                     if( $lineMatrixCounter > 0 ){
                                                         $activeCabMatrix = ' active';
                                                     }
-                                                    echo $activeCabMatrix;
                                                 @endphp
                                             @endif
                                         @endfor
