@@ -431,7 +431,47 @@
             // echo $current_line;
 
         }else{
-            echo 'Нет айдишника';
+            // У спонсора новая матрица, у которой нет ID
+            // Встаём к нему первыми
+
+            $countMatrixPlacerLines = DB::table('matrix_placers')->count();
+
+            echo $countMatrixPlacerLines;
+
+            exit();
+
+            DB::table('matrix_placers')->insert([
+                'matrix_id' => $user->id,
+                'referer_id' => $matrix_lvl,
+                'shoulder' => 0,
+                'referer_shoulder' => 0,
+                'line' => 1,
+                'referer_line' => 1,
+                'user_id' => $user->id,
+                'user_place' => 1,
+                'referer_place' => 1,
+                // 'created_at' => Carbon::now(),
+                // 'updated_at' => Carbon::now()
+            ]);
+
+            // После создаём свою матрицу
+
+            $myMatrix = DB::table('matrix')->where([
+                    ['user_id', '=', $user->id],
+                    ['matrix_lvl', '=', $matrix_lvl],
+                ])->first();
+
+            if ( !$myMatrix ) {
+
+                DB::table('matrix')->insert([
+                    'user_id' => $user->id,
+                    'matrix_lvl' => $matrix_lvl,
+                    'matrix_active' => 1,
+                    // 'created_at' => Carbon::now(),
+                    // 'updated_at' => Carbon::now()
+                ]);
+            }
+
         }
 
     }else{
