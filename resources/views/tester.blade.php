@@ -49,6 +49,7 @@
                     echo '<br>';
 
                     if( $i != 1 ){
+
                         for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
 
                             echo '==== Проверка позиции: ' . $uplace . ' ====';
@@ -107,9 +108,35 @@
                                     echo 'Матрица вышестоящего: ' . $referer_id;
                                     break;
                                 }
+                            }else{
+                                // У вышестоящего ещё не активирована матрица
+
+                                $newMatrixID = DB::table('matrix_placers')->count()+1;
+
+                                DB::table('matrix_placers')->insert([
+                                    'matrix_id' => $matrix_id,
+                                    'referer_id' => $newMatrixID,
+                                    'shoulder' => 0,
+                                    'referer_shoulder' => 0,
+                                    'line' => 1,
+                                    'referer_line' => 1,
+                                    'user_id' => $user->id,
+                                    'user_place' => 1,
+                                    'referer_place' => 1,
+                                    // 'created_at' => Carbon::now(),
+                                    // 'updated_at' => Carbon::now()
+                                ]);
+
+                                // Добавляем вышестоящему созданную матрицу
+
+                                DB::table('matrix')->where([
+                                    ['user_id', '=', $referer_id],
+                                    ['matrix_lvl', '=', $matrix_lvl],
+                                ])->update(['matrix_id' => $newMatrixID]);
                             }
 
                         }
+
                     }else{
                         // Нет вышестоящего кроме спонсора
                         $uplace = $spmplacer->count() + 1;
@@ -449,7 +476,7 @@
                 ])->update([
                     'balance' => `balance` + $line_pay,
                     'alter_balance' => `alter_balance` + $line_bonus,
-                    'earned' => `earned` + $line_bonus,
+                    'earned' => `earned` + $line_pay,
                 ]);
 
                 if( $line_reinv == 0 ){
@@ -520,11 +547,11 @@
             // У спонсора новая матрица, у которой нет ID
             // Встаём к нему первыми
 
-            $matrixID = DB::table('matrix_placers')->count()+1;
+            $newMatrixID = DB::table('matrix_placers')->count()+1;
 
             DB::table('matrix_placers')->insert([
-                'matrix_id' => $matrixID,
-                'referer_id' => $matrixID,
+                'matrix_id' => $newMatrixID,
+                'referer_id' => $newMatrixID,
                 'shoulder' => 0,
                 'referer_shoulder' => 0,
                 'line' => 1,
@@ -541,7 +568,7 @@
             DB::table('matrix')->where([
                 ['user_id', '=', $sp],
                 ['matrix_lvl', '=', $matrix_lvl],
-            ])->update(['matrix_id' => $matrixID]);
+            ])->update(['matrix_id' => $newMatrixID]);
 
             // После создаём свою матрицу
 
@@ -559,6 +586,13 @@
                     // 'created_at' => Carbon::now(),
                     // 'updated_at' => Carbon::now()
                 ]);
+
+                // Обновляем статус активации
+
+                DB::table('user_infos')->where([
+                    ['user_id', '=', $user->id],
+                ])->update(['activated' => 1]);
+
             }
 
         }
@@ -571,8 +605,9 @@
             ])->first();
 
         if ( !$myMatrix ) {
+
             // У нас тоже нет активной матрицы этого уровня
-            // Создаём матрицу
+            // Создаём матрицу и обновляем статус активации
 
             DB::table('matrix')->insert([
                 'user_id' => $user->id,
@@ -581,6 +616,10 @@
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ]);
+
+            DB::table('user_infos')->where([
+                ['user_id', '=', $user->id],
+            ])->update(['activated' => 1]);
         }
     }
 
