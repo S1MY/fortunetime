@@ -136,6 +136,7 @@
                                                     }
                                                 @endphp
                                             @else
+                                                1
                                                 @php
                                                     $activeCabMatrix = '';
                                                     $lineMatrix = $matrixInfos->where('line', '=', $i);
