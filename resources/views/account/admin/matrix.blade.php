@@ -153,6 +153,7 @@
                                                     if( $lineMatrixCounter > 0 ){
                                                         $activeCabMatrix = ' active';
                                                     }
+                                                    echo $activeCabMatrix;
                                                 @endphp
                                             @endif
                                         @endfor
