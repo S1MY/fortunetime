@@ -48,70 +48,68 @@
                     echo 'Людей на линии: ' . $spmplacer->count();
                     echo '<br>';
 
-                    for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
+                    if( $i != 1 ){
+                        for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
 
-                        echo '==== Проверка позиции: ' . $uplace . ' ====';
-                        echo '<br>';
+                            echo '==== Проверка позиции: ' . $uplace . ' ====';
+                            echo '<br>';
 
-                        $rpos = 1;
+                            $rpos = 1;
 
-                        for ($n=1; $n <= $uplace; $n++) {
-                            if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
-                                $rpos++;
+                            for ($n=1; $n <= $uplace; $n++) {
+                                if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
+                                    $rpos++;
+                                }
                             }
-                        }
 
-                        echo 'Позиция вышестоящего: ' . $rpos;
-                        echo '<br>';
-                        echo 'Проверка '.$matrix_id.' матрицы';
-                        echo '<br>';
-                        echo 'Линии '.$i-1;
-                        echo '<br>';
+                            echo 'Позиция вышестоящего: ' . $rpos;
+                            echo '<br>';
+                            echo 'Проверка '.$matrix_id.' матрицы';
+                            echo '<br>';
 
-                        $refmplacer = DB::table('matrix_placers')->where([
-                            ['matrix_id', '=', $matrix_id],
-                            ['line', '=', $i-1],
-                            ['user_place', '=', $rpos],
-                        ])->orWhere([
-                            ['referer_id', '=', $matrix_id],
-                            ['referer_line', '=', $i-1],
-                            ['referer_place', '=', $rpos],
-                        ])->first();
-
-                        exit;
-
-                        $ruser_id = $refmplacer->user_id;
-
-                        $refmatrix = DB::table('matrix')->where([
-                            ['user_id', '=', $ruser_id],
-                            ['matrix_lvl', '=', $matrix_lvl],
-                        ])->first();
-
-                        if( $refmatrix ){
-                            $referer_id = $refmatrix->matrix_id;
-
-                            $rmplacer = DB::table('matrix_placers')->where([
-                                ['matrix_id', '=', $referer_id],
-                                ['line', '=', 1],
-                                ['shoulder', '=', 0],
+                            $refmplacer = DB::table('matrix_placers')->where([
+                                ['matrix_id', '=', $matrix_id],
+                                ['line', '=', $i-1],
+                                ['user_place', '=', $rpos],
                             ])->orWhere([
-                                ['referer_id', '=', $referer_id],
-                                ['referer_line', '=', 1],
-                                ['shoulder', '=', 0],
-                            ])->get();
+                                ['referer_id', '=', $matrix_id],
+                                ['referer_line', '=', $i-1],
+                                ['referer_place', '=', $rpos],
+                            ])->first();
+
+                            $ruser_id = $refmplacer->user_id;
+
+                            $refmatrix = DB::table('matrix')->where([
+                                ['user_id', '=', $ruser_id],
+                                ['matrix_lvl', '=', $matrix_lvl],
+                            ])->first();
+
+                            if( $refmatrix ){
+                                $referer_id = $refmatrix->matrix_id;
+
+                                $rmplacer = DB::table('matrix_placers')->where([
+                                    ['matrix_id', '=', $referer_id],
+                                    ['line', '=', 1],
+                                    ['shoulder', '=', 0],
+                                ])->orWhere([
+                                    ['referer_id', '=', $referer_id],
+                                    ['referer_line', '=', 1],
+                                    ['shoulder', '=', 0],
+                                ])->get();
 
 
-                            if( $rmplacer->count() >= 2 ){
-                                echo 'Тут нельзя';
-                                echo '<br>';
-                            }else{
-                                echo 'Можем разместиться';
-                                echo '<br>';
-                                echo 'Матрица вышестоящего: ' . $referer_id;
-                                break;
+                                if( $rmplacer->count() >= 2 ){
+                                    echo 'Тут нельзя';
+                                    echo '<br>';
+                                }else{
+                                    echo 'Можем разместиться';
+                                    echo '<br>';
+                                    echo 'Матрица вышестоящего: ' . $referer_id;
+                                    break;
+                                }
                             }
-                        }
 
+                        }
                     }
 
                     break;
