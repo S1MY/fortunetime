@@ -116,7 +116,7 @@
                                         @php
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
                                         @endphp
-                                        @for ($ei = 1; $ei <= $lineG[$i]; $i++)
+                                        @for ($ei = 1; $ei <= $lineG[$i-1]; $i++)
                                             {{ $ei }}
                                         @endfor
                                         @php
