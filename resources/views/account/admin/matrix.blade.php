@@ -117,7 +117,6 @@
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
                                         @endphp
                                         @for ($ei = 1; $ei <= $lineG[$i-1]; $ei++)
-                                            {{ $i }}
                                             @if ($matrixInfos->where('line', '=', $i)->where('user_place', '=', $ei)->count() == 0 )
                                                 @php
                                                     $activeCabMatrix = '';
@@ -141,6 +140,7 @@
                                                     $activeCabMatrix = '';
                                                     $lineMatrix = $matrixInfos->where('line', '=', $i);
                                                     $lineMatrixCounter = $lineMatrix->count();
+                                                    print_r($lineMatrix);
                                                     $stringI = array(
                                                         'первого',
                                                         'второго',
