@@ -106,6 +106,7 @@
                                     echo 'Можем разместиться';
                                     echo '<br>';
                                     echo 'Матрица вышестоящего: ' . $referer_id;
+                                    echo '<br>';
                                     break;
                                 }
                             }else{
@@ -113,28 +114,15 @@
 
                                 $newMatrixID = DB::table('matrix_placers')->count()+1;
 
-                                DB::table('matrix_placers')->insert([
-                                    'matrix_id' => $matrix_id,
-                                    'referer_id' => $newMatrixID,
-                                    'shoulder' => 0,
-                                    'referer_shoulder' => 0,
-                                    'line' => 1,
-                                    'referer_line' => 1,
-                                    'user_id' => $user->id,
-                                    'user_place' => 1,
-                                    'referer_place' => 1,
-                                    // 'created_at' => Carbon::now(),
-                                    // 'updated_at' => Carbon::now()
-                                ]);
-
-                                // Добавляем вышестоящему созданную матрицу
-
                                 DB::table('matrix')->where([
                                     ['user_id', '=', $referer_id],
                                     ['matrix_lvl', '=', $matrix_lvl],
                                 ])->update(['matrix_id' => $newMatrixID]);
 
-                                echo 'Создали матрицу вышестоящему и встали к нему';
+                                $refposs = 1;
+
+                                echo 'Создали матрицу вышестоящему';
+                                echo '<br>';
                             }
 
                         }
