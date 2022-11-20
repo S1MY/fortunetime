@@ -117,8 +117,8 @@
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
                                         @endphp
                                         @for ($ei = 1; $ei <= $lineG[$i-1]; $ei++)
+                                            {{ $i }}
                                             @if ($matrixInfos->where('line', '=', $i)->where('user_place', '=', $ei)->count() == 0 )
-                                            2
                                                 @php
                                                     $activeCabMatrix = '';
                                                     $lineMatrix = $matrixInfos->where('referer_line', '=', $i);
@@ -137,7 +137,6 @@
                                                     }
                                                 @endphp
                                             @else
-                                                1
                                                 @php
                                                     $activeCabMatrix = '';
                                                     $lineMatrix = $matrixInfos->where('line', '=', $i);
