@@ -450,6 +450,13 @@
                 // 'updated_at' => Carbon::now()
             ]);
 
+            // Добавляем спонсору созданную матрицу
+
+            DB::table('matrix_placers')->update('matrix_id' => $matrixID)->where([
+                ['user_id', '=', $sp],
+                ['matrix_lvl', '=', $matrix_lvl],
+            ])
+
             // После создаём свою матрицу
 
             $myMatrix = DB::table('matrix')->where([
