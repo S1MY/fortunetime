@@ -437,8 +437,38 @@
                 echo 'Тут мы не даём деньги';
                 echo '<br>';
             }else{
-
+                // Тут даём деньги
             }
+
+            $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
+            $lineG = array(4, 12, 28, 60, 124, 252, 508);
+
+            $line = 0;
+            $newPlace = $uplace;
+            $maxLine = 7;
+
+            if ($line == 0) {
+                $crew = 0;
+            }else{
+                $crew = $line - 1;
+            }
+
+            for ($l=0; $l <= $maxLine ; $l++) {
+                if($newPlace <= $lineG[$crew]){
+                    $line = $l + 1;
+                    break;
+                }
+                $crew++;
+            }
+
+            if ($newPlace > $shoulderG[$crew]) {
+                $shoulder = 1;
+            }else{
+                $shoulder = 0;
+            }
+
+            $referer_shoulder = 0;
+            $referer_line = 1;
 
             DB::table('matrix_placers')->insert([
                 'matrix_id' => $matrix_id,
