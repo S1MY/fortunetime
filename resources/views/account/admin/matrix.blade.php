@@ -115,7 +115,7 @@
                                     @for ($i = 1; $i < 8; $i++)
                                         @php
                                             $activeCabMatrix = '';
-                                            $lineMatrix = $matrixInfos->where('line', $i);
+                                            $lineMatrix = $matrixInfos->where('line', $i)->orwhere('referer_line', $i);
                                             $lineMatrixCounter = $lineMatrix->count();
                                             $stringI = array(
                                                 'первого',
