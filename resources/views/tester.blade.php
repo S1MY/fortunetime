@@ -121,6 +121,7 @@
                                 ])->update(['matrix_id' => $newMatrixID]);
 
                                 $refposs = 1;
+                                $referer_id = $newMatrixID;
 
                                 echo 'Создали матрицу вышестоящему';
                                 echo '<br>';
