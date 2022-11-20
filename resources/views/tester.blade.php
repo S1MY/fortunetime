@@ -432,8 +432,15 @@
                 }
             }
 
+            if( $line_pay == 0 ){
+                echo 'Тут мы не даём деньги';
+            }else{
+
+            }
             echo '<br>';
-            echo $line_pay;
+
+
+
             // echo $current_line;
 
         }else{
