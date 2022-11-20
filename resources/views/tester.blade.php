@@ -124,6 +124,7 @@
             }
 
             $line_pay = 0;
+            $line_reinv = 0;
             // Нужно ли двать деньги
 
             if( $uplace == $lineG[$current_line - 1] ){
@@ -440,7 +441,34 @@
                 echo 'Тут мы не даём деньги';
                 echo '<br>';
             }else{
-                // Тут даём деньги
+                // Тут даём деньги спонсору и открываем новую матрицу
+
+                DB::table('user_infos')->where([
+                    ['user_id', '=', $sp],
+                ])->update([
+                    'balance' => `balance` + $line_pay,
+                    'alter_balance' => `alter_balance` + $line_bonus,
+                    'earned' => `earned` + $line_bonus,
+                ]);
+
+                if( $line_reinv == 0 ){
+                    DB::table('matrix')->insert([
+                        'user_id' => $sp,
+                        'matrix_lvl' => $matrix_lvl+1,
+                        'matrix_active' => 1,
+                        // 'created_at' => Carbon::now(),
+                        // 'updated_at' => Carbon::now()
+                    ]);
+                }else{
+                    DB::table('matrix')->insert([
+                        'user_id' => $sp,
+                        'matrix_lvl' => $matrix_lvl+0.5,
+                        'matrix_active' => 1,
+                        // 'created_at' => Carbon::now(),
+                        // 'updated_at' => Carbon::now()
+                    ]);
+                }
+
             }
 
             $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
