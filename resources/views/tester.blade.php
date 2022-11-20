@@ -65,6 +65,8 @@
                         echo '<br>';
                         echo 'Проверка '.$matrix_id.' матрицы';
                         echo '<br>';
+                        echo 'Линии '.$i-1;
+                        echo '<br>';
 
                         $refmplacer = DB::table('matrix_placers')->where([
                             ['matrix_id', '=', $matrix_id],
