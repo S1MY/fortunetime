@@ -98,6 +98,7 @@ class MainController extends Controller
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
+                            ->orWhere('matrix_placers.referer_id', $matrix->matrix_id)
                             ->get();
 
             $matrixUsersCount = $matrixInfos->count();
