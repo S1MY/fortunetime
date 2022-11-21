@@ -99,9 +99,9 @@
                                 ['matrix_id', '!=', null],
                             ])->first();
 
-                            dd($refmatrix);
+                            // dd($refmatrix);
 
-                            exit;
+                            // exit;
 
                             if( $refmatrix ){
                                 $referer_id = $refmatrix->matrix_id;
