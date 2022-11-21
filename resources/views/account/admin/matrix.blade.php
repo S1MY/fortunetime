@@ -119,7 +119,7 @@
 
                                             $activeCabMatrix = '';
                                             $lineMatrix = $matrixInfos->where('line', '=', $i);
-                                            $lineMatrixReferer = $matrixInfos->where('line', '=', $i);
+                                            $lineMatrixReferer = $matrixInfos->where('referer_line', '=', $i);
                                             $lineMatrixCounter = $lineMatrix->count() + $lineMatrixReferer->count();
                                             $stringI = array(
                                                 'первого',
