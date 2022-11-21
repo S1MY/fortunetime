@@ -6,6 +6,31 @@
     // Заменить 10 на $user['id']
     $user = DB::table('users')->where('id', 31)->first();
 
+    // Проверяем есть ли у нас матрица
+
+    $myMatrix = DB::table('matrix')->where([
+                    ['user_id', '=', $user->id],
+                    ['matrix_lvl', '=', $matrix_lvl],
+                ])->first();
+
+    if ( !$myMatrix ) {
+
+        DB::table('matrix')->insert([
+            'user_id' => $user->id,
+            'matrix_lvl' => $matrix_lvl,
+            'matrix_active' => 1,
+            // 'created_at' => Carbon::now(),
+            // 'updated_at' => Carbon::now()
+        ]);
+
+        // Обновляем статус активации
+
+        DB::table('user_infos')->where([
+            ['user_id', '=', $user->id],
+        ])->update(['activated' => 1]);
+
+    }
+
     // Берём спонсора и проверяем есть ли у него матрица
     $sp = $user->sponsor;
 
