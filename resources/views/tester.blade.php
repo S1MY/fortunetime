@@ -70,6 +70,7 @@
                             echo 'matrix '.$matrix_id;
                             echo '<br>';
                             echo 'line '.$i-1;
+                            echo '<br>';
 
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
@@ -89,14 +90,15 @@
 
                             $ruser_id = $refmplacer->user_id;
 
-                            echo $ruser_id;
-                            exit;
-
+                            echo 'id user '.$ruser_id;
+                            echo '<br>';
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
                                 ['matrix_lvl', '=', $matrix_lvl],
                                 ['matrix_id', '!=', null],
                             ])->first();
+                            exit;
+
 
                             if( $refmatrix ){
                                 $referer_id = $refmatrix->matrix_id;
