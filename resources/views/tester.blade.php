@@ -15,8 +15,8 @@ $matrixInfosUs = DB::table('users')
                 ->get();
 
     $matrixInfosUs->each(function($value) {
-                echo $value;
-            });
+        echo $value;
+    });
 
 dd($matrixInfosReferersNext);
 
