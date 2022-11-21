@@ -86,9 +86,11 @@
 
                             dd($refmplacer);
 
-                            exit;
 
                             $ruser_id = $refmplacer->user_id;
+
+                            echo $ruser_id;
+                            exit;
 
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
