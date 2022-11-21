@@ -98,12 +98,7 @@ class MainController extends Controller
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
-                            ->whereExists(function ($query, $matrix) {
-                                $query->select('referer_id as matrix_id', 'referer_shoulder as shoulder', 'referer_place as user_place', 'referer_line as line', 'user_id')
-                                      ->from('matrix_placers')
-                                      ->whereColumn('matrix_placers.referer_id', $matrix->matrix_id);
-                            })
-                            // ->orWhere('matrix_placers.referer_id', $matrix->matrix_id)
+                            ->orWhere('matrix_placers.referer_id', $matrix->matrix_id)
                             ->get();
 
             $matrixUsersCount = $matrixInfos->count();
