@@ -144,7 +144,7 @@
                                                         Левое плечо
                                                         <span>
                                                             @php
-                                                                $leftCount = $lineMatrix->where('shoulder', 0)->count();
+                                                                $leftCount = $lineMatrix->where('shoulder', 0)->count() + $lineMatrixReferer->where('referer_shoulder', 0)->count();
                                                             @endphp
                                                             ({{ $leftCount }})
                                                         </span>
