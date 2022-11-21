@@ -6,19 +6,20 @@ $UsMatrix = DB::table('matrix')->where([
             ])->first();
 
 $matrixInfosUs = DB::table('users')
-            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-            ->where([
-                ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
-                ['matrix_placers.line', 1],
-            ])
-            ->get();
+                ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                ->where([
+                    ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
+                    ['matrix_placers.line', 1],
+                ])
+                ->get();
 
-foreach ($matrixInfosUs as $matrixInfosU)
-{
-        $matrixInfosU->each(function($value) {
-            echo $value;
-
+    foreach ($matrixInfosUs as $matrixInfosU)
+    {
+            $matrixInfosU->each(function($value) {
+                echo $value;
+            });
+    }
 
 dd($matrixInfosReferersNext);
 
