@@ -65,8 +65,6 @@
 
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
-                            echo 'Проверка '.$matrix_id.' матрицы';
-                            echo '<br>';
 
                             $refmplacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $matrix_id],
@@ -120,10 +118,14 @@
 
                                 $newMatrixID = DB::table('matrix_placers')->count()+1;
 
-                                DB::table('matrix')->where([
-                                    ['user_id', '=', $ruser_id],
-                                    ['matrix_lvl', '=', $matrix_lvl],
-                                ])->update(['matrix_id' => $newMatrixID]);
+                                DB::table('matrix')->insert([
+                                    'user_id' => $ruser_id,
+                                    'matrix_lvl' => $matrix_lvl,
+                                    'matrix_active' => 1,
+                                    'matrix_id' => $newMatrixID,
+                                    // 'created_at' => Carbon::now(),
+                                    // 'updated_at' => Carbon::now()
+                                ]);
 
                                 $refposs = 1;
                                 $referer_id = $newMatrixID;
