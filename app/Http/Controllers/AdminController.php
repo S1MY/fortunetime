@@ -121,7 +121,7 @@ class AdminController extends Controller
                                      'user_surname',
                                      'avatar',
                                      'email',
-                                     'created_at')
+                                     'matrix_placers.created_at')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.referer_id', $matrix->matrix_id)
