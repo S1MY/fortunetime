@@ -1,11 +1,24 @@
 @php
 
-$matrixInfosReferersNext = DB::table('users')
-->select('id as `id` + 1')
-->where([
-    ['id', 1]
-])
-->get();
+$UsMatrix = DB::table('matrix')->where([
+                ['user_id', '=', 18],
+                ['matrix_lvl', '=', 1],
+            ])->first();
+
+$matrixInfosUs = DB::table('users')
+            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+            ->where([
+                ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
+                ['matrix_placers.line', 1],
+            ])
+            ->get();
+
+foreach ($matrixInfosUs as $matrixInfosU)
+{
+        $matrixInfosU->each(function($value) {
+            echo $value;
+
 
 dd($matrixInfosReferersNext);
 
