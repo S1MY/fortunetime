@@ -129,7 +129,7 @@ class AdminController extends Controller
             $matrixUsersCount = $matrixInfos->count();
         }
 
-        dd($matrixInfos);
+        // dd($matrixInfos);
 
         return view('account.admin.matrix', compact('user', 'userInfo' ,'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
