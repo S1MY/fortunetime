@@ -14,12 +14,9 @@ $matrixInfosUs = DB::table('users')
                 ])
                 ->get();
 
-    foreach ($matrixInfosUs as $matrixInfosU)
-    {
-            $matrixInfosU->each(function($value) {
+    $matrixInfosUs->each(function($value) {
                 echo $value;
             });
-    }
 
 dd($matrixInfosReferersNext);
 
