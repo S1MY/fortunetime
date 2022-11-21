@@ -638,8 +638,8 @@
                 'user_id' => $user->id,
                 'matrix_lvl' => $matrix_lvl,
                 'matrix_active' => 1,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
+                // 'created_at' => Carbon::now(),
+                // 'updated_at' => Carbon::now()
             ]);
 
             DB::table('user_infos')->where([
