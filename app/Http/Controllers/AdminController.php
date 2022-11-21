@@ -135,7 +135,7 @@ class AdminController extends Controller
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
-            dd($matrixInfos[0]->id);
+            dd($matrixInfos[1]->id);
 
             for ($i=0; $i < $matrixInfos->count(); $i++) {
                 echo 1;
