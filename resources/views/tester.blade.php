@@ -65,12 +65,11 @@
                                 }
                             }
                             echo '<br>';
-                            echo $rpos;
+                            echo 'rpos '.$rpos;
                             echo '<br>';
-                            echo $matrix_id;
+                            echo 'matrix '.$matrix_id;
                             echo '<br>';
-                            echo $i-1;
-                            exit;
+                            echo 'line '.$i-1;
 
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
@@ -84,6 +83,10 @@
                                 ['referer_line', '=', $i-1],
                                 ['referer_place', '=', $rpos],
                             ])->first();
+
+                            dd($refmplacer);
+
+                            exit;
 
                             $ruser_id = $refmplacer->user_id;
 
