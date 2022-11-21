@@ -1,4 +1,13 @@
 @php
+
+$matrixInfosReferersNext = DB::table('users')
+->select('id as `id` + 1')
+->where([
+    ['id', 1]
+])
+->get();
+
+    exit;
     // Данные для проверки
     $matrix_lvl = 1;
 
