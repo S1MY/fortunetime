@@ -115,15 +115,23 @@
                                     @for ($i = 1; $i < 8; $i++)
 
                                         @php
-                                           $lineG = array(4, 12, 28, 60, 124, 252, 508);
+                                            $activeCabMatrix = '';
+                                            $lineG = array(4, 12, 28, 60, 124, 252, 508);
+
+                                            // Cчитаем сколько людей на линии
+                                            $lineMatrix = $matrixInfos->where('line', '=', $i);
+                                            $lineMatrixCounter = $lineMatrix->count();
+
+                                            $lineMatrixReferer = $matrixInfos->where('referer_line', '=', $i);
+                                            $lineMatrixCounter += $lineMatrixReferer->count();
+
+
                                         @endphp
 
                                         @php
 
-                                            $activeCabMatrix = '';
                                             $lineMatrix = $matrixInfos->where('line', '=', $i);
                                             $lineMatrixCounter = $lineMatrix->count();
-                                            $lineMatrixCounter += 2;
                                             $stringI = array(
                                                 'первого',
                                                 'второго',
