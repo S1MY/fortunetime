@@ -119,8 +119,7 @@
 
                                             $activeCabMatrix = '';
                                             $lineMatrix = $matrixInfos->where('line', '=', $i);
-                                            $lineMatrixReferer = $matrixInfos->where('referer_line', '=', $i);
-                                            $lineMatrixCounter = $lineMatrix->count() + $lineMatrixReferer->count();
+                                            $lineMatrixCounter = $lineMatrix->count();
                                             $stringI = array(
                                                 'первого',
                                                 'второго',
@@ -144,7 +143,7 @@
                                                         Левое плечо
                                                         <span>
                                                             @php
-                                                                $leftCount = $lineMatrix->where('shoulder', 0)->count() + $lineMatrixReferer->where('referer_shoulder', 0)->count();
+                                                                $leftCount = $lineMatrix->where('shoulder', 0)->count();
                                                             @endphp
                                                             ({{ $leftCount }})
                                                         </span>
