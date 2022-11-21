@@ -7,6 +7,8 @@ $matrixInfosReferersNext = DB::table('users')
 ])
 ->get();
 
+dd($matrixInfosReferersNext);
+
     exit;
     // Данные для проверки
     $matrix_lvl = 1;
