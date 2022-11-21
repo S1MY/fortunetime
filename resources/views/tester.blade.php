@@ -58,13 +58,15 @@
                             $rpos = 1;
 
                             echo $uplace;
-                            exit;
 
                             for ($n=1; $n <= $uplace; $n++) {
                                 if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
                                     $rpos++;
                                 }
                             }
+                            echo '<br>';
+                            echo $rpos;
+                            exit;
 
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
