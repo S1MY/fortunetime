@@ -115,24 +115,12 @@
                                     @for ($i = 1; $i < 8; $i++)
 
                                         @php
-                                            $activeCabMatrix = '';
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
 
-                                            // Cчитаем сколько людей на линии
+                                            $activeCabMatrix = '';
                                             $lineMatrix = $matrixInfos->where('line', '=', $i);
-                                            $lineMatrixCounter = $lineMatrix->count();
-
-                                            $lineMatrixReferer = $matrixInfos->where('referer_line', '=', $i);
-                                            $lineMatrixCounter += $lineMatrixReferer->count();
-
-                                            echo $lineMatrixReferer->count();
-
-                                        @endphp
-
-                                        @php
-
-                                            $lineMatrix = $matrixInfos->where('line', '=', $i);
-                                            $lineMatrixCounter = $lineMatrix->count();
+                                            $lineMatrixReferer = $matrixInfos->where('line', '=', $i);
+                                            $lineMatrixCounter = $lineMatrix->count() + $lineMatrixReferer->count();
                                             $stringI = array(
                                                 'первого',
                                                 'второго',
@@ -145,8 +133,6 @@
                                             if( $lineMatrixCounter > 0 ){
                                                 $activeCabMatrix = ' active';
                                             }
-
-                                            echo $lineMatrixCounter;
                                         @endphp
 
                                         <div class="cabMatrixElement{{$activeCabMatrix}}">
