@@ -135,7 +135,7 @@ class AdminController extends Controller
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
-            dd($matrixInfos->count());
+            dd($matrixInfos[0]);
 
             for ($i=2; $i < 8; $i++) {
                 $matrixInfosNext = DB::table('users')
