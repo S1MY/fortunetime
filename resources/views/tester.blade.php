@@ -141,7 +141,7 @@
                     }else{
                         // Нет вышестоящего кроме спонсора
                         $uplace = $spmplacer->count() + 1;
-                        $referer_id = $matrix_id;
+                        $referer_id = null;
                         $refposs = $uplace;
                     }
 
@@ -554,7 +554,7 @@
 
             DB::table('matrix_placers')->insert([
                 'matrix_id' => $newMatrixID,
-                'referer_id' => $newMatrixID,
+                'referer_id' => null,
                 'shoulder' => 0,
                 'referer_shoulder' => 0,
                 'line' => 1,

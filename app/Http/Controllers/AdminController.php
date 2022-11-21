@@ -125,7 +125,6 @@ class AdminController extends Controller
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.referer_id', $matrix->matrix_id)
-                            ->where('matrix_placers.referer_id', '!=', 'matrix_placers.matrix_id')
                             ->get();
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
