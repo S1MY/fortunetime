@@ -135,6 +135,8 @@ class AdminController extends Controller
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
+            dd($matrixInfos->count());
+
             for ($i=2; $i < 8; $i++) {
                 $matrixInfosNext = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
