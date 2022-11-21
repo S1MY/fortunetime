@@ -139,7 +139,6 @@
                                                 @php
                                                     $lineMatrix = $matrixInfos->where('line', '=', $i);
                                                     $lineMatrixCounter = $lineMatrix->count();
-                                                    print_r($lineMatrix->count());
                                                     $stringI = array(
                                                         'первого',
                                                         'второго',
