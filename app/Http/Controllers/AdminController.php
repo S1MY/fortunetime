@@ -124,6 +124,7 @@ class AdminController extends Controller
                             ->where('matrix_placers.referer_id', $matrix->matrix_id)
                             ->get();
 
+            $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
             $matrixUsersCount = $matrixInfos->count();
         }
