@@ -105,7 +105,7 @@ class AdminController extends Controller
             $disabled = '';
 
             $matrixInfos = DB::table('users')
-                            ->select('referer_id as matrix_id')
+                            ->select('referer_id as matrix_id', 'referer_shoulder as shoulder', 'matrix_id')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
