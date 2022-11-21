@@ -66,6 +66,10 @@
                             }
                             echo '<br>';
                             echo $rpos;
+                            echo '<br>';
+                            echo $matrix_id;
+                            echo '<br>';
+                            echo $i-1;
                             exit;
 
                             echo 'Позиция вышестоящего: ' . $rpos;
