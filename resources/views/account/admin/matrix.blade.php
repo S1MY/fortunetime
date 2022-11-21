@@ -123,7 +123,7 @@
                                             $activeCabMatrix = '';
                                             $lineMatrix = $matrixInfos->where('line', '=', $i);
                                             $lineMatrixCounter = $lineMatrix->count();
-                                            $lineMatrixCounter .= 2;
+                                            $lineMatrixCounter += 2;
                                             $stringI = array(
                                                 'первого',
                                                 'второго',
