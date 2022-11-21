@@ -102,14 +102,17 @@
                                     echo 'Тут нельзя';
                                     echo '<br>';
                                 }else{
+
+                                    $myRpos = $rmplacer->count() + 1;
+
                                     echo 'Можем разместиться';
                                     echo '<br>';
                                     echo 'Матрица вышестоящего: ' . $referer_id;
                                     echo '<br>';
-                                    echo 'Наша в ней позиция: '.$rpos;
+                                    echo 'Наша в ней позиция: '.$myRpos;
                                     echo '<br>';
 
-                                    $refposs = $rpos;
+                                    $refposs = $myRpos;
 
                                     break;
                                 }
