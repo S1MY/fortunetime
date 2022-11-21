@@ -125,6 +125,7 @@
                                             $lineMatrixReferer = $matrixInfos->where('referer_line', '=', $i);
                                             $lineMatrixCounter += $lineMatrixReferer->count();
 
+                                            echo $lineMatrixReferer->count();
 
                                         @endphp
 
