@@ -135,14 +135,21 @@ class AdminController extends Controller
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
-            dd($matrixInfos[0]);
+            dd($matrixInfos[0]->id);
+
+            for ($i=0; $i < $matrixInfos->count(); $i++) {
+                echo
+            }
 
             for ($i=2; $i < 8; $i++) {
+
+                $matrixID = $matrix->matrix_id;
+
                 $matrixInfosNext = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where([
-                                ['matrix_placers.matrix_id', $matrix->matrix_id],
+                                ['matrix_placers.matrix_id', $matrixID],
                                 ['matrix_placers.line', $i],
                             ])
                             ->get();
@@ -162,7 +169,7 @@ class AdminController extends Controller
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where([
-                                ['matrix_placers.referer_id', $matrix->matrix_id],
+                                ['matrix_placers.referer_id', $matrixID],
                                 ['matrix_placers.referer_line', $i]
                             ])
                             ->get();
