@@ -4,7 +4,7 @@
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 1)->first();
+    $user = DB::table('users')->where('id', 27)->first();
 
     // Берём спонсора и проверяем есть ли у него матрица
     $sp = $user->sponsor;
