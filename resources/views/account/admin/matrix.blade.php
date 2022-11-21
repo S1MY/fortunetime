@@ -117,7 +117,7 @@
                                             $lineG = array(4, 12, 28, 60, 124, 252, 508);
                                             $activeCabMatrix = '';
                                             $lineMatrix = $matrixInfos->where('line', '=', $i);
-                                            $lineMatrixCounter = $lineMatrixCounter+$lineMatrix->count();
+                                            $lineMatrixCounter = $lineMatrix->count();
                                             $stringI = array(
                                                 'первого',
                                                 'второго',
