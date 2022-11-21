@@ -110,11 +110,25 @@ class AdminController extends Controller
                             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
                             ->get();
 
+            $matrixInfosReferers = DB::table('users')
+                            ->select('users.id',
+                                     'users.login',
+                                     'referer_id as matrix_id',
+                                     'referer_shoulder as shoulder',
+                                     'referer_line as line',
+                                     'referer_place as user_place',
+                                     'user_name',
+                                     'user_surname')
+                            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                            ->where('matrix_placers.matrix_id', $matrix->matrix_id)
+                            ->get();
+
 
             $matrixUsersCount = $matrixInfos->count();
         }
 
-        dd($matrixInfos);
+        dd($matrixInfosReferers);
 
         return view('account.admin.matrix', compact('user', 'userInfo' ,'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
     }
