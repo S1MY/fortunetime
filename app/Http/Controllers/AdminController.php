@@ -104,12 +104,15 @@ class AdminController extends Controller
         if($matrix != null){
             $disabled = '';
 
-            $matrixInfos = DB::table('users')
+            $matrixInfos = new \Illuminate\Database\Eloquent\Collection;
+
+            $matrixInfos1 = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
                             ->where('matrix_placers.matrix_id', $matrix->matrix_id)
                             ->get();
-            dd($matrixInfos);
+
+            $matrixInfos = $matrixInfos->merge($matrixInfos1);
 
             $matrixUsersCount = $matrixInfos->count();
         }
