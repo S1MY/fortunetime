@@ -138,7 +138,7 @@ class AdminController extends Controller
             dd($matrixInfos[0]->id);
 
             for ($i=0; $i < $matrixInfos->count(); $i++) {
-                echo
+                echo 1;
             }
 
             for ($i=2; $i < 8; $i++) {
