@@ -92,13 +92,16 @@
 
                             echo 'id user '.$ruser_id;
                             echo '<br>';
+
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
                                 ['matrix_lvl', '=', $matrix_lvl],
                                 ['matrix_id', '!=', null],
                             ])->first();
-                            exit;
 
+                            dd($refmatrix);
+
+                            exit;
 
                             if( $refmatrix ){
                                 $referer_id = $refmatrix->matrix_id;
