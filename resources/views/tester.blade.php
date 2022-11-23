@@ -97,6 +97,7 @@
 
                         echo $prevMatrixPlacer->count();
                         echo '<br>';
+                        exit;
 
                     }
 
