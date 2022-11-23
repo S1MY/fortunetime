@@ -565,7 +565,7 @@
 
             if( $line_pay != 0 ){
                 // Тут даём деньги спонсору и открываем новую матрицу
-
+                echo 'Даём деньги '. $sp .' в сумме '. $line_pay;
                 DB::table('user_infos')->where([
                     ['user_id', '=', $sp],
                 ])->update([
