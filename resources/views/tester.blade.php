@@ -69,18 +69,27 @@
                 if( $i > 1 ){
                     $spmplacerCounter = 0;
 
-                    $prevLine = DB::table('matrix_placers')->where([
-                        ['matrix_id', '=', $matrix_id],
-                        ['line', '=', $i - 1],
-                    ])->orWhere([
-                        ['referer_id', '=', $matrix_id],
-                        ['referer_line', '=', $i - 1],
-                    ])->get();
+                    if( $i == 2 ){
+                        $prevLine = DB::table('matrix_placers')->where([
+                            ['matrix_id', '=', $matrix_id],
+                            ['line', '=', $i - 1],
+                        ])->orWhere([
+                            ['referer_id', '=', $matrix_id],
+                            ['referer_line', '=', $i - 1],
+                        ])->get();
+                    }else{
+                        // Тут нужна сборная солянка с переливами
+
+
+
+                    }
+
+
+                    // /|\ тут не считаются переливы от вышестоящих
 
                     echo 'Людей на прошлой линии: '.$pInLastLine;
                     echo '<br>';
 
-                    // /|\ тут не считаются переливы от вышестоящих
 
                     for ($o=0; $o < $pInLastLine; $o++) {
                         $prevLineUser = $prevLine[$o];
