@@ -167,12 +167,6 @@ class AdminController extends Controller
 
                     return $info;
                 });
-                echo $usID;
-                echo $i;
-                echo $usSholder1;
-                if( $usID == 2 ){
-                    dd($matrixInfosUs);
-                }
 
                 // И вниз по линиям
 
@@ -202,7 +196,7 @@ class AdminController extends Controller
 
                         // dd($matrixInfosUsLine);
 
-                        $matrixInfosUsLine->map(function($info, $usSholder){
+                        $matrixInfosUsLine->map(function($info) use ($usSholder){
                             $info->line = $info->line + 2;
                             $info->shoulder = $usSholder;
                             return $info;
