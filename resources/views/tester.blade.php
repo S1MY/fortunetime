@@ -140,7 +140,7 @@
                                     echo '<br>';
                                 }else{
 
-                                    $myRpos = $uplace;
+                                    $myRpos = $rmplacer->count() + 1;
 
                                     echo 'Можем разместиться';
                                     echo '<br>';
