@@ -161,8 +161,12 @@ class AdminController extends Controller
                             ->take(2)
                             ->get();
 
-                $matrixInfosUs->map(function($info, $usSholder1){
+                $matrixInfosUs->map(function($info){
                     $info->line = $info->line + 1;
+
+                    return $info;
+                });
+                $matrixInfosUs->map(function($info, $usSholder1){
                     $info->shoulder = $usSholder1;
 
                     return $info;
