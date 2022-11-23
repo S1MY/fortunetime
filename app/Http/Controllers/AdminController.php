@@ -162,7 +162,7 @@ class AdminController extends Controller
                     return $info;
                 });
 
-                dd($matrixInfosUs);
+                // dd($matrixInfosUs);
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
