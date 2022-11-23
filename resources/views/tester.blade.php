@@ -573,7 +573,7 @@
             }
 
             echo $shoulder;
-
+            exit;
             // echo $shoulderG[$crew];
             // exit;
 
