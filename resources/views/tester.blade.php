@@ -160,8 +160,9 @@
                             ])->first();
 
 
-                            $ruser_id = $refmplacer->user_id;
-                            dd($ruser_id);
+                            // $ruser_id = $refmplacer->user_id;
+
+                            dd($refmplacer);
 
                             exit;
 
