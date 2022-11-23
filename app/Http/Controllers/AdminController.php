@@ -216,6 +216,7 @@ class AdminController extends Controller
                         });
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
+                        $countLineMatrixMebmer = $matrixInfosUs->count();
                     }
                 }
 
