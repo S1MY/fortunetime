@@ -563,14 +563,14 @@
                 $crew++;
             }
 
-            echo $crew;
-            exit;
-
             if ($newPlace > $shoulderG[$crew]) {
                 $shoulder = 1;
             }else{
                 $shoulder = 0;
             }
+
+            echo $newPlace;
+            exit;
 
             $referer_shoulder = 0;
             $referer_line = 1;
