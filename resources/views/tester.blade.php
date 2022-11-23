@@ -69,6 +69,7 @@
                 $spmplacerCounter = $spmplacer->count();
 
                 if( $i > 1 ){
+                    dd($spmplacer);
                     echo $spmplacerCounter;
                     echo '<br>';
                     $prevLine = DB::table('matrix_placers')->where([
