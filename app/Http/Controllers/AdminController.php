@@ -205,7 +205,7 @@ class AdminController extends Controller
                                     ->take(2)
                                     ->get();
 
-                        if( $usID2 == 3 ){
+                        if( $usID2 == 2 ){
                             echo $d;
                             echo '<br>';
                             echo $m;
