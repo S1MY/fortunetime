@@ -189,10 +189,10 @@ class AdminController extends Controller
                                     ->take(2)
                                     ->get();
 
-                        dd($matrixInfosUsLine);
+                        // dd($matrixInfosUsLine);
 
                         $matrixInfosUsLine->map(function($info){
-                            $info->line = $info->line + 1;
+                            $info->line = $info->line + 2;
                             return $info;
                         });
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
