@@ -5,7 +5,7 @@
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 36 )->first();
+    $user = DB::table('users')->where('id', 34 )->first();
 
     // Проверяем есть ли у нас матрица
 
@@ -63,6 +63,10 @@
                     ['referer_id', '=', $matrix_id],
                     ['referer_line', '=', $i],
                 ])->get();
+
+                echo $spmplacer->count();
+
+                exit;
 
                 if( $spmplacer->count() == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
