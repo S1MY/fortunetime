@@ -217,7 +217,7 @@ class AdminController extends Controller
                 $countLineMatrixMebmer = $matrixInfosUs->count();
             }
 
-            dd($countLineMatrixMebmer);
+            // dd($countLineMatrixMebmer);
 
             // Берём наших людей и переливов по линиям
 
