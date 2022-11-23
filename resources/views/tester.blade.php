@@ -66,6 +66,8 @@
 
                 $spmplacerCounter = $spmplacer->count();
 
+                // /|\ тут не считаются переливы
+
                 if( $i > 1 ){
                     $spmplacerCounter = 0;
 
@@ -87,12 +89,6 @@
                                         ['user_id', '=', $prevLineUser->user_id],
                                         ['matrix_lvl', '=', $matrix_lvl],
                                     ])->first();
-
-
-
-                        if( $i == 3 ){
-                            dd($UsMatrix);
-                        }
 
                         $prevMatrixId = $UsMatrix->matrix_id;
 
@@ -163,11 +159,11 @@
                                 ['referer_place', '=', $rpos],
                             ])->first();
 
-                            dd($refmplacer);
-
-                            exit;
 
                             $ruser_id = $refmplacer->user_id;
+                            dd($ruser_id);
+
+                            exit;
 
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
