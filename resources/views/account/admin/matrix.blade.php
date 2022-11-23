@@ -86,7 +86,7 @@
                                 <input type="hidden" value="1">
                                 <a href="#" class="activationBigBtn cabinetBigItem">Активировать</a>
                             @else
-                                <input type="hidden" value="{{ $user_max_lvl->matrix_lvl + 1 }}">
+                                <input type="hidden" value="{{ $user_max_lvl->matrix_lvl + 1 }}" name="matrix_lvl">
                                 <a href="#" class="activationBigBtn cabinetBigItem">Активировать {{ $user_max_lvl->matrix_lvl + 1 }} матрицу</a>
                             @endif
                         </form>
