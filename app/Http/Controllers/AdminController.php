@@ -167,7 +167,7 @@ class AdminController extends Controller
 
                     return $info;
                 });
-
+                echo $i;
                 if( $usID == 2 ){
                     dd($matrixInfosUs);
                 }
