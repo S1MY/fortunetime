@@ -143,6 +143,12 @@ class AdminController extends Controller
 
             for ($i=0; $i < $countMatrixMember; $i++) {
                 $usID = $matrixInfos[$i]->id;
+                $usSholder1 = $matrixInfos[$i]->shoulder;
+
+
+                if( $usID == 28 ){
+                    dd($usID);
+                }
 
                 $UsMatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $usID],
@@ -173,9 +179,7 @@ class AdminController extends Controller
                     for ($d=1; $d < 8; $d++) {
                         $usID2 = $matrixInfosUs[$m]->id;
                         $usSholder = $matrixInfosUs[$m]->shoulder;
-                        if( $usID2 == 28 ){
-                            dd($usID2);
-                        }
+
                         $UsMatrixLine = DB::table('matrix')->where([
                                         ['user_id', '=', $usID2],
                                         ['matrix_lvl', '=', 1],
