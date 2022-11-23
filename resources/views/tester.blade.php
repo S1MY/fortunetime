@@ -1,32 +1,10 @@
 @php
-
-$UsMatrix = DB::table('matrix')->where([
-                ['user_id', '=', 18],
-                ['matrix_lvl', '=', 1],
-            ])->first();
-
-$matrixInfosUs = DB::table('users')
-                ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                ->where([
-                    ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
-                    ['matrix_placers.line', 1],
-                ])
-                ->get();
-
-    $matrixInfosUs->each(function($value) {
-        echo $value;
-    });
-
-dd($matrixInfosReferersNext);
-
-    exit;
     // Данные для проверки
     $matrix_lvl = 1;
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 23)->first();
+    $user = DB::table('users')->where('id', 18)->first();
 
     // Проверяем есть ли у нас матрица
 
