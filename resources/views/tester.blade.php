@@ -5,7 +5,7 @@
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 42 )->first();
+    $user = DB::table('users')->where('id', 41 )->first();
 
     // Проверяем есть ли у нас матрица
 
@@ -35,7 +35,7 @@
     // Берём спонсора и проверяем есть ли у него матрица
     $sp = $user->sponsor;
 
-    $lineG = array(4, 12, 28, 60, 124, 252, 508);
+    $lineG = array(4, 8, 16, 32, 64, 128, 256);
 
     $spmatrix = DB::table('matrix')->where([
                 ['user_id', '=', $sp],
