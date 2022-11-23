@@ -1,6 +1,7 @@
 @php
 
     $uplace = 1;
+    $rpos = 1;
 
     for ($n=1; $n <= $uplace; $n++) {
         if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
