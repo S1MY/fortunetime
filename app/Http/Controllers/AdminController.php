@@ -147,7 +147,7 @@ class AdminController extends Controller
 
 
                 if( $usID == 28 ){
-                    dd($usID);
+                    dd($usSholder1);
                 }
 
                 $UsMatrix = DB::table('matrix')->where([
