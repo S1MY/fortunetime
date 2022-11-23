@@ -207,7 +207,7 @@ class AdminController extends Controller
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
 
-            dd($matrixInfos);
+            // dd($matrixInfos);
 
             // Берём наших людей и переливов по линиям
 
