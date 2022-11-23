@@ -163,13 +163,13 @@ class AdminController extends Controller
 
                 $matrixInfosUs->map(function($info, $usSholder1){
                     $info->line = $info->line + 1;
-                    $info->shoulder = $usSholder1;
+                    $info->shoulder = 0;//$usSholder1;
 
                     return $info;
                 });
 
                 if( $usID == 2 ){
-                    dd($usSholder1);
+                    dd($matrixInfosUs);
                 }
 
                 // И вниз по линиям
