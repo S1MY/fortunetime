@@ -169,46 +169,46 @@ class AdminController extends Controller
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
 
-            dd($matrixInfos);
+            // dd($matrixInfos);
 
             // Берём наших людей и переливов по линиям
 
-            for ($i=2; $i < 8; $i++) {
+            // for ($i=2; $i < 8; $i++) {
 
-                $matrixID = $matrix->matrix_id;
+            //     $matrixID = $matrix->matrix_id;
 
-                $matrixInfosNext = DB::table('users')
-                            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                            ->where([
-                                ['matrix_placers.matrix_id', $matrixID],
-                                ['matrix_placers.line', $i],
-                            ])
-                            ->get();
+            //     $matrixInfosNext = DB::table('users')
+            //                 ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+            //                 ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+            //                 ->where([
+            //                     ['matrix_placers.matrix_id', $matrixID],
+            //                     ['matrix_placers.line', $i],
+            //                 ])
+            //                 ->get();
 
-                $matrixInfosReferersNext = DB::table('users')
-                            ->select('users.id',
-                                     'users.login',
-                                     'referer_id as matrix_id',
-                                     'referer_shoulder as shoulder',
-                                     'referer_line as line',
-                                     'referer_place as user_place',
-                                     'user_name',
-                                     'user_surname',
-                                     'avatar',
-                                     'email',
-                                     'matrix_placers.created_at')
-                            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                            ->where([
-                                ['matrix_placers.referer_id', $matrixID],
-                                ['matrix_placers.referer_line', $i]
-                            ])
-                            ->get();
+            //     $matrixInfosReferersNext = DB::table('users')
+            //                 ->select('users.id',
+            //                          'users.login',
+            //                          'referer_id as matrix_id',
+            //                          'referer_shoulder as shoulder',
+            //                          'referer_line as line',
+            //                          'referer_place as user_place',
+            //                          'user_name',
+            //                          'user_surname',
+            //                          'avatar',
+            //                          'email',
+            //                          'matrix_placers.created_at')
+            //                 ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+            //                 ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+            //                 ->where([
+            //                     ['matrix_placers.referer_id', $matrixID],
+            //                     ['matrix_placers.referer_line', $i]
+            //                 ])
+            //                 ->get();
 
-                $matrixInfos = $matrixInfos->merge($matrixInfosNext);
-                $matrixInfos = $matrixInfos->merge($matrixInfosReferersNext);
-            }
+            //     $matrixInfos = $matrixInfos->merge($matrixInfosNext);
+            //     $matrixInfos = $matrixInfos->merge($matrixInfosReferersNext);
+            // }
 
             $matrixUsersCount = $matrixInfos->count();
         }
