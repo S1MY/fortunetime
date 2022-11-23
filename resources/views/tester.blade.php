@@ -64,7 +64,7 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                echo $spmplacer->count();
+                echo 'Людей на линии: ' . $spmplacer->count();
 
                 exit;
 
