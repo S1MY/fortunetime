@@ -157,6 +157,13 @@ class AdminController extends Controller
                             ])
                             ->get();
 
+                $matrixInfosUs->map(function($info){
+                    $info->line = $info->line + 1;
+                    return $info;
+                });
+
+                dd($matrixInfosUs);
+
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
 
