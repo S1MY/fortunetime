@@ -140,7 +140,7 @@
 
                     if( $i != 1 ){
 
-                        for ($uplace=($spmplacerCounter + 1); $uplace < $lineG[$i-1]; $uplace++) {
+                        for ($uplace=($spmplacerCounter + 1); $uplace <= $lineG[$i-1]; $uplace++) {
 
                             echo '==== Проверка позиции: ' . $uplace . ' ====';
                             echo '<br>';
