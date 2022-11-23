@@ -80,13 +80,10 @@
                                 </div>
                             </div>
                         </div>
-                        {{ $matrix }}
-                        @if ( $matrix != null )
-                            {{-- <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a> --}}
-                        @else
-                            {{-- <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a> --}}
+
+                        @if ( $userInfo->activated == 0 )
+                            <a href="{{ route('activation', ['id'=>$user->id]) }}" class="cabinetBigItem">Активировать</a>
                         @endif
-                        <a href="{{ route('activation', ['id'=>$user->id]) }}" class="cabinetBigItem">Активировать</a>
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
