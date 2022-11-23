@@ -75,6 +75,12 @@
 
                     echo 'Людей наа прошлой линии: '.$prevLine->count();
                     echo '<br>';
+
+                    for ($o=0; $o < $prevLine->count(); $o++) {
+                        $prevLineUser = $prevLine[$o];
+                        dd($prevLineUser);
+
+                    }
                 }
 
 
