@@ -50,7 +50,7 @@
             $matrix_id = $spmid;
 
             for ($i=1; $i <= 7; $i++) {
-
+                $line = $i;
                 echo '----- Итерация # ' . $i . ' -----';
                 echo '<br>';
 
@@ -545,7 +545,7 @@
             $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
             $lineG = array(4, 12, 28, 60, 124, 252, 508);
 
-            $line = 0;
+            // $line = 0;
             $newPlace = $uplace;
             $maxLine = 7;
 
