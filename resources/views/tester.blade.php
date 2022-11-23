@@ -5,7 +5,7 @@
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 34)->first();
+    $user = DB::table('users')->where('id', 35)->first();
 
     // Проверяем есть ли у нас матрица
 
@@ -82,8 +82,6 @@
                             echo '<br>';
 
                             $rpos = 1;
-
-                            echo $uplace;
 
                             for ($n=1; $n <= $uplace; $n++) {
                                 if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
