@@ -217,7 +217,7 @@ class AdminController extends Controller
                         });
 
                         if( $usID2 == 3 ){
-                            dd($matrixInfosUsLine);
+                            dd($usLine);
                         }
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
