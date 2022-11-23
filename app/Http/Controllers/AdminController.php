@@ -185,11 +185,7 @@ class AdminController extends Controller
 
                     for ($d=1; $d < 8; $d++) {
 
-
                         $usID2 = $matrixInfosUs[$m]->id;
-
-                        echo $usID2;
-                        echo '<br>';
 
                         $usSholder = $matrixInfosUs[$m]->shoulder;
 
@@ -208,6 +204,10 @@ class AdminController extends Controller
                                     ])
                                     ->take(2)
                                     ->get();
+
+                        if( $usID2 == 2 ){
+                            dd($matrixInfosUsLine);
+                        }
 
                         $matrixInfosUsLine->map(function($info) use ($usSholder){
                             $info->line = $info->line + 2;
