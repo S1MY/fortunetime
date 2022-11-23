@@ -572,8 +572,8 @@
                 $shoulder = 0;
             }
 
-            // echo $shoulder;
-            // exit;
+            echo $shoulderG[$line-1/*$crew*/];
+            exit;
             // echo $shoulderG[$crew];
             // exit;
 
