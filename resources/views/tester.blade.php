@@ -555,6 +555,9 @@
                 $crew = $line - 1;
             }
 
+            echo $crew;
+            exit;
+
             for ($l=0; $l <= $maxLine ; $l++) {
                 if($newPlace <= $lineG[$crew]){
                     $line = $l + 1;
