@@ -87,16 +87,18 @@
 
                         $prevMatrixId = $UsMatrix->matrix_id;
 
-                        $prevMatrixPlacer = DB::table('matrix_placers')->where([
-                            ['matrix_id', '=', $prevMatrixId],
-                            ['line', '=', $i-1],
-                        ])->orWhere([
-                            ['referer_id', '=', $prevMatrixId],
-                            ['referer_line', '=', $i-1],
-                        ])->get();
+                        if( $prevMatrixId != null ){
+                            $prevMatrixPlacer = DB::table('matrix_placers')->where([
+                                ['matrix_id', '=', $prevMatrixId],
+                                ['line', '=', $i-1],
+                            ])->orWhere([
+                                ['referer_id', '=', $prevMatrixId],
+                                ['referer_line', '=', $i-1],
+                            ])->get();
 
-                        echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
-                        echo '<br>';
+                            echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
+                            echo '<br>';
+                        }
 
                     }
 
