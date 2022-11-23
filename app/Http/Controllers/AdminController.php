@@ -160,6 +160,7 @@ class AdminController extends Controller
                             ])
                             ->take(2)
                             ->get();
+                dd($matrixInfosUs);
 
                 $matrixInfosUs->map(function($info, $usSholder1){
                     $info->line = $info->line + 1;
@@ -171,7 +172,6 @@ class AdminController extends Controller
                 // И вниз по линиям
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
-                dd($matrixInfosUs);
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
                     for ($d=1; $d < 8; $d++) {
