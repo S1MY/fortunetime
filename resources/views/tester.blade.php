@@ -1,19 +1,5 @@
 @php
 
-    $uplace = 5;
-    $rpos = 1;
-
-    for ($n=1; $n <= $uplace; $n++) {
-        if ( ($n - 1) % 2 == 0  && $n-1 != 0 ){
-            $rpos++;
-        }
-    }
-
-    echo 'Позиция реферала '.$rpos;
-
-    exit;
-
-
     // Данные для проверки
     $matrix_lvl = 1;
 
@@ -79,8 +65,6 @@
                     ['referer_id', '=', $matrix_id],
                     ['referer_line', '=', $i],
                 ])->get();
-
-                $spmplacerCounter = $spmplacer->count();
 
                 if( $i > 1 ){
                     $prevLine = DB::table('matrix_placers')->where([
