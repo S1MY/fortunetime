@@ -72,10 +72,11 @@
                         ['referer_id', '=', $matrix_id],
                         ['referer_line', '=', $i - 1],
                     ])->get();
+
+                    echo 'Людей наа прошлой линии: '.$prevLine->count();
+                    echo '<br>';
                 }
 
-                echo 'Людей наа прошлой линии: '.$prevLine->count();
-                echo '<br>';
 
                 if( $spmplacer->count() == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
