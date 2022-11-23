@@ -93,10 +93,10 @@
 
                         $prevMatrixPlacer = DB::table('matrix_placers')->where([
                             ['matrix_id', '=', $prevMatrixId],
-                            ['line', '=', $i],
+                            ['line', '=', $i-1],
                         ])->orWhere([
                             ['referer_id', '=', $prevMatrixId],
-                            ['referer_line', '=', $i],
+                            ['referer_line', '=', $i-1],
                         ])->get();
 
                         echo $prevMatrixPlacer->count();
