@@ -83,9 +83,9 @@
 
                         @if ( $userInfo->activated == 0 )
                             <a href="{{ route('activation', ['id'=>$user->id, 'lvl'=>1]) }}" class="cabinetBigItem">Активировать</a>
+                        @else
+                            <a href="{{ route('activation', ['id'=>$user->id, 'lvl'=>$user_max_lvl->matrix_lvl + 1]) }}" class="cabinetBigItem">Активировать {{ $user_max_lvl->matrix_lvl }} матрицу</a>
                         @endif
-
-                        {{ $user_max_lvl->matrix_lvl }}
 
                     </div>
                 </div>
