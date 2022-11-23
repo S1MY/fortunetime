@@ -85,6 +85,8 @@
                             <a href="{{ route('activation', ['id'=>$user->id, 'lvl'=>1]) }}" class="cabinetBigItem">Активировать</a>
                         @endif
 
+                        {{ $user_max_lvl->matrix_lvl }}
+
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
