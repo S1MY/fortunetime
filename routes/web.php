@@ -85,7 +85,10 @@ Route::post('/admin/sorting/reviews', 'App\Http\Controllers\AdminController@admi
 Route::post('/admin/news/add', 'App\Http\Controllers\AdminController@adminAddNews')->name('adminAddNews')->middleware('auth', 'is_admin');
 Route::post('/admin/delete/news', 'App\Http\Controllers\AdminController@newsDelete')->name('newsDelete')->middleware('auth', 'is_admin');
 Route::post('/admin/users/change', 'App\Http\Controllers\AdminController@changeUserReferal')->name('changeUserReferal')->middleware('auth', 'is_admin');
+
 Route::get('/account/matrix/{login}', 'App\Http\Controllers\AdminController@showMartix')->name('showMatrix')->middleware('auth', 'is_admin');
+
+Route::post('/account/matrix/{login}/activation', 'App\Http\Controllers\AdminController@activation')->name('activation')->middleware('auth', 'is_admin');
 
 
 /* Freekassa */
