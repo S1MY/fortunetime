@@ -129,6 +129,8 @@
                     echo 'Людей на линии: ' . $spmplacerCounter;
                     echo '<br>';
 
+                    echo $lineG[$i-1];
+                    echo '<br>';
 
                     if( $i != 1 ){
 
