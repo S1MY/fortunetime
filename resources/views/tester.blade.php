@@ -66,8 +66,6 @@
 
                 $spmplacerCounter = $spmplacer->count();
 
-                // /|\ тут не считаются переливы от вышестоящих
-
                 if( $i > 1 ){
                     $spmplacerCounter = 0;
 
@@ -79,10 +77,12 @@
                         ['referer_line', '=', $i - 1],
                     ])->get();
 
-                    echo 'Людей на прошлой линии: '.$prevLine->count();
+                    echo 'Людей на прошлой линии: '.$pInLastLine;
                     echo '<br>';
 
-                    for ($o=0; $o < $prevLine->count(); $o++) {
+                    // /|\ тут не считаются переливы от вышестоящих
+
+                    for ($o=0; $o < $pInLastLine; $o++) {
                         $prevLineUser = $prevLine[$o];
 
                         $UsMatrix = DB::table('matrix')->where([
@@ -124,6 +124,10 @@
                 if( $spmplacerCounter == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
                     echo '<br>';
+                    $lastLineCounter = array(4, 8, 16, 32, 64, 128, 256);
+
+                    $pInLastLine = $lastLineCounter[$i - 1];
+
                 }else{
 
                     echo 'Свободна '.$i.' линяя';
