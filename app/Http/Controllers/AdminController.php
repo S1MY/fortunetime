@@ -206,6 +206,8 @@ class AdminController extends Controller
                 $matrixInfos = $matrixInfos->merge($matrixInfosNext);
                 $matrixInfos = $matrixInfos->merge($matrixInfosReferersNext);
 
+                dd($matrixInfos);
+
                 for ($myi=0; $myi < $countMatrixMember; $myi++) {
                     $usID = $matrixInfos[$myi]->id;
 
