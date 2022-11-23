@@ -569,7 +569,7 @@
                 $shoulder = 0;
             }
 
-            echo $newPlace;
+            echo $shoulder;
             exit;
 
             $referer_shoulder = 0;
