@@ -139,32 +139,32 @@ class AdminController extends Controller
 
             // Берём их личников
 
-            for ($i=0; $i < $matrixInfos->count(); $i++) {
-                $usID = $matrixInfos[$i]->id;
+            // for ($i=0; $i < $matrixInfos->count(); $i++) {
+            //     $usID = $matrixInfos[$i]->id;
 
-                $UsMatrix = DB::table('matrix')->where([
-                                ['user_id', '=', $usID],
-                                ['matrix_lvl', '=', 1],
-                            ])->first();
+            //     $UsMatrix = DB::table('matrix')->where([
+            //                     ['user_id', '=', $usID],
+            //                     ['matrix_lvl', '=', 1],
+            //                 ])->first();
 
-                $matrixInfosUs = DB::table('users')
-                            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                            ->where([
-                                ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
-                                ['matrix_placers.line', 1],
-                            ])
-                            ->get();
+            //     $matrixInfosUs = DB::table('users')
+            //                 ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+            //                 ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+            //                 ->where([
+            //                     ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
+            //                     ['matrix_placers.line', 1],
+            //                 ])
+            //                 ->get();
 
-                foreach ($matrixInfosUs as $matrixInfosU)
-                {
-                        $matrixInfosU->each(function($value) {
-                            echo $value;
-                        });
-                }
+            //     foreach ($matrixInfosUs as $matrixInfosU)
+            //     {
+            //             $matrixInfosU->each(function($value) {
+            //                 echo $value;
+            //             });
+            //     }
 
-                $matrixInfos = $matrixInfos->merge($matrixInfosUs);
-            }
+            //     $matrixInfos = $matrixInfos->merge($matrixInfosUs);
+            // }
 
             // Берём наших людей и переливов по линиям
 
