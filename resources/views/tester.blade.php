@@ -64,6 +64,8 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
+                dd($spmplacer);
+
                 $spmplacerCounter = $spmplacer->count();
 
                 if( $i > 1 ){
