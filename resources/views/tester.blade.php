@@ -56,8 +56,6 @@
 
                 $current_line = $i;
 
-                $spmplacerCounter = 0;
-
                 $spmplacer = DB::table('matrix_placers')->where([
                     ['matrix_id', '=', $matrix_id],
                     ['line', '=', $i],
@@ -66,7 +64,11 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
+                $spmplacerCounter = $spmplacer->count();
+
                 if( $i > 1 ){
+                    $spmplacerCounter = 0;
+
                     $prevLine = DB::table('matrix_placers')->where([
                         ['matrix_id', '=', $matrix_id],
                         ['line', '=', $i - 1],
