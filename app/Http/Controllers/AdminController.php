@@ -139,7 +139,6 @@ class AdminController extends Controller
 
             // Берём их личников
 
-            dd($matrixInfos);
 
             for ($i=0; $i < $matrixInfos->count(); $i++) {
                 $usID = $matrixInfos[$i]->id;
@@ -168,6 +167,8 @@ class AdminController extends Controller
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
+
+            dd($matrixInfos);
 
             // Берём наших людей и переливов по линиям
 
