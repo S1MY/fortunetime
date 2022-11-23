@@ -205,6 +205,34 @@ class AdminController extends Controller
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosNext);
                 $matrixInfos = $matrixInfos->merge($matrixInfosReferersNext);
+
+                for ($myi=0; $myi < $countMatrixMember; $myi++) {
+                    $usID = $matrixInfos[$myi]->id;
+
+                    $UsMatrix = DB::table('matrix')->where([
+                                    ['user_id', '=', $usID],
+                                    ['matrix_lvl', '=', 1],
+                                ])->first();
+
+
+                    $matrixInfosUs = DB::table('users')
+                                ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                                ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                                ->where([
+                                    ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
+                                    ['matrix_placers.line', $i],
+                                ])
+                                ->take(2)
+                                ->get();
+
+                    $matrixInfosUs->map(function($info){
+                        $info->line = $info->line + 1;
+                        return $info;
+                    });
+
+                    $matrixInfos = $matrixInfos->merge($matrixInfosUs);
+                }
+
             }
 
             $matrixUsersCount = $matrixInfos->count();
