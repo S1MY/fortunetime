@@ -142,8 +142,6 @@ class AdminController extends Controller
             for ($i=0; $i < $matrixInfos->count(); $i++) {
                 $usID = $matrixInfos[$i]->id;
 
-
-
                 $UsMatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $usID],
                                 ['matrix_lvl', '=', 1],
