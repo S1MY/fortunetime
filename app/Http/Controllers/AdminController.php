@@ -206,11 +206,13 @@ class AdminController extends Controller
                                     ->get();
 
 
-                        $matrixInfosUsLine->map(function($info) use ($usSholder, $d){
-                            $info->line = $info->line + $d + 2;
+                        $matrixInfosUsLine->map(function($info) use ($usSholder){
+                            $info->line = $info->line + 2;
                             $info->shoulder = $usSholder;
                             return $info;
                         });
+
+                        $matrixInfosUsLine->put('d', $d);
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
                         $countLineMatrixMebmer = $matrixInfosUs->count();
