@@ -1,6 +1,6 @@
 @php
 
-    $uplace = 3;
+    $uplace = 4;
     $rpos = 1;
 
     for ($n=1; $n <= $uplace; $n++) {
