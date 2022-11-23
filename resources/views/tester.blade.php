@@ -195,7 +195,7 @@
                                 ])->orWhere([
                                     ['referer_id', '=', $referer_id],
                                     ['referer_line', '=', 1],
-                                    ['shoulder', '=', 0],
+                                    ['referer_shoulder', '=', 0],
                                 ])->get();
 
 
