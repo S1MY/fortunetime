@@ -95,16 +95,18 @@ class AdminController extends Controller
             ['matrix_lvl', '=', 1],
         ])->first();
 
+        // Переменные если матрицы не существует
         $disabled = ' disabled';
         $matrixInfos = '';
         $matrixUsersCount = '';
 
-        // dd($matrix);
-
         if($matrix != null){
+
+            // Если матрица есть, показываем её
+
             $disabled = '';
 
-            // Берём наших людей и переливов
+            // Берём людей из нашей матрицы
 
             $matrixInfos = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
@@ -114,6 +116,9 @@ class AdminController extends Controller
                                 ['matrix_placers.line', 1],
                             ])
                             ->get();
+
+            // Берём наших переливов
+            // И переименовываем поля, для слияния двух матриц
 
             $matrixInfosReferers = DB::table('users')
                             ->select('users.id',
@@ -135,21 +140,25 @@ class AdminController extends Controller
                             ])
                             ->get();
 
+            // Склеиваем две коллекции
+
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
+            // Считаем кол-во людей в матрице на первом линии
             $countMatrixMember = $matrixInfos->count();
 
-            // Берём их личников
+            // Берём людей, кого пригласили из первой линии
 
             for ($i=0; $i < $countMatrixMember; $i++) {
+                // Берём айдишник и плечо в котором находится $i человек в нашей линии
+
                 $usID = $matrixInfos[$i]->id;
-                $usSholder1 = $matrixInfos[$i]->shoulder;
+                $usSholder = $matrixInfos[$i]->shoulder;
 
                 $UsMatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $usID],
                                 ['matrix_lvl', '=', 1],
                             ])->first();
-
 
                 $matrixInfosUs = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
@@ -161,14 +170,12 @@ class AdminController extends Controller
                             ->take(2)
                             ->get();
 
-                $matrixInfosUs->map(function($info) use ($usSholder1){
+                $matrixInfosUs->map(function($info) use ($usSholder){
                     $info->line = $info->line + 1;
-                    $info->shoulder = $usSholder1;
+                    $info->shoulder = $usSholder;
 
                     return $info;
                 });
-
-                // И вниз по линиям
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
 
