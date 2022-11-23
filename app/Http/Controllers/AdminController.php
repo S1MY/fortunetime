@@ -139,6 +139,8 @@ class AdminController extends Controller
 
             // Берём их личников
 
+            dd($matrixInfos);
+
             for ($i=0; $i < $matrixInfos->count(); $i++) {
                 $usID = $matrixInfos[$i]->id;
 
