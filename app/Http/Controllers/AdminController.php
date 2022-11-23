@@ -193,6 +193,7 @@ class AdminController extends Controller
 
                         $matrixInfosUsLine->map(function($info){
                             $info->line = $info->line + 2;
+                            $info->shoulder = 0;
                             return $info;
                         });
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
