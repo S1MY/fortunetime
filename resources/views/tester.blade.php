@@ -566,30 +566,52 @@
             if( $line_pay != 0 ){
                 // Тут даём деньги спонсору и открываем новую матрицу
                 echo 'Даём деньги '. $sp .' в сумме '. $line_pay;
+
                 DB::table('user_infos')->where([
                     ['user_id', '=', $sp],
-                ])->update([
-                    'balance' => `balance` + $line_pay,
-                    'alter_balance' => `alter_balance` + $line_bonus,
-                    'earned' => `earned` + $line_pay,
-                ]);
+                ])->increment('balance', $line_pay);
+
+                DB::table('user_infos')->where([
+                    ['user_id', '=', $sp],
+                ])->increment('alter_balance', $line_bonus);
+
+                DB::table('user_infos')->where([
+                    ['user_id', '=', $sp],
+                ])->increment('earned', $line_pay);
 
                 if( $line_reinv == 0 ){
-                    DB::table('matrix')->insert([
-                        'user_id' => $sp,
-                        'matrix_lvl' => $matrix_lvl+1,
-                        'matrix_active' => 1,
-                        // 'created_at' => Carbon::now(),
-                        // 'updated_at' => Carbon::now()
-                    ]);
+
+                    $spNewMatrix = DB::table('matrix')->where([
+                            ['user_id', '=', $sp],
+                            ['matrix_lvl', '=', $matrix_lvl+1],
+                        ])->first();
+
+                    if ( !$spNewMatrix ) {
+                        DB::table('matrix')->insert([
+                            'user_id' => $sp,
+                            'matrix_lvl' => $matrix_lvl+1,
+                            'matrix_active' => 1,
+                            // 'created_at' => Carbon::now(),
+                            // 'updated_at' => Carbon::now()
+                        ]);
+                    }
+
                 }else{
-                    DB::table('matrix')->insert([
-                        'user_id' => $sp,
-                        'matrix_lvl' => $matrix_lvl+0.5,
-                        'matrix_active' => 1,
-                        // 'created_at' => Carbon::now(),
-                        // 'updated_at' => Carbon::now()
-                    ]);
+
+                    $spNewMatrix = DB::table('matrix')->where([
+                            ['user_id', '=', $sp],
+                            ['matrix_lvl', '=', $matrix_lvl+0.5],
+                        ])->first();
+
+                    if ( !$spNewMatrix ) {
+                        DB::table('matrix')->insert([
+                            'user_id' => $sp,
+                            'matrix_lvl' => $matrix_lvl+0.5,
+                            'matrix_active' => 1,
+                            // 'created_at' => Carbon::now(),
+                            // 'updated_at' => Carbon::now()
+                        ]);
+                    }
                 }
 
                 // Ставим его снова под спонсора
