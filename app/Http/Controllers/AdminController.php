@@ -207,6 +207,8 @@ class AdminController extends Controller
 
                         if( $usID2 == 3 ){
                             echo $d;
+                            echo '<br>';
+                            echo $m;
                             dd($matrixInfosUsLine);
                         }
 
