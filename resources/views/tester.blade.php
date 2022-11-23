@@ -157,6 +157,9 @@
                                 ['referer_place', '=', $rpos],
                             ])->first();
 
+
+                            exit;
+
                             $ruser_id = $refmplacer->user_id;
 
                             $refmatrix = DB::table('matrix')->where([
