@@ -180,6 +180,7 @@ class AdminController extends Controller
                 });
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
+                dd($matrixInfosUs);
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
 
