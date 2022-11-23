@@ -181,6 +181,8 @@ class AdminController extends Controller
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
 
+
+
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
 
                     for ($d=1; $d < 8; $d++) {
@@ -213,7 +215,7 @@ class AdminController extends Controller
                         });
 
                         if( $usID2 == 3 ){
-                            dd($matrixInfosUsLine);
+                            dd($matrixInfosUs);
                         }
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
