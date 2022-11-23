@@ -89,13 +89,6 @@
                                     $rpos++;
                                 }
                             }
-                            echo '<br>';
-                            echo 'rpos '.$rpos;
-                            echo '<br>';
-                            echo 'matrix '.$matrix_id;
-                            echo '<br>';
-                            echo 'line '.$i-1;
-                            echo '<br>';
 
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
@@ -110,13 +103,7 @@
                                 ['referer_place', '=', $rpos],
                             ])->first();
 
-                            // dd($refmplacer);
-
-
                             $ruser_id = $refmplacer->user_id;
-
-                            echo 'id user '.$ruser_id;
-                            echo '<br>';
 
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
@@ -134,10 +121,6 @@
                                     ['matrix_lvl', '=', $matrix_lvl],
                                 ])->update(['matrix_id' => $newMatrixID]);
                             }
-
-                            // dd($refmatrix);
-
-                            // exit;
 
                             if( $refmatrix ){
                                 $referer_id = $refmatrix->matrix_id;
