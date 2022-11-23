@@ -95,9 +95,8 @@
                             ['referer_line', '=', $i-1],
                         ])->get();
 
-                        echo 'У пользователя'. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
+                        echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
                         echo '<br>';
-                        exit;
 
                     }
 
