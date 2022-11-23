@@ -169,7 +169,7 @@ class AdminController extends Controller
                 });
 
                 if( $usID == 2 ){
-                    dd($matrixInfosUs);
+                    dd($usSholder1);
                 }
 
                 // И вниз по линиям
