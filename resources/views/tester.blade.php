@@ -67,7 +67,8 @@
                 $spmplacerCounter = $spmplacer->count();
 
                 if( $i > 1 ){
-
+                    echo $spmplacerCounter;
+                    echo '<br>';
                     $prevLine = DB::table('matrix_placers')->where([
                         ['matrix_id', '=', $matrix_id],
                         ['line', '=', $i - 1],
@@ -101,7 +102,7 @@
                             if( $prevMatrixPlacer->count() == 1 ){
                                 $spmplacerCounter = $spmplacerCounter + 1;
 
-                                echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
+                                echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человек';
                                 echo '<br>';
 
                             }elseif ( $prevMatrixPlacer->count() >= 2 ) {
