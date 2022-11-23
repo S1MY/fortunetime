@@ -88,7 +88,7 @@ Route::post('/admin/users/change', 'App\Http\Controllers\AdminController@changeU
 
 Route::get('/account/matrix/{login}', 'App\Http\Controllers\AdminController@showMartix')->name('showMatrix')->middleware('auth', 'is_admin');
 
-Route::post('/account/matrix/{login}/activation', 'App\Http\Controllers\AdminController@activation')->name('activation')->middleware('auth', 'is_admin');
+Route::post('/account/matrix/activation/{id}', 'App\Http\Controllers\AdminController@activation')->name('activation')->middleware('auth', 'is_admin');
 
 
 /* Freekassa */

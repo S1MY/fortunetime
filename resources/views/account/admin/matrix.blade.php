@@ -85,6 +85,7 @@
                         @else
                             {{-- <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a> --}}
                         @endif
+                        <a href="{{ route('activation', ['id'=>$user->id]) }}" class="cabinetBigItem">Начать заработок</a>
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
