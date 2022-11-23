@@ -569,7 +569,7 @@
                 $shoulder = 0;
             }
 
-            echo $shoulder;
+            echo $shoulderG[$crew];
             exit;
 
             $referer_shoulder = 0;
