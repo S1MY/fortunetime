@@ -1,7 +1,7 @@
 @php
 
     function ec($value){
-        return echo $value;
+        return $value;
     }
 
     ec(1);
