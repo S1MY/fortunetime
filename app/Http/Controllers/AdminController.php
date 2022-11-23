@@ -137,11 +137,13 @@ class AdminController extends Controller
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
 
+            $countMatrixMember = $matrixInfos->count();
+
             // Берём их личников
 
             // dd($matrixInfos);
 
-            for ($i=0; $i < $matrixInfos->count(); $i++) {
+            for ($i=0; $i < $countMatrixMember; $i++) {
                 $usID = $matrixInfos[$i]->id;
 
                 $UsMatrix = DB::table('matrix')->where([
