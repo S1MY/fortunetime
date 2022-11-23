@@ -173,6 +173,8 @@ class AdminController extends Controller
                     for ($d=2; $d < 8; $d++) {
                         $usID2 = $matrixInfosUs[$i]->id;
 
+                        dd($usID2);
+
                         $UsMatrixLine = DB::table('matrix')->where([
                                         ['user_id', '=', $usID2],
                                         ['matrix_lvl', '=', 1],
