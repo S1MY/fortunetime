@@ -66,7 +66,7 @@
 
                 $spmplacerCounter = $spmplacer->count();
 
-                // /|\ тут не считаются переливы
+                // /|\ тут не считаются переливы от вышестоящих
 
                 if( $i > 1 ){
                     $spmplacerCounter = 0;
@@ -159,12 +159,14 @@
                                 ['referer_place', '=', $rpos],
                             ])->first();
 
-
-                            // $ruser_id = $refmplacer->user_id;
+                            //  /|\ тут нужно добавить переливов от вышестоящих
 
                             dd($refmplacer);
 
                             exit;
+
+                            $ruser_id = $refmplacer->user_id;
+
 
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
