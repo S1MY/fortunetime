@@ -145,10 +145,6 @@ class AdminController extends Controller
                 $usID = $matrixInfos[$i]->id;
                 $usSholder1 = $matrixInfos[$i]->shoulder;
 
-                if( $usID == 2 ){
-                    dd($usSholder1);
-                }
-
                 $UsMatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $usID],
                                 ['matrix_lvl', '=', 1],
@@ -164,6 +160,10 @@ class AdminController extends Controller
                             ])
                             ->take(2)
                             ->get();
+
+                if( $usID == 2 ){
+                    dd($matrixInfosUs);
+                }
 
                 $matrixInfosUs->map(function($info, $usSholder1){
                     $info->line = $info->line + 1;
