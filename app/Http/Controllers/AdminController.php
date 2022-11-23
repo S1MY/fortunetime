@@ -186,7 +186,7 @@ class AdminController extends Controller
                                         ['matrix_placers.matrix_id', $UsMatrixLine->matrix_id],
                                         ['matrix_placers.line', $d],
                                     ])
-                                    ->take(2)
+                                    ->take(4)
                                     ->get();
 
                         // dd($matrixInfosUsLine);
