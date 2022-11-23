@@ -1,4 +1,13 @@
 @php
+
+    function ec($value){
+        return echo $value;
+    }
+
+    ec(1);
+
+    exit;
+
     // Данные для проверки
     $matrix_lvl = 1;
 
@@ -538,6 +547,7 @@
                 }
 
                 // Ставим его снова под спонсора
+
 
 
             }
