@@ -88,6 +88,9 @@ class AdminController extends Controller
     public function showMartix($login){
 
         $user = DB::table('users')->where('login', '=', $login)->first();
+
+        dd($user);
+
         $userInfo = DB::table('user_infos')->where('user_id', '=', $user->id)->first();
 
         $matrix = DB::table('matrix')->where([
