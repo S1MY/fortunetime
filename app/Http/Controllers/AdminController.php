@@ -167,6 +167,7 @@ class AdminController extends Controller
 
                     return $info;
                 });
+                echo $usID;
                 echo $i;
                 echo $usSholder1;
                 if( $usID == 2 ){
