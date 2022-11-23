@@ -1,19 +1,11 @@
 @php
 
-    function ec($value){
-        return $value;
-    }
-
-    ec(1);
-
-    exit;
-
     // Данные для проверки
     $matrix_lvl = 1;
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 23)->first();
+    $user = DB::table('users')->where('id', 34)->first();
 
     // Проверяем есть ли у нас матрица
 
