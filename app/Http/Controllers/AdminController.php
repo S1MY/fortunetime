@@ -213,6 +213,9 @@ class AdminController extends Controller
                         });
 
                         $matrixInfosUsLine->put('d', $d);
+                        if( $usID2 == 3 ){
+                            dd($matrixInfosUsLine);
+                        }
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
                         $countLineMatrixMebmer = $matrixInfosUs->count();
@@ -223,7 +226,6 @@ class AdminController extends Controller
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
 
-            dd($matrixInfos);
 
             // Берём наших людей и переливов по линиям
 
