@@ -481,4 +481,8 @@ class AdminController extends Controller
 
         return true;
     }
+
+    public function activation(Request $request){
+        return $request;
+    }
 }

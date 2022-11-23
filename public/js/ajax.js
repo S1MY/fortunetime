@@ -163,6 +163,47 @@ $(document).ready(function () {
         });
     })
 
+    $('.activationBigBtn').click(function (e) {
+        e.preventDefault();
+
+        if( $(this).hasClass('delete') ){
+            $('#activation').submit();
+        }
+
+        $('.popupResponse.deleteQuestion').fadeOut(500);
+
+    });
+
+    $('#activation').submit(function(e){
+        $('.popupResponse.changeRef').fadeOut(500);
+        e.preventDefault();
+        let ajaxurl = $(this).attr('action');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        var formData = $(this).serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('.popupResponse.succes').fadeIn(500);
+                // setTimeout(() => {
+                //     location.reload();
+                // }, 1500);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
+
     $('#changeReferal').submit(function(e){
         $('.popupResponse.changeRef').fadeOut(500);
         e.preventDefault();
