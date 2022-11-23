@@ -121,8 +121,19 @@
                             $refmatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $ruser_id],
                                 ['matrix_lvl', '=', $matrix_lvl],
-                                ['matrix_id', '!=', null],
                             ])->first();
+
+                            if( $refmatrix->matrix_id == null ){
+                                echo 'Обновили данные матрицы';
+                                echo '<br>';
+
+                                $newMatrixID = DB::table('matrix_placers')->count()+1;
+
+                                DB::table('matrix')->where([
+                                    ['user_id', '=', $ruser_id],
+                                    ['matrix_lvl', '=', $matrix_lvl],
+                                ])->update(['matrix_id' => $newMatrixID]);
+                            }
 
                             // dd($refmatrix);
 
