@@ -490,8 +490,6 @@ class AdminController extends Controller
         $uplace = 0;
         $refposs = 0;
 
-
-        // Заменить 10 на $user['id']
         $user = DB::table('users')->where('id', $request->id )->first();
 
         // Проверяем есть ли у нас матрица
