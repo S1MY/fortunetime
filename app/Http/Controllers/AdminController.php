@@ -96,8 +96,6 @@ class AdminController extends Controller
             ['matrix_lvl', '=', 1],
         ])->first();
 
-        dd($matrix);
-
         // Переменные если матрицы не существует
         $disabled = ' disabled';
         $matrixInfos = '';
