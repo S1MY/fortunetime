@@ -212,6 +212,10 @@ class AdminController extends Controller
                             return $info;
                         });
 
+                        if( $usID2 == 3 ){
+                            dd($matrixInfosUsLine);
+                        }
+
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
                         $countLineMatrixMebmer = $matrixInfosUs->count();
                     }
