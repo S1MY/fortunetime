@@ -157,15 +157,6 @@ class AdminController extends Controller
                             ])
                             ->get();
 
-                dd($matrixInfosUs);
-
-                foreach ($matrixInfosUs as $matrixInfosU)
-                {
-                        $matrixInfosU->each(function($value) {
-                            echo $value;
-                        });
-                }
-
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
 
