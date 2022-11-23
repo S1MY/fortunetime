@@ -209,7 +209,7 @@ class AdminController extends Controller
                             echo $d;
                             echo '<br>';
                             echo $m;
-                            dd($matrixInfosUsLine);
+                            // dd($matrixInfosUsLine);
                         }
 
                         $matrixInfosUsLine->map(function($info) use ($usSholder){
