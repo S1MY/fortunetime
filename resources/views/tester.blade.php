@@ -544,7 +544,8 @@
 
             $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
             $lineG = array(4, 12, 28, 60, 124, 252, 508);
-
+            echo $line;
+            exit();
             $line = 0;
             $newPlace = $uplace;
             $maxLine = 7;
