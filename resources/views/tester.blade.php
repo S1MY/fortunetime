@@ -4,7 +4,7 @@
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 28)->first();
+    $user = DB::table('users')->where('id', 2)->first();
 
     // Проверяем есть ли у нас матрица
 
