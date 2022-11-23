@@ -82,7 +82,7 @@
                         </div>
 
                         @if ( $userInfo->activated == 0 )
-                            <a href="{{ route('activation', ['id'=>$user->id]) }}" class="cabinetBigItem">Активировать</a>
+                            <a href="{{ route('activation', ['id'=>$user->id, 'lvl'=>1]) }}" class="cabinetBigItem">Активировать</a>
                         @endif
 
                     </div>
