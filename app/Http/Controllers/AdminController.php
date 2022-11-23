@@ -147,7 +147,6 @@ class AdminController extends Controller
                                 ['matrix_lvl', '=', 1],
                             ])->first();
 
-                dd($UsMatrix);
 
                 $matrixInfosUs = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
@@ -157,6 +156,8 @@ class AdminController extends Controller
                                 ['matrix_placers.line', 1],
                             ])
                             ->get();
+
+                dd($matrixInfosUs);
 
                 foreach ($matrixInfosUs as $matrixInfosU)
                 {
