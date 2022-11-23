@@ -171,9 +171,11 @@ class AdminController extends Controller
                 // И вниз по линиям
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
+                dd($matrixInfosUs);
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
                     for ($d=1; $d < 8; $d++) {
+
                         $usID2 = $matrixInfosUs[$m]->id;
                         $usSholder = $matrixInfosUs[$m]->shoulder;
 
