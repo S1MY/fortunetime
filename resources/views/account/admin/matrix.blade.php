@@ -1,6 +1,6 @@
 @extends('../master')
 
-@section('title', 'Личный кабинет пользователя '. $userInfo->user_name)
+@section('title', 'Личный кабинет пользователя '. $userInfo->user_login)
 
 @section('content')
     <section class="pageSection">
