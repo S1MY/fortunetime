@@ -158,7 +158,7 @@ class AdminController extends Controller
                                 ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
                                 ['matrix_placers.line', 1],
                             ])
-                            ->take(2)
+                            ->take(3)
                             ->get();
 
                 $matrixInfosUs->map(function($info, $usSholder1){
