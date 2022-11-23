@@ -83,7 +83,7 @@
                         <form action="{{route('activation')}}" id="activation" method="POST">
                             <input type="hidden" value="{{ $user->id }}" name="id">
                             @if ( $userInfo->activated == 0 )
-                                <input type="hidden" value="1" value="matrix_lvl">
+                                <input type="hidden" value="1" name="matrix_lvl">
                                 <a href="#" class="activationBigBtn cabinetBigItem">Активировать</a>
                             @else
                                 <input type="hidden" value="{{ $user_max_lvl->matrix_lvl + 1 }}" name="matrix_lvl">
