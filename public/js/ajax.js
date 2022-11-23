@@ -170,7 +170,7 @@ $(document).ready(function () {
 
     });
 
-    $('#activation').submit(function(e){
+    $(document).on('submit', '#activation', function(e) {
         $('.popupResponse.changeRef').fadeOut(500);
         e.preventDefault();
         let ajaxurl = $(this).attr('action');
