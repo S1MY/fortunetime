@@ -216,9 +216,9 @@ class AdminController extends Controller
                             return $info;
                         });
 
-                        if( $usID2 == 3 ){
-                            dd($usLine);
-                        }
+                        // if( $usID2 == 3 ){
+                        //     dd($usLine);
+                        // }
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
                         $countLineMatrixMebmer = $matrixInfosUs->count();
