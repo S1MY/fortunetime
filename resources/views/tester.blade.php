@@ -85,10 +85,6 @@
                                         ['matrix_lvl', '=', $matrix_lvl],
                                     ])->first();
 
-                        echo $i;
-
-                        dd($UsMatrix);
-
                         $prevMatrixId = $UsMatrix->matrix_id;
 
                         $prevMatrixPlacer = DB::table('matrix_placers')->where([
