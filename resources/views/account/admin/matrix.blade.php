@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="route('activation')" id="activation" method="POST">
+                        <form action="{{route('activation')}}" id="activation" method="POST">
                             <input type="hidden" value="{{ $user->id }}" name="id">
                             @if ( $userInfo->activated == 0 )
                                 <input type="hidden" value="1">
