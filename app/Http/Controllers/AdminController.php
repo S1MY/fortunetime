@@ -89,14 +89,14 @@ class AdminController extends Controller
 
         $user = DB::table('users')->where('login', '=', $login)->first();
 
-        dd($user);
-
         $userInfo = DB::table('user_infos')->where('user_id', '=', $user->id)->first();
 
         $matrix = DB::table('matrix')->where([
             ['user_id', '=', $user->id],
             ['matrix_lvl', '=', 1],
         ])->first();
+
+        dd($matrix);
 
         // Переменные если матрицы не существует
         $disabled = ' disabled';
