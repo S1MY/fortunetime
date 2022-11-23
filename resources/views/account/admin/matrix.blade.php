@@ -84,6 +84,7 @@
                         @if ( $userInfo->activated == 0 )
                             <a href="{{ route('activation', ['id'=>$user->id]) }}" class="cabinetBigItem">Активировать</a>
                         @endif
+
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
