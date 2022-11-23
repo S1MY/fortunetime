@@ -166,11 +166,7 @@ $(document).ready(function () {
     $('.activationBigBtn').click(function (e) {
         e.preventDefault();
 
-        if( $(this).hasClass('delete') ){
-            $('#activation').submit();
-        }
-
-        $('.popupResponse.deleteQuestion').fadeOut(500);
+        $('#activation').submit();
 
     });
 
