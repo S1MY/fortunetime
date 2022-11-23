@@ -93,9 +93,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        User::where('id', $sponsor)->update([
-            'sponsor_counter' => `sponsor_counter`+1,
-        ]);
+        User::where('id', $sponsor)->increment('sponsor_counter');
 
         $userId = $user->id;
 
