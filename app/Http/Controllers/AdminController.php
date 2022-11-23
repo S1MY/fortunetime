@@ -142,12 +142,14 @@ class AdminController extends Controller
             for ($i=0; $i < $matrixInfos->count(); $i++) {
                 $usID = $matrixInfos[$i]->id;
 
-                dd($usID);
+
 
                 $UsMatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $usID],
                                 ['matrix_lvl', '=', 1],
                             ])->first();
+
+                dd($UsMatrix);
 
                 $matrixInfosUs = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
