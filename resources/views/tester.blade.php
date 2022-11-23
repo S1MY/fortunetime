@@ -98,13 +98,17 @@
                                 ['referer_line', '=', $i-1],
                             ])->get();
 
-                            echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
-                            echo '<br>';
-
                             if( $prevMatrixPlacer->count() == 1 ){
                                 $spmplacerCounter = $spmplacerCounter + 1;
+
+                                echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
+                                echo '<br>';
+
                             }elseif ( $prevMatrixPlacer->count() >= 2 ) {
                                 $spmplacerCounter = $spmplacerCounter + 2;
+
+                                echo 'У пользователя '. $prevLineUser->user_id . ' на линии более 2-ух человек';
+                                echo '<br>';
                             }
 
                         }
