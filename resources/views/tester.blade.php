@@ -64,6 +64,8 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
+                $spmplacerCounter = $spmplacer->count();
+
                 if( $i > 1 ){
 
                     $prevLine = DB::table('matrix_placers')->where([
@@ -98,6 +100,13 @@
 
                             echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человека';
                             echo '<br>';
+
+                            if( $prevMatrixPlacer->count() == 1 ){
+                                $spmplacerCounter = $spmplacerCounter + 1;
+                            }elseif ( $prevMatrixPlacer->count() >= 2 ) {
+                                $spmplacerCounter = $spmplacerCounter + 2;
+                            }
+
                         }
 
                     }
@@ -105,21 +114,21 @@
                 }
 
 
-                if( $spmplacer->count() == $lineG[$i-1] ){
+                if( $spmplacerCounter == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
                     echo '<br>';
                 }else{
 
                     echo 'Свободна '.$i.' линяя';
                     echo '<br>';
-                    echo 'Людей на линии: ' . $spmplacer->count();
+                    echo 'Людей на линии: ' . $spmplacerCounter;
                     echo '<br>';
 
                     exit;
 
                     if( $i != 1 ){
 
-                        for ($uplace=($spmplacer->count() + 1); $uplace < $lineG[$i-1]; $uplace++) {
+                        for ($uplace=($spmplacerCounter + 1); $uplace < $lineG[$i-1]; $uplace++) {
 
                             echo '==== Проверка позиции: ' . $uplace . ' ====';
                             echo '<br>';
@@ -223,7 +232,7 @@
 
                     }else{
                         // Нет вышестоящего кроме спонсора
-                        $uplace = $spmplacer->count() + 1;
+                        $uplace = $spmplacerCounter + 1;
                         $referer_id = null;
                         $refposs = $uplace;
                     }
