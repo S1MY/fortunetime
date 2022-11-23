@@ -567,13 +567,19 @@
                 // Тут даём деньги спонсору и открываем новую матрицу
                 echo 'Даём деньги '. $sp .' в сумме '. $line_pay;
 
+                // Деньги
+
                 DB::table('user_infos')->where([
                     ['user_id', '=', $sp],
                 ])->increment('balance', $line_pay);
 
+                // Наши деньги
+
                 DB::table('user_infos')->where([
                     ['user_id', '=', $sp],
                 ])->increment('alter_balance', $line_bonus);
+
+                // Всего заработанно
 
                 DB::table('user_infos')->where([
                     ['user_id', '=', $sp],
@@ -582,9 +588,9 @@
                 if( $line_reinv == 0 ){
 
                     $spNewMatrix = DB::table('matrix')->where([
-                            ['user_id', '=', $sp],
-                            ['matrix_lvl', '=', $matrix_lvl+1],
-                        ])->first();
+                        ['user_id', '=', $sp],
+                        ['matrix_lvl', '=', $matrix_lvl+1],
+                    ])->first();
 
                     if ( !$spNewMatrix ) {
                         DB::table('matrix')->insert([
