@@ -165,8 +165,42 @@ class AdminController extends Controller
                     return $info;
                 });
 
-                $matrixInfos = $matrixInfos->merge($matrixInfosUs);
+                // И вниз по линиям
+
+                $countLineMatrixMebmer = $matrixInfosUs->count();
+
+                for ($m=0; $m < $countLineMatrixMebmer; $m++) {
+                    for ($d=2; $d < 8; $d++) {
+                        $usID2 = $matrixInfosUs[$i]->id;
+
+                        $UsMatrixLine = DB::table('matrix')->where([
+                                        ['user_id', '=', $usID2],
+                                        ['matrix_lvl', '=', 1],
+                                    ])->first();
+
+
+                        $matrixInfosUsLine = DB::table('users')
+                                    ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                                    ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                                    ->where([
+                                        ['matrix_placers.matrix_id', $UsMatrixLine->matrix_id],
+                                        ['matrix_placers.line', $d],
+                                    ])
+                                    ->take(2)
+                                    ->get();
+
+                        $matrixInfosUsLine->map(function($info){
+                            $info->line = $info->line + 1;
+                            return $info;
+                        });
+                        $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
+                    }
+                }
+
+                // $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
+                dd($matrixInfosUsLine);
+
 
             // Берём наших людей и переливов по линиям
 
@@ -205,35 +239,6 @@ class AdminController extends Controller
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosNext);
                 $matrixInfos = $matrixInfos->merge($matrixInfosReferersNext);
-
-                dd($matrixInfos);
-
-                for ($myi=0; $myi < $countMatrixMember; $myi++) {
-                    $usID = $matrixInfos[$myi]->id;
-
-                    $UsMatrix = DB::table('matrix')->where([
-                                    ['user_id', '=', $usID],
-                                    ['matrix_lvl', '=', 1],
-                                ])->first();
-
-
-                    $matrixInfosUs = DB::table('users')
-                                ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                                ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                                ->where([
-                                    ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
-                                    ['matrix_placers.line', $i],
-                                ])
-                                ->take(2)
-                                ->get();
-
-                    $matrixInfosUs->map(function($info){
-                        $info->line = $info->line + 1;
-                        return $info;
-                    });
-
-                    $matrixInfos = $matrixInfos->merge($matrixInfosUs);
-                }
 
             }
 
