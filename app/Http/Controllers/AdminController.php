@@ -206,9 +206,9 @@ class AdminController extends Controller
                                     ->get();
 
                         if( $usID2 == 3 ){
-                            echo 'd<br>';
+                            echo '<br>d';
                             echo $d;
-                            echo 'm<br>';
+                            echo '<br>m';
                             echo $m;
                             // dd($matrixInfosUsLine);
                         }
