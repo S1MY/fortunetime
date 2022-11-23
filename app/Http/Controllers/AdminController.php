@@ -212,7 +212,7 @@ class AdminController extends Controller
                             return $info;
                         });
 
-                        $matrixInfosUsLine->put('d', $d);
+                        $matrixInfosUsLine->put('m', $m);
                         if( $usID2 == 2 ){
                             dd($matrixInfosUsLine);
                         }
