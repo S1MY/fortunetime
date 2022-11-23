@@ -170,7 +170,7 @@ class AdminController extends Controller
                 $countLineMatrixMebmer = $matrixInfosUs->count();
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
-                    for ($d=2; $d < 8; $d++) {
+                    for ($d=1; $d < 8; $d++) {
                         $usID2 = $matrixInfosUs[$i]->id;
 
                         $UsMatrixLine = DB::table('matrix')->where([
