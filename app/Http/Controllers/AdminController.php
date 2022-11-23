@@ -191,6 +191,8 @@ class AdminController extends Controller
 
                         $usSholder = $matrixInfosUs[$m]->shoulder;
 
+                        $usLine = $matrixInfosUs[$m]->line;
+
                         $UsMatrixLine = DB::table('matrix')->where([
                                         ['user_id', '=', $usID2],
                                         ['matrix_lvl', '=', 1],
@@ -208,8 +210,8 @@ class AdminController extends Controller
                                     ->get();
 
 
-                        $matrixInfosUsLine->map(function($info) use ($usSholder, $m){
-                            $info->line = $info->line + $m + 2;
+                        $matrixInfosUsLine->map(function($info) use ($usSholder, $usLine){
+                            $info->line = $info->line + $usLine + 1;
                             $info->shoulder = $usSholder;
                             return $info;
                         });
