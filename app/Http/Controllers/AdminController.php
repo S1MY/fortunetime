@@ -182,6 +182,7 @@ class AdminController extends Controller
                 $countLineMatrixMebmer = $matrixInfosUs->count();
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
+
                     for ($d=1; $d < 8; $d++) {
 
                         $usID2 = $matrixInfosUs[$m]->id;
@@ -217,7 +218,7 @@ class AdminController extends Controller
                 $countLineMatrixMebmer = $matrixInfosUs->count();
             }
 
-            // dd($countLineMatrixMebmer);
+            dd($matrixInfosUs);
 
             // Берём наших людей и переливов по линиям
 
