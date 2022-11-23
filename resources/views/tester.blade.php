@@ -65,6 +65,7 @@
                 ])->get();
 
                 if( $i > 1 ){
+
                     $prevLine = DB::table('matrix_placers')->where([
                         ['matrix_id', '=', $matrix_id],
                         ['line', '=', $i - 1],
@@ -73,14 +74,32 @@
                         ['referer_line', '=', $i - 1],
                     ])->get();
 
-                    echo 'Людей наа прошлой линии: '.$prevLine->count();
+                    echo 'Людей на прошлой линии: '.$prevLine->count();
                     echo '<br>';
 
                     for ($o=0; $o < $prevLine->count(); $o++) {
                         $prevLineUser = $prevLine[$o];
-                        dd($prevLineUser);
+
+                        $UsMatrix = DB::table('matrix')->where([
+                                        ['user_id', '=', $prevLineUser],
+                                        ['matrix_lvl', '=', $matrix_lvl],
+                                    ])->first();
+
+                        $prevMatrixId = $UsMatrix->matrix_id;
+
+                        $prevMatrixPlacer = DB::table('matrix_placers')->where([
+                            ['matrix_id', '=', $prevMatrixId],
+                            ['line', '=', $i],
+                        ])->orWhere([
+                            ['referer_id', '=', $prevMatrixId],
+                            ['referer_line', '=', $i],
+                        ])->get();
+
+                        echo $prevMatrixPlacer->count();
+                        echo '<br>';
 
                     }
+
                 }
 
 
