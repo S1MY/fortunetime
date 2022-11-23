@@ -161,16 +161,16 @@ class AdminController extends Controller
                             ->take(2)
                             ->get();
 
-                if( $usID == 2 ){
-                    dd($matrixInfosUs);
-                }
-
                 $matrixInfosUs->map(function($info, $usSholder1){
                     $info->line = $info->line + 1;
                     $info->shoulder = $usSholder1;
 
                     return $info;
                 });
+
+                if( $usID == 2 ){
+                    dd($matrixInfosUs);
+                }
 
                 // И вниз по линиям
 
