@@ -64,9 +64,9 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
-                // echo 'Людей на линии: ' . $spmplacer->count();
+                echo 'Людей на линии: ' . $spmplacer->count();
 
-                // exit;
+                exit;
 
                 if( $spmplacer->count() == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
