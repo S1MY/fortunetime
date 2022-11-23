@@ -129,15 +129,6 @@
                     echo 'Людей на линии: ' . $spmplacerCounter;
                     echo '<br>';
 
-                    echo $lineG[$i-1];
-                    echo '<br>';
-
-                    $uplace= $spmplacerCounter + 1;
-
-                    if( $uplace < $lineG[$i-1] ){
-                        echo 'И хуле';
-                    }
-
                     if( $i != 1 ){
 
                         for ($uplace=($spmplacerCounter + 1); $uplace <= $lineG[$i-1]; $uplace++) {
