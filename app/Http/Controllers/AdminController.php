@@ -180,7 +180,7 @@ class AdminController extends Controller
                 });
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
-                dd($countLineMatrixMebmer);
+
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
                     for ($d=1; $d < 8; $d++) {
 
@@ -214,6 +214,7 @@ class AdminController extends Controller
                 }
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
+                $countLineMatrixMebmer = $matrixInfosUs->count();
             }
 
             // dd($matrixInfos);
