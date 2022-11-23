@@ -566,14 +566,14 @@
             //     $crew++;
             // }
 
-            if ($newPlace > $shoulderG[$line/*$crew*/]) {
+            if ($newPlace > $shoulderG[$line-1/*$crew*/]) {
                 $shoulder = 1;
             }else{
                 $shoulder = 0;
             }
 
-            echo $shoulder;
-            exit;
+            // echo $shoulder;
+            // exit;
             // echo $shoulderG[$crew];
             // exit;
 
