@@ -77,13 +77,11 @@
                     echo 'Людей на прошлой линии: '.$prevLine->count();
                     echo '<br>';
 
-                    dd($prevLine);
-
                     for ($o=0; $o < $prevLine->count(); $o++) {
                         $prevLineUser = $prevLine[$o];
 
                         $UsMatrix = DB::table('matrix')->where([
-                                        ['user_id', '=', $prevLineUser->id],
+                                        ['user_id', '=', $prevLineUser->user_id],
                                         ['matrix_lvl', '=', $matrix_lvl],
                                     ])->first();
 
