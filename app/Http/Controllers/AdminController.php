@@ -269,9 +269,15 @@ class AdminController extends Controller
             $matrixUsersCount = $matrixInfos->count();
         }
 
+        $user_max_lvl = DB::table('matrix')->where([
+            ['user_id', '=', $user->id],
+        ])
+        ->orderBy('matrix_lvl', 'DESC')
+        ->first();
+
         // dd($matrixInfos);
 
-        return view('account.admin.matrix', compact('user', 'userInfo' ,'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
+        return view('account.admin.matrix', compact('user', 'userInfo' ,'matrix', 'disabled', 'matrixInfos', 'matrixUsersCount', 'user_max_lvl'));
     }
 
     // Управление
