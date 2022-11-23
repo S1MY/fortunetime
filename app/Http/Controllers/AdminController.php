@@ -213,8 +213,8 @@ class AdminController extends Controller
                             // dd($matrixInfosUsLine);
                         }
 
-                        $matrixInfosUsLine->map(function($info) use ($usSholder){
-                            $info->line = $info->line + 2;
+                        $matrixInfosUsLine->map(function($info) use ($usSholder, $d){
+                            $info->line = $info->line + $d + 1;
                             $info->shoulder = $usSholder;
                             return $info;
                         });
