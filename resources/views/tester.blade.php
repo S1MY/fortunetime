@@ -5,7 +5,7 @@
 
 
     // Заменить 10 на $user['id']
-    $user = DB::table('users')->where('id', 39 )->first();
+    $user = DB::table('users')->where('id', 40 )->first();
 
     // Проверяем есть ли у нас матрица
 
@@ -69,8 +69,6 @@
                 $spmplacerCounter = $spmplacer->count();
 
                 if( $i > 1 ){
-                    echo $spmplacerCounter;
-                    echo '<br>';
                     $prevLine = DB::table('matrix_placers')->where([
                         ['matrix_id', '=', $matrix_id],
                         ['line', '=', $i - 1],
