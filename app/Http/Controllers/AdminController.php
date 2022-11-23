@@ -187,7 +187,12 @@ class AdminController extends Controller
 
                     for ($d=1; $d < 8; $d++) {
 
+
                         $usID2 = $matrixInfosUs[$m]->id;
+
+                        echo $usID2;
+                        echo '<br>';
+
                         $usSholder = $matrixInfosUs[$m]->shoulder;
 
                         $UsMatrixLine = DB::table('matrix')->where([
@@ -211,8 +216,6 @@ class AdminController extends Controller
                             $info->shoulder = $usSholder;
                             return $info;
                         });
-
-                        echo $d;
 
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
                     }
