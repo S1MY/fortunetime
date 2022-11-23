@@ -80,11 +80,6 @@
                     echo 'Людей на прошлой линии: '.$prevLine->count();
                     echo '<br>';
 
-                    if( $i == 3 ){
-                        dd($prevLine);
-                    }
-
-
                     for ($o=0; $o < $prevLine->count(); $o++) {
                         $prevLineUser = $prevLine[$o];
 
@@ -92,6 +87,12 @@
                                         ['user_id', '=', $prevLineUser->user_id],
                                         ['matrix_lvl', '=', $matrix_lvl],
                                     ])->first();
+
+
+
+                        if( $i == 3 ){
+                            dd($UsMatrix);
+                        }
 
                         $prevMatrixId = $UsMatrix->matrix_id;
 
