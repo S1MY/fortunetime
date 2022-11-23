@@ -542,33 +542,37 @@
 
             }
 
-            $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
-            $lineG = array(4, 12, 28, 60, 124, 252, 508);
-            echo $line;
-            exit();
-            $line = 0;
+            $shoulderG = array(2, 4, 8, 16, 32, 64, 128);
+
+            // $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
+            // $lineG = array(4, 12, 28, 60, 124, 252, 508);
+            // echo $line;
+            // exit();
+            // $line = 0;
             $newPlace = $uplace;
-            $maxLine = 7;
+            // $maxLine = 7;
 
-            if ($line == 0) {
-                $crew = 0;
-            }else{
-                $crew = $line - 1;
-            }
+            // if ($line == 0) {
+            //     $crew = 0;
+            // }else{
+            //     $crew = $line - 1;
+            // }
 
-            for ($l=0; $l <= $maxLine ; $l++) {
-                if($newPlace <= $lineG[$crew]){
-                    $line = $l + 1;
-                    break;
-                }
-                $crew++;
-            }
+            // for ($l=0; $l <= $maxLine ; $l++) {
+            //     if($newPlace <= $lineG[$crew]){
+            //         $line = $l + 1;
+            //         break;
+            //     }
+            //     $crew++;
+            // }
 
-            if ($newPlace > $shoulderG[$crew]) {
+            if ($newPlace > $shoulderG[$line/*$crew*/]) {
                 $shoulder = 1;
             }else{
                 $shoulder = 0;
             }
+
+            echo $shoulder;
 
             // echo $shoulderG[$crew];
             // exit;
