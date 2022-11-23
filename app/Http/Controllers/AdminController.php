@@ -217,12 +217,13 @@ class AdminController extends Controller
                         $matrixInfosUs = $matrixInfosUs->merge($matrixInfosUsLine);
                         $countLineMatrixMebmer = $matrixInfosUs->count();
                     }
+
                 }
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
             }
 
-            // dd($matrixInfosUs);
+            dd($matrixInfosUs);
 
             // Берём наших людей и переливов по линиям
 
