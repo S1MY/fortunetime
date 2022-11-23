@@ -180,7 +180,6 @@ class AdminController extends Controller
                 });
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
-                dd($matrixInfosUs);
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
 
@@ -216,10 +215,9 @@ class AdminController extends Controller
                 }
 
                 $matrixInfos = $matrixInfos->merge($matrixInfosUs);
-                $countLineMatrixMebmer = $matrixInfosUs->count();
             }
 
-            dd($matrixInfosUs);
+            // dd($matrixInfosUs);
 
             // Берём наших людей и переливов по линиям
 
