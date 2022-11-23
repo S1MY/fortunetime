@@ -64,6 +64,19 @@
                     ['referer_line', '=', $i],
                 ])->get();
 
+                if( $i > 1 ){
+                    $prevLine = DB::table('matrix_placers')->where([
+                        ['matrix_id', '=', $matrix_id],
+                        ['line', '=', $i - 1],
+                    ])->orWhere([
+                        ['referer_id', '=', $matrix_id],
+                        ['referer_line', '=', $i - 1],
+                    ])->get();
+                }
+
+                echo 'Людей наа прошлой линии: '.$prevLine->count();
+                echo '<br>';
+
                 if( $spmplacer->count() == $lineG[$i-1] ){
                     echo 'Линяя ' . $i . ' занята';
                     echo '<br>';
