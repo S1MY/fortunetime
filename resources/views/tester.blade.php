@@ -109,9 +109,11 @@
                             $prevMatrixPlacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $prevMatrixId],
                                 ['line', '=', $i-$minus],
+                                ['shoulder', '=', 0],
                             ])->orWhere([
                                 ['referer_id', '=', $prevMatrixId],
                                 ['referer_line', '=', $i-$minus],
+                                ['referer_shoulder', '=', 0],
                             ])->take(2)->get();
 
                             if( $prevMatrixPlacer->count() == 1 ){
