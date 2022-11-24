@@ -44,7 +44,9 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
-        $paieds->put('type', 'freekassa');
+        for ($i=0; $i < $paieds->count(); $i++) {
+            $paieds[$i]->type = 'freekassa';
+        }
 
         $paiedsPayeer = DB::table('payeer')
                     ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(payeer.created_at) as created_at"))
@@ -53,12 +55,8 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
-        $paiedsPayeer[0]->type = 'payeer';
-
-        dd($paiedsPayeer);
-
         for ($i=0; $i < $paiedsPayeer->count(); $i++) {
-            $paiedsPayeer[$i]->put('type', 'payeer');
+            $paiedsPayeer[$i]->type = 'payeer';
         }
 
 
