@@ -196,6 +196,10 @@ $(document).ready(function () {
             },
             error: function (data) {
                 console.log(data);
+                $('.popupResponse.succes').fadeIn(500);
+                setTimeout(() => {
+                    location.reload();
+                }, 1500);
             }
         });
     })
