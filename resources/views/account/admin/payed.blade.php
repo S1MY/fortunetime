@@ -23,12 +23,15 @@
                             <tr>
                                 <th>Логин</th>
                                 <th>Сумма</th>
+                                <th>Агрегатор</th>
                                 <th>Дата</th>
                             </tr>
                             @foreach ($paieds as $paied)
                                 <tr>
                                     <td class="tacenter">{{ $paied->login }}</td>
                                     <td class="tacenter">{{ $paied->amount }}</td>
+
+                                    <td class="tacenter">{{ $paied->payeer }}</td>
                                     <td class="tacenter">{{ $paied->created_at }}</td>
                                 </tr>
                             @endforeach
