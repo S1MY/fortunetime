@@ -145,14 +145,14 @@ class UserController extends Controller
             ['matrix_lvl', '=', $lvl],
         ])->first();
 
-        dd($matrix);
+        // dd($matrix);
 
         // Переменные если матрицы не существует
         $disabled = ' disabled';
         $matrixInfos = '';
         $matrixUsersCount = '';
 
-        if($matrix != null){
+        if($matrix != null && $matrix->matrix_id != null){
 
             // Если матрица есть, показываем её
 
