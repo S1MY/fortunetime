@@ -82,6 +82,8 @@
 
                         $prevLine = $inLineCollect;
 
+                        dd($prevLine);
+
                     }
 
 
@@ -136,6 +138,7 @@
 
 
                 if( $spmplacerCounter == $lineG[$i-1] ){
+
                     echo 'Линяя ' . $i . ' занята';
                     echo '<br>';
                     $lastLineCounter = array(4, 8, 16, 32, 64, 128, 256);
