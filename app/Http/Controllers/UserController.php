@@ -85,6 +85,10 @@ class UserController extends Controller
         return true;
     }
 
+    public function output(Request $request){
+        return $request;
+    }
+
     public function updateAvatar(Request $request, $id)
     {
 
