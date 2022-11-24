@@ -62,7 +62,7 @@ class AdminController extends Controller
 
         $paieds = $paieds->merge($paiedsPayeer);
 
-        dd($paieds);
+        // dd($paieds);
 
         $title = 'Все пополнения';
 
