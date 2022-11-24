@@ -13,9 +13,9 @@
                     <h3 class="cabMatrixName" style="margin-top: 20px">Пополнений ещё не было...</h3>
                 @else
                     <div class="info">
-                        <h3>Общая сумма</h3>
+                        <h3 class="cabMatrixName" style="margin-top: 20px">Информация</h3>
                         <p style="font-size: 24px;
-                                  font-weight: bold;">{{ $paiedsum }} руб.</p>
+                                  font-weight: bold;">Общая сумма: <span>{{ $paiedsum }} руб.</span></p>
                     </div>
 
                     <div class="tableWrapper">
