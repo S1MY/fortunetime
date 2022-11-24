@@ -190,12 +190,6 @@
                                 $refmplacer = $prevLine[$rpos-1];
                             }
 
-                            //  /|\ тут нужно добавить переливов от вышестоящих
-
-                            dd($refmplacer);
-
-                            exit;
-
                             $ruser_id = $refmplacer->user_id;
 
 
