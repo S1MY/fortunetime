@@ -109,7 +109,7 @@
                             ])->orWhere([
                                 ['referer_id', '=', $prevMatrixId],
                                 ['referer_line', '=', $i-1],
-                            ])->get();
+                            ])->take(2)->get();
 
                             if( $prevMatrixPlacer->count() == 1 ){
                                 $spmplacerCounter = $spmplacerCounter + 1;
