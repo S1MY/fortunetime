@@ -169,7 +169,7 @@ class AdminController extends Controller
                                 ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
                                 ['matrix_placers.line', 1],
                             ])
-                            ->orderBy('user_id', 'DESC')
+                            ->orderBy('matrix_placers.user_id', 'DESC')
                             ->take(2)
                             ->get();
 
@@ -207,7 +207,7 @@ class AdminController extends Controller
                                         ['matrix_placers.matrix_id', $UsMatrixLine->matrix_id],
                                         ['matrix_placers.line', $d],
                                     ])
-                                    ->orderBy('user_id', 'DESC')
+                                    ->orderBy('matrix_placers.user_id', 'DESC')
                                     ->take(2)
                                     ->get();
 
