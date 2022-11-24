@@ -171,6 +171,9 @@
                             echo 'Позиция вышестоящего: ' . $rpos;
                             echo '<br>';
 
+                            echo 'Матрица вышестоящего: ' . $matrix_id;
+                            echo '<br>';
+
                             $refmplacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $matrix_id],
                                 ['line', '=', $i-1],
