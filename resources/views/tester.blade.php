@@ -174,7 +174,7 @@
                             echo 'Матрица вышестоящего: ' . $matrix_id;
                             echo '<br>';
 
-                            dd($inLineCollect[$rpos-1]);
+                            dd($inLineCollect);
 
                             $refmplacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $matrix_id],
