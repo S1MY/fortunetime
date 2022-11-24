@@ -484,17 +484,16 @@ class AdminController extends Controller
         return true;
     }
 
-    public function activation(Request $request){
-
+    public function activeNextLvl($id, $matrix_lvl){
         // Данные для проверки
-        $matrix_lvl = $request->matrix_lvl;
+        $matrix_lvl = $matrix_lvl;
         $referer_id = 0;
         $uplace = 0;
         $refposs = 0;
         $inLineCollect = 0;
         $pInLastLine = 0;
 
-        $user = DB::table('users')->where('id', $request->id )->first();
+        $user = DB::table('users')->where('id', $id )->first();
 
         // Проверяем есть ли у нас матрица
 
@@ -1304,16 +1303,17 @@ class AdminController extends Controller
         return 1;
     }
 
-    public function activeNextLvl($id, $matrix_lvl){
+    public function activation(Request $request){
+
         // Данные для проверки
-        $matrix_lvl = $matrix_lvl;
+        $matrix_lvl = $request->matrix_lvl;
         $referer_id = 0;
         $uplace = 0;
         $refposs = 0;
         $inLineCollect = 0;
         $pInLastLine = 0;
 
-        $user = DB::table('users')->where('id', $id )->first();
+        $user = DB::table('users')->where('id', $request->id )->first();
 
         // Проверяем есть ли у нас матрица
 
