@@ -22,6 +22,7 @@ $(document).ready(function () {
             data: formData,
             dataType: 'json',
             success: function (data) {
+                console.log(data);
                 if( formController == 'ReviewStore' ){
                     window.location.href = '/reviews';
                 }else if(formController == 'SetPincode' || formController == 'presonal'){
@@ -36,11 +37,13 @@ $(document).ready(function () {
                     setTimeout(() => {
                         window.location.href = '/admin/faq';
                     }, 1500);
+                }else if(formController == 'output'){
                 }else{
                     window.location.href = '/account';
                 }
             },
             error: function (data) {
+                console.log(data);
                 $('p.errors').remove();
 
                 if( formController == 'ReviewStore' ){
@@ -69,6 +72,7 @@ $(document).ready(function () {
                         }
 
                     });
+                }else if(formController == 'output'){
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
