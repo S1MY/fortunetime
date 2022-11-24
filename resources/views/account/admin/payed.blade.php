@@ -9,7 +9,7 @@
 
                 @include('account.layout.adminMaster')
 
-                @if ($paiedsum != 0)
+                @if ($paiedsum == 0)
                     <h3 class="cabMatrixName" style="margin-top: 20px">Пополнений ещё не было...</h3>
                 @else
                     <div class="info">
