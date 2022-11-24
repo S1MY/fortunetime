@@ -30,7 +30,6 @@
                                 <tr>
                                     <td class="tacenter">{{ $paied->login }}</td>
                                     <td class="tacenter">{{ $paied->amount }}</td>
-
                                     <td class="tacenter">{{ $paied->type }}</td>
                                     <td class="tacenter">{{ $paied->created_at }}</td>
                                 </tr>
