@@ -618,7 +618,7 @@ class FreekassaController extends Controller
         if( $matrix->matrix_lvl != 1 ){
             session()->flash('success', 'Вы успешно активировали '.$titleMatrix.' уровень матрицы!');
         }else{
-            session()->flash('success', 'Вы успешно активировали первый уровень матрицы! На вашу почту была отправленна система!');
+            session()->flash('success', 'Вы успешно активировали первый уровень матрицы! Теперь можете скачать систему на странице "Быстрый старт"!');
         }
 
 
