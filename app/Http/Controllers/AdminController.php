@@ -44,6 +44,8 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
+        $paieds->put('type', 'freekassa');
+
         $paiedsPayeer = DB::table('payeer')
                     ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(payeer.created_at) as created_at"))
                     ->leftJoin('users', 'payeer.user_id', '=', 'users.id')
@@ -51,7 +53,7 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
-        $paiedsPayeer->put('payeer', 1);
+        $paieds->put('type', 'payeer');
 
         $paieds = $paieds->merge($paiedsPayeer);
 
