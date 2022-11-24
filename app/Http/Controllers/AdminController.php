@@ -62,15 +62,15 @@ class AdminController extends Controller
 
         $paieds = $paieds->merge($paiedsPayeer);
 
-        // dd($paieds);
-
         $title = 'Все пополнения';
 
         $paiedsum = DB::table('freekassas')
                     ->where('status','=',1)
                     ->sum('amount');
+        $paiedsumPayeer = DB::table('payeer')
+                    ->sum('amount');
 
-        return view('account.admin.payed', compact('paieds', 'title', 'paiedsum'));
+        return view('account.admin.payed', compact('paieds', 'title', 'paiedsum', 'paiedsumPayeer'));
     }
 
     public function faq(){
