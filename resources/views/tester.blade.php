@@ -90,6 +90,7 @@
                     echo 'Людей на прошлой линии: '.$pInLastLine;
                     echo '<br>';
 
+                    $inLineCollect = collect();
 
                     for ($o=0; $o < $pInLastLine; $o++) {
                         $prevLineUser = $prevLine[$o];
@@ -116,15 +117,23 @@
                                 echo 'У пользователя '. $prevLineUser->user_id . ' на линии ' . $prevMatrixPlacer->count() . ' человек';
                                 echo '<br>';
 
+                                $inLineCollect = $inLineCollect->merge($prevMatrixPlacer);
+
                             }elseif ( $prevMatrixPlacer->count() >= 2 ) {
                                 $spmplacerCounter = $spmplacerCounter + 2;
 
                                 echo 'У пользователя '. $prevLineUser->user_id . ' на линии более 2-ух человек';
                                 echo '<br>';
+
+                                $inLineCollect = $inLineCollect->merge($prevMatrixPlacer);
                             }
 
                         }
 
+                    }
+
+                    if( $i = 3 ){
+                        dd($inLineCollect);
                     }
 
                 }
