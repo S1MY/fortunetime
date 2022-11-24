@@ -17,7 +17,11 @@
             <td>{{ $user->user_surname }}</td>
             <td class="tacenter cursorPointer">{{ $user->login }}</td>
             <td>{{ $user->email }}</td>
-            <td class="tacenter cursorPointer">{{ $user->sponsor_login }}</td>
+            @if ($user->sponsor_login == null AND $user->activated == 0)
+                <td class="tacenter cursorPointer changeRef"><a href="#" data-id="{{ $user->user_id }}">Поменять реферала</a></td>
+            @else
+                <td class="tacenter cursorPointer">{{ $user->sponsor_login }}</td>
+            @endif
             <td class="tacenter">{{ $user->sponsor_counter }}</td>
             <td class="tacenter">{{ $user->balance }}</td>
             <td class="tacenter">{{ $user->created_at }}</td>
