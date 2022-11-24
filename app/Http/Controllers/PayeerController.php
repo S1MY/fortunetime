@@ -75,7 +75,7 @@ class PayeerController extends Controller
                 }
 
                 if( $matrix_lvl == 0 ){
-                    return $_POST['m_orderid'].'|success';
+                    return $_POST['m_orderid'].'|error';
                 }
 
                 $referer_id = 0;
@@ -865,11 +865,11 @@ class PayeerController extends Controller
 
                 }
 
-                ob_end_clean(); exit($_POST['m_orderid'].'|success');
+                return $_POST['m_orderid'].'|success';
 
             }
 
-            ob_end_clean(); exit($_POST['m_orderid'].'|error');
+            return $_POST['m_orderid'].'|error';
         }
     }
 
