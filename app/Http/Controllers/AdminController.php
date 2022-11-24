@@ -52,8 +52,10 @@ class AdminController extends Controller
                     ->groupBy('users.login', DB::raw("date(payeer.created_at)"))
                     ->orderBy('created_at', 'DESC')
                     ->get();
+        for ($i=0; $i < $paiedsPayeer->count(); $i++) {
+            $paiedsPayeer[$i]->put('type', 'payeer');
+        }
 
-        $paiedsPayeer->put('type', 'payeer');
 
         $paieds = $paieds->merge($paiedsPayeer);
 
