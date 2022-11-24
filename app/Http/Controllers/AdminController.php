@@ -516,8 +516,8 @@ class AdminController extends Controller
         'user_id' => $user->id,
         'matrix_lvl' => $matrix_lvl,
         'matrix_active' => 1,
-        // 'created_at' => Carbon::now(),
-        // 'updated_at' => Carbon::now()
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now()
         ]);
 
         // Обновляем статус активации
@@ -745,8 +745,8 @@ class AdminController extends Controller
                                 'matrix_lvl' => $matrix_lvl,
                                 'matrix_active' => 1,
                                 'matrix_id' => $newMatrixID,
-                                // 'created_at' => Carbon::now(),
-                                // 'updated_at' => Carbon::now()
+                                'created_at' => Carbon::now(),
+                                'updated_at' => Carbon::now()
                             ]);
 
                             $refposs = 1;
@@ -1124,8 +1124,8 @@ class AdminController extends Controller
                         'user_id' => $sp,
                         'matrix_lvl' => $matrix_lvl+1,
                         'matrix_active' => 1,
-                        // 'created_at' => Carbon::now(),
-                        // 'updated_at' => Carbon::now()
+                        'created_at' => Carbon::now(),
+                        'updated_at' => Carbon::now()
                     ]);
                 }
 
@@ -1141,8 +1141,8 @@ class AdminController extends Controller
                         'user_id' => $sp,
                         'matrix_lvl' => $matrix_lvl+0.5,
                         'matrix_active' => 1,
-                        // 'created_at' => Carbon::now(),
-                        // 'updated_at' => Carbon::now()
+                        'created_at' => Carbon::now(),
+                        'updated_at' => Carbon::now()
                     ]);
                 }
             }
@@ -1155,29 +1155,9 @@ class AdminController extends Controller
 
         $shoulderG = array(2, 4, 8, 16, 32, 64, 128);
 
-        // $shoulderG = array(2, 8, 20, 44, 92, 188, 380);
-        // $lineG = array(4, 12, 28, 60, 124, 252, 508);
-        // echo $line;
-        // exit();
-        // $line = 0;
         $newPlace = $uplace;
-        // $maxLine = 7;
 
-        // if ($line == 0) {
-        //     $crew = 0;
-        // }else{
-        //     $crew = $line - 1;
-        // }
-
-        // for ($l=0; $l <= $maxLine ; $l++) {
-        //     if($newPlace <= $lineG[$crew]){
-        //         $line = $l + 1;
-        //         break;
-        //     }
-        //     $crew++;
-        // }
-
-        if ($newPlace > $shoulderG[$line-1/*$crew*/]) {
+        if ($newPlace > $shoulderG[$line-1]) {
             $shoulder = 1;
         }else{
             $shoulder = 0;
@@ -1196,8 +1176,8 @@ class AdminController extends Controller
             'user_id' => $user->id,
             'user_place' => $uplace,
             'referer_place' => $refposs,
-            // 'created_at' => Carbon::now(),
-            // 'updated_at' => Carbon::now()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
 
         }else{
@@ -1216,8 +1196,8 @@ class AdminController extends Controller
             'user_id' => $user->id,
             'user_place' => 1,
             'referer_place' => 1,
-            // 'created_at' => Carbon::now(),
-            // 'updated_at' => Carbon::now()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
 
         // Добавляем спонсору созданную матрицу
@@ -1240,8 +1220,8 @@ class AdminController extends Controller
                 'user_id' => $user->id,
                 'matrix_lvl' => $matrix_lvl,
                 'matrix_active' => 1,
-                // 'created_at' => Carbon::now(),
-                // 'updated_at' => Carbon::now()
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ]);
 
             // Обновляем статус активации
@@ -1255,29 +1235,29 @@ class AdminController extends Controller
         }
 
         }else{
-        // У спонсора нет активной матрицы
-        $myMatrix = DB::table('matrix')->where([
-            ['user_id', '=', $user->id],
-            ['matrix_lvl', '=', $matrix_lvl],
-        ])->first();
+            // У спонсора нет активной матрицы
+            $myMatrix = DB::table('matrix')->where([
+                ['user_id', '=', $user->id],
+                ['matrix_lvl', '=', $matrix_lvl],
+            ])->first();
 
-        if ( !$myMatrix ) {
+            if ( !$myMatrix ) {
 
-        // У нас тоже нет активной матрицы этого уровня
-        // Создаём матрицу и обновляем статус активации
+            // У нас тоже нет активной матрицы этого уровня
+            // Создаём матрицу и обновляем статус активации
 
-        DB::table('matrix')->insert([
-            'user_id' => $user->id,
-            'matrix_lvl' => $matrix_lvl,
-            'matrix_active' => 1,
-            // 'created_at' => Carbon::now(),
-            // 'updated_at' => Carbon::now()
-        ]);
+            DB::table('matrix')->insert([
+                'user_id' => $user->id,
+                'matrix_lvl' => $matrix_lvl,
+                'matrix_active' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]);
 
-        DB::table('user_infos')->where([
-            ['user_id', '=', $user->id],
-        ])->update(['activated' => 1]);
-        }
+            DB::table('user_infos')->where([
+                ['user_id', '=', $user->id],
+            ])->update(['activated' => 1]);
+            }
         }
 
         return 1;
