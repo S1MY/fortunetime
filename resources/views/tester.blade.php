@@ -40,6 +40,10 @@
     // // Берём спонсора и проверяем есть ли у него матрица
     // $sp = $user->sponsor;
 
+    // if( $sp == null ){
+    //     $sp = 18;
+    // }
+
     // $lineG = array(4, 8, 16, 32, 64, 128, 256);
 
     // $spmatrix = DB::table('matrix')->where([
