@@ -53,9 +53,10 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
-        $paiedsPayeer += collect('type', 'payeer' );
+        $paiedsPayeer[0]['type'] = 'payeer';
 
         dd($paiedsPayeer);
+
         for ($i=0; $i < $paiedsPayeer->count(); $i++) {
             $paiedsPayeer[$i]->put('type', 'payeer');
         }
