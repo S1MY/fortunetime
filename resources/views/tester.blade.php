@@ -86,9 +86,6 @@
 
                     }
 
-
-                    // /|\ тут не считаются переливы от вышестоящих
-
                     echo 'Людей на прошлой линии: '.$pInLastLine;
                     echo '<br>';
 
@@ -105,12 +102,16 @@
                         $prevMatrixId = $UsMatrix->matrix_id;
 
                         if( $prevMatrixId != null ){
+                            $minus = 1;
+                            if( $i >= 3 ){
+                                $minus = $i - 1;
+                            }
                             $prevMatrixPlacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $prevMatrixId],
-                                ['line', '=', $i-1],
+                                ['line', '=', $i-$minus],
                             ])->orWhere([
                                 ['referer_id', '=', $prevMatrixId],
-                                ['referer_line', '=', $i-1],
+                                ['referer_line', '=', $i-$minus],
                             ])->take(2)->get();
 
                             if( $prevMatrixPlacer->count() == 1 ){
