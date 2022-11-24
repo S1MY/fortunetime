@@ -208,7 +208,7 @@ class UserController extends Controller
 
                 $UsMatrix = DB::table('matrix')->where([
                                 ['user_id', '=', $usID],
-                                ['matrix_lvl', '=', 1],
+                                ['matrix_lvl', '=', $lvl],
                             ])->first();
 
                 $matrixInfosUs = DB::table('users')
@@ -244,7 +244,7 @@ class UserController extends Controller
 
                         $UsMatrixLine = DB::table('matrix')->where([
                                         ['user_id', '=', $usID2],
-                                        ['matrix_lvl', '=', 1],
+                                        ['matrix_lvl', '=', $lvl],
                                     ])->first();
 
 
