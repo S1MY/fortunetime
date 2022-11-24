@@ -176,7 +176,7 @@
                             echo 'Матрица вышестоящего: ' . $matrix_id;
                             echo '<br>';
 
-                            dd($prevLine);
+
 
                             $refmplacer = DB::table('matrix_placers')->where([
                                 ['matrix_id', '=', $matrix_id],
@@ -187,6 +187,10 @@
                                 ['referer_line', '=', $i-1],
                                 ['referer_place', '=', $rpos],
                             ])->first();
+
+                            if( $i >= 3 ){
+                                $refmplacer = $prevLine[$i-1];
+                            }
 
                             //  /|\ тут нужно добавить переливов от вышестоящих
 
