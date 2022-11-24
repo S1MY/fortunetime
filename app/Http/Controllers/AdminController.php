@@ -53,7 +53,7 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
-        $paiedsPayeer += ['type' => 'payeer'];
+        $paiedsPayeer += collect('type', 'payeer' );
 
         dd($paiedsPayeer);
         for ($i=0; $i < $paiedsPayeer->count(); $i++) {
