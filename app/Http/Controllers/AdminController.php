@@ -47,7 +47,6 @@ class AdminController extends Controller
         $paiedsPayeer = DB::table('payeer')
                     ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(payeer.created_at) as created_at"))
                     ->leftJoin('users', 'payeer.user_id', '=', 'users.id')
-                    ->where('status','=',1)
                     ->groupBy('users.login', DB::raw("date(payeer.created_at)"))
                     ->orderBy('created_at', 'DESC')
                     ->get();
