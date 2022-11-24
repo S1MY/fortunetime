@@ -42,7 +42,19 @@ class AdminController extends Controller
                     ->where('status','=',1)
                     ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
                     ->orderBy('created_at', 'DESC')
-                    ->paginate(15);
+                    ->get();
+
+        $paiedsPayeer = DB::table('payeer')
+                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(payeer.created_at) as created_at"))
+                    ->leftJoin('users', 'payeer.user_id', '=', 'users.id')
+                    ->where('status','=',1)
+                    ->groupBy('users.login', DB::raw("date(payeer.created_at)"))
+                    ->orderBy('created_at', 'DESC')
+                    ->get();
+
+        $paieds = $paieds->merge($paiedsPayeer);
+
+        $paieds = $paieds->paginate(15);
 
         $title = 'Все пополнения';
 
