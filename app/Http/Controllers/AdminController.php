@@ -53,7 +53,7 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
-        $paieds->put('type', 'payeer');
+        $paiedsPayeer->put('type', 'payeer');
 
         $paieds = $paieds->merge($paiedsPayeer);
 
