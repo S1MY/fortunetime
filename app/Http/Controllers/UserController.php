@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UsersRequest;
 use App\Models\User;
 use App\Models\UserInfo;
+use Carbon\Carbon;
 use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -94,15 +95,27 @@ class UserController extends Controller
             ['user_id', '=', Auth::user()->id],
         ])->first();
 
-
-
         if ( !Hash::check($pincode, $codeVerify->account_password)) {
             session()->flash('warning', 'Не правильно введён пинкод!');
         }else{
-            session()->flash('warning', 'Правильно введён пинкод!');
+            if( $request['amount'] > $codeVerify->balance ){
+                session()->flash('warning', 'Данная сумма больше вашего баланса!');
+            }else{
+                DB::table('outputs')->insert([
+                    'user_id' =>  Auth::user()->id,
+                    'status' => $request['amount'],
+                    'amount' => $request['req'],
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now()
+                ]);
+
+                DB::table('user_infos')->where([
+                    ['user_id', '=', Auth::user()->id],
+                ])->decrement('balance', $request['amount']);
+            }
         }
 
-        return $request;
+        return 1;
     }
 
     public function updateAvatar(Request $request, $id)
