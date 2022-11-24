@@ -1,9 +1,9 @@
 @php
 
-    for ($i=0; $i < 5; $i++) {
-        echo Hash::make(1234);
-        echo '<br>';
-    }
+    // for ($i=0; $i < 5; $i++) {
+    //     echo md5(1234);
+    //     echo '<br>';
+    // }
 
     // // Данные для проверки
     // $matrix_lvl = 1;

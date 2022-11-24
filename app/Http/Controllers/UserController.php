@@ -112,6 +112,7 @@ class UserController extends Controller
                 DB::table('user_infos')->where([
                     ['user_id', '=', Auth::user()->id],
                 ])->decrement('balance', $request['amount']);
+
                 session()->flash('success', 'Заявка на вывод успешно поступила!');
             }
         }

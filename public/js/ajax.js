@@ -38,6 +38,7 @@ $(document).ready(function () {
                         window.location.href = '/admin/faq';
                     }, 1500);
                 }else if(formController == 'output'){
+                    location.reload();
                 }else{
                     window.location.href = '/account';
                 }
@@ -73,6 +74,7 @@ $(document).ready(function () {
 
                     });
                 }else if(formController == 'output'){
+                    location.reload();
                 }else{
                     $('form#'+formController+' input.error').removeClass('error');
                     $.each(data.responseJSON.errors, function(key, value) {
