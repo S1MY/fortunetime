@@ -187,7 +187,7 @@
                             ])->first();
 
                             if( $i >= 3 ){
-                                $refmplacer = $prevLine[$i-1];
+                                $refmplacer = $prevLine[$rpos-1];
                             }
 
                             //  /|\ тут нужно добавить переливов от вышестоящих
