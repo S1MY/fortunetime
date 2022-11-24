@@ -51,6 +51,8 @@ class AdminController extends Controller
                     ->orderBy('created_at', 'DESC')
                     ->get();
 
+        $paiedsPayeer->put('payeer', 1);
+
         $paieds = $paieds->merge($paiedsPayeer);
 
         $title = 'Все пополнения';
