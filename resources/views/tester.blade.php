@@ -80,7 +80,7 @@
                     }else{
                         // Тут нужна сборная солянка с переливами
 
-
+                        $prevLine = $inLineCollect;
 
                     }
 
@@ -130,10 +130,6 @@
 
                         }
 
-                    }
-
-                    if( $i = 3 ){
-                        dd($inLineCollect);
                     }
 
                 }
