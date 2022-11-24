@@ -145,6 +145,8 @@ class UserController extends Controller
             ['matrix_lvl', '=', $lvl],
         ])->first();
 
+echo $lvl;
+
         // Переменные если матрицы не существует
         $disabled = ' disabled';
         $matrixInfos = '';
