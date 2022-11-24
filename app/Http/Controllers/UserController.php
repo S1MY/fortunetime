@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UsersRequest;
 use App\Models\User;
 use App\Models\UserInfo;
+use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -86,6 +87,18 @@ class UserController extends Controller
     }
 
     public function output(Request $request){
+
+        $pincode = Hash::make($request['amount_pincode']);
+
+        $codeVerify = DB::table('user_infos')->where([
+            ['user_id', '=', Auth::user()->id],
+            ['account_password', '=', $pincode],
+        ])->first();
+
+        if( !$codeVerify ){
+            session()->flash('warning', 'Не правильно введён пинкод!');
+        }
+
         return $request;
     }
 
