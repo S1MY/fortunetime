@@ -75,7 +75,7 @@ class PayeerController extends Controller
                 }
 
                 if( $matrix_lvl == 0 ){
-                    return 1;
+                    return $_POST['m_orderid'].'|success';
                 }
 
                 $referer_id = 0;
