@@ -53,10 +53,10 @@
                             <p style="margin-bottom: 25px;">Заявка на вывод</p>
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="output" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
                                 @csrf
-                                <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
                                 <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
+                                <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
                                 <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
-                                <button class="passBtn" style="width: 100%;">Оставить заявку</button>
+                                <button class="passBtn">Оставить заявку</button>
                             </form>
                         </div>
                         <div class="cabinetItem">
