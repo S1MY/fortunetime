@@ -52,6 +52,8 @@ class PayeerController extends Controller
 
                 $amount = $request->m_amount;
 
+                $matrix_lvl = 0;
+
                 if( $amount == 1000 ){
                     $matrix_lvl = 1;
                 }else if( $amount == 5000 ){
@@ -70,6 +72,10 @@ class PayeerController extends Controller
                     $matrix_lvl = 8;
                 }else if( $amount == 1000000 ){
                     $matrix_lvl = 9;
+                }
+
+                if( $matrix_lvl == 0 ){
+                    return 1;
                 }
 
                 $referer_id = 0;
