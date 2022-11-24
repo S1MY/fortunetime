@@ -67,6 +67,7 @@ class AdminController extends Controller
         $paiedsum = DB::table('freekassas')
                     ->where('status','=',1)
                     ->sum('amount');
+
         $paiedsumPayeer = DB::table('payeer')
                     ->sum('amount');
 
