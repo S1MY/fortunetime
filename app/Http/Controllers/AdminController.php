@@ -57,6 +57,8 @@ class AdminController extends Controller
 
         $paieds = $paieds->merge($paiedsPayeer);
 
+        dd($paieds);
+
         $title = 'Все пополнения';
 
         $paiedsum = DB::table('freekassas')
