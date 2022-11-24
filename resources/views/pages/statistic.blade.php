@@ -39,7 +39,7 @@
                         <div class="inputFlex displayFlex alignItemsCenter spaceBetween">
                             @csrf
                             <input type="text" class="formInput" placeholder="Ваше Имя" name="name">
-                            <input type="text" style="position: absolute; opacity: 0;" name="surname" placeholder="Ваша Фамилия">
+                            <input type="text" style="position: absolute; opacity: 0; left: 0;" name="surname" placeholder="Ваша Фамилия">
                             <input type="email" class="formInput" placeholder="Ваш E-Mail" name="email">
                         </div>
                         <textarea class="contactArea" placeholder="Ваш вопрос" name="question"></textarea>
