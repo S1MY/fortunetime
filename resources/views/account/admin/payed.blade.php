@@ -35,7 +35,7 @@
 
                         </table>
 
-                        {{ $paieds->links('vendor.pagination.default') }}
+                        {{-- {{ $paieds->links('vendor.pagination.default') }} --}}
                     </div>
                 @endif
 
