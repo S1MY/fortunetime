@@ -51,7 +51,7 @@
                     @else
                         <div class="cabinetItem">
                             <p style="margin-bottom: 25px;">Заявка на вывод</p>
-                            <form class="passChange displayFlex spaceBetween AJAXForm" id="output" method="POST" action="{{ route('update.user', Auth::user()->id) }}">
+                            <form class="passChange displayFlex spaceBetween AJAXForm" id="output" method="POST" action="{{ route('output') }}">
                                 @csrf
                                 <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
                                 <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
