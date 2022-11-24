@@ -134,7 +134,7 @@ $(document).ready(function () {
 
     });
 
-    $('.changeRef a').click(function (e) {
+    $('body').on('click', '.changeRef a', function(e){
         e.preventDefault();
 
         $('.popupResponse.changeRef').fadeIn(500);
