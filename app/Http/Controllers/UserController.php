@@ -97,6 +97,8 @@ class UserController extends Controller
 
         if( !$codeVerify ){
             session()->flash('warning', 'Не правильно введён пинкод!');
+        }else{
+            session()->flash('warning', 'Правильно введён пинкод!');
         }
 
         return $request;
