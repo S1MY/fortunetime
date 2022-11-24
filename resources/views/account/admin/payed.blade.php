@@ -14,8 +14,7 @@
                 @else
                     <div class="info">
                         <h3 class="cabMatrixName" style="margin-top: 20px">Информация</h3>
-                        <p style="font-size: 24px;
-                                  font-weight: bold;">Общая сумма: <span>{{ $paiedsum }} руб.</span></p>
+                        <p>Общая сумма: <span style="font-size: 24px; font-weight: bold;">{{ $paiedsum }} руб.</span></p>
                     </div>
 
                     <div class="tableWrapper">
