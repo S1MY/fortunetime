@@ -88,14 +88,15 @@ class UserController extends Controller
 
     public function output(Request $request){
 
-        $pincode = Hash::make($request['amount_pincode']);
+        $pincode = $request['amount_pincode'];
 
         $codeVerify = DB::table('user_infos')->where([
             ['user_id', '=', Auth::user()->id],
-            ['account_password', '=', $pincode],
         ])->first();
 
-        if( !$codeVerify ){
+
+
+        if ( !Hash::check($pincode, $codeVerify->account_password)) {
             session()->flash('warning', 'Не правильно введён пинкод!');
         }else{
             session()->flash('warning', 'Правильно введён пинкод!');
