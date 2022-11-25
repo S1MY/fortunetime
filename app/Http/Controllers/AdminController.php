@@ -183,7 +183,7 @@ class AdminController extends Controller
                                 ['matrix_lvl', '=', 1],
                             ])->first();
 
-                if( $UsMatrix->matrix_id ){
+                if( $UsMatrix->matrix_id == null ){
                     $matrixInfosUs = DB::table('users')
                                 ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                                 ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
