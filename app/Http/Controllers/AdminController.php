@@ -183,27 +183,25 @@ class AdminController extends Controller
                                 ['matrix_lvl', '=', 1],
                             ])->first();
 
-                if( $UsMatrix->matrix_id != null ){
-                    $matrixInfosUs = DB::table('users')
-                                ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
-                                ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
-                                ->where([
-                                    ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
-                                    ['matrix_placers.line', 1],
-                                ])
-                                ->orderBy('matrix_placers.id', 'ASC')
-                                ->take(2)
-                                ->get();
+                $matrixInfosUs = DB::table('users')
+                            ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
+                            ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
+                            ->where([
+                                ['matrix_placers.matrix_id', $UsMatrix->matrix_id],
+                                ['matrix_placers.line', 1],
+                            ])
+                            ->orderBy('matrix_placers.id', 'ASC')
+                            ->take(2)
+                            ->get();
 
-                    $matrixInfosUs->map(function($info) use ($usSholder){
-                        $info->line = $info->line + 1;
-                        $info->shoulder = $usSholder;
+                $matrixInfosUs->map(function($info) use ($usSholder){
+                    $info->line = $info->line + 1;
+                    $info->shoulder = $usSholder;
 
-                        return $info;
-                    });
+                    return $info;
+                });
 
-                    $countLineMatrixMebmer = $matrixInfosUs->count();
-                }
+                $countLineMatrixMebmer = $matrixInfosUs->count();
 
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
 
