@@ -165,7 +165,7 @@ class AdminController extends Controller
             // Склеиваем две коллекции
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
-            dd($matrixInfos);
+            // dd($matrixInfos);
 
             // Считаем кол-во людей в матрице на первом линии
             $countMatrixMember = $matrixInfos->count();
@@ -175,7 +175,7 @@ class AdminController extends Controller
             for ($i=0; $i < $countMatrixMember; $i++) {
                 // Берём айдишник и плечо в котором находится $i человек в нашей линии
 
-                $usID = $matrixInfos[$i]->id;
+                $usID = $matrixInfos[$i]->user_id;
                 $usSholder = $matrixInfos[$i]->shoulder;
 
                 $UsMatrix = DB::table('matrix')->where([
@@ -183,9 +183,9 @@ class AdminController extends Controller
                                 ['matrix_lvl', '=', 1],
                             ])->first();
 
-                if( $usID == 44 ){
-                    dd($UsMatrix);
-                }
+                // if( $usID == 44 ){
+                //     dd($UsMatrix);
+                // }
 
                 $matrixInfosUs = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
