@@ -183,6 +183,8 @@ class AdminController extends Controller
                                 ['matrix_lvl', '=', 1],
                             ])->first();
 
+                dd($UsMatrix);
+
                 $matrixInfosUs = DB::table('users')
                             ->leftJoin('matrix_placers', 'users.id', '=', 'matrix_placers.user_id')
                             ->leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')
