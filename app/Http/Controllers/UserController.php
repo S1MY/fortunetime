@@ -205,7 +205,7 @@ class UserController extends Controller
             for ($i=0; $i < $countMatrixMember; $i++) {
                 // Берём айдишник и плечо в котором находится $i человек в нашей линии
 
-                $usID = $matrixInfos[$i]->id;
+                $usID = $matrixInfos[$i]->user_id;
                 $usSholder = $matrixInfos[$i]->shoulder;
 
                 $UsMatrix = DB::table('matrix')->where([
@@ -232,13 +232,11 @@ class UserController extends Controller
 
                 $countLineMatrixMebmer = $matrixInfosUs->count();
 
-
-
                 for ($m=0; $m < $countLineMatrixMebmer; $m++) {
 
                     for ($d=1; $d < 8; $d++) {
 
-                        $usID2 = $matrixInfosUs[$m]->id;
+                        $usID2 = $matrixInfosUs[$m]->user_id;
 
                         $usSholder = $matrixInfosUs[$m]->shoulder;
 
