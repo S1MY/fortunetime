@@ -211,7 +211,7 @@ class AdminController extends Controller
 
                     for ($d=1; $d < 8; $d++) {
 
-                        $usID2 = $matrixInfosUs[$m]->user_id;
+                        $usID2 = $matrixInfosUs[$m]->id;
 
                         $usSholder = $matrixInfosUs[$m]->shoulder;
 
