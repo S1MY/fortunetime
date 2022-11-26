@@ -165,7 +165,7 @@ class AdminController extends Controller
             // Склеиваем две коллекции
 
             $matrixInfos = $matrixInfos->merge($matrixInfosReferers);
-            // dd($matrixInfos);
+            dd($matrixInfos);
 
             // Считаем кол-во людей в матрице на первом линии
             $countMatrixMember = $matrixInfos->count();
@@ -177,7 +177,7 @@ class AdminController extends Controller
 
                 $usID = $matrixInfos[$i]->user_id;
 
-                echo $usID;
+                // echo $usID;
 
                 $usSholder = $matrixInfos[$i]->shoulder;
 
