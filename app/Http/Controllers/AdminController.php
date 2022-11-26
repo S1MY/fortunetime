@@ -115,6 +115,7 @@ class AdminController extends Controller
         $matrix = DB::table('matrix')->where([
             ['user_id', '=', $user->id],
             ['matrix_lvl', '=', 1],
+            ['matrix_id', '!=', NULL]
         ])->first();
 
         // Переменные если матрицы не существует
