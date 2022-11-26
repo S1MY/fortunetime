@@ -176,6 +176,9 @@ class AdminController extends Controller
                 // Берём айдишник и плечо в котором находится $i человек в нашей линии
 
                 $usID = $matrixInfos[$i]->user_id;
+
+                echo $usID;
+
                 $usSholder = $matrixInfos[$i]->shoulder;
 
                 $UsMatrix = DB::table('matrix')->where([
