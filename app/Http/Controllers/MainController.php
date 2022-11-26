@@ -86,7 +86,6 @@ class MainController extends Controller
         $matrix = DB::table('matrix')->where([
                     ['user_id', '=', Auth::user()->id],
                     ['matrix_lvl', '=', 1],
-                    ['matrix_id', '!=', NULL]
                 ])->first();
 
         // Переменные если матрицы не существует
@@ -94,7 +93,7 @@ class MainController extends Controller
         $matrixInfos = '';
         $matrixUsersCount = '';
 
-        if($matrix != null){
+        if($matrix != null && $matrix->matrix_id != null){
 
             // Если матрица есть, показываем её
 
