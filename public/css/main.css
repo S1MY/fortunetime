@@ -2180,6 +2180,9 @@ img.matrixImage{
     .adminTable tr td:nth-last-child(1){
         display: none;
     }
+    .outSettings{
+        display: none;
+    }
     .cabinetFlex {
         flex-wrap: wrap;
     }
