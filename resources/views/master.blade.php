@@ -394,6 +394,9 @@
                 @auth
                     <div class="menuWrapper">
                         <p class="menuName">Мой кабинет</p>
+                        @if (Auth::user()->is_admin == 1)
+                            <a href="{{ route('adminPage') }}" class="subMenuItem admin" style="color: #ff5722;">Админка</a>
+                        @endif
                         <a href="{{ route('account') }}" class="menuItem">Личный кабинет</a>
                         <a href="{{ route('start') }}" class="menuItem">Быстрый старт</a>
                         <a href="{{ route('automation') }}" class="menuItem">Автоматизация</a>
