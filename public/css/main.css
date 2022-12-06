@@ -2820,6 +2820,9 @@ img.matrixImage{
     .statTable{
         margin-top: 30px;
     }
+    .adminFaq .answerHeader span{
+        width: calc(100% - 90px);
+    }
 }
 @media (max-width: 480px) {
     .adminTable th{
