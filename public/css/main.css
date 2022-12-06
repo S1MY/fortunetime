@@ -2586,7 +2586,21 @@ img.matrixImage{
         line-height: 100%;
     }
 }
+@media (max-width: 700px) {
+    .adminTable tr th:nth-child(4){
+        display: none;
+    }
+    .adminTable tr td:nth-child(4){
+        display: none;
+    }
+}
 @media (max-width: 680px) {
+    .adminTable tr th:nth-child(4){
+        display: none;
+    }
+    .adminTable tr td:nth-child(4){
+        display: none;
+    }
     .passChange .formInput{
         width: 100%;
         margin-bottom: 20px !important;
