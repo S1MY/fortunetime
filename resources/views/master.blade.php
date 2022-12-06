@@ -401,7 +401,7 @@
                             <a href="{{ route('adminfaq') }}" class="menuItem{{ Route::currentRouteName() == 'adminfaq' ? ' active' : '' }}">Добавить FAQ</a>
                             <a href="{{ route('adminreviews') }}" class="menuItem{{ Route::currentRouteName() == 'adminreviews' ? ' active' : '' }}">Менеджер отзывов</a>
                             <a href="{{ route('adminnews') }}" class="menuItem{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a>
-                            <a href="{{ route('logout') }}" class="menuItem">Выйти</a>
+                            {{-- <a href="{{ route('logout') }}" class="menuItem">Выйти</a> --}}
                         </div>
                     @endif
                     <div class="menuWrapper">
