@@ -26,7 +26,7 @@
 
                 <div class="tableWrapper">
                     <h3 class="cabMatrixName" style="margin-top: 20px">{{ $title }}</h3>
-                    <table class="adminTable">
+                    <table class="adminTable mainTable">
                         <tr>
                             <th>Имя</th>
                             <th>Фамилия</th>
