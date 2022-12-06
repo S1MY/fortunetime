@@ -2471,6 +2471,13 @@ img.matrixImage{
     }
 }
 @media (max-width: 800px) {
+    .adminTable th{
+        font-size: 14px;
+        max-width: 100px;
+    }
+    .adminTable td{
+        font-size: 12px;
+    }
     .avatarCab{
         margin-right: 0;
         margin-bottom: 10px;
