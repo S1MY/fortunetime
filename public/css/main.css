@@ -2170,10 +2170,14 @@ img.matrixImage{
     }
 }
 @media (max-width: 1240px) {
-    .adminTable tr th:nth-child(1){
+    .adminTable tr th:nth-child(1),
+    .adminTable tr th:nth-child(2),
+    .adminTable tr th:nth-last-child(1){
         display: none;
     }
-    .adminTable tr td:nth-child(1){
+    .adminTable tr td:nth-child(1),
+    .adminTable tr td:nth-child(2),
+    .adminTable tr td:nth-last-child(1){
         display: none;
     }
     .cabinetFlex {
