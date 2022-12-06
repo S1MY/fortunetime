@@ -392,11 +392,20 @@
                     </a>
                 </div>
                 @auth
+                    @if (Auth::user()->is_admin == 1)
+                        <div class="menuWrapper">
+                            <p class="menuName">Админ панель</p>
+                            <a href="{{ route('adminPage') }}" class="menuItem admin" style="color: #ff5722;">Админка</a>
+                            <a href="{{ route('adminPage') }}" class="menuItem{{ Route::currentRouteName() == 'adminPage' ? ' active' : '' }}">Все пользователи</a>
+                            <a href="{{ route('paied') }}" class="menuItem{{ Route::currentRouteName() == 'paied' ? ' active' : '' }}">Все пополнения</a>
+                            <a href="{{ route('adminfaq') }}" class="menuItem{{ Route::currentRouteName() == 'adminfaq' ? ' active' : '' }}">Добавить FAQ</a>
+                            <a href="{{ route('adminreviews') }}" class="menuItem{{ Route::currentRouteName() == 'adminreviews' ? ' active' : '' }}">Менеджер отзывов</a>
+                            <a href="{{ route('adminnews') }}" class="menuItem{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a>
+                            <a href="{{ route('logout') }}" class="menuItem">Выйти</a>
+                        </div>
+                    @endif
                     <div class="menuWrapper">
                         <p class="menuName">Мой кабинет</p>
-                        @if (Auth::user()->is_admin == 1)
-                            <a href="{{ route('adminPage') }}" class="menuItem admin" style="color: #ff5722;">Админка</a>
-                        @endif
                         <a href="{{ route('account') }}" class="menuItem">Личный кабинет</a>
                         <a href="{{ route('start') }}" class="menuItem">Быстрый старт</a>
                         <a href="{{ route('automation') }}" class="menuItem">Автоматизация</a>
