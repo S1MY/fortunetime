@@ -33,7 +33,10 @@ class MailSendController extends Controller
         $user = User::where('email', '=', $request->email)->count();
 
         if( $user > 0 ){
-
+            return response()->json([
+                'error' => 0,
+                'message' => 'Пользователь существует.'
+            ]);
         }else{
             return response()->json([
                 'error' => 1,
