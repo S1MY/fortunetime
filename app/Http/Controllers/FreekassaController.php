@@ -23,6 +23,8 @@ class FreekassaController extends Controller
 
         // Меняем статус оплаты
 
+        return 1;
+
         Freekassa::where('id', $request->MERCHANT_ORDER_ID)->update([
             'remoteADDR' => $_SERVER['REMOTE_ADDR'],
             'status' => 1,
@@ -850,9 +852,9 @@ class FreekassaController extends Controller
     public function pay(Request $request){
         $userID = Auth::user()->id;
 
-        $merchant_id = '20918';
+        $merchant_id = '26763';
         $order_amount = $request['oa'];
-        $secret_word = 'ONC^acH*>LRz>%Z';
+        $secret_word = '7YypX4W6MsiJ6OG';
         $currency = 'RUB';
 
         $order = Freekassa::create([
