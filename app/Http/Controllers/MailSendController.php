@@ -29,6 +29,7 @@ class MailSendController extends Controller
     }
 
     public function changePassword(Request $request){
+        dd($request);
         return $request;
     }
 
