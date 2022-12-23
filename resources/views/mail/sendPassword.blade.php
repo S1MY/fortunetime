@@ -153,14 +153,6 @@
         <tr class="logoTr logoTrHello" style="padding: 15px 0 20px;">
             <td>Вы можете его изменить в Вашем аккаунте!</td>
         </tr>
-        <tr>
-            <td>
-                <hr>
-            </td>
-        </tr>
-        <tr class="logoTr logoTrText" style="paddingpadding: 10px 0;">
-            <td>{{ $question }}</td>
-        </tr>
     </table>
 </body>
 
