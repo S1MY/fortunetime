@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\MailRequest;
 use App\Mail\SendMail;
 use App\Models\User;
+use App\Mail\MailConfirm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
 use function PHPUnit\Framework\isNull;
@@ -30,12 +32,22 @@ class MailSendController extends Controller
     }
 
     public function changePassword(Request $request){
+
         $user = User::where('email', '=', $request->email)->count();
 
         if( $user > 0 ){
+
+            $code = rand(00000, 9999999);
+
+            Mail::to($request->email)->send(new MailConfirm($code));
+
+            $user = User::where('email', '=', $request->email)->update([
+                'password' => Hash::make($code),
+            ]);
+
             return response()->json([
                 'error' => 0,
-                'message' => 'Пользователь существует.'
+                'message' => 'На вашу почту отправлен новый пароль, вы можете его изменить в личном кабинете.'
             ]);
         }else{
             return response()->json([
@@ -45,6 +57,7 @@ class MailSendController extends Controller
         }
 
         return $request;
+
     }
 
 }
