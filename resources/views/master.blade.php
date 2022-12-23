@@ -298,7 +298,7 @@
                     </div>
                 </div>
             </form>
-            <form class="popupElement" data-popup="repair">
+            <form class="popupElement AJAXFormRepairPassword" id="changePwd" method="POST" action="{{ route('changerpwd') }}" data-popup="repair">
                 <svg class="popupClose" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.6668 3.33325L3.3335 16.6666M16.6668 16.6666L3.3335 3.33325L16.6668 16.6666Z" stroke="#202020" stroke-width="1.66667" stroke-linecap="round"></path>
                 </svg>

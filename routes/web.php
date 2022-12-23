@@ -44,6 +44,7 @@ Route::get('/personal', 'App\Http\Controllers\MainController@personal')->name('p
 /* Mail Contacts */
 
 Route::post('/send-mail', 'App\Http\Controllers\MailSendController@sendMailContact')->name('send');
+Route::post('/change-password', 'App\Http\Controllers\MailSendController@changePassword')->name('changerpwd');
 
 /* Account  */
 
@@ -70,6 +71,7 @@ Route::post('/settings/update-user/avatar/{id}', 'App\Http\Controllers\UserContr
 Route::post('/user/{id}/{lvl}', 'App\Http\Controllers\UserController@getMatrix')->name('getmatrix')->middleware('auth');
 Route::post('/user/output', 'App\Http\Controllers\UserController@output')->name('output')->middleware('auth');
 
+
 /* Admin */
 
 Route::get('/admin', 'App\Http\Controllers\AdminController@admin')->name('adminPage')->middleware('auth', 'is_admin');
@@ -90,7 +92,6 @@ Route::post('/admin/users/change', 'App\Http\Controllers\AdminController@changeU
 Route::get('/account/matrix/{login}', 'App\Http\Controllers\AdminController@showMartix')->name('showMatrix')->middleware('auth', 'is_admin');
 
 Route::post('/account/matrix/activation/', 'App\Http\Controllers\AdminController@activation')->name('activation')->middleware('auth', 'is_admin');
-
 
 /* Freekassa */
 Route::post('/freekassa', 'App\Http\Controllers\FreekassaController@freekassa')->name('freekassa');

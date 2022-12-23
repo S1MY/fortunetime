@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\MailRequest;
 use App\Mail\SendMail;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Mail;
 
 use function PHPUnit\Framework\isNull;
@@ -25,6 +26,10 @@ class MailSendController extends Controller
 
         return true;
 
+    }
+
+    public function changePassword(Request $request){
+        return $request;
     }
 
 }
