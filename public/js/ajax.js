@@ -248,7 +248,6 @@ $(document).ready(function () {
     $('#avatarUpload').submit(function (e) {
         e.preventDefault();
         let ajaxurl = $(this).attr('action');
-        let formData = $(this).serialize();
 
         $.ajaxSetup({
             headers: {
@@ -257,6 +256,8 @@ $(document).ready(function () {
         });
         var $input = $(".avatarInput");
         var fd = new FormData;
+
+        console.log(fd);
 
         fd.append('img', $input.prop('files')[0]);
 
@@ -268,7 +269,7 @@ $(document).ready(function () {
             type: 'POST',
             success: function (data) {
                 console.log(data);
-                location.reload();
+                // location.reload();
             },
             error: function (data) {
                 console.log(data);
