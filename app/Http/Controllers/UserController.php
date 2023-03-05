@@ -103,8 +103,9 @@ class UserController extends Controller
             }else{
                 DB::table('outputs')->insert([
                     'user_id' =>  Auth::user()->id,
-                    'status' => $request['amount'],
-                    'amount' => $request['req'],
+                    'status' => 0,
+                    'amount' => $request['amount'],
+                    'req' => $request['req'],
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now()
                 ]);
