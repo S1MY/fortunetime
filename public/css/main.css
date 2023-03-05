@@ -1844,6 +1844,7 @@ img.matrixImage{
 }
 .alterCabinetButton{
     display: inline-flex;
+    width: 100%;
     justify-content: space-between;
 }
 .alterCabinetButton .cabinetBigItem{
