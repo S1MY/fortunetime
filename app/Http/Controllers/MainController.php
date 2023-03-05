@@ -267,7 +267,9 @@ class MainController extends Controller
         ->orderBy('matrix_lvl', 'DESC')
         ->first();
 
-        return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount'));
+        $sponsor = User::where('id', '=', Auth::user()->sponsor)->first();
+
+        return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount', 'sponsor'));
     }
 
     public function start(){
