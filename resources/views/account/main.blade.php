@@ -534,7 +534,7 @@
                         @php
                             $class = ' ';
                             if( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 ){
-                                $class = ' class="alterCabinetButton"';
+                                $class = ' class=alterCabinetButton';
                             }
                         @endphp
                         <div {{ $class }}>
