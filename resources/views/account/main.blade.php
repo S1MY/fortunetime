@@ -531,7 +531,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="alterCabinetButton">
+                        @php
+                            $class = ' ';
+                            if( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 ){
+                                $class = ' class="alterCabinetButton"';
+                            }
+                        @endphp
+                        <div {{ $class }}>
                             @if ( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 )
                                 <a href="#" class="cabinetBigItem">Заявка на вывод</a>
                             @endif
