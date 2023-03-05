@@ -267,7 +267,7 @@ class MainController extends Controller
         ->orderBy('matrix_lvl', 'DESC')
         ->first();
 
-        $sponsor = User::leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')->where('id', '=', Auth::user()->sponsor)->first();
+        $sponsor = User::leftJoin('user_infos', 'users.id', '=', 'user_infos.user_id')->where('users.id', '=', Auth::user()->sponsor)->first();
 
         return view('account.main', compact('matrix', 'disabled', 'matrixInfos', 'matrixUsersCount', 'sponsor'));
     }
