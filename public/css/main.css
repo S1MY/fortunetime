@@ -1842,6 +1842,13 @@ img.matrixImage{
     display: block;
     transition: all 0.4s;
 }
+.alterCabinetButton{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.alterCabinetButton .cabinetBigItem{
+    width: calc(50% - 10px);
+}
 .cabinetBigItem:hover{
     background: transparent;
     color: #4168D2;

@@ -531,14 +531,16 @@
                                 </div>
                             </div>
                         </div>
-                        @if ( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 )
-                            <a href="#" class="cabinetBigItem">Заявка на вывод</a>
-                        @endif
-                        @if ( $matrix != null )
-                            <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
-                        @else
-                            <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
-                        @endif
+                        <div class="alterCabinetButton">
+                            @if ( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 )
+                                <a href="#" class="cabinetBigItem">Заявка на вывод</a>
+                            @endif
+                            @if ( $matrix != null )
+                                <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
+                            @else
+                                <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 <div class="matrixTabs cabinetTabs">
