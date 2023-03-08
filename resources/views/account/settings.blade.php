@@ -49,7 +49,7 @@
                             </form>
                         </div>
                     @else
-                        <div class="cabinetItem">
+                        {{-- <div class="cabinetItem">
                             <p style="margin-bottom: 25px;">Заявка на вывод</p>
                             <form class="passChange displayFlex spaceBetween AJAXForm" id="output" method="POST" action="{{ route('output') }}">
                                 @csrf
@@ -58,7 +58,7 @@
                                 <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
                                 <button class="passBtn">Оставить заявку</button>
                             </form>
-                        </div>
+                        </div> --}}
                         <div class="cabinetItem">
                             @php
                                 $readonly = '';
