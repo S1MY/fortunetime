@@ -540,7 +540,7 @@
                         @endphp
                         <div {{ $class }}>
                             @if ( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 )
-                                <a href="#" class="cabinetBigItem">Заявка на вывод</a>
+                                <a href="#" class="cabinetBigItem popupBtn" data-popup="output">Заявка на вывод</a>
                             @endif
                             @if ( $matrix != null )
                                 <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
