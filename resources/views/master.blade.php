@@ -320,6 +320,13 @@
                     <h2 class="popupName">Вывод</h2>
                     <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
                     <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
+                    <select name="reqname" class="formInput" placeholder="Выберите кошелёк">
+                        <option value="payeer">Payeer</option>
+                        <option value="visa">Visa</option>
+                        <option value="master">MasterCard</option>
+                        <option value="qiwi">Qiwi</option>
+                        <option value="yandex">Яндекс деньги</option>
+                    </select>
                     <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
                     <button class="passBtn" style="width: 100%;
                     margin-top: 20px;">Оставить заявку</button>
