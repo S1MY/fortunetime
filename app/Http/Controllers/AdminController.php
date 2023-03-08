@@ -334,8 +334,14 @@ class AdminController extends Controller
 
     public function adminPayedGo(Request $request){
 
+        $status = 1;
+
+        if( DB::table('outputs')->where('id', $request->id)->first()->status == 1 ){
+            $status = 0;
+        }
+
         DB::table('outputs')->where('id', $request->id)->update([
-            'status' => 1,
+            'status' => $status,
         ]);
 
         return true;

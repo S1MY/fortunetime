@@ -42,7 +42,7 @@
                                         if( $paied->status == 0 ){
                                             $text = 'Выплатить';
                                         }else{
-                                            $text = 'Да';
+                                            $text = 'Отмена';
                                         }
                                     @endphp
                                     <td class="tacenter"><a href="#" id="adminPayed" data-id="{{ $paied->id }}" data-action="{{ route('adminPayedGo') }}">{{ $text }}</a></td>
