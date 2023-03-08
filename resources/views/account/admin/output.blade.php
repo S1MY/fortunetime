@@ -28,7 +28,7 @@
                                 <th>Сумма</th>
                                 <th>Статус</th>
                                 <th>Дата</th>
-                                <th>Выплачено?</th>
+                                <th>Действие</th>
                             </tr>
                             @foreach ($outputs as $paied)
                                 <tr>
