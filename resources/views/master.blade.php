@@ -319,7 +319,7 @@
                 <div class="formContent">
                     <h2 class="popupName">Вывод</h2>
                     <select name="reqname" class="formInput">
-                        <option value="0">Выберите способ вывода</option>
+                        <option value="0" selected disabled hidden>Выберите счёт</option>
                         <option value="payeer">Payeer</option>
                         <option value="visa">Visa</option>
                         <option value="master">MasterCard</option>
