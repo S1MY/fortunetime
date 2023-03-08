@@ -332,6 +332,15 @@ class AdminController extends Controller
 
     // Управление
 
+    public function adminPayedGo(Request $request){
+
+        DB::table('outputs')->where('id', $request->id)->update([
+            'status' => 1,
+        ]);
+
+        return true;
+    }
+
     public function changeUserReferal(Request $request){
 
         // return $request;

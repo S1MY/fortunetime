@@ -169,6 +169,31 @@ $(document).ready(function () {
         });
     })
 
+    $('#adminPayed').click(function (e) {
+        e.preventDefault();
+
+        let ajaxurl = $(this).attr('data-action');
+        let formData = $(this).attr('data-id');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: {id: formData},
+            dataType: 'json',
+            success: function (data) {
+                location.reload();
+            },
+            error: function (data) {
+                location.reload();
+            }
+        });
+    });
+
     $('.activationBigBtn').click(function (e) {
         e.preventDefault();
 

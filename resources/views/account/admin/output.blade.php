@@ -45,7 +45,7 @@
                                             $text = 'Да';
                                         }
                                     @endphp
-                                    <td class="tacenter"><a href="#" class="payed" data-id="{{ $paied->id }}">{{ $text }}</a></td>
+                                    <td class="tacenter"><a href="#" id="adminPayed" data-id="{{ $paied->id }}" data-action="{{ route('adminPayedGo') }}">{{ $text }}</a></td>
                                 </tr>
                             @endforeach
 
