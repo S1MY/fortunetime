@@ -169,7 +169,7 @@ $(document).ready(function () {
         });
     })
 
-    $('#adminPayed').click(function (e) {
+    $('.adminPayed').click(function (e) {
         e.preventDefault();
 
         let ajaxurl = $(this).attr('data-action');
