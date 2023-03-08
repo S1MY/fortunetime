@@ -318,15 +318,16 @@
                 </svg>
                 <div class="formContent">
                     <h2 class="popupName">Вывод</h2>
-                    <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
-                    <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
-                    <select name="reqname" class="formInput" placeholder="Выберите кошелёк">
+                    <select name="reqname" class="formInput">
+                        <option value="0">Выберите способ вывода</option>
                         <option value="payeer">Payeer</option>
                         <option value="visa">Visa</option>
                         <option value="master">MasterCard</option>
                         <option value="qiwi">Qiwi</option>
                         <option value="yandex">Яндекс деньги</option>
                     </select>
+                    <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
+                    <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
                     <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
                     <button class="passBtn" style="width: 100%;
                     margin-top: 20px;">Оставить заявку</button>
