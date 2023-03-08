@@ -9,14 +9,13 @@
 
                 @include('account.layout.adminMaster')
 
-                @if ($paiedsum+$paiedsumPayeer == 0)
+                @if ( $outputs->count() == 0 )
                     <h3 class="cabMatrixName" style="margin-top: 20px">Заявок ещё не было...</h3>
                 @else
                     <div class="info">
                         <h3 class="cabMatrixName" style="margin-top: 20px">Информация</h3>
-                        <p>Общая сумма: <span style="font-weight: bold;">{{ $paiedsum + $paiedsumPayeer }} руб.</span></p>
-                        <p>Пополнений с Фрикассы: <span style="font-weight: bold;">{{ $paiedsum }} руб.</span></p>
-                        <p>Пополнений с Пеера: <span style="font-weight: bold;">{{ $paiedsumPayeer }} руб.</span></p>
+                        <p>Уже выплатили: <span style="font-weight: bold;">{{ $outputsum }} руб.</span></p>
+                        <p>Предстоит выплатить: <span style="font-weight: bold;">{{ $outputsumnext }} руб.</span></p>
                     </div>
 
                     <div class="tableWrapper">
@@ -24,15 +23,19 @@
                         <table class="adminTable">
                             <tr>
                                 <th>Логин</th>
+                                <th>Куда выплачивать</th>
+                                <th>Реквизиты</th>
                                 <th>Сумма</th>
-                                <th>Агрегатор</th>
+                                <th>Статус</th>
                                 <th>Дата</th>
                             </tr>
-                            @foreach ($paieds as $paied)
+                            @foreach ($outputs as $paied)
                                 <tr>
                                     <td class="tacenter">{{ $paied->login }}</td>
+                                    <td class="tacenter" style="text-transform: uppercase;">{{ $paied->reqname }}</td>
+                                    <td class="tacenter">{{ $paied->req }}</td>
                                     <td class="tacenter">{{ $paied->amount }}</td>
-                                    <td class="tacenter" style="text-transform: uppercase;">{{ $paied->type }}</td>
+                                    <td class="tacenter">{{ $paied->status }}</td>
                                     <td class="tacenter">{{ $paied->created_at }}</td>
                                 </tr>
                             @endforeach

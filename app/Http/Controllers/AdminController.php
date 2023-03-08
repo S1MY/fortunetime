@@ -107,42 +107,22 @@ class AdminController extends Controller
     }
 
     public function output(){
-        $paieds = DB::table('freekassas')
-                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(freekassas.created_at) as created_at"))
-                    ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
-                    ->where('status','=',1)
-                    ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
-                    ->orderBy('created_at', 'DESC')
+
+        $outputs = DB::table('outputs')
+                    ->select('users.login', 'outputs.status', 'outputs.amount', 'outputs.reqname', 'req', 'outputs.created_at')
+                    ->leftJoin('users', 'outputs.user_id', '=', 'users.id')
+                    ->orderBy('outputs.created_at', 'DESC')
                     ->get();
 
-        for ($i=0; $i < $paieds->count(); $i++) {
-            $paieds[$i]->type = 'freekassa';
-        }
-
-        $paiedsPayeer = DB::table('payeer')
-                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(payeer.created_at) as created_at"))
-                    ->leftJoin('users', 'payeer.user_id', '=', 'users.id')
-                    ->groupBy('users.login', DB::raw("date(payeer.created_at)"))
-                    ->orderBy('created_at', 'DESC')
-                    ->get();
-
-        for ($i=0; $i < $paiedsPayeer->count(); $i++) {
-            $paiedsPayeer[$i]->type = 'payeer';
-        }
-
-
-        $paieds = $paieds->merge($paiedsPayeer);
-
-        $title = 'Все пополнения';
-
-        $paiedsum = DB::table('freekassas')
+        $outputsum = DB::table('outputs')
                     ->where('status','=',1)
                     ->sum('amount');
 
-        $paiedsumPayeer = DB::table('payeer')
+        $outputsumnext = DB::table('outputs')
+                    ->where('status','=', 0)
                     ->sum('amount');
 
-        return view('account.admin.output', compact('paieds', 'title', 'paiedsum', 'paiedsumPayeer'));
+        return view('account.admin.output', compact('outputs', 'outputsum', 'outputsumnext'));
     }
 
     public function showMartix($login){
