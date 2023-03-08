@@ -10,3 +10,9 @@
     <a href="{{ route('adminnews') }}" class="cabMenuLink{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a>
     <a href="{{ route('logout') }}" class="cabMenuLink">Выйти</a>
 </div>
+
+<style>
+    .cabMenuLink {
+        width: calc((100% - 20px) / 7);
+    }
+</style>
