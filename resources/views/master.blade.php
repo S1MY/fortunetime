@@ -317,7 +317,7 @@
                     <path d="M16.6668 3.33325L3.3335 16.6666M16.6668 16.6666L3.3335 3.33325L16.6668 16.6666Z" stroke="#202020" stroke-width="1.66667" stroke-linecap="round"></path>
                 </svg>
                 <div class="formContent">
-                    <h2 class="popupName">Вывод</h2>
+                    <h2 class="popupName">Вывод средств</h2>
                     <select name="reqname" class="formInput">
                         <option value="0" selected disabled hidden>Выберите счёт</option>
                         <option value="payeer">Payeer</option>

@@ -91,6 +91,8 @@ class UserController extends Controller
 
         $pincode = $request['amount_pincode'];
 
+        // dd($request);
+
         $codeVerify = DB::table('user_infos')->where([
             ['user_id', '=', Auth::user()->id],
         ])->first();
@@ -106,6 +108,7 @@ class UserController extends Controller
                     'status' => 0,
                     'amount' => $request['amount'],
                     'req' => $request['req'],
+                    'reqname' => $request['reqname'],
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now()
                 ]);
