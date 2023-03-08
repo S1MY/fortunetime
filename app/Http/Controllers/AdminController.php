@@ -106,6 +106,45 @@ class AdminController extends Controller
         return view('account.admin.news', compact('news', 'newCount'));
     }
 
+    public function output(){
+        $paieds = DB::table('freekassas')
+                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(freekassas.created_at) as created_at"))
+                    ->leftJoin('users', 'freekassas.user_id', '=', 'users.id')
+                    ->where('status','=',1)
+                    ->groupBy('users.login', DB::raw("date(freekassas.created_at)"))
+                    ->orderBy('created_at', 'DESC')
+                    ->get();
+
+        for ($i=0; $i < $paieds->count(); $i++) {
+            $paieds[$i]->type = 'freekassa';
+        }
+
+        $paiedsPayeer = DB::table('payeer')
+                    ->select('users.login', DB::raw("sum(amount) as amount"), DB::raw("date(payeer.created_at) as created_at"))
+                    ->leftJoin('users', 'payeer.user_id', '=', 'users.id')
+                    ->groupBy('users.login', DB::raw("date(payeer.created_at)"))
+                    ->orderBy('created_at', 'DESC')
+                    ->get();
+
+        for ($i=0; $i < $paiedsPayeer->count(); $i++) {
+            $paiedsPayeer[$i]->type = 'payeer';
+        }
+
+
+        $paieds = $paieds->merge($paiedsPayeer);
+
+        $title = 'Все пополнения';
+
+        $paiedsum = DB::table('freekassas')
+                    ->where('status','=',1)
+                    ->sum('amount');
+
+        $paiedsumPayeer = DB::table('payeer')
+                    ->sum('amount');
+
+        return view('account.admin.output', compact('paieds', 'title', 'paiedsum', 'paiedsumPayeer'));
+    }
+
     public function showMartix($login){
 
         $user = DB::table('users')->where('login', '=', $login)->first();
