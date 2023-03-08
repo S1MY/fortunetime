@@ -1,7 +1,7 @@
 
 
 <h1 class="caninetName">Админ панель</h1>
-<div class="cabMenuFlex displayFlex alignItemsCenter spaceBetween">
+<div class="cabMenuFlex displayFlex alignItemsCenter spaceBetween adminPanelCabinet">
     <a href="{{ route('adminPage') }}" class="cabMenuLink{{ Route::currentRouteName() == 'adminPage' ? ' active' : '' }}">Все пользователи</a>
     <a href="{{ route('paied') }}" class="cabMenuLink{{ Route::currentRouteName() == 'paied' ? ' active' : '' }}">Все пополнения</a>
     <a href="{{ route('adminoutput') }}" class="cabMenuLink{{ Route::currentRouteName() == 'adminoutput' ? ' active' : '' }}">Заявки на вывод</a>
@@ -14,5 +14,10 @@
 <style>
     .cabMenuLink {
         width: calc((100% - 20px) / 7);
+    }
+    @media (max-width: 1100px){
+        .adminPanelCabinet{
+            display: none;
+        }
     }
 </style>
