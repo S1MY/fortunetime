@@ -109,7 +109,7 @@ class AdminController extends Controller
     public function output(){
 
         $outputs = DB::table('outputs')
-                    ->select('users.login', 'outputs.status', 'outputs.amount', 'outputs.reqname', 'req', 'outputs.created_at')
+                    ->select('users.login', 'outputs.id', 'outputs.status', 'outputs.amount', 'outputs.reqname', 'req', 'outputs.created_at')
                     ->leftJoin('users', 'outputs.user_id', '=', 'users.id')
                     ->orderBy('outputs.created_at', 'DESC')
                     ->get();

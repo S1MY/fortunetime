@@ -28,6 +28,7 @@
                                 <th>Сумма</th>
                                 <th>Статус</th>
                                 <th>Дата</th>
+                                <th>Выплачено?</th>
                             </tr>
                             @foreach ($outputs as $paied)
                                 <tr>
@@ -37,6 +38,14 @@
                                     <td class="tacenter">{{ $paied->amount }}</td>
                                     <td class="tacenter">{{ $paied->status }}</td>
                                     <td class="tacenter">{{ $paied->created_at }}</td>
+                                    @php
+                                        if( $paied->status == 0 ){
+                                            $text = 'Нет';
+                                        }else{
+                                            $text = 'Да';
+                                        }
+                                    @endphp
+                                    <td class="tacenter"><a href="#" class="payed" data-id="{{ $paied->id }}">{{ $text }}</a></td>
                                 </tr>
                             @endforeach
 
