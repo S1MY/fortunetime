@@ -321,7 +321,8 @@
                     <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
                     <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
                     <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
-                    <button class="passBtn">Оставить заявку</button>
+                    <button class="passBtn" style="width: 100%;
+                    margin-top: 20px;">Оставить заявку</button>
                 </div>
             </form>
             <div class="popupElement" data-popup="starter">
