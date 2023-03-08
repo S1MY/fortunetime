@@ -8,12 +8,11 @@
     <a href="{{ route('adminfaq') }}" class="cabMenuLink{{ Route::currentRouteName() == 'adminfaq' ? ' active' : '' }}">Добавить FAQ</a>
     <a href="{{ route('adminreviews') }}" class="cabMenuLink{{ Route::currentRouteName() == 'adminreviews' ? ' active' : '' }}">Менеджер отзывов</a>
     <a href="{{ route('adminnews') }}" class="cabMenuLink{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a>
-    <a href="{{ route('logout') }}" class="cabMenuLink">Выйти</a>
 </div>
 
 <style>
     .cabMenuLink {
-        width: calc((100% - 20px) / 7);
+        width: calc((100% - 20px) / 6);
     }
     @media (max-width: 1100px){
         .adminPanelCabinet{
