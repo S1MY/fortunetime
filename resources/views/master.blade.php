@@ -415,6 +415,7 @@
                             <a href="{{ route('adminPage') }}" class="menuItem admin" style="color: #ff5722;">Админка</a>
                             <a href="{{ route('adminPage') }}" class="menuItem{{ Route::currentRouteName() == 'adminPage' ? ' active' : '' }}">Все пользователи</a>
                             <a href="{{ route('paied') }}" class="menuItem{{ Route::currentRouteName() == 'paied' ? ' active' : '' }}">Все пополнения</a>
+                            <a href="{{ route('adminoutput') }}" class="menuItem{{ Route::currentRouteName() == 'adminoutput' ? ' active' : '' }}">Заявки на вывод</a>
                             <a href="{{ route('adminfaq') }}" class="menuItem{{ Route::currentRouteName() == 'adminfaq' ? ' active' : '' }}">Добавить FAQ</a>
                             <a href="{{ route('adminreviews') }}" class="menuItem{{ Route::currentRouteName() == 'adminreviews' ? ' active' : '' }}">Менеджер отзывов</a>
                             <a href="{{ route('adminnews') }}" class="menuItem{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a>
