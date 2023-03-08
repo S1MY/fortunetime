@@ -40,7 +40,7 @@
                                     <td class="tacenter">{{ $paied->created_at }}</td>
                                     @php
                                         if( $paied->status == 0 ){
-                                            $text = 'Нет';
+                                            $text = 'Выплатить';
                                         }else{
                                             $text = 'Да';
                                         }
