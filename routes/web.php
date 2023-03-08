@@ -70,7 +70,7 @@ Route::post('/settings/update-user/avatar/{id}', 'App\Http\Controllers\UserContr
 
 Route::post('/user/{id}/{lvl}', 'App\Http\Controllers\UserController@getMatrix')->name('getmatrix')->middleware('auth');
 
-Route::post('/user/output', 'App\Http\Controllers\UserController@output')->name('output')->middleware('auth');
+Route::post('/settings/user/output', 'App\Http\Controllers\UserController@output')->name('output')->middleware('auth');
 
 
 /* Admin */
