@@ -122,7 +122,9 @@ class AdminController extends Controller
                     ->where('status','=', 0)
                     ->sum('amount');
 
-        return view('account.admin.output', compact('outputs', 'outputsum', 'outputsumnext'));
+        $title = 'Заявки на вывод';
+
+        return view('account.admin.output', compact('outputs', 'outputsum', 'outputsumnext', 'title'));
     }
 
     public function showMartix($login){
