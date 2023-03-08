@@ -534,12 +534,12 @@
                         </div>
                         @php
                             $class = ' ';
-                            if( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 ){
+                            if( Auth::user()->UserInfo->balance > 0  ){
                                 $class = ' class=alterCabinetButton';
                             }
                         @endphp
                         <div {{ $class }}>
-                            @if ( Auth::user()->UserInfo->balance > 0 || Auth::user()->id == 1 )
+                            @if ( Auth::user()->UserInfo->balance > 0  )
                                 <a href="#" class="cabinetBigItem popupBtn" data-popup="output">Заявка на вывод</a>
                             @endif
                             @if ( $matrix != null )
