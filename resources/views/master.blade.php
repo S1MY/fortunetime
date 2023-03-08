@@ -326,9 +326,9 @@
                         <option value="qiwi">Qiwi</option>
                         <option value="yandex">Яндекс деньги</option>
                     </select>
-                    <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req">
-                    <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount">
-                    <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode">
+                    <input type="text" class="formInput" placeholder="Реквизиты для вывода" name="req" readonly onfocus="this.removeAttribute('readonly')">
+                    <input type="text" class="formInput" placeholder="Введите сумму для вывода" name="amount" readonly onfocus="this.removeAttribute('readonly')">
+                    <input type="password" class="formInput" placeholder="Пин-код" name="amount_pincode" readonly onfocus="this.removeAttribute('readonly')">
                     <button class="passBtn" style="width: 100%;
                     margin-top: 20px;">Оставить заявку</button>
                 </div>
