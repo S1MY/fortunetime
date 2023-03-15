@@ -480,7 +480,7 @@
                                     @endif
                                 </p>
                                 @php
-                                    if( $sponsor['user_name'] ):
+                                    if( $sponsor['user_name'] == null ):
                                 @endphp
                                     <p class="cabinetInfoItem">Ваш наставник: {{ $sponsor['user_name'] }} ( <a href="mailto:{{ $sponsor['email'] }}">{{ $sponsor['email'] }}</a> )<p>
                                 @php
