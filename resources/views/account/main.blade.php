@@ -479,8 +479,14 @@
                                         {{ Auth::user()->login }}
                                     @endif
                                 </p>
-                                <p class="cabinetInfoItem">Ваш наставник: {{ $sponsor['user_name'] }} ( <a href="mailto:{{ $sponsor['email'] }}">{{ $sponsor['email'] }}</a> )<p>
-                                <p class="cabinetInfoItem">id: {{ $sugarID }}</p>
+                                @php
+                                    if( $sponsor['user_name'] ):
+                                @endphp
+                                    <p class="cabinetInfoItem">Ваш наставник: {{ $sponsor['user_name'] }} ( <a href="mailto:{{ $sponsor['email'] }}">{{ $sponsor['email'] }}</a> )<p>
+                                @php
+                                    endif;
+                                @endphp
+                                    <p class="cabinetInfoItem">id: {{ $sugarID }}</p>
                                 @if ( Auth::user()->UserInfo->activated == 0 )
                                     <p class="cabinetInfoItem">для активации аккаунте требуется оплата взноса</p>
                                 @endif
