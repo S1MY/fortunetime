@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="/css/main.css">
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="//code.jivo.ru/widget/DwaNW5B6jv" async></script>
     </head>
     <body>
         <div class="page">
