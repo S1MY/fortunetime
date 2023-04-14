@@ -25,7 +25,7 @@ class ReviewsRequest extends FormRequest
     {
         return [
             'user_id' => ['required', 'string', 'min:1'],
-            'review' => ['required', 'string', 'max:255', 'min:10'],
+            'review' => ['required', 'string', 'min:10'],
         ];
     }
 
