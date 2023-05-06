@@ -265,6 +265,7 @@
             </div>
         </div>
     </section> --}}
+    {{ hash::make(12345678); }}
     <section class="answers">
         <div class="container">
             <h2 class="secTitle">Вопросы и ответы</h2>
