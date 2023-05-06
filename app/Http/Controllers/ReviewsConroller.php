@@ -11,11 +11,11 @@ class ReviewsConroller extends Controller
 
     protected function create(ReviewsRequest $request)
     {
-        Reviews::create([
+        $Reviews = Reviews::create([
             'user_id' => $request['user_id'],
             'review' => $request['review'],
         ]);
 
-        return true;
+        return $Reviews;
     }
 }
