@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 class FreekassaController extends Controller
 {
     public function freekassa(Request $request){
-
+        return 200;
         function getIP() {
             if(isset($_SERVER['HTTP_X_REAL_IP'])) return $_SERVER['HTTP_X_REAL_IP'];
             return $_SERVER['REMOTE_ADDR'];
