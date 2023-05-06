@@ -23,7 +23,7 @@ class FreekassaController extends Controller
 
         // Меняем статус оплаты
 
-        // return 1;
+        return 1;
 
         Freekassa::where('id', $request->MERCHANT_ORDER_ID)->update([
             'remoteADDR' => $_SERVER['REMOTE_ADDR'],
