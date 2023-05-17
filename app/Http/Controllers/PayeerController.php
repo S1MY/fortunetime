@@ -885,7 +885,7 @@ class PayeerController extends Controller
         // $m_amount = number_format(10, 2, '.', '');
         $m_curr = 'RUB';
         $m_desc = base64_encode('Оплата одного из уровня маркетинга на проекте Fortune Time!');
-        $m_key = 'CdYgPvFnAirSIJf7';
+        $m_key = 'pqQhL@s5cHufsBU';
 
         $arHash = array(
             $m_shop,
