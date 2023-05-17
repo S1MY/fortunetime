@@ -16,7 +16,7 @@ class PayeerController extends Controller
 
         if (isset($request->m_operation_id) && isset($request->m_sign))
         {
-            $m_key = 'DAJ12VfyfWmzQ5mu';
+            $m_key = '5BlWbuUtwgmiLLJh';
 
             $arHash = array(
                 $request->m_operation_id,
@@ -874,7 +874,7 @@ class PayeerController extends Controller
     }
 
     public function pay(Request $request){
-        $m_shop = '1799877113';
+        $m_shop = '1880328813';
         $m_orderid = Auth::user()->id;
         $m_amount = number_format($request->oa, 2, '.', '');
 

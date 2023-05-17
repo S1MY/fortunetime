@@ -852,9 +852,9 @@ class FreekassaController extends Controller
     public function pay(Request $request){
         $userID = Auth::user()->id;
 
-        $merchant_id = '26763';
+        $merchant_id = '33834';
         $order_amount = $request['oa'];
-        $secret_word = '7YypX4W6MsiJ6OG';
+        $secret_word = 'Fz}0]B]cUA.0%N6';
         $currency = 'RUB';
 
         $order = Freekassa::create([
