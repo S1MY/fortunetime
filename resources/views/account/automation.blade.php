@@ -11,7 +11,7 @@
                 <div class="automatFlex displayFlex spaceBetween">
                     <div class="automatVideo">
                         <video name="media" autoplay controls style="width: 100%;">
-                            <source src="https://fortune-time.pro/video/10.mp4" type="video/mp4">
+                            <source src="https://fortune-time.su/video/10.mp4" type="video/mp4">
                         </video>
                     </div>
                     {{-- <div class="automatLinks">
