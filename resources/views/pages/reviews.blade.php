@@ -40,7 +40,7 @@
                         <h2 class="pageName">Последние видео-отзывы</h2>
                         <div class="reviewVideo">
                             <video name="media" controls="" autoplay style="width: 100%;">
-                                <source src="https://fortune-time.pro/video/Ролик на отзыв.mp4" type="video/mp4">
+                                <source src="https://fortune-time.su/video/Ролик на отзыв.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
