@@ -9,10 +9,14 @@
             justify-content: space-between;
         }
         .text{
-            min-width: 50%;
+            max-width: 50%;
         }
         .text .cabinetBtn{
-            margin: 0 0 0 auto;
+            margin: 16px 0 0 auto;
+        }
+        .titleStart{
+            font-size: 24px;
+            font-weight: bold;
         }
     </style>
     <section class="pageSection">
@@ -27,6 +31,8 @@
                     Your browser doesn't support HTML5 video tag.
                     </video>
                     <div class="text">
+                        <p class="cabinetText titleStart">Система быстрого старта</p>
+                        <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
                         <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
                         @if (Auth::user()->UserInfo->activated == 1)
                             <a href="Система ФОРТУНА.pdf" class="cabinetBtn" download>Скачать Систему</a>
