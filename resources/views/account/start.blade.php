@@ -95,6 +95,7 @@
             $('.nextLeson').click(function(e){
                 e.preventDefault();
                 let next = $(this).parent().parent().parent().attr('data-leson') + 1;
+                console.log(next);
                 $('.leson').removeClass('active');
                 $('.leson[data-leson=' + next + ']').addClass('active');
             });
