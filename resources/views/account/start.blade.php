@@ -26,6 +26,14 @@
         .leson.active{
             display: block;
         }
+        @media (max-width: 1240px){
+            .dFlex{
+                display: block;
+            }
+            .dFlex video{
+                width: 100%;
+            }
+        }
     </style>
     <section class="pageSection">
         <div class="container">
