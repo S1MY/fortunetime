@@ -6,7 +6,7 @@
     <section class="hero">
         <div class="container">
             <div class="heroInner">
-                {{ $pwd }}
+                {{-- {{ $pwd }} --}}
                 <h1 class="heroTitle">ПОСТРОЙ<br> СВОЮ СИСТЕМУ<br> ЗАРАБОТКА С НУЛЯ</h1>
                 <a href="/" class="heroGuide displayFlex alignItemsCenter">
                     <span class="heroGuideBtn matrixImage" href="/video/Фортуна. Новая презентация.mp4">
