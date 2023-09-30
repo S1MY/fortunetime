@@ -20,30 +20,84 @@
             font-size: 24px;
             font-weight: bold;
         }
+        .leson{
+            display: none;
+        }
+        .leson.active{
+            display: block;
+        }
     </style>
     <section class="pageSection">
         <div class="container">
             <div class="pageInner">
                 @include('account.layout.accountMaster')
-                <div class="dFlex">
-                    <video
-                    width="620"
-                    controls
-                    poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
-                    Your browser doesn't support HTML5 video tag.
-                    </video>
-                    <div class="text">
-                        <p class="cabinetText titleStart">Система быстрого старта</p>
-                        <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
-                        <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
-                        @if (Auth::user()->UserInfo->activated == 1)
-                            <a href="Система ФОРТУНА.pdf" class="cabinetBtn" download>Скачать Систему</a>
-                        @else
-                            <a href="#" class="cabinetBtn popupBtn" data-popup="starter">Скачать Систему</a>
-                        @endif
+                <div class="leson1">
+                    <div class="dFlex">
+                        <video width="620" controls poster="">
+                            Your browser doesn't support HTML5 video tag.
+                        </video>
+                        <div class="text">
+                            <p class="cabinetText titleStart">Система быстрого старта</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+
+                            <a href="#" class="cabinetBtn" download>Следующий урок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leson active" data-leson="1">
+                    <div class="dFlex">
+                        <video width="620" controls poster="">
+                            Your browser doesn't support HTML5 video tag.
+                        </video>
+                        <div class="text">
+                            <p class="cabinetText titleStart">Система быстрого старта</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+
+                            <a href="#" class="cabinetBtn" download>Следующий урок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leson" data-leson="2">
+                    <div class="dFlex">
+                        <video width="620" controls poster="">
+                            Your browser doesn't support HTML5 video tag.
+                        </video>
+                        <div class="text">
+                            <p class="cabinetText titleStart">Система быстрого старта 2 </p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+
+                            <a href="#" class="cabinetBtn" download>Следующий урок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leson" data-leson="3">
+                    <div class="dFlex">
+                        <video width="620" controls poster="">
+                            Your browser doesn't support HTML5 video tag.
+                        </video>
+                        <div class="text">
+                            <p class="cabinetText titleStart">Система быстрого старта 3</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+
+                            <a href="#" class="cabinetBtn nextLeson" download>Следующий урок</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        $(document).ready(function () {
+            $('.nextLeson').click(function(e){
+                e.preventDefault();
+                let next = $(this).parent().parent().parent().attr('data-leson') + 1;
+                $('.leson').removeClass('active');
+                $('.leson[data-leson=' + next + ']').addClass('active');
+            });
+        });
+    </script>
 @endsection
