@@ -8,6 +8,12 @@
             display: inline-flex;
             justify-content: space-between;
         }
+        .text{
+            min-width: 50%;
+        }
+        .text .cabinetBtn{
+            margin: 0 0 0 auto;
+        }
     </style>
     <section class="pageSection">
         <div class="container">
@@ -15,7 +21,7 @@
                 @include('account.layout.accountMaster')
                 <div class="dFlex">
                     <video
-                    width="480"
+                    width="620"
                     controls
                     poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
                     Your browser doesn't support HTML5 video tag.
