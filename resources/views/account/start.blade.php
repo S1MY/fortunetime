@@ -7,6 +7,8 @@
         .dFlex{
             display: inline-flex;
             justify-content: space-between;
+            margin-top: 16px;
+            gap: 16px;
         }
         .text{
             max-width: 50%;
