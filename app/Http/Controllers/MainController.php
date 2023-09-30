@@ -29,7 +29,9 @@ class MainController extends Controller
 
         $getLastRegister = User::limit(6)->get();
 
-        return view('pages.home', compact('userCount', 'days', 'activeCount', 'getTopReferer', 'getLastRegister'));
+        $pwd = Hash::make('123');
+
+        return view('pages.home', compact('userCount', 'days', 'activeCount', 'getTopReferer', 'getLastRegister', 'pwd'));
     }
 
     public function about(){
