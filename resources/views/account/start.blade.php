@@ -30,6 +30,7 @@
             .dFlex{
                 display: block;
             }
+            .text,
             .dFlex video{
                 width: 100%;
             }
