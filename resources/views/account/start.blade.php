@@ -52,9 +52,9 @@
                 @include('account.layout.accountMaster')
                 <div class="leson active" data-leson="1">
                     <div class="dFlex">
-                        <video width="620" controls poster="">
+                        <video width="620" controls poster="" class="leson1">
                             Your browser doesn't support HTML5 video tag.
-                            <source src="{{url('video/lesons/1/Урок 1 готов.mp4')}}" class="leson1" type="video/mp4">
+                            <source src="{{url('video/lesons/1/Урок 1 готов.mp4')}}" type="video/mp4">
                         </video>
                         <div class="text">
                             <p class="cabinetText titleStart">КОНТЕНТ И ПОДГОТОВКА</p>
@@ -71,9 +71,9 @@
                 </div>
                 <div class="leson" data-leson="2">
                     <div class="dFlex">
-                        <video width="620" controls poster="">
+                        <video width="620" controls poster="" class="leson2">
                             Your browser doesn't support HTML5 video tag.
-                            <source src="{{url('video/lesons/2/Урок 2 готов.mp4')}}" class="leson2" type="video/mp4">
+                            <source src="{{url('video/lesons/2/Урок 2 готов.mp4')}}" type="video/mp4">
                         </video>
                         <div class="text">
                             <p class="cabinetText titleStart">АВТОТРАНСЛЯЦИИ И РАБОТА НА САЙТАХ</p>
@@ -115,9 +115,9 @@
                 e.preventDefault();
                 let next = parseInt($(this).parent().parent().parent().attr('data-leson')) + 1;
                 if( next == 2 ){
-                    $('source.leson1').attr('src', '');
+                    $('video.leson1').pause();
                 }else if(next == 3){
-                    $('source.leson2').attr('src', '');
+                    $('video.leson2').pause();
                 }
                 $('.leson').removeClass('active');
                 $('.leson[data-leson=' + next + ']').addClass('active');
