@@ -28,6 +28,12 @@
         }
         .cabinetBtn{
             display: inline-flex;
+            max-width: 313px;
+        }
+        @media (max-width: 1326px){
+            .cabinetBtn{
+                max-width: calc(50% - 2px);
+            }
         }
         @media (max-width: 1240px){
             .dFlex{
