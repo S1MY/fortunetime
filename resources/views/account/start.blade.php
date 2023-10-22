@@ -54,13 +54,17 @@
                     <div class="dFlex">
                         <video width="620" controls poster="">
                             Your browser doesn't support HTML5 video tag.
+                            <source src="{{url('video/lesons/1/Урок 1 готов.mp4')}}" type="video/mp4">
                         </video>
                         <div class="text">
-                            <p class="cabinetText titleStart">1. Фундамент и техническая часть</p>
-                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
-                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
+                            <p class="cabinetText titleStart">1. КОНТЕНТ И ПОДГОТОВКА</p>
+                            <p class="cabinetText">В этом уроке мы с вами.
+                                Подготовим все необходимые материалы.
+                                Разберём и изучим подготовленный контент план
+                                Зарегистрируемся на всех необходимых для дальнейшей работы сайтах.</p>
+                            <p class="cabinetText">Перед просмотром урока, необходимо скачать чек лист.</p>
 
-                            <a href="#" class="cabinetBtn">Скачать</a>
+                            <a href="{{url('video/lesons/1/Урок 1.zip')}}" download class="cabinetBtn">Скачать</a>
                             <a href="#" class="cabinetBtn nextLeson">Следующий урок</a>
                         </div>
                     </div>
