@@ -28,7 +28,7 @@
         }
         .cabinetBtn{
             display: inline-flex;
-            max-width: 313px;
+            max-width: calc(50% - 2px);
         }
         @media (max-width: 1326px){
             .cabinetBtn{
