@@ -26,6 +26,9 @@
         .leson.active{
             display: block;
         }
+        .cabinetBtn{
+            display: inline-flex;
+        }
         @media (max-width: 1240px){
             .dFlex{
                 display: block;
