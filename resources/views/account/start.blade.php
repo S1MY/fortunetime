@@ -54,7 +54,7 @@
                     <div class="dFlex">
                         <video width="620" controls poster="">
                             Your browser doesn't support HTML5 video tag.
-                            <source src="{{url('video/lesons/1/Урок 1 готов.mp4')}}" type="video/mp4">
+                            <source src="{{url('video/lesons/1/Урок 1 готов.mp4')}}" class="leson1" type="video/mp4">
                         </video>
                         <div class="text">
                             <p class="cabinetText titleStart">КОНТЕНТ И ПОДГОТОВКА</p>
@@ -73,7 +73,7 @@
                     <div class="dFlex">
                         <video width="620" controls poster="">
                             Your browser doesn't support HTML5 video tag.
-                            <source src="{{url('video/lesons/2/Урок 2 готов.mp4')}}" type="video/mp4">
+                            <source src="{{url('video/lesons/2/Урок 2 готов.mp4')}}" class="leson2" type="video/mp4">
                         </video>
                         <div class="text">
                             <p class="cabinetText titleStart">АВТОТРАНСЛЯЦИИ И РАБОТА НА САЙТАХ</p>
@@ -113,9 +113,12 @@
         $(document).ready(function () {
             $('.nextLeson').click(function(e){
                 e.preventDefault();
-                $(this).parent().prev().children().attr('src', '');
                 let next = parseInt($(this).parent().parent().parent().attr('data-leson')) + 1;
-                console.log(next);
+                if( next == 2 ){
+                    $('source.leson1').attr('src', '');
+                }else if(next == 3){
+                    $('source.leson2').attr('src', '');
+                }
                 $('.leson').removeClass('active');
                 $('.leson[data-leson=' + next + ']').addClass('active');
             });
