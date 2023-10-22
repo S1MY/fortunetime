@@ -103,20 +103,6 @@
                             <p class="cabinetText">Перед просмотром урока, необходимо скачать чек лист.</p>
 
                             <a href="{{url('video/lesons/3/Урок 3.zip')}}" download class="cabinetBtn">Скачать</a>
-                            <a href="#" class="cabinetBtn nextLeson">Следующий урок</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="leson" data-leson="4">
-                    <div class="dFlex">
-                        <video width="620" controls poster="">
-                            Your browser doesn't support HTML5 video tag.
-                        </video>
-                        <div class="text">
-                            <p class="cabinetText titleStart">Система быстрого старта 3</p>
-                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
-                            <p class="cabinetText">Система быстрого старта позволит вам пригласить минимум 10 партнёров в вашу команду. Даже без опыта. Всё что от вас требуется это соблюдать 4е простых шага, описанных в системе.</p>
-
                         </div>
                     </div>
                 </div>
