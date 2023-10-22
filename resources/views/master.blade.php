@@ -67,7 +67,7 @@
                             <div class="burgerBtn"><span></span></div>
                             <nav class="navigation">
                                 <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">О нас</a>
-                                <a href="{{ route('marketing') }}" class="navItem {{ Route::currentRouteName() == 'marketing' ? 'active' : '' }}">Маркетинг</a>
+                                <a href="{{ route('marketing') }}" class="navItem {{ Route::currentRouteName() == 'marketing' ? 'active' : '' }}">Бонусная программа</a>
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
                                 <a href="{{ route('news') }}" class="navItem {{ Route::currentRouteName() == 'news' ? 'active' : '' }}">Новости</a>
@@ -148,11 +148,11 @@
                                     </defs>
                                 </svg>
                             </a> --}}
-                            <a href="https://t.me/htswAJQ1d7Z72RbiJSVg0vKretb7" class="footerSocial">
+                            {{-- <a href="https://t.me/htswAJQ1d7Z72RbiJSVg0vKretb7" class="footerSocial">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20.7099 3.65451C20.7099 3.65451 22.6524 2.89701 22.4899 4.73651C22.4364 5.49401 21.9509 8.14551 21.5729 11.013L20.2779 19.508C20.2779 19.508 20.1699 20.7525 19.1984 20.969C18.2274 21.185 16.7704 20.2115 16.5004 19.995C16.2844 19.8325 12.4534 17.3975 11.1044 16.2075C10.7264 15.8825 10.2944 15.2335 11.1584 14.476L16.8239 9.06501C17.4714 8.41601 18.1189 6.90101 15.4209 8.74051L7.86591 13.8805C7.86591 13.8805 7.00241 14.422 5.38391 13.935L1.87591 12.8525C1.87591 12.8525 0.580915 12.041 2.79341 11.2295C8.18991 8.68651 14.8274 6.08951 20.7089 3.65451H20.7099Z" fill="white"></path>
                                 </svg>
-                            </a>
+                            </a> --}}
                             {{-- <a href="/" class="footerSocial">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.9236 11.7996L11.2284 10.542C10.9932 10.4328 10.8 10.5552 10.8 10.8156V13.1844C10.8 13.4448 10.9932 13.5672 11.2284 13.458L13.9224 12.2004C14.1588 12.09 14.1588 11.91 13.9236 11.7996ZM12 0.47998C5.63758 0.47998 0.47998 5.63758 0.47998 12C0.47998 18.3624 5.63758 23.52 12 23.52C18.3624 23.52 23.52 18.3624 23.52 12C23.52 5.63758 18.3624 0.47998 12 0.47998ZM12 16.68C6.10318 16.68 5.99998 16.1484 5.99998 12C5.99998 7.85158 6.10318 7.31998 12 7.31998C17.8968 7.31998 18 7.85158 18 12C18 16.1484 17.8968 16.68 12 16.68Z" fill="white"></path>
