@@ -115,9 +115,9 @@
                 e.preventDefault();
                 let next = parseInt($(this).parent().parent().parent().attr('data-leson')) + 1;
                 if( next == 2 ){
-                    $('video.leson1').pause();
+                    $('video.leson1').remove();
                 }else if(next == 3){
-                    $('video.leson2').pause();
+                    $('video.leson2').remove();
                 }
                 $('.leson').removeClass('active');
                 $('.leson[data-leson=' + next + ']').addClass('active');
