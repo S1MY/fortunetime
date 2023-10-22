@@ -113,6 +113,7 @@
         $(document).ready(function () {
             $('.nextLeson').click(function(e){
                 e.preventDefault();
+                $(this).parent().prev().children().attr('src', '');
                 let next = parseInt($(this).parent().parent().parent().attr('data-leson')) + 1;
                 console.log(next);
                 $('.leson').removeClass('active');
