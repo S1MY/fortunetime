@@ -20,7 +20,7 @@
 
 
                         @if ( !Auth::user() )
-                            <a href="#" class="standartBtn">Зарегистрироваться</a>
+                            <a href="#" class="standartBtn btnReg popupBtn" data-popup="register">Зарегистрироваться</a>
                         @endif
 
 
