@@ -465,7 +465,7 @@
                         <div class="cabinetTop displayFlex alignItemsCenter">
                             <div class="avatarItem">
                                 @if (Auth::user()->UserInfo->avatar != '')
-                                    <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar">
+                                    <img src="{{ Storage::url(Auth::user()->UserInfo->avatar) }}" alt="avatar" style="position:absolute">
                                 @endif
                             </div>
                             <div class="cabinetInfo">
