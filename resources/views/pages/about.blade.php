@@ -28,7 +28,7 @@
                             @if ( Auth::user()->UserInfo->activated)
                                 <a href="{{ url('Система ФОРТУНА.pdf') }}" download="" class="standartBtn">Скачать систему</a>
                             @else
-                                <a href="" class="standartBtn">Начать зарабатывать</a>
+                                <a href="https://fortune-time.su/account" class="standartBtn">Начать заработок</a>
                             @endif
                         @endif
 
