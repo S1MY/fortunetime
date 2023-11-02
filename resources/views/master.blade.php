@@ -65,11 +65,11 @@
                         <div class="headerInnerR displayFlex alignItemsCenter">
                             <div class="burgerBtn"><span></span></div>
                             <nav class="navigation">
-                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматическая система</a>
+                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматизированная система</a>
                                 <a href="{{ route('marketing') }}" class="navItem {{ Route::currentRouteName() == 'marketing' ? 'active' : '' }}">Бонусная программа</a>
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
-                                <a href="{{ route('news') }}" class="navItem {{ Route::currentRouteName() == 'news' ? 'active' : '' }}">Новости</a>
+                                {{-- <a href="{{ route('news') }}" class="navItem {{ Route::currentRouteName() == 'news' ? 'active' : '' }}">Новости</a> --}}
                                 <a href="{{ route('statistic') }}" class="navItem {{ Route::currentRouteName() == 'statistic' ? 'active' : '' }}">Контакты</a>
                             </nav>
                             @guest
@@ -160,7 +160,7 @@
                         </div>
                         <div class="footerFlexR displayFlex alignItemsCenter">
                             <nav class="navigation">
-                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматическая система</a>
+                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматизированная система</a>
                                 <a href="{{ route('marketing') }}" class="navItem {{ Route::currentRouteName() == 'marketing' ? 'active' : '' }}">Бонусная программа</a>
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
@@ -418,7 +418,7 @@
                             <a href="{{ route('adminoutput') }}" class="menuItem{{ Route::currentRouteName() == 'adminoutput' ? ' active' : '' }}">Заявки на вывод</a>
                             <a href="{{ route('adminfaq') }}" class="menuItem{{ Route::currentRouteName() == 'adminfaq' ? ' active' : '' }}">Добавить FAQ</a>
                             <a href="{{ route('adminreviews') }}" class="menuItem{{ Route::currentRouteName() == 'adminreviews' ? ' active' : '' }}">Менеджер отзывов</a>
-                            <a href="{{ route('adminnews') }}" class="menuItem{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a>
+                            {{-- <a href="{{ route('adminnews') }}" class="menuItem{{ Route::currentRouteName() == 'settings' ? ' active' : '' }}">Новости</a> --}}
                             {{-- <a href="{{ route('logout') }}" class="menuItem">Выйти</a> --}}
                         </div>
                     @endif
@@ -434,11 +434,11 @@
                 @endauth
                 <div class="menuWrapper">
                     <p class="menuName">Главное меню</p>
-                    <a href="{{ route('about') }}" class="menuItem">Автоматическая система</a>
+                    <a href="{{ route('about') }}" class="menuItem">Автоматизированная система</a>
                     <a href="{{ route('marketing') }}" class="menuItem">Бонусная программа</a>
                     <a href="{{ route('faq') }}" class="menuItem">FAQ</a>
                     <a href="{{ route('reviews') }}" class="menuItem">Отзывы</a>
-                    <a href="{{ route('news') }}" class="menuItem">Новости</a>
+                    {{-- <a href="{{ route('news') }}" class="menuItem">Новости</a> --}}
                     <a href="{{ route('statistic') }}" class="menuItem">Контакты</a>
                     @guest
                         <a href="/" class="menuItem mobileBtn popupBtn" data-popup="login">Вход</a>
