@@ -103,6 +103,7 @@
                             <p class="cabinetText">Перед просмотром урока, необходимо скачать чек лист.</p>
 
                             <a href="{{url('video/lesons/3/Урок 3.zip')}}" download class="cabinetBtn">Скачать</a>
+                            <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
                         </div>
                     </div>
                 </div>
