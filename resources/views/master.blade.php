@@ -66,7 +66,7 @@
                         <div class="headerInnerR displayFlex alignItemsCenter">
                             <div class="burgerBtn"><span></span></div>
                             <nav class="navigation">
-                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматизированная система</a>
+                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматическая система</a>
                                 <a href="{{ route('marketing') }}" class="navItem {{ Route::currentRouteName() == 'marketing' ? 'active' : '' }}">Бонусная программа</a>
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
@@ -161,7 +161,7 @@
                         </div>
                         <div class="footerFlexR displayFlex alignItemsCenter">
                             <nav class="navigation">
-                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматизированная система</a>
+                                <a href="{{ route('about') }}" class="navItem {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">Автоматическая система</a>
                                 <a href="{{ route('marketing') }}" class="navItem {{ Route::currentRouteName() == 'marketing' ? 'active' : '' }}">Бонусная программа</a>
                                 <a href="{{ route('faq') }}" class="navItem {{ Route::currentRouteName() == 'faq' ? 'active' : '' }}">FAQ</a>
                                 <a href="{{ route('reviews') }}" class="navItem {{ Route::currentRouteName() == 'reviews' ? 'active' : '' }}">Отзывы</a>
@@ -435,7 +435,7 @@
                 @endauth
                 <div class="menuWrapper">
                     <p class="menuName">Главное меню</p>
-                    <a href="{{ route('about') }}" class="menuItem">Автоматизированная система</a>
+                    <a href="{{ route('about') }}" class="menuItem">Автоматическая система</a>
                     <a href="{{ route('marketing') }}" class="menuItem">Бонусная программа</a>
                     <a href="{{ route('faq') }}" class="menuItem">FAQ</a>
                     <a href="{{ route('reviews') }}" class="menuItem">Отзывы</a>
