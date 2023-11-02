@@ -23,6 +23,15 @@
                             <a href="#" class="standartBtn">Зарегистрироваться</a>
                         @endif
 
+
+                        @if ( Auth::user() )
+                            @if ( Auth::user()->UserInfo->activated)
+                                <a href="#" class="standartBtn">Скачать систему</a>
+                            @else
+                                <a href="#" class="standartBtn">Начать зарабатывать</a>
+                            @endif
+                        @endif
+
                     </div>
                 </div>
 
