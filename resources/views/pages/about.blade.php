@@ -12,13 +12,10 @@
                         <source src="https://fortune-time.su/video/система.mp4" type="video/mp4">
                     </video>
                     <div class="textBlock">
-                        <div class="aboutFlexL">
-                            <h3>Наша система позволяет:</h3>
-                            <p class="standartText list">Полностью автоматизировать Ваш заработок</p>
-                            <p class="standartText list">Не тратить время на ежедневную рутину</p>
-                            <p class="standartText list">Зарабатывать из любого уголка мира</p>
-
-                        </div>
+                        <h3>Наша система позволяет:</h3>
+                        <p class="standartText list">Полностью автоматизировать Ваш заработок</p>
+                        <p class="standartText list">Не тратить время на ежедневную рутину</p>
+                        <p class="standartText list">Зарабатывать из любого уголка мира</p>
                     </div>
                 </div>
 
