@@ -26,9 +26,9 @@
 
                         @if ( Auth::user() )
                             @if ( Auth::user()->UserInfo->activated)
-                                <a href="#" class="standartBtn">Скачать систему</a>
+                                <a href="{{ url('Система ФОРТУНА.pdf') }}" class="standartBtn">Скачать систему</a>
                             @else
-                                <a href="{{ url('Система ФОРТУНА.pdf') }}" class="standartBtn">Начать зарабатывать</a>
+                                <a href="" class="standartBtn">Начать зарабатывать</a>
                             @endif
                         @endif
 
