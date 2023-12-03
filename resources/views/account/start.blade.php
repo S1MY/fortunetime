@@ -109,8 +109,8 @@
                         </div>
                     </div>
                 @else
-                <p>Для получения программы "Быстрый старт" оплатите участие в проекте</p>
-                <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
+                    <p class="cabinetText">Для получения программы "Быстрый старт" оплатите участие в проекте</p>
+                    <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
                 @endif
             </div>
         </div>
