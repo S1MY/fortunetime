@@ -551,7 +551,8 @@
                             @if ( $matrix != null )
                                 <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
                             @else
-                                <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a>
+                                <a href="#" class="cabinetBigItem popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
+                                {{-- <a href="{{ route('start') }}" class="cabinetBigItem">Начать заработок</a> --}}
                             @endif
                         </div>
                     </div>
