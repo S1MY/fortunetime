@@ -45,7 +45,13 @@
                     <p class="standartText">Когда в седьмом уровне первой матрицы проекта Фортуна, под Вами будет 256 человек, соответственно по 128 человек, в правом и левом плече, Вы получаете доход в размере 256 000 рублей, из которых автоматически 5000 рублей идёт на оплату за вход на шестой уровень второй матрицы и 5 000 рублей за вход на седьмой уровень той же второй матрицы. Разницу в доходе за закрытие седьмого уровня первой матрицы в сумме 246 000 рублей Вы также можете вывести со своего кабинета себе на карту.</p>
                     <p class="standartText">Тогда когда Ваши приглашённые по Вашей реферальной ссылке, дублицируя Вас пригласят людей к себе в матрицу, а те в свою очередь, делясь уникальной методикой заработка в проекте Фортуна, также будут приглашать людей, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней первой матрицы, Ваш общий доход составит 473 000 рублей.</p>
-                    <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
+
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
+                    @endif
+
                 </div>
                 <div class="matrixElement" data-matrix="2">
                     <div class="imgMtrixWrapper">
@@ -83,6 +89,11 @@
 
                     <p class="standartText">Тогда когда все приглашённые люди из первой матрицы автоматически перейдут к Вам во вторую по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней второй матрицы, Ваш общий доход составит 2 470 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="3">
                     <div class="imgMtrixWrapper">
@@ -122,6 +133,11 @@
                     <p class="standartText">Третья матрица в проекта Фортуна так же точно такая же, как и первая и вторая. В ней всё тоже самое. Отличие лишь в существенной разнице дохода от закрытие всех Вами проходимых уровней.</p>
                     <p class="standartText">Тогда когда все приглашённые люди из первой матрицы автоматически перейдут к Вам во вторую, а затем в третью по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней третьей матрицы, Ваш общий доход составит 4 950 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="3">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="4">
                     <div class="imgMtrixWrapper">
@@ -161,6 +177,11 @@
                     <p class="standartText">Четвёртая матрица проекта Фортуна так же точно такая же, как и три предыдущих. В ней всё тоже самое. Отличие лишь в существенной разнице дохода от закрытие всех Вами проходимых уровней.</p>
                     <p class="standartText">Тогда когда все приглашённые люди из первой матрицы автоматически перейдут к Вам во вторую, а затем в третью и четвёртую, по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней четвёртой матрицы, Ваш общий доход составит 12 300 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="4">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="5">
                     <div class="imgMtrixWrapper">
@@ -201,6 +222,11 @@
                     <p class="standartText">Пятая матрица в проекта Фортуна в корне отличается от предыдущих. Она даёт не только вознаграждение за закрытые уровни, но и позволяет Вам сделать реинвест на клонирование самой себя.</p>
                     <p class="standartText">Тогда когда все приглашённые люди из четвёртой матрицы автоматически перейдут к Вам в пятую по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней пятой матрицы, Ваш общий доход составит 24 350 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="5">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="6">
                     <div class="imgMtrixWrapper">
@@ -241,6 +267,11 @@
                     <p class="standartText">Шестая матрица в проекта Фортуна, также как и пятая, даёт не только вознаграждение за закрытые уровей, но и позволяет Вам сделать реинвест на клонирование самой себя.</p>
                     <p class="standartText">Тогда когда все приглашённые люди из пятой матрицы автоматически перейдут к Вам в шестую, по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней шестой матрицы, Ваш общий доход составит 48 350 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="6">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="7">
                     <div class="imgMtrixWrapper">
@@ -281,6 +312,11 @@
                     <p class="standartText">Седьмая матрица в проекта Фортуна, также как и шестая, даёт не только вознаграждение за закрытые уровей, но и позволяет Вам сделать реинвест на клонирование самой себя.</p>
                     <p class="standartText">Тогда когда все приглашённые люди из шестой матрицы автоматически перейдут к Вам в седьмую по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней седьмой матрицы, Ваш общий доход составит 121 750 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="7">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="8">
                     <div class="imgMtrixWrapper">
@@ -321,6 +357,11 @@
                     <p class="standartText">Восьмая матрица в проекта Фортуна, также как и седьмая, даёт не только вознаграждение за закрытые уровей, но и позволяет Вам сделать реинвест на клонирование самой себя.</p>
                     <p class="standartText">Тогда когда все приглашённые люди из седьмой матрицы автоматически перейдут к Вам в восьмую по соответствию расстановки по своим уровням, Вы легко и не принуждённо будете двигаться.</p>
                     <p class="standartText">За прохождение всех уровней восьмой матрицы, Ваш общий доход составит 243 500 000 рублей.</p>
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="8">Начать заработок</a>
+                    @endif
                 </div>
                 <div class="matrixElement" data-matrix="9">
                     <div class="imgMtrixWrapper">
@@ -363,6 +404,12 @@
                     <p class="standartText">За прохождение всех уровней девятой матрицы, Ваш общий доход составит 501 000 000 рублей.</p>
                     <p class="standartText">За прохождения всех девяти матриц в проекте Фортуна по маркетинг плану проекта Вы получаете чистого дохода 959 146 000 рублей.</p>
                     <p class="standartText">Вдумайтесь. Всего лишь с одной тысячи рублей, Вы выполняя условия стратегии заработка в проекте Фортуна получаете уникальную возможность стать супер богатыми людьми. А решение как это Вам сделать, остаётся за Вами. </p>
+
+                    @if ( !Auth::user() )
+                        <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
+                    @else
+                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="9">Начать заработок</a>
+                    @endif
                 </div>
             </div>
         </div>
