@@ -276,7 +276,11 @@ class MainController extends Controller
     }
 
     public function start(){
-        return view('account.start');
+        $matrix = DB::table('matrix')->where([
+                    ['user_id', '=', Auth::user()->id],
+                    ['matrix_lvl', '=', 1],
+                ])->first();
+        return view('account.start', compact('matrix'));
     }
 
     public function automation(){
