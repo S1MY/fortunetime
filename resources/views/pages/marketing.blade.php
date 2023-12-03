@@ -49,7 +49,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="1">Начать заработок</a>
                     @endif
 
                 </div>
@@ -92,7 +92,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="2">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="3">
@@ -136,7 +136,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="3">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="3">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="4">
@@ -180,7 +180,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="4">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="4">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="5">
@@ -225,7 +225,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="5">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="5">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="6">
@@ -270,7 +270,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="6">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="6">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="7">
@@ -315,7 +315,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="7">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="7">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="8">
@@ -360,7 +360,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="8">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="8">Начать заработок</a>
                     @endif
                 </div>
                 <div class="matrixElement" data-matrix="9">
@@ -408,7 +408,7 @@
                     @if ( !Auth::user() )
                         <a href="#" class="standartBtn popupBtn" data-popup="register">Зарегистрироваться</a>
                     @else
-                        <a href="#" class="cabinetBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="9">Начать заработок</a>
+                        <a href="#" class="standartBtn popupBtn martixBuyer" data-popup="starter" data-matrix-id="9">Начать заработок</a>
                     @endif
                 </div>
             </div>
